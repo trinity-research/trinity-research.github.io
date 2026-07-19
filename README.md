@@ -28,9 +28,9 @@ argument.
 ## Check the method yourself
 
 The measurement method has a standalone, reproducible demonstration on public
-Pythia-14m training checkpoints: a preregistered protocol, pinned model
-commits, shuffled-pairing and persistence controls, and CPU-only runtime of a
-few seconds.
+Pythia-14m training checkpoints: a pre-specified protocol with dated post-run
+amendments, pinned model commits, shuffled-pairing and persistence controls,
+and CPU-only runtime of a few seconds.
 
 **[github.com/trinity-research/pythia-edmd-demo](https://github.com/trinity-research/pythia-edmd-demo)**
 
