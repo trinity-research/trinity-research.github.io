@@ -1,70 +1,55 @@
-# Project SLSSM-01 Public Site
+# Project SLSSM-01 — Public Research Dossier
 
-This folder is a self-contained static public site prototype for GitHub Pages.
+**Live site: [trinity-research.com](https://trinity-research.com)**
 
-It intentionally uses synthetic visualization data. Do not replace the charts with raw Project SLSSM-01 analysis outputs unless the material has been redacted and approved for public release.
+This repository is the source of the public research dossier for Project
+SLSSM-01, an independent research effort studying recurrent language models
+with observable spectral dynamics. The model's primary sequence mechanism uses
+state evolution rather than quadratic self-attention, which is what makes its
+internal memory behavior measurable in the first place.
 
-The page is intended as a research credibility dossier, not as the final public face of a company.
+The dossier is a credibility document, not a company homepage or a model
+recipe. Its limitations are stated on the page, prominently, as part of the
+argument.
 
-Use `Project SLSSM-01` as the public codename until naming and trademark clearance are reviewed. Do not reintroduce earlier internal names into the public site without review.
+## What the dossier contains
 
-## Files
+- A [research note](https://trinity-research.com/research-note.html) covering
+  the research question, evidence from the v3 short-context run, metric
+  definitions, a skeptic FAQ, and the disclosure boundary.
+- Rounded evidence summaries: training movement, validation probes, EDMD
+  concordance, signed phase behavior, and the long-memory limitation that
+  motivates the next experiment
+  ([evidence/checkpoint-summary.csv](evidence/checkpoint-summary.csv)).
+- Interactive visualizations that are **synthetic by design** and labeled as
+  such. They illustrate the diagnostic vocabulary (Spectral Atlas, EDMD
+  Concordance, Prompt Manifold); they are not raw analysis outputs.
 
-- `index.html` - public page
-- `research-note.html` - public research note
-- `sitemap.xml` - search engine sitemap
-- `robots.txt` - crawler guidance
-- `feed.xml` - RSS feed for updates
-- `social-card.svg` - editable source for the social/newsletter preview image
-- `social-card.png` - 1200 x 630 raster social preview used by page metadata
-- `evidence/checkpoint-summary.csv` - rounded public checkpoint artifact mirrored from the research note
-- `configure-release.ps1` - one-time release helper for canonical, social, feed, sitemap, robots, citation, and launch-post URLs
-- `assets/` - optimized public profile images
-- `styles.css` - layout and visual design
-- `site.js` - synthetic atlas, prompt trace, concordance sketch, and evidence charts
-- `CNAME` - GitHub Pages custom-domain binding
+## Check the method yourself
 
-The Evidence section includes rounded summaries from the private v3 short-context run. Keep those summaries high level. Do not replace them with raw mode tables, raw activations, or model checkpoints.
+The measurement method has a standalone, reproducible demonstration on public
+Pythia-14m training checkpoints: a preregistered protocol, pinned model
+commits, shuffled-pairing and persistence controls, and CPU-only runtime of a
+few seconds.
 
-## Release Configuration
+**[github.com/trinity-research/pythia-edmd-demo](https://github.com/trinity-research/pythia-edmd-demo)**
 
-Release URLs are configured for `https://trinity-research.com`, with the
-reproducible demo at `https://github.com/trinity-research/pythia-edmd-demo`.
-If either URL ever changes, rerun the helper from this folder in one pass:
+The demo validates the measurement method on a public model. It does not
+validate this model's claims; the dossier is explicit about that distinction.
 
-```powershell
-.\configure-release.ps1 -SiteUrl 'https://new-site.example' -DemoRepoUrl 'https://github.com/org/repo'
-```
+## What is deliberately not here
 
-Note the helper replaces its placeholder tokens, so on an already-configured
-tree the old URLs must be swapped back to the placeholders first (or edit the
-files directly).
+Every number in the dossier is author-reported, rounded, from one run, and
+externally unreplicated. The site says this before any reader has to ask.
+This repository and the site intentionally exclude model weights and
+checkpoints, training code and recipes, exact architecture equations, raw
+activations, and raw mode tables.
 
-The visitor counter was intentionally removed. If analytics are added later, use a
-clearly documented privacy-respecting service rather than a local-storage display.
+## Repository notes
 
-## Recommended Publishing Pattern
+This is a pure static site with no build step: clone and open `index.html`
+to preview locally. `configure-release.ps1` rewrites every canonical,
+social-card, feed, sitemap, and citation URL in one pass if the domain ever
+changes; the tree is currently configured for `https://trinity-research.com`.
 
-Do not make the private research repository public.
-
-Create a separate clean public repository that contains only the contents of this `public_site` folder. Then enable GitHub Pages for that public repository.
-
-## Public-Safety Reminder
-
-The public site should not contain:
-
-- source code for Project SLSSM-01
-- Colab notebooks
-- checkpoints
-- raw logs
-- raw activations
-- exact model equations
-- exact training recipes
-- private analysis CSV/JSON files
-
-Public evidence can include:
-
-- rounded checkpoint summaries
-- aggregate charts
-- qualitative conclusions
-- explicit statements about what remains unsolved
+Maintained by Freddie Hunt and Joshua Hunt, PhD.
