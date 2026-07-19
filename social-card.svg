@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Project SLSSM-01 social card</title>
+  <desc id="desc">Observable spectral language model dynamics with a synthetic spectral atlas.</desc>
+  <defs>
+    <radialGradient id="bg1" cx="25%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#11395a"/>
+      <stop offset="55%" stop-color="#07090d"/>
+      <stop offset="100%" stop-color="#05070a"/>
+    </radialGradient>
+    <radialGradient id="bg2" cx="78%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#123d3b" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#07090d" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg1)"/>
+  <rect width="1200" height="630" fill="url(#bg2)"/>
+  <g opacity="0.22" fill="none" stroke="#edf4ff">
+    <ellipse cx="820" cy="330" rx="265" ry="86"/>
+    <ellipse cx="820" cy="330" rx="215" ry="70"/>
+    <ellipse cx="820" cy="330" rx="165" ry="54"/>
+    <ellipse cx="820" cy="330" rx="115" ry="38"/>
+  </g>
+  <g filter="url(#glow)">
+    <circle cx="726" cy="310" r="8" fill="#37e6d4"/>
+    <circle cx="772" cy="268" r="10" fill="#37e6d4"/>
+    <circle cx="825" cy="292" r="7" fill="#ffc857"/>
+    <circle cx="872" cy="250" r="11" fill="#ff5d73"/>
+    <circle cx="925" cy="318" r="8" fill="#ffc857"/>
+    <circle cx="884" cy="382" r="12" fill="#37e6d4"/>
+    <circle cx="801" cy="402" r="7" fill="#ff5d73"/>
+    <circle cx="742" cy="374" r="10" fill="#ffc857"/>
+    <circle cx="934" cy="430" r="9" fill="#ff5d73"/>
+    <circle cx="686" cy="428" r="7" fill="#37e6d4"/>
+  </g>
+  <path d="M700 310 C760 250 828 300 875 250 S935 318 884 382 S800 402 742 374" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.75"/>
+  <g font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="800">
+    <text x="74" y="88" fill="#37e6d4" font-size="26" letter-spacing="5">Project SLSSM-01</text>
+    <text x="74" y="190" fill="#edf4ff" font-size="76">Observable Spectral</text>
+    <text x="74" y="276" fill="#edf4ff" font-size="76">Language Model</text>
+    <text x="74" y="362" fill="#edf4ff" font-size="76">Dynamics</text>
+    <text x="78" y="430" fill="#95a4b8" font-size="28" font-weight="500">Public research dossier with rounded evidence, EDMD concordance,</text>
+    <text x="78" y="468" fill="#95a4b8" font-size="28" font-weight="500">prompt manifolds, explicit limitations, and a clear boundary.</text>
+    <text x="78" y="548" fill="#ffc857" font-size="28">Stable linear spectral state-space language model</text>
+  </g>
+</svg>

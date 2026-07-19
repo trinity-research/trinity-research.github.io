@@ -1,0 +1,5 @@
+checkpoint,processed_tokens_billions,best_loss,validation_mean,edmd_mean_distance,edmd_median_distance,edmd_p90_distance,high_retention_modes,very_high_retention_modes,high_rotation_modes,max_measured_half_life,public_interpretation
+30k,3.9,4.03,3.91,0.0113,0.0103,0.0187,2,0,470,12.7,early organization
+102k,13.4,3.38,3.40,0.0079,0.0069,0.0138,,,,,agreement tightened
+204k,26.7,3.24,3.28,0.0077,0.0071,0.0131,2,1,733,16.8,stable dynamics
+250k,32.8,3.16,3.27,0.0078,0.0071,0.0134,6,1,638,16.2,short-context finish
