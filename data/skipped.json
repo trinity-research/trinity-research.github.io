@@ -1,5 +1,15 @@
 [
   {
+    "url": "https://techcommunity.microsoft.com/t5/azure-arc-blog/build-and-deploy-confidential-virtual-machines-on-azure-local/ba-p/4543995",
+    "date": "2026-08-06",
+    "reason": "infrastructure security hardware feature for edge deployments, off-topic for this feed"
+  },
+  {
+    "url": "https://simonwillison.net/2026/Aug/5/muse-code-and-muse-spark-12/#atom-everything",
+    "date": "2026-08-05",
+    "reason": "Meta model release and AI industry commentary, not Microsoft or Power Platform tooling"
+  },
+  {
     "url": "https://simonwillison.net/2026/Aug/6/an-ai-model-from-meta/#atom-everything",
     "date": "2026-08-06",
     "reason": "general AI industry news, not business automation"

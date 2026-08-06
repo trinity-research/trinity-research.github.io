@@ -6,13 +6,21 @@
     <atom:link href="https://trinity-research.com/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Business automation and applied AI, tracked as it changes. Short notes from Trinity Research on what shipped and whether it matters.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Aug 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 06 Aug 2026 12:00:00 +0000</lastBuildDate>
     <item>
       <title>Observable Spectral Dynamics in a Recurrent Sequence Model</title>
       <link>https://trinity-research.com/research-note.html</link>
       <guid isPermaLink="true">https://trinity-research.com/research-note.html</guid>
       <pubDate>Sun, 28 Jun 2026 00:00:00 +0000</pubDate>
       <description>Research note with rounded evidence from Project SLSSM-01's v3 short-context run, including EDMD concordance, signed phase behavior, prompt manifold observations, and the long-memory limitation.</description>
+    </item>
+    <item>
+      <title>AI-assisted Oracle-to-PostgreSQL schema conversion in Visual Studio Code</title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-blog-for-postgresql/ai-assisted-oracle-to-postgresql-schema-conversion-in-visual/ba-p/4542203</link>
+      <guid isPermaLink="true">https://techcommunity.microsoft.com/t5/microsoft-blog-for-postgresql/ai-assisted-oracle-to-postgresql-schema-conversion-in-visual/ba-p/4542203</guid>
+      <pubDate>Thu, 06 Aug 2026 12:00:00 +0000</pubDate>
+      <source url="https://trinity-research.com/feed.xml">Microsoft Tech Community</source>
+      <description>Microsoft&#39;s PostgreSQL engineering team describes an AI-assisted schema conversion workflow in Visual Studio Code for Oracle-to-Azure Database for PostgreSQL migrations. Mapping Oracle&#39;s type system, constraints, and PL/SQL constructs to PostgreSQL equivalents is typically the most time-consuming phase before any data moves, and doing this from within the editor reduces context-switching. The article does not confirm whether the tooling is generally available or in preview, so verify before using it in a production migration plan.</description>
     </item>
     <item>
       <title>Exploring Multi-Agent Workflows with Microsoft Agent Framework</title>

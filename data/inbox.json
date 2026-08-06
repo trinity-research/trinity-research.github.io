@@ -1,23 +1,23 @@
 [
   {
+    "title": "AI-assisted Oracle-to-PostgreSQL schema conversion in Visual Studio Code",
+    "url": "https://techcommunity.microsoft.com/t5/microsoft-blog-for-postgresql/ai-assisted-oracle-to-postgresql-schema-conversion-in-visual/ba-p/4542203",
+    "source": "Microsoft Tech Community",
+    "published": "2026-08-06",
+    "summary": "<P><STRONG>By Aditya Duvuri, Anil Dogra, Pranay Lohia, AI Omar Rajawat, Gautam Juneja, Vikas Nimmagadda</STRONG></P> <P>We’re seeing significant interest in migrating database workloads from Oracle to Azure Database for PostgreSQL. Historically, schema conversion has been one of the most technically challenging and expensive steps in that journey, demanding specialist knowledge of both engines and stretching migration timelines before a single row of data moves. Recent advances in AI-assisted sc"
+  },
+  {
+    "title": "Build and Deploy Confidential Virtual Machines on Azure Local (Public Preview)",
+    "url": "https://techcommunity.microsoft.com/t5/azure-arc-blog/build-and-deploy-confidential-virtual-machines-on-azure-local/ba-p/4543995",
+    "source": "Microsoft Tech Community",
+    "published": "2026-08-06",
+    "summary": "<P><EM>Estimated read: ~4 minutes</EM></P> <P>Confidential computing has become foundational to how regulated and sovereign organizations run their most sensitive workloads. Today, we're excited to announce that <STRONG>Confidential Virtual Machines on Azure Local are available in public preview</STRONG> — bringing hardware-based memory encryption and attestation to customer-owned, customer-managed edge infrastructure.</P> <P>This is a milestone for organizations that can't move their most sensi"
+  },
+  {
     "title": "Introducing Muse Code and Muse Spark 1.2",
     "url": "https://simonwillison.net/2026/Aug/5/muse-code-and-muse-spark-12/#atom-everything",
     "source": "Simon Willison",
     "published": "2026-08-05",
     "summary": "<p><strong><a href=\"https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2\">Introducing Muse Code and Muse Spark 1.2</a></strong></p> Yet more evidence that the most important characteristic of any model these days is long-sequence agentic tool calling. Meta shipped their own coding agent as part of getting that to work!</p> <blockquote> <p>Muse Spark 1.2 is a coding-focused update to Muse Spark 1.1, with improvements in code generation, complex debugging, codebase understanding,"
-  },
-  {
-    "title": "End VPN gaps with identity-first access",
-    "url": "https://techcommunity.microsoft.com/t5/microsoft-entra-blog/end-vpn-gaps-with-identity-first-access/ba-p/4529306",
-    "source": "Microsoft Tech Community",
-    "published": "2026-08-05",
-    "summary": "<P>Traditional VPNs extend network access—but they were not built continuously evaluate identity, device posture, location, user risk, or session context. That gap can leave AI apps, SaaS, on-premises applications, unmanaged services, and internet traffic unevenly protected.</P> <P>Zero Trust closes this gap by putting identity and policy at the center of every access decision. Microsoft principles are simple: verify explicitly, use least-privilege access, and assume breach. As user, device, app"
-  },
-  {
-    "title": "Azure Key Vault Premium and AES-KW Post Quantum Resistant Key Wrapping in Public Preview",
-    "url": "https://techcommunity.microsoft.com/t5/post-quantum-crypto-tech-blog/azure-key-vault-premium-and-aes-kw-post-quantum-resistant-key/ba-p/4544358",
-    "source": "Microsoft Tech Community",
-    "published": "2026-08-05",
-    "summary": "<H1>Introduction</H1> <P>Post-quantum cryptography, like any cryptographic system, depends on strong foundational components.</P> <P>Key management is one of those critical foundations.</P> <P>Azure Key Vault is Azure’s most popular key-management service, and Azure Key Vault Premium now supports quantum-resistant AES key wrapping (AES-KW) in Public Preview.</P> <P>AES-KW lets services replace quantum-vulnerable RSA key wrapping with a quantum-resistant alternative.</P> <P>For most readers, that"
   }
 ]
