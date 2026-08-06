@@ -402,6 +402,7 @@ function drawModeField(canvas, options = {}) {
 }
 
 function drawPromptTrace(canvas) {
+  if (!canvas) return;
   const ctx = canvas.getContext("2d");
   const { width, height } = resizeCanvas(canvas);
   ctx.clearRect(0, 0, width, height);
@@ -459,6 +460,7 @@ function drawPromptTrace(canvas) {
 }
 
 function drawConcordance(canvas) {
+  if (!canvas) return;
   const ctx = canvas.getContext("2d");
   const { width, height } = resizeCanvas(canvas);
   ctx.clearRect(0, 0, width, height);

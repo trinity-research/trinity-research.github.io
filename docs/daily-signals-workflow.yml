@@ -1,0 +1,99 @@
+name: Daily Signals (reference copy - not active)
+
+# ============================================================================
+# THIS IS A REFERENCE COPY. IT IS NOT THE LIVE PIPELINE AND DOES NOT RUN.
+#
+# It lives in docs/ rather than .github/workflows/ on purpose: pushing a file
+# into .github/workflows/ requires the `workflow` OAuth scope, which the gh
+# token used here does not have. Keeping it here means the nightly push never
+# trips that restriction.
+#
+# The Signals feed is published from a local machine by
+# scripts/run-signals.ps1 on a Windows scheduled task. See "Scheduling" in
+# README.md.
+#
+# To switch to CI instead of the local task:
+#   1. gh auth refresh -h github.com -s workflow
+#   2. Install the Claude GitHub App on the trinity-research org
+#   3. Add the CLAUDE_CODE_OAUTH_TOKEN secret (`claude setup-token`)
+#   4. Copy this file to .github/workflows/daily-signals.yml
+#   5. Uncomment the cron below
+#   6. Remove the local scheduled task, or both will publish:
+#      .\scripts\register-signals-task.ps1 -Remove
+# ============================================================================
+#
+#   fetch-signals.mjs  ->  data/inbox.json   (deterministic: RSS in, JSON out)
+#   /daily-signals     ->  data/signals.json (Claude writes prose, nothing else)
+#   render-signals.mjs ->  signals.html, feed.xml, sitemap.xml, index.html strip
+#
+# Claude never writes HTML, so a weak generation costs a weak entry, not a
+# broken page. The render script validates data/signals.json and fails the run
+# on a malformed entry rather than publishing one.
+#
+# Auth: uses a Claude subscription via CLAUDE_CODE_OAUTH_TOKEN (generate with
+# `claude setup-token` locally). No API key, no per-call billing. The token can
+# expire or be invalidated by logging out of Claude Code - regenerate with the
+# same command and update the secret.
+
+on:
+  # No `schedule:` on purpose - see the PARKED note above. To revive this,
+  # install the Claude GitHub App on the org, add the CLAUDE_CODE_OAUTH_TOKEN
+  # secret, uncomment the cron, and remove the local scheduled task so the two
+  # do not both publish.
+  #
+  # schedule:
+  #   - cron: "0 13 * * 1-5"   # 13:00 UTC weekdays (08:00 CT)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  id-token: write
+
+concurrency:
+  group: daily-signals
+  cancel-in-progress: false
+
+jobs:
+  signals:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Fetch new items
+        id: fetch
+        run: node scripts/fetch-signals.mjs
+
+      - name: Write takes
+        if: steps.fetch.outputs.has_new == 'true'
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          prompt: "/daily-signals"
+          claude_args: "--max-turns 20 --model claude-sonnet-5"
+
+      - name: Render pages
+        if: steps.fetch.outputs.has_new == 'true'
+        run: node scripts/render-signals.mjs
+
+      - name: Commit
+        if: steps.fetch.outputs.has_new == 'true'
+        run: |
+          git config user.name "trinity-signals[bot]"
+          git config user.email "contact@trinity-research.com"
+          git add -A data signals.html feed.xml sitemap.xml index.html
+          if git diff --staged --quiet; then
+            echo "Nothing changed - no commit."
+          else
+            git commit -m "Signals: ${{ steps.fetch.outputs.count }} new entries for $(date -u +%Y-%m-%d)"
+            git push
+          fi
+
+      - name: Nothing to do
+        if: steps.fetch.outputs.has_new != 'true'
+        run: echo "No new items in the window. Skipped generation and commit."

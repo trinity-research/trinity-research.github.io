@@ -1,0 +1,61 @@
+{
+  "_comment": "Feeds polled by fetch-signals.mjs. Edit freely - no code change needed. Run `node scripts/check-sources.mjs` after editing to confirm each one still resolves and parses. Every URL below was verified working on 2026-08-05.",
+  "_priority": "1 = the core niche this feed is trying to own, always gets slots first. 2 = adjacent automation. 3 = applied AI context, fills leftover slots. Defaults to 3 if omitted.",
+  "_maxPerPriority": "Ceiling on how many items each priority band may contribute in one run. Keeps a quiet Power Platform week from turning this into a general AI news feed - on those days it publishes fewer, on-topic items instead of filling six slots with drift.",
+  "maxItemsPerRun": 6,
+  "maxPerSource": 2,
+  "maxPerPriority": { "1": 6, "2": 2, "3": 1 },
+  "maxAgeDays": 14,
+  "sources": [
+    {
+      "name": "Power Platform Blog",
+      "url": "https://www.microsoft.com/en-us/power-platform/blog/feed/",
+      "priority": 1
+    },
+    {
+      "name": "Power Automate Blog",
+      "url": "https://www.microsoft.com/en-us/power-platform/blog/power-automate/feed/",
+      "priority": 1
+    },
+    {
+      "name": "Power Apps Blog",
+      "url": "https://www.microsoft.com/en-us/power-platform/blog/power-apps/feed/",
+      "priority": 1
+    },
+    {
+      "name": "Power Pages Blog",
+      "url": "https://www.microsoft.com/en-us/power-platform/blog/power-pages/feed/",
+      "priority": 1
+    },
+    {
+      "name": "Microsoft 365 Blog",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/feed/",
+      "priority": 2
+    },
+    {
+      "name": "Microsoft 365 Insider",
+      "url": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=Microsoft365InsiderBlog",
+      "priority": 2
+    },
+    {
+      "name": "Microsoft Tech Community",
+      "url": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community?interaction.style=blog",
+      "priority": 2
+    },
+    {
+      "name": "Zapier Blog",
+      "url": "https://zapier.com/blog/feed/",
+      "priority": 2
+    },
+    {
+      "name": "Simon Willison",
+      "url": "https://simonwillison.net/atom/everything/",
+      "priority": 3
+    },
+    {
+      "name": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog/feed.xml",
+      "priority": 3
+    }
+  ]
+}

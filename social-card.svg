@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">Project SLSSM-01 social card</title>
-  <desc id="desc">Observable spectral language model dynamics with a synthetic spectral atlas.</desc>
+  <title id="title">Trinity Research social card</title>
+  <desc id="desc">Trinity Research: applied research, automation, and predictive systems.</desc>
   <defs>
     <radialGradient id="bg1" cx="25%" cy="20%" r="70%">
       <stop offset="0%" stop-color="#11395a"/>
@@ -41,12 +41,12 @@
   </g>
   <path d="M700 310 C760 250 828 300 875 250 S935 318 884 382 S800 402 742 374" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.75"/>
   <g font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="800">
-    <text x="74" y="88" fill="#37e6d4" font-size="26" letter-spacing="5">Project SLSSM-01</text>
-    <text x="74" y="190" fill="#edf4ff" font-size="76">Observable Spectral</text>
-    <text x="74" y="276" fill="#edf4ff" font-size="76">Language Model</text>
-    <text x="74" y="362" fill="#edf4ff" font-size="76">Dynamics</text>
-    <text x="78" y="430" fill="#95a4b8" font-size="28" font-weight="500">Public research dossier with rounded evidence, EDMD concordance,</text>
-    <text x="78" y="468" fill="#95a4b8" font-size="28" font-weight="500">prompt manifolds, explicit limitations, and a clear boundary.</text>
-    <text x="78" y="548" fill="#ffc857" font-size="28">Stable linear spectral state-space language model</text>
+    <text x="74" y="88" fill="#37e6d4" font-size="26" letter-spacing="5">Trinity Research</text>
+    <text x="74" y="188" fill="#edf4ff" font-size="68">Research That</text>
+    <text x="74" y="266" fill="#edf4ff" font-size="68">Turns Into</text>
+    <text x="74" y="344" fill="#edf4ff" font-size="68">Working Systems</text>
+    <text x="78" y="430" fill="#95a4b8" font-size="28" font-weight="500">Language model research and optimization, business process</text>
+    <text x="78" y="468" fill="#95a4b8" font-size="28" font-weight="500">automation, predictive modeling, and data ingestion systems.</text>
+    <text x="78" y="548" fill="#ffc857" font-size="28">Freddie Hunt and Joshua Hunt, PhD</text>
   </g>
 </svg>

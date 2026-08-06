@@ -1,0 +1,51 @@
+[
+  {
+    "date": "2026-08-05",
+    "title": "Exploring Multi-Agent Workflows with Microsoft Agent Framework",
+    "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/exploring-multi-agent-workflows-with-microsoft-agent-framework/ba-p/4542512",
+    "source": "Microsoft Tech Community",
+    "take": "This Microsoft Foundry post describes five orchestration patterns for multi-agent systems — concurrent, sequential, group chat, handoff, and Magentic — with code examples using Azure AI Foundry's FoundryChatClient. It is an educational walkthrough of available patterns rather than a product announcement; the post does not indicate any capability is newly released. Useful as a named-pattern reference if you are designing coordination logic on Foundry and want working code alongside the taxonomy."
+  },
+  {
+    "date": "2026-08-05",
+    "title": "What's new in Agent 365 - July 2026",
+    "url": "https://techcommunity.microsoft.com/t5/agent-365-blog/what-s-new-in-agent-365-july-2026/ba-p/4543654",
+    "source": "Microsoft Tech Community",
+    "take": "Microsoft added governance capabilities to Agent 365 aimed at organizations running agents across multiple tenants and a mix of agent platforms. The problem is real - agent sprawl tends to arrive faster than anyone's inventory of it - but this is a monthly roundup rather than a single release, so read it for the list rather than for one change. Worth a look if you already have agents deployed and no current answer to who owns them."
+  },
+  {
+    "date": "2026-08-05",
+    "title": "Public Preview: Nested API Support Comes to Microsoft Sentinel CCF",
+    "url": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/public-preview-nested-api-support-comes-to-microsoft-sentinel/ba-p/4537026",
+    "source": "Microsoft Tech Community",
+    "take": "Sentinel's Codeless Connector Framework now handles nested API responses, in public preview. Nested payloads were a common reason connector authors had to abandon CCF and write custom ingestion code, so this closes a real gap. Preview status means it is not yet something to put a production ingestion path on."
+  },
+  {
+    "date": "2026-08-05",
+    "title": "n8n vs. UiPath: Which is best? [2026]",
+    "url": "https://zapier.com/blog/n8n-vs-uipath",
+    "source": "Zapier Blog",
+    "take": "A comparison of two tools that market themselves almost identically but solve different problems: n8n wires APIs together and can be self-hosted, while UiPath drives software that never exposed an API in the first place. That distinction is the right first question when choosing between workflow automation and RPA, and it is more useful than either vendor's own positioning. Note the source is a competitor to both, and weight it accordingly."
+  },
+  {
+    "date": "2026-07-29",
+    "title": "Prompt Columns in GA: Turning Business Apps Data into Persisted AI Insights",
+    "url": "https://www.microsoft.com/en-us/power-platform/blog/2026/07/29/prompt-columns-july2026/",
+    "source": "Power Platform Blog",
+    "take": "Prompt Columns reached general availability. You define a natural-language prompt once against a business table and the resulting classification or summary is persisted as column data rather than computed on each request, which makes AI output queryable and reportable like any other field. Understand the refresh behaviour before you build reporting on it - persisted values and changing source rows are the obvious place this gets awkward."
+  },
+  {
+    "date": "2026-07-28",
+    "title": "Dataverse Plugin for Coding Agents: OpenAI and Codex Marketplace Expansion",
+    "url": "https://www.microsoft.com/en-us/power-platform/blog/2026/07/28/dataverse-plugin-for-coding-agents-openai-and-codex-marketplace-expansion/",
+    "source": "Power Platform Blog",
+    "take": "The Dataverse plugin is now listed in the OpenAI and Codex marketplaces. This is distribution news rather than new capability - the plugin already existed, and this widens where it can be installed from. Relevant only if your team already works in those agents."
+  },
+  {
+    "date": "2026-07-23",
+    "title": "Announcing the Power Pages Security Agent (Preview): Your AI Partner for Site Security",
+    "url": "https://www.microsoft.com/en-us/power-platform/blog/power-pages/announcing-the-power-pages-security-agent-preview-your-ai-partner-for-site-security/",
+    "source": "Power Platform Blog",
+    "take": "Power Pages now has a conversational AI agent in the Design Studio Security workspace, in preview, that can review authentication settings, configure table permissions and web roles, set up identity providers, and recommend changes to CSP and HTTP security headers. It does not apply any change automatically - every modification requires explicit approval before it takes effect. Useful for Power Pages admins navigating a broad security surface, though changes should be tested in a dev environment before production."
+  }
+]

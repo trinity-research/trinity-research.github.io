@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://simonwillison.net/2026/Aug/6/an-ai-model-from-meta/#atom-everything",
+    "date": "2026-08-06",
+    "reason": "general AI industry news, not business automation"
+  },
+  {
+    "url": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/building-a-ccf-nested-api-pull-connector-a-technical-lab/ba-p/4537027",
+    "date": "2026-08-05",
+    "reason": "redundant with the CCF preview entry already published"
+  },
+  {
+    "url": "https://techcommunity.microsoft.com/t5/microsoft-security-exposure/containment-strategies-for-ai-now-available-in-secure-now/ba-p/4539827",
+    "date": "2026-08-05",
+    "reason": "security posture management, off-topic for this feed"
+  },
+  {
+    "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2026/07/30/the-next-measure-of-ai-momentum-is-work-transformed/",
+    "date": "2026-07-30",
+    "reason": "adoption-milestone marketing, no product change"
+  }
+]

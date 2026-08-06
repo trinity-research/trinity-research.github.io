@@ -3,427 +3,290 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A public research dossier for Project SLSSM-01: evidence, methods, limitations, and synthetic views of observable spectral language model dynamics.">
+  <meta name="description" content="Trinity Research is Freddie Hunt and Joshua Hunt, PhD: language model research and optimization, business process automation, predictive modeling, and data ingestion systems.">
   <link rel="canonical" href="https://trinity-research.com/">
   <meta name="author" content="Freddie Hunt, Joshua Hunt, PhD">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Project SLSSM-01">
-  <meta property="og:title" content="Project SLSSM-01 | Observable Spectral Language Model Dynamics">
-  <meta property="og:description" content="A public research dossier showing evidence, analysis vocabulary, and synthetic visualizations from Project SLSSM-01's observable spectral dynamics work.">
+  <meta property="og:site_name" content="Trinity Research">
+  <meta property="og:title" content="Trinity Research | Applied research and working systems">
+  <meta property="og:description" content="Language model research and optimization, business process automation, predictive modeling, and data ingestion systems. Built and documented by Freddie Hunt and Joshua Hunt, PhD.">
   <meta property="og:url" content="https://trinity-research.com/">
   <meta property="og:image" content="https://trinity-research.com/social-card.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Project SLSSM-01 social card with spectral atlas visualization">
+  <meta property="og:image:alt" content="Trinity Research social card">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Project SLSSM-01 | Observable Spectral Language Model Dynamics">
-  <meta name="twitter:description" content="A public research dossier for Project SLSSM-01: rounded evidence, spectral diagnostics, limitations, and synthetic visualizations.">
+  <meta name="twitter:title" content="Trinity Research | Applied research and working systems">
+  <meta name="twitter:description" content="Language model research and optimization, business process automation, predictive modeling, and data ingestion systems.">
   <meta name="twitter:image" content="https://trinity-research.com/social-card.png">
-  <title>Project SLSSM-01 | Observable Spectral Language Models</title>
+  <title>Trinity Research | Applied research and working systems</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="alternate" type="application/rss+xml" title="Project SLSSM-01 Research Updates" href="https://trinity-research.com/feed.xml">
-  <link rel="stylesheet" href="styles.css?v=20260710a">
+  <link rel="alternate" type="application/rss+xml" title="Trinity Research Signals" href="https://trinity-research.com/feed.xml">
+  <link rel="stylesheet" href="styles.css?v=20260805a">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Project SLSSM-01",
+    "@type": "Organization",
+    "name": "Trinity Research",
     "url": "https://trinity-research.com/",
-    "description": "A public research dossier for observable spectral language model dynamics.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Project SLSSM-01"
-    }
+    "email": "contact@trinity-research.com",
+    "description": "Independent research and applied systems work: language model internals and optimization, business process automation, predictive modeling, and data ingestion.",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Freddie Hunt",
+        "jobTitle": "Founder / Lead Research Scientist",
+        "sameAs": [
+          "https://www.linkedin.com/in/freddie-hunt/",
+          "https://x.com/ExtraDeadFred"
+        ]
+      },
+      {
+        "@type": "Person",
+        "name": "Joshua Hunt, PhD",
+        "jobTitle": "Research Collaborator / Academic Advisor",
+        "sameAs": [
+          "https://www.linkedin.com/in/joshua-hunt-936973255/",
+          "https://x.com/_Professor_Hunt",
+          "https://www.latech.edu/directory/joshua-hunt.php"
+        ]
+      }
+    ]
   }
   </script>
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="Project SLSSM-01 home">
-      <span class="brand-mark">S</span>
-      <span>Project SLSSM-01</span>
+    <a class="brand" href="#top" aria-label="Trinity Research home">
+      <span class="brand-mark">T</span>
+      <span>Trinity Research</span>
     </a>
     <nav aria-label="Primary">
+      <a href="#capabilities">Capabilities</a>
       <a href="#work">Work</a>
-      <a href="#evidence">Evidence</a>
-      <a href="research-note.html">Note</a>
-      <a href="#atlas">Atlas</a>
-      <a href="#team">Team</a>
+      <a href="slssm-01.html">Research</a>
+      <a href="#signals">Signals</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main id="top">
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">Independent sequence modeling research</p>
-        <h1>Making language model dynamics visible.</h1>
+        <p class="eyebrow">Independent research and applied systems</p>
+        <h1>Research that turns into working systems.</h1>
         <p class="lede">
-          Project SLSSM-01 studies recurrent language models with inspectable spectral
-          dynamics. This public dossier presents the evidence, methods, and limitations;
-          the implementation, weights, and training recipe remain private.
+          Trinity Research is Freddie Hunt and Joshua Hunt, PhD. We work on language
+          model internals and optimization, business process automation, predictive
+          modeling, and the data ingestion that sits underneath all of it. This page
+          describes what we build and how. The research dossier documents one project
+          in full, including the parts that did not work.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="research-note.html">Read the public note</a>
-          <a class="button secondary" href="#atlas">Explore the synthetic atlas</a>
-          <a class="button secondary" href="#team">Meet the researchers</a>
+          <a class="button primary" href="#work">See selected work</a>
+          <a class="button secondary" href="slssm-01.html">Read the research dossier</a>
+          <a class="button secondary" href="#contact">Get in touch</a>
         </div>
       </div>
       <div class="hero-visual">
-        <canvas id="heroField" width="760" height="620" role="img" aria-label="Animated synthetic field of slow, middle, and fast spectral mode families">
-          Synthetic spectral mode field showing three mode families. The visualization does not contain model weights or activations.
+        <canvas id="heroField" width="760" height="620" role="img" aria-label="Animated abstract field of drifting points in three colour families">
+          An abstract animated field of drifting points, used as a decorative visual.
         </canvas>
-        <div class="visual-note">Synthetic public visualization. No model weights, activations, or implementation parameters are shown.</div>
+        <div class="visual-note">Decorative generated visualization. It represents no client data and no production system.</div>
       </div>
     </section>
 
-    <section class="band statement" id="work">
+    <section class="band statement" id="capabilities">
       <div class="section-heading">
-        <p class="eyebrow">What we are publishing</p>
-        <h2>The map, not the engine.</h2>
+        <p class="eyebrow">Capabilities</p>
+        <h2>What we work on.</h2>
       </div>
       <div class="statement-grid">
         <article>
-          <h3>Spectral Atlas</h3>
+          <h3>Language model research &amp; optimization</h3>
           <p>
-            A visual language for mapping learned recurrent mode families and tracking
-            how they reorganize during training.
+            We study how language models behave internally, not only how they score.
+            That covers training analysis, interpretability tooling, and practical
+            optimization of the models already in use — prompt and context structure,
+            inference cost, latency, and knowing which of those is actually the
+            constraint.
           </p>
         </article>
         <article>
-          <h3>EDMD Concordance</h3>
+          <h3>Business process automation</h3>
           <p>
-            Extended Dynamic Mode Decomposition (EDMD) compares measured trajectory
-            behavior with learned internal dynamics as an interpretability lens.
+            Most organizations already pay for Power Automate and the wider Power
+            Platform and use a small fraction of it. What they usually need is not a
+            complicated build: receipts captured and filed without anyone retyping
+            them, expense reports that assemble themselves, email campaigns that go
+            out on schedule. Small automations, done properly, are where the hours
+            come back.
           </p>
         </article>
         <article>
-          <h3>Prompt Manifold</h3>
+          <h3>Predictive modeling</h3>
           <p>
-            A prompt-conditioned trace of mode usage during inference, labeled with
-            illustrative token steps so the path can be read as a simulated prompt
-            moving through mode neighborhoods.
+            We build and continuously refit models for market and outcome prediction,
+            including sports markets. Most of the work is in the pipeline rather than
+            the model: data collection, feature construction, backtesting discipline,
+            and evaluation that is honest about variance.
+          </p>
+        </article>
+        <article>
+          <h3>Data ingestion &amp; systems design</h3>
+          <p>
+            Forms, spreadsheets, and manual collection are where most organizational
+            data stalls. We design the path from capture to something downstream can
+            use: validation, normalization, storage, and the automation that keeps it
+            current without anyone remembering to run it.
           </p>
         </article>
       </div>
     </section>
 
-    <section class="model-class-section">
+    <section class="evidence-section" id="work">
       <div class="section-heading">
-        <p class="eyebrow">Model class</p>
-        <h2>A stable linear spectral state-space language model.</h2>
+        <p class="eyebrow">Selected work</p>
+        <h2>What we have built.</h2>
         <p>
-          The public name for Project SLSSM-01's model class is a stable linear spectral
-          state-space language model. More precisely: Project SLSSM-01 uses a stable linear
-          recurrent dynamics core, with nonlinear token drive, gating, and readout
-          around that core. That distinction matters. The stable linear part is what
-          makes the internal dynamics analyzable as modes; the surrounding learned
-          components are what let those modes interact with language.
-        </p>
-      </div>
-      <div class="model-class-grid">
-        <article>
-          <h3>Stable</h3>
-          <p>The recurrent state is constrained to avoid uncontrolled dynamical blow-up during training and inference.</p>
-        </article>
-        <article>
-          <h3>Linear core</h3>
-          <p>The central state evolution is treated as a mode-based linear dynamical system.</p>
-        </article>
-        <article>
-          <h3>Spectral</h3>
-          <p>The model can be analyzed through learned frequencies, decay behavior, and mode populations.</p>
-        </article>
-        <article>
-          <h3>Language model</h3>
-          <p>Nonlinear learned components drive and decode the stable state dynamics into token behavior.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="metrics" aria-label="Public summary metrics">
-      <div>
-        <span class="metric-value">250k</span>
-        <span class="metric-label">training steps in the v3 short-context run</span>
-      </div>
-      <div>
-        <span class="metric-value">32.8B</span>
-        <span class="metric-label">tokens processed in the analyzed run</span>
-      </div>
-      <div>
-        <span class="metric-value">360M-class</span>
-        <span class="metric-label">research model in the analyzed run</span>
-      </div>
-    </section>
-
-    <section class="evidence-section" id="evidence">
-      <div class="section-heading">
-        <p class="eyebrow">Evidence without the recipe</p>
-        <h2>What we can show publicly.</h2>
-        <p>
-          The charts below summarize the Project SLSSM-01 v3 short-context
-          training run. They show run scale, loss movement, dynamical agreement, signed
-          phase behavior, and the next open problem: longer memory.
+          Four projects that between them cover the range: a client platform, a
+          research program, a modeling practice, and the everyday automation work.
         </p>
       </div>
 
-      <div class="evidence-cards">
-        <article>
-          <span class="evidence-number">3.16</span>
-          <h3>Best observed loss</h3>
-          <p>Rounded final checkpoint result from the analyzed v3 short run.</p>
-        </article>
-        <article>
-          <span class="evidence-number">3.27</span>
-          <h3>Validation mean</h3>
-          <p>Twenty-batch validation probe at the final analyzed checkpoint.</p>
-        </article>
-        <article>
-          <span class="evidence-number">~31%</span>
-          <h3>EDMD distance reduction</h3>
-          <p>Mean nearest-distance improved from the early checkpoint to final.</p>
-        </article>
-        <article>
-          <span class="evidence-number">2-way</span>
-          <h3>Signed phase population</h3>
-          <p>Final modes retained both positive and negative phase rotation.</p>
-        </article>
-      </div>
-
-      <div class="evidence-grid">
-        <div class="panel evidence-panel">
-          <div class="panel-title">
-            <h3>Training movement</h3>
-            <span>checkpoint summary</span>
-          </div>
-          <canvas id="lossEvidenceCanvas" width="560" height="320" role="img" aria-describedby="lossEvidenceDescription">
-            Line chart showing rounded best loss decreasing from 4.03 at 30k steps to 3.16 at 250k steps.
-          </canvas>
-          <p class="panel-copy" id="lossEvidenceDescription">
-            Loss moved down across the run rather than stalling at the early spectral
-            organization stage.
-          </p>
-        </div>
-
-        <div class="panel evidence-panel">
-          <div class="panel-title">
-            <h3>EDMD concordance</h3>
-            <span>lower is closer</span>
-          </div>
-          <canvas id="edmdEvidenceCanvas" width="560" height="320" role="img" aria-describedby="edmdEvidenceDescription">
-            Line chart showing rounded EDMD mean distance decreasing from 0.0113 at 30k steps to 0.0078 at 250k steps.
-          </canvas>
-          <p class="panel-copy" id="edmdEvidenceDescription">
-            Independent trajectory analysis stayed close to the learned spectral
-            structure after the early run.
-          </p>
-        </div>
-
-        <div class="panel evidence-panel">
-          <div class="panel-title">
-            <h3>Signed phase did not collapse</h3>
-            <span>final checkpoint</span>
-          </div>
-          <canvas id="phaseEvidenceCanvas" width="560" height="320" role="img" aria-describedby="phaseEvidenceDescription">
-            Bar chart showing 986 negative-rotation modes and 1,062 positive-rotation modes at the final checkpoint.
-          </canvas>
-          <p class="panel-copy" id="phaseEvidenceDescription">
-            The model kept meaningful population on both rotation directions, which is
-            exactly what signed phase was meant to preserve.
-          </p>
-        </div>
-
-        <div class="panel evidence-panel">
-          <div class="panel-title">
-            <h3>Long-memory gap</h3>
-            <span>why v3-long exists</span>
-          </div>
-          <canvas id="memoryEvidenceCanvas" width="560" height="320" role="img" aria-describedby="memoryEvidenceDescription">
-            Line chart showing six high-retention modes and one very-high-retention mode at the final checkpoint.
-          </canvas>
-          <p class="panel-copy" id="memoryEvidenceDescription">
-            The short-context model worked, but the near-unit slow population remained
-            sparse. That gives the next run a clear target instead of a vague hope.
-          </p>
-        </div>
-      </div>
-
-      <div class="evidence-table-wrap">
-        <table class="evidence-table">
-          <caption>Checkpoint summary</caption>
-          <thead>
-            <tr>
-              <th>Checkpoint</th>
-              <th>Tokens</th>
-              <th>Best loss</th>
-              <th>Validation mean</th>
-              <th>EDMD mean distance</th>
-              <th>Read</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>30k</td>
-              <td>3.9B</td>
-              <td>4.03</td>
-              <td>3.91</td>
-              <td>0.0113</td>
-              <td>early organization</td>
-            </tr>
-            <tr>
-              <td>102k</td>
-              <td>13.4B</td>
-              <td>3.38</td>
-              <td>3.40</td>
-              <td>0.0079</td>
-              <td>agreement tightened</td>
-            </tr>
-            <tr>
-              <td>204k</td>
-              <td>26.7B</td>
-              <td>3.24</td>
-              <td>3.28</td>
-              <td>0.0077</td>
-              <td>stable dynamics</td>
-            </tr>
-            <tr>
-              <td>250k</td>
-              <td>32.8B</td>
-              <td>3.16</td>
-              <td>3.27</td>
-              <td>0.0078</td>
-              <td>short-context finish</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="evidence-artifact">
-        <div>
-          <span class="finding-kicker">Public-safe artifact</span>
-          <h3>Inspect the rounded checkpoint record.</h3>
+      <div class="work-grid">
+        <article class="work-card">
+          <span class="finding-kicker">Client platform</span>
+          <h3>Real estate site with an automated back end</h3>
           <p>
-            The downloadable CSV mirrors the public tables. The research note defines
-            each metric, states the evidence boundary, and lists outcomes that would
-            weaken the current interpretation.
+            A live agent site for Catherine C. Hunt of LaState Realty LLC, covering
+            eight parishes in Northwest Louisiana: MLS-backed home search,
+            neighborhood guides, a live market-data dashboard, and valuation
+            requests. Behind it runs the part visitors do not see — scheduled
+            ingestion of listing and market data, automated research that produces
+            buyer and investor recommendations, a generated email newsletter, and
+            daily social posts drawn from the same pipeline. The research output and
+            its distribution are one system rather than two.
           </p>
-        </div>
-        <div class="artifact-actions">
-          <a class="button primary" href="evidence/checkpoint-summary.csv" download>Download rounded CSV</a>
-          <a class="button secondary" href="research-note.html#evidence-guide">Read the evidence guide</a>
-        </div>
-      </div>
+          <div class="links">
+            <a href="https://extradeadfred.github.io/hnt-realtor/">Visit the site</a>
+          </div>
+        </article>
 
-      <div class="evidence-artifact">
-        <div>
-          <span class="finding-kicker">Reproducible demo</span>
-          <h3>Run the measurement method yourself.</h3>
+        <article class="work-card">
+          <span class="finding-kicker">Research program</span>
+          <h3>Project SLSSM-01</h3>
           <p>
-            A standalone EDMD demonstration on public Pythia-14m training
-            checkpoints: a pre-specified protocol with dated post-run
-            amendments, pinned model commits, shuffled-pairing and persistence
-            controls, CPU-only, a few seconds per run. It validates the measurement method on a public model; it
-            does not validate this model's claims.
+            A stable linear spectral state-space language model, trained and analyzed
+            so that its internal dynamics could be tracked across checkpoints rather
+            than summarized by a loss curve. The public dossier gives the evidence,
+            the metric definitions, the disclosure boundary, and the limitation the
+            analysis exposed. The measurement method has a separate reproducible demo
+            on public Pythia-14m checkpoints.
           </p>
-        </div>
-        <div class="artifact-actions">
-          <a class="button primary" href="https://github.com/trinity-research/pythia-edmd-demo">Get the demo on GitHub</a>
-        </div>
-      </div>
+          <div class="links">
+            <a href="slssm-01.html">Research dossier</a>
+            <a href="research-note.html">Research note</a>
+            <a href="https://github.com/trinity-research/pythia-edmd-demo">Reproducible demo</a>
+          </div>
+        </article>
 
-      <p class="evidence-note">
-        These author-reported summaries are intentionally rounded and come from one
-        analyzed run. They are not an external replication or a claim of benchmark
-        leadership. The public note documents the disclosure and validation boundary.
-        <a class="note-callout" href="research-note.html">Read the public research note</a>.
-      </p>
+        <article class="work-card">
+          <span class="finding-kicker">Modeling practice</span>
+          <h3>Predictive sports models</h3>
+          <p>
+            An ongoing modeling program covering data collection, feature
+            construction, and continuous refitting against closing markets. We are
+            not publishing performance figures here: a track record is only worth
+            reading with its sample size, date range, and evaluation method attached,
+            and that belongs in a document of its own rather than a line on a
+            homepage.
+          </p>
+        </article>
+
+        <article class="work-card">
+          <span class="finding-kicker">Automation builds</span>
+          <h3>Receipts, expenses, and the small stuff</h3>
+          <p>
+            Power Automate and forms-to-systems work: receipt and expense capture,
+            expense reports that build themselves, scheduled email campaigns, and
+            replacing email-attachment shuffling with validated capture that lands
+            somewhere structured. Individually these are small builds. They are also
+            the ones people notice every week. These engagements are private, so
+            they are described by shape rather than by client.
+          </p>
+        </article>
+      </div>
     </section>
 
-    <section class="atlas-section" id="atlas">
+    <section class="band statement" id="signals">
       <div class="section-heading">
-        <p class="eyebrow">Research visualization</p>
-        <h2>Token-labeled Spectral Atlas</h2>
+        <p class="eyebrow">Signals</p>
+        <h2>Business automation, tracked as it changes.</h2>
         <p>
-          This page uses generated public data to demonstrate the type of analysis we
-          perform. The traced path is labeled with example prompt tokens so the viewer
-          can understand what is being simulated. No Project SLSSM-01 weights,
-          activations, or tokenizer details are shown.
+          Short notes on Power Platform releases, Microsoft 365 changes, and applied
+          AI tooling — what changed and whether it matters. Updated on weekdays.
         </p>
       </div>
-
-      <div class="dashboard">
-        <div class="panel atlas-panel">
-          <div class="panel-title">
-            <h3>3D mode field with prompt trace</h3>
-            <span id="modeReadout">synthetic prompt path</span>
+      <!-- signals:start -->
+      <div class="signal-strip">
+        <article class="signal-item">
+          <div class="signal-date">Aug 5, 2026</div>
+          <div>
+            <h3><a href="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/exploring-multi-agent-workflows-with-microsoft-agent-framework/ba-p/4542512" rel="noopener">Exploring Multi-Agent Workflows with Microsoft Agent Framework</a></h3>
+            <p>This Microsoft Foundry post describes five orchestration patterns for multi-agent systems — concurrent, sequential, group chat, handoff, and Magentic — with code examples using Azure AI Foundry&#39;s FoundryChatClient. It is an educational walkthrough of available patterns rather than a product announcement; the post does not indicate any capability is newly released. Useful as a named-pattern reference if you are designing coordination logic on Foundry and want working code alongside the taxonomy.</p>
+            <span class="signal-source">Microsoft Tech Community</span>
           </div>
-          <canvas id="atlasCanvas" width="820" height="560" role="img" aria-label="Synthetic three-dimensional spectral atlas with a token-labeled prompt path">
-            Synthetic three-dimensional spectral atlas showing a prompt path through slow, middle, and fast mode families.
-          </canvas>
-          <div class="legend">
-            <span><i class="dot slow"></i>slow family</span>
-            <span><i class="dot mid"></i>mid family</span>
-            <span><i class="dot fast"></i>fast family</span>
+        </article>
+        <article class="signal-item">
+          <div class="signal-date">Aug 5, 2026</div>
+          <div>
+            <h3><a href="https://techcommunity.microsoft.com/t5/agent-365-blog/what-s-new-in-agent-365-july-2026/ba-p/4543654" rel="noopener">What&#39;s new in Agent 365 - July 2026</a></h3>
+            <p>Microsoft added governance capabilities to Agent 365 aimed at organizations running agents across multiple tenants and a mix of agent platforms. The problem is real - agent sprawl tends to arrive faster than anyone&#39;s inventory of it - but this is a monthly roundup rather than a single release, so read it for the list rather than for one change. Worth a look if you already have agents deployed and no current answer to who owns them.</p>
+            <span class="signal-source">Microsoft Tech Community</span>
           </div>
-        </div>
-
-        <div class="panel">
-          <div class="panel-title">
-            <h3>Prompt manifold</h3>
-            <span>token-labeled trace</span>
+        </article>
+        <article class="signal-item">
+          <div class="signal-date">Aug 5, 2026</div>
+          <div>
+            <h3><a href="https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/public-preview-nested-api-support-comes-to-microsoft-sentinel/ba-p/4537026" rel="noopener">Public Preview: Nested API Support Comes to Microsoft Sentinel CCF</a></h3>
+            <p>Sentinel&#39;s Codeless Connector Framework now handles nested API responses, in public preview. Nested payloads were a common reason connector authors had to abandon CCF and write custom ingestion code, so this closes a real gap. Preview status means it is not yet something to put a production ingestion path on.</p>
+            <span class="signal-source">Microsoft Tech Community</span>
           </div>
-          <canvas id="promptCanvas" width="420" height="260" role="img" aria-describedby="promptCanvasDescription">
-            Synthetic prompt trace showing example tokens moving through three mode neighborhoods.
-          </canvas>
-          <p class="panel-copy" id="promptCanvasDescription">
-            Prompt traces show how words can move through different mode neighborhoods.
-            In the research workflow, real prompts can be compared across checkpoints
-            without reducing the model to a single loss number.
-          </p>
-        </div>
-
-        <div class="panel">
-          <div class="panel-title">
-            <h3>Concordance sketch</h3>
-            <span>synthetic sketch</span>
-          </div>
-          <canvas id="concordanceCanvas" width="420" height="260" role="img" aria-describedby="concordanceCanvasDescription">
-            Synthetic concordance sketch comparing measured trajectory points with learned structure.
-          </canvas>
-          <p class="panel-copy" id="concordanceCanvasDescription">
-            The research question is whether measured dynamics agree with learned
-            internal structure. The public chart shows the idea while omitting the
-            implementation-specific transformation path.
-          </p>
-        </div>
+        </article>
       </div>
+      <p class="signal-more"><a href="signals.html">Read all signals</a></p>
+      <!-- signals:end -->
     </section>
 
     <section class="band principles">
       <div class="section-heading">
-        <p class="eyebrow">Research stance</p>
-        <h2>Models should be studied from the inside, too.</h2>
+        <p class="eyebrow">How we work</p>
+        <h2>We would rather show the system than describe it.</h2>
       </div>
       <div class="principle-list">
         <p>
-          Loss curves matter, but they do not tell the whole story. We are interested
-          in how memory, phase, and mode participation evolve inside a model while it
-          learns.
+          Where we can link the thing itself, we link it. Where a project belongs to
+          a client, we describe the shape of the work and stop there. That means this
+          page is shorter than it could be, and the parts of it that are specific are
+          specific on purpose.
         </p>
         <p>
-          We developed a proprietary recurrent spectral language model whose internal
-          dynamics can be tracked across training. Our analysis revealed a shortage of
-          long-retention modes consistent with the model's observed long-memory
-          limitations. This finding informed a follow-up training plan designed to
-          strengthen long-timescale memory while preserving short-context performance.
+          We publish limitations next to results. The research dossier on this site
+          says plainly that its numbers are author-reported, rounded, drawn from a
+          single run, and externally unreplicated — because a reader who has to
+          discover that on their own has learned something worse than the caveat. The
+          same standard applies to the applied work: there are no performance claims
+          on this page, because a claim without its method attached is not evidence.
         </p>
       </div>
     </section>
 
     <section class="team-section" id="team">
       <div class="section-heading">
-        <p class="eyebrow">Research team</p>
+        <p class="eyebrow">Who we are</p>
         <h2>Led by the Hunt brothers.</h2>
       </div>
       <div class="team-grid">
@@ -433,8 +296,9 @@
             <h3>Freddie Hunt</h3>
             <p class="role">Founder / Lead Research Scientist</p>
             <p>
-              Leads Project SLSSM-01's model research, training analysis, spectral diagnostics,
-              and experimental direction.
+              Leads model research, training analysis, and spectral diagnostics on
+              Project SLSSM-01, and the automation, modeling, and platform work across
+              Trinity Research's applied projects.
             </p>
             <div class="links">
               <a href="https://www.linkedin.com/in/freddie-hunt/">LinkedIn</a>
@@ -461,10 +325,10 @@
         </article>
       </div>
       <p class="affiliation-note">
-        Project SLSSM-01 is an independent research effort. Louisiana Tech University
+        Trinity Research is an independent effort. Louisiana Tech University
         affiliation is provided for identification only and does not imply institutional endorsement.
       </p>
-      <p class="affiliation-note">
+      <p class="affiliation-note" id="contact">
         Questions, corrections, or collaboration:
         <a href="mailto:contact@trinity-research.com">contact@trinity-research.com</a>
       </p>
@@ -474,12 +338,12 @@
 
   <footer class="site-footer">
     <div>
-      <strong>Project SLSSM-01</strong>
-      <span>Observable spectral language model dynamics.</span>
+      <strong>Trinity Research</strong>
+      <span>Applied research, automation, and predictive systems.</span>
     </div>
-    <span>Independent public research dossier. <a href="mailto:contact@trinity-research.com">contact@trinity-research.com</a></span>
+    <span>Independent research group. <a href="mailto:contact@trinity-research.com">contact@trinity-research.com</a></span>
   </footer>
 
-  <script src="site.js?v=20260718a"></script>
+  <script src="site.js?v=20260805a"></script>
 </body>
 </html>

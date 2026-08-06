@@ -1,18 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Project SLSSM-01 Research Updates</title>
-    <link>https://trinity-research.com/</link>
+    <title>Trinity Research Signals</title>
+    <link>https://trinity-research.com/signals.html</link>
     <atom:link href="https://trinity-research.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <description>Updates from Project SLSSM-01's observable spectral dynamics research dossier.</description>
+    <description>Business automation and applied AI, tracked as it changes. Short notes from Trinity Research on what shipped and whether it matters.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Jul 2026 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2026 12:00:00 +0000</lastBuildDate>
     <item>
       <title>Observable Spectral Dynamics in a Recurrent Sequence Model</title>
       <link>https://trinity-research.com/research-note.html</link>
       <guid isPermaLink="true">https://trinity-research.com/research-note.html</guid>
-      <pubDate>Sun, 28 Jun 2026 00:00:00 -0500</pubDate>
+      <pubDate>Sun, 28 Jun 2026 00:00:00 +0000</pubDate>
       <description>Research note with rounded evidence from Project SLSSM-01's v3 short-context run, including EDMD concordance, signed phase behavior, prompt manifold observations, and the long-memory limitation.</description>
+    </item>
+    <item>
+      <title>Exploring Multi-Agent Workflows with Microsoft Agent Framework</title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/exploring-multi-agent-workflows-with-microsoft-agent-framework/ba-p/4542512</link>
+      <guid isPermaLink="true">https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/exploring-multi-agent-workflows-with-microsoft-agent-framework/ba-p/4542512</guid>
+      <pubDate>Wed, 05 Aug 2026 12:00:00 +0000</pubDate>
+      <source url="https://trinity-research.com/feed.xml">Microsoft Tech Community</source>
+      <description>This Microsoft Foundry post describes five orchestration patterns for multi-agent systems — concurrent, sequential, group chat, handoff, and Magentic — with code examples using Azure AI Foundry&#39;s FoundryChatClient. It is an educational walkthrough of available patterns rather than a product announcement; the post does not indicate any capability is newly released. Useful as a named-pattern reference if you are designing coordination logic on Foundry and want working code alongside the taxonomy.</description>
+    </item>
+    <item>
+      <title>What&#39;s new in Agent 365 - July 2026</title>
+      <link>https://techcommunity.microsoft.com/t5/agent-365-blog/what-s-new-in-agent-365-july-2026/ba-p/4543654</link>
+      <guid isPermaLink="true">https://techcommunity.microsoft.com/t5/agent-365-blog/what-s-new-in-agent-365-july-2026/ba-p/4543654</guid>
+      <pubDate>Wed, 05 Aug 2026 12:00:00 +0000</pubDate>
+      <source url="https://trinity-research.com/feed.xml">Microsoft Tech Community</source>
+      <description>Microsoft added governance capabilities to Agent 365 aimed at organizations running agents across multiple tenants and a mix of agent platforms. The problem is real - agent sprawl tends to arrive faster than anyone&#39;s inventory of it - but this is a monthly roundup rather than a single release, so read it for the list rather than for one change. Worth a look if you already have agents deployed and no current answer to who owns them.</description>
+    </item>
+    <item>
+      <title>Public Preview: Nested API Support Comes to Microsoft Sentinel CCF</title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/public-preview-nested-api-support-comes-to-microsoft-sentinel/ba-p/4537026</link>
+      <guid isPermaLink="true">https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/public-preview-nested-api-support-comes-to-microsoft-sentinel/ba-p/4537026</guid>
+      <pubDate>Wed, 05 Aug 2026 12:00:00 +0000</pubDate>
+      <source url="https://trinity-research.com/feed.xml">Microsoft Tech Community</source>
+      <description>Sentinel&#39;s Codeless Connector Framework now handles nested API responses, in public preview. Nested payloads were a common reason connector authors had to abandon CCF and write custom ingestion code, so this closes a real gap. Preview status means it is not yet something to put a production ingestion path on.</description>
+    </item>
+    <item>
+      <title>n8n vs. UiPath: Which is best? [2026]</title>
+      <link>https://zapier.com/blog/n8n-vs-uipath</link>
+      <guid isPermaLink="true">https://zapier.com/blog/n8n-vs-uipath</guid>
+      <pubDate>Wed, 05 Aug 2026 12:00:00 +0000</pubDate>
+      <source url="https://trinity-research.com/feed.xml">Zapier Blog</source>
+      <description>A comparison of two tools that market themselves almost identically but solve different problems: n8n wires APIs together and can be self-hosted, while UiPath drives software that never exposed an API in the first place. That distinction is the right first question when choosing between workflow automation and RPA, and it is more useful than either vendor&#39;s own positioning. Note the source is a competitor to both, and weight it accordingly.</description>
+    </item>
+    <item>
+      <title>Prompt Columns in GA: Turning Business Apps Data into Persisted AI Insights</title>
+      <link>https://www.microsoft.com/en-us/power-platform/blog/2026/07/29/prompt-columns-july2026/</link>
+      <guid isPermaLink="true">https://www.microsoft.com/en-us/power-platform/blog/2026/07/29/prompt-columns-july2026/</guid>
+      <pubDate>Wed, 29 Jul 2026 12:00:00 +0000</pubDate>
+      <source url="https://trinity-research.com/feed.xml">Power Platform Blog</source>
+      <description>Prompt Columns reached general availability. You define a natural-language prompt once against a business table and the resulting classification or summary is persisted as column data rather than computed on each request, which makes AI output queryable and reportable like any other field. Understand the refresh behaviour before you build reporting on it - persisted values and changing source rows are the obvious place this gets awkward.</description>
+    </item>
+    <item>
+      <title>Dataverse Plugin for Coding Agents: OpenAI and Codex Marketplace Expansion</title>
+      <link>https://www.microsoft.com/en-us/power-platform/blog/2026/07/28/dataverse-plugin-for-coding-agents-openai-and-codex-marketplace-expansion/</link>
+      <guid isPermaLink="true">https://www.microsoft.com/en-us/power-platform/blog/2026/07/28/dataverse-plugin-for-coding-agents-openai-and-codex-marketplace-expansion/</guid>
+      <pubDate>Tue, 28 Jul 2026 12:00:00 +0000</pubDate>
+      <source url="https://trinity-research.com/feed.xml">Power Platform Blog</source>
+      <description>The Dataverse plugin is now listed in the OpenAI and Codex marketplaces. This is distribution news rather than new capability - the plugin already existed, and this widens where it can be installed from. Relevant only if your team already works in those agents.</description>
+    </item>
+    <item>
+      <title>Announcing the Power Pages Security Agent (Preview): Your AI Partner for Site Security</title>
+      <link>https://www.microsoft.com/en-us/power-platform/blog/power-pages/announcing-the-power-pages-security-agent-preview-your-ai-partner-for-site-security/</link>
+      <guid isPermaLink="true">https://www.microsoft.com/en-us/power-platform/blog/power-pages/announcing-the-power-pages-security-agent-preview-your-ai-partner-for-site-security/</guid>
+      <pubDate>Thu, 23 Jul 2026 12:00:00 +0000</pubDate>
+      <source url="https://trinity-research.com/feed.xml">Power Platform Blog</source>
+      <description>Power Pages now has a conversational AI agent in the Design Studio Security workspace, in preview, that can review authentication settings, configure table permissions and web roles, set up identity providers, and recommend changes to CSP and HTTP security headers. It does not apply any change automatically - every modification requires explicit approval before it takes effect. Useful for Power Pages admins navigating a broad security surface, though changes should be tested in a dev environment before production.</description>
     </item>
   </channel>
 </rss>
