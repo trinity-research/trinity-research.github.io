@@ -15,6 +15,14 @@
       <description>Research note with rounded evidence from Project SLSSM-01's v3 short-context run, including EDMD concordance, signed phase behavior, prompt manifold observations, and the long-memory limitation.</description>
     </item>
     <item>
+      <title>datasette 1.0a38</title>
+      <link>https://simonwillison.net/2026/Aug/6/datasette/#atom-everything</link>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/6/datasette/#atom-everything</guid>
+      <pubDate>Thu, 06 Aug 2026 12:00:00 +0000</pubDate>
+      <source url="https://trinity-research.com/feed.xml">Simon Willison</source>
+      <description>datasette 1.0a38 patches a SQL injection vulnerability affecting instances that serve a mix of public and private tables from the same database using Datasette&#39;s built-in permissions system. Administrators running access-controlled multi-table instances should update immediately. Instances serving only public data, or where all tables share the same access level, are not affected.</description>
+    </item>
+    <item>
       <title>AI-assisted Oracle-to-PostgreSQL schema conversion in Visual Studio Code</title>
       <link>https://techcommunity.microsoft.com/t5/microsoft-blog-for-postgresql/ai-assisted-oracle-to-postgresql-schema-conversion-in-visual/ba-p/4542203</link>
       <guid isPermaLink="true">https://techcommunity.microsoft.com/t5/microsoft-blog-for-postgresql/ai-assisted-oracle-to-postgresql-schema-conversion-in-visual/ba-p/4542203</guid>

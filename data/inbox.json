@@ -1,23 +1,23 @@
 [
   {
-    "title": "AI-assisted Oracle-to-PostgreSQL schema conversion in Visual Studio Code",
-    "url": "https://techcommunity.microsoft.com/t5/microsoft-blog-for-postgresql/ai-assisted-oracle-to-postgresql-schema-conversion-in-visual/ba-p/4542203",
+    "title": "From Leadership Engagement, Town Halls to Communities: Put Viva Engage to Work at Comms Camp",
+    "url": "https://techcommunity.microsoft.com/t5/viva-engage-blog/from-leadership-engagement-town-halls-to-communities-put-viva/ba-p/4544752",
     "source": "Microsoft Tech Community",
     "published": "2026-08-06",
-    "summary": "<P><STRONG>By Aditya Duvuri, Anil Dogra, Pranay Lohia, AI Omar Rajawat, Gautam Juneja, Vikas Nimmagadda</STRONG></P> <P>We’re seeing significant interest in migrating database workloads from Oracle to Azure Database for PostgreSQL. Historically, schema conversion has been one of the most technically challenging and expensive steps in that journey, demanding specialist knowledge of both engines and stretching migration timelines before a single row of data moves. Recent advances in AI-assisted sc"
+    "summary": "<P>The best way to learn Viva Engage is not by watching someone else publish another perfectly prepared demo post. It is by starting with a real communications challenge.&nbsp; Maybe you are planning a leadership campaign and want employees to do more than simply read an update. Perhaps you are trying to build a community with a clear purpose, improve an AMA, make a town hall part of an ongoing conversation, or understand what employee questions are telling you.&nbsp; Bring that challenge to <ST"
   },
   {
-    "title": "Build and Deploy Confidential Virtual Machines on Azure Local (Public Preview)",
-    "url": "https://techcommunity.microsoft.com/t5/azure-arc-blog/build-and-deploy-confidential-virtual-machines-on-azure-local/ba-p/4543995",
+    "title": "Bring your communications challenge to Comms Camp 2026",
+    "url": "https://techcommunity.microsoft.com/t5/corporate-communications-blog/bring-your-communications-challenge-to-comms-camp-2026/ba-p/4544755",
     "source": "Microsoft Tech Community",
     "published": "2026-08-06",
-    "summary": "<P><EM>Estimated read: ~4 minutes</EM></P> <P>Confidential computing has become foundational to how regulated and sovereign organizations run their most sensitive workloads. Today, we're excited to announce that <STRONG>Confidential Virtual Machines on Azure Local are available in public preview</STRONG> — bringing hardware-based memory encryption and attestation to customer-owned, customer-managed edge infrastructure.</P> <P>This is a milestone for organizations that can't move their most sensi"
+    "summary": "<P>Corporate communicators are being asked to do more than ever. We are planning across more channels, supporting increasingly visible leaders, responding to employees in real time, experimenting with AI, and trying to demonstrate what is actually working. Somewhere between the stakeholder request, the fifth draft, and the post-campaign report, it can be difficult to find time to step back and improve the way the work gets done.</P> <P>That is why we created Comms Camp.&nbsp;</P> <img /> <P>Comm"
   },
   {
-    "title": "Introducing Muse Code and Muse Spark 1.2",
-    "url": "https://simonwillison.net/2026/Aug/5/muse-code-and-muse-spark-12/#atom-everything",
+    "title": "datasette 1.0a38",
+    "url": "https://simonwillison.net/2026/Aug/6/datasette/#atom-everything",
     "source": "Simon Willison",
-    "published": "2026-08-05",
-    "summary": "<p><strong><a href=\"https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2\">Introducing Muse Code and Muse Spark 1.2</a></strong></p> Yet more evidence that the most important characteristic of any model these days is long-sequence agentic tool calling. Meta shipped their own coding agent as part of getting that to work!</p> <blockquote> <p>Muse Spark 1.2 is a coding-focused update to Muse Spark 1.1, with improvements in code generation, complex debugging, codebase understanding,"
+    "published": "2026-08-06",
+    "summary": "<p><strong>Release:</strong> <a href=\"https://github.com/simonw/datasette/releases/tag/1.0a38\">datasette 1.0a38</a></p> <blockquote> <p>This release fixes a <strong>SQL injection</strong> security issue that affects Datasette instances that serve a <strong>mixture of public and private tables</strong> in the same database, with access configured using the <a href=\"https://docs.datasette.io/en/latest/authentication.html\">Datasette permissions system</a>.</p> <p>Site administrators who serve priva"
   }
 ]
