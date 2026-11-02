@@ -14,6 +14,29 @@ automation, predictive modeling, and data ingestion systems.
 | `slssm-01.html` | The Project SLSSM-01 research dossier — evidence, synthetic visualizations, and the disclosure boundary. |
 | `research-note.html` | The long-form research note: metric definitions, skeptic FAQ, limitations, citation blocks. |
 | `signals.html` | Generated. Business automation and applied AI, updated on weekdays. |
+| `hnted/` | HNTED hunting dashboard: sun/moon timing, both daily lunar windows, and regional whitetail rut context. |
+| `hnted/field-notes/` | Four short, source-linked hunting research articles. |
+
+## HNTED
+
+HNTED is a static, browser-based field-planning project by Trinity Research.
+Weather integration is deferred, with NWS the preferred future US source;
+camera import, accounts, and automatic article generation are not enabled.
+Sun/moon calculations and geographic rut matching run on the visitor's device.
+Saved spots and preferences stay in that browser.
+
+Town search uses a bundled GeoNames US town index under CC BY 4.0, with source
+and license attribution in the app. It has no geocoding API calls, API key,
+ZIP-code lookup, or property-address search. GPS and manual coordinates are
+available for locations outside that index.
+
+Edit `data/hnted-articles.json` and rebuild reviewed articles with
+`node scripts/build-hnted-notes.mjs --public`. Publication settings live in
+`data/hnted-publication.json`. Add new article URLs to `data/hnted-pages.json`;
+`node scripts/render-signals.mjs` preserves these entries in the root sitemap.
+Hunting articles are separate from the business-automation Signals feed.
+The HNTED app requires no server route; only its static files are published.
+Its astronomy library license is retained in `hnted/vendor/SUNCALC-LICENSE.txt`.
 
 `slssm-01.html`, `signals.html`, `feed.xml`, and `sitemap.xml` are the only
 pages with generated content; everything else is hand-written.

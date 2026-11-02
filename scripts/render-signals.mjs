@@ -183,6 +183,12 @@ writeFileSync(join(root, "feed.xml"), feedXml);
 /* ---------- sitemap.xml ---------- */
 
 const today = new Date().toISOString().slice(0, 10);
+const hntedManifest = join(root, "data/hnted-pages.json");
+const hntedPages = existsSync(hntedManifest) ? JSON.parse(readFileSync(hntedManifest, "utf8")) : [];
+const hntedSitemap = hntedPages.map(page => {
+  if (!/^\/hnted\/[a-z0-9/.-]*$/.test(page.path) || !/^\d{4}-\d{2}-\d{2}$/.test(page.modified) || !/^[01](\.\d+)?$/.test(page.priority)) throw new Error("Invalid HNTED sitemap entry");
+  return `  <url><loc>${SITE}${escapeHtml(page.path)}</loc><lastmod>${page.modified}</lastmod><changefreq>monthly</changefreq><priority>${page.priority}</priority></url>`;
+}).join("\n");
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
@@ -209,6 +215,7 @@ const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+${hntedSitemap}
 </urlset>
 `;
 

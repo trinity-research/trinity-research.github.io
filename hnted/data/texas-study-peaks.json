@@ -1,0 +1,164 @@
+{
+  "state": "TX",
+  "kind": "peak",
+  "source": "https://tpwd.texas.gov/huntwild/hunt/planning/rut_whitetailed_deer/",
+  "sourceLabel": "Texas Parks and Wildlife Department",
+  "edition": "Written 1996; three-year fetal-measurement study, 2,436 does across 16 study areas",
+  "metric": "Peak breeding/conception date reported for each study area",
+  "quality": "Historical study. Source reports little annual variation in most areas; young or poorly conditioned does may breed later. Ecoregions are broad and study areas are samples rather than prediction polygons. Never infer north/south or east/west dividers from latitude/longitude.",
+  "automaticLookup": "Official Gould ecoregion polygons identify ecological regions. HNTED displays a broad envelope of available study-area peaks within a region, labeled as an interpretation. No source-defined subdivision polygons were located; explicit user choice is required for a specific study-area peak. High Plains and Blackland Prairie have no standalone study choices.",
+  "ecoregionService": "https://services1.arcgis.com/1mtXwieMId59thmg/arcgis/rest/services/GouldEcoRegions/FeatureServer/0",
+  "ecoregionItem": "https://www.arcgis.com/home/item.html?id=78fa98507f564bd6aabd4c3697863111",
+  "ecoregionSourcePage": "https://tpwd.texas.gov/gis/data/baselayers/gouldecoregions/view",
+  "ecoregionFields": [
+    "Name",
+    "RegionNum"
+  ],
+  "ownership": "Study agency-authored and publicly available; no open license located for study. Official Gould layer owner TPWD_Wildlife1 within TPWD organization1mtXwieMId59thmg; credits Gould1975 and TPWD GIS. Layer license is informational-use/no-warranty disclaimer, not an explicit redistribution license. Retain attribution before later publishing.",
+  "choices": [
+    {
+      "id": "tx-gulf-north",
+      "region": "Gulf Prairies and Marshes",
+      "part": "Northern study area",
+      "peak": "09-30",
+      "rangeStart": "08-24",
+      "rangeEnd": "11-25",
+      "rangeMeaning": "Earliest and latest conception records for entire ecological region during study, not the peak movement window"
+    },
+    {
+      "id": "tx-gulf-south",
+      "region": "Gulf Prairies and Marshes",
+      "part": "Southern study area",
+      "peak": "10-31",
+      "rangeStart": "08-24",
+      "rangeEnd": "11-25",
+      "rangeMeaning": "Earliest and latest conception records for entire ecological region during study, not the peak movement window"
+    },
+    {
+      "id": "tx-post-oak-central",
+      "region": "Post Oak Savannah",
+      "part": "Central study area",
+      "peak": "11-10",
+      "rangeStart": "09-30",
+      "rangeEnd": "01-16",
+      "rangeMeaning": "Earliest and latest conception records for entire ecological region during study, not the peak movement window"
+    },
+    {
+      "id": "tx-post-oak-south",
+      "region": "Post Oak Savannah",
+      "part": "Southern study area",
+      "peak": "11-11",
+      "rangeStart": "09-30",
+      "rangeEnd": "01-16",
+      "rangeMeaning": "Earliest and latest conception records for entire ecological region during study, not the peak movement window"
+    },
+    {
+      "id": "tx-pineywoods-north",
+      "region": "Pineywoods",
+      "part": "Northern study area",
+      "peak": "11-22",
+      "rangeStart": "10-21",
+      "rangeEnd": "01-05",
+      "rangeMeaning": "Earliest and latest conception records for entire ecological region during study, not the peak movement window"
+    },
+    {
+      "id": "tx-pineywoods-south",
+      "region": "Pineywoods",
+      "part": "Southern study area",
+      "peak": "11-12",
+      "rangeStart": "10-21",
+      "rangeEnd": "01-05",
+      "rangeMeaning": "Earliest and latest conception records for entire ecological region during study, not the peak movement window"
+    },
+    {
+      "id": "tx-rolling-north",
+      "region": "Rolling Plains",
+      "part": "Northern study area",
+      "peak": "12-03",
+      "rangeStart": "10-08",
+      "rangeEnd": "12-30",
+      "rangeMeaning": "Earliest and latest conception records for entire ecological region during study, not the peak movement window"
+    },
+    {
+      "id": "tx-rolling-south",
+      "region": "Rolling Plains",
+      "part": "Southern study area",
+      "peak": "11-20",
+      "rangeStart": "10-08",
+      "rangeEnd": "12-30",
+      "rangeMeaning": "Earliest and latest conception records for entire ecological region during study, not the peak movement window"
+    },
+    {
+      "id": "tx-edwards-east",
+      "region": "Edwards Plateau",
+      "part": "Eastern study area",
+      "peak": "11-07",
+      "rangeStart": "10-09",
+      "rangeEnd": "01-30",
+      "rangeMeaning": "Earliest and latest conception records for entire ecological region during study, not the peak movement window"
+    },
+    {
+      "id": "tx-edwards-central",
+      "region": "Edwards Plateau",
+      "part": "Central study area",
+      "peak": "11-24",
+      "rangeStart": "10-09",
+      "rangeEnd": "01-30",
+      "rangeMeaning": "Earliest and latest conception records for entire ecological region during study, not the peak movement window"
+    },
+    {
+      "id": "tx-edwards-west",
+      "region": "Edwards Plateau",
+      "part": "Western study area",
+      "peak": "12-05",
+      "rangeStart": "10-09",
+      "rangeEnd": "01-30",
+      "rangeMeaning": "Earliest and latest conception records for entire ecological region during study, not the peak movement window"
+    },
+    {
+      "id": "tx-cross-timbers-north",
+      "region": "Cross Timbers",
+      "part": "Northern study area",
+      "peak": "11-15",
+      "rangeStart": "10-13",
+      "rangeEnd": "12-17",
+      "rangeMeaning": "Earliest and latest conception records for entire ecological region during study, not the peak movement window"
+    },
+    {
+      "id": "tx-cross-timbers-south",
+      "region": "Cross Timbers",
+      "part": "Southern study area",
+      "peak": "11-17",
+      "rangeStart": "10-13",
+      "rangeEnd": "12-17",
+      "rangeMeaning": "Earliest and latest conception records for entire ecological region during study, not the peak movement window"
+    },
+    {
+      "id": "tx-trans-pecos",
+      "region": "Trans-Pecos",
+      "part": "Entire study area",
+      "peak": "12-08",
+      "rangeStart": "11-04",
+      "rangeEnd": "01-04",
+      "rangeMeaning": "Earliest and latest conception records for entire ecological region during study, not the peak movement window"
+    },
+    {
+      "id": "tx-south-plains-east",
+      "region": "South Texas Plains",
+      "part": "Eastern study area",
+      "peak": "12-16",
+      "rangeStart": "11-09",
+      "rangeEnd": "02-01",
+      "rangeMeaning": "Earliest and latest conception records for entire ecological region during study, not the peak movement window"
+    },
+    {
+      "id": "tx-south-plains-west",
+      "region": "South Texas Plains",
+      "part": "Western study area",
+      "peak": "12-24",
+      "rangeStart": "11-09",
+      "rangeEnd": "02-01",
+      "rangeMeaning": "Earliest and latest conception records for entire ecological region during study, not the peak movement window"
+    }
+  ]
+}

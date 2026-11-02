@@ -1,0 +1,250 @@
+{
+  "checkedAt": "2026-11-01",
+  "season": "2024-25",
+  "source": "https://deerassociation.com/wp-content/uploads/2026/01/DR2026.pdf",
+  "pages": {
+    "antlered": 7,
+    "antlerless": 11,
+    "participation": 35
+  },
+  "selection": "Top 20 reported complete white-tailed deer harvest totals (antlered plus antlerless); prioritize implementation within this cohort using reported deer-hunter reach. Missing participation is retained as unknown, never zero. Kansas is included as an explicit owner-requested addition beyond the original cohort.",
+  "participationLimit": "State-reported estimates are not necessarily unique active people; New York includes all regular-season antlered-tag recipients. Coverage and missingness are retained. This is a launch cohort, not a universal equal-weight ranking.",
+  "states": [
+    {
+      "state": "Texas",
+      "antlered": 425529,
+      "antlerless": 411480,
+      "harvest": 837009,
+      "hunters": 1142060,
+      "deerHunters": 765180,
+      "harvestRank": 1,
+      "code": "TX",
+      "reachPriority": 1
+    },
+    {
+      "state": "Pennsylvania",
+      "antlered": 175280,
+      "antlerless": 301600,
+      "harvest": 476880,
+      "hunters": 840000,
+      "deerHunters": 621600,
+      "harvestRank": 2,
+      "code": "PA",
+      "reachPriority": 2
+    },
+    {
+      "state": "Wisconsin",
+      "antlered": 162336,
+      "antlerless": 165614,
+      "harvest": 327950,
+      "hunters": 652980,
+      "deerHunters": 604007,
+      "harvestRank": 3,
+      "code": "WI",
+      "reachPriority": 3
+    },
+    {
+      "state": "Alabama",
+      "antlered": 144828,
+      "antlerless": 176220,
+      "harvest": 321048,
+      "hunters": 544973,
+      "deerHunters": 234338,
+      "harvestRank": 4,
+      "code": "AL",
+      "reachPriority": 11
+    },
+    {
+      "state": "Michigan",
+      "antlered": 157204,
+      "antlerless": 130460,
+      "harvest": 287664,
+      "hunters": 656236,
+      "deerHunters": 603737,
+      "harvestRank": 5,
+      "code": "MI",
+      "reachPriority": 4
+    },
+    {
+      "state": "Missouri",
+      "antlered": 128935,
+      "antlerless": 146721,
+      "harvest": 275656,
+      "hunters": 556891,
+      "deerHunters": 473357,
+      "harvestRank": 6,
+      "code": "MO",
+      "reachPriority": 6
+    },
+    {
+      "state": "Georgia",
+      "antlered": 128846,
+      "antlerless": 145293,
+      "harvest": 274139,
+      "hunters": 400000,
+      "deerHunters": 320000,
+      "harvestRank": 7,
+      "code": "GA",
+      "reachPriority": 9
+    },
+    {
+      "state": "Mississippi",
+      "antlered": 117121,
+      "antlerless": 154168,
+      "harvest": 271289,
+      "hunters": 210041,
+      "deerHunters": 180635,
+      "harvestRank": 8,
+      "code": "MS",
+      "reachPriority": 17
+    },
+    {
+      "state": "Louisiana",
+      "antlered": 129060,
+      "antlerless": 109940,
+      "harvest": 239000,
+      "hunters": 293667,
+      "deerHunters": 211440,
+      "harvestRank": 9,
+      "code": "LA",
+      "reachPriority": 13
+    },
+    {
+      "state": "Ohio",
+      "antlered": 100766,
+      "antlerless": 137371,
+      "harvest": 238137,
+      "hunters": 324679,
+      "deerHunters": 275977,
+      "harvestRank": 10,
+      "code": "OH",
+      "reachPriority": 10
+    },
+    {
+      "state": "New York",
+      "antlered": 122427,
+      "antlerless": 100877,
+      "harvest": 223304,
+      "hunters": 536720,
+      "deerHunters": 536720,
+      "harvestRank": 11,
+      "code": "NY",
+      "reachPriority": 5
+    },
+    {
+      "state": "Virginia",
+      "antlered": 101238,
+      "antlerless": 103856,
+      "harvest": 205094,
+      "hunters": 307345,
+      "deerHunters": 186233,
+      "harvestRank": 12,
+      "code": "VA",
+      "reachPriority": 16
+    },
+    {
+      "state": "Arkansas",
+      "antlered": 97445,
+      "antlerless": 102840,
+      "harvest": 200285,
+      "hunters": 350000,
+      "deerHunters": 332500,
+      "harvestRank": 13,
+      "code": "AR",
+      "reachPriority": 8
+    },
+    {
+      "state": "North Carolina",
+      "antlered": 98466,
+      "antlerless": 90334,
+      "harvest": 188800,
+      "hunters": 264123,
+      "deerHunters": 204695,
+      "harvestRank": 14,
+      "code": "NC",
+      "reachPriority": 14
+    },
+    {
+      "state": "South Carolina",
+      "antlered": 90670,
+      "antlerless": 88828,
+      "harvest": 179498,
+      "hunters": null,
+      "deerHunters": 190330,
+      "harvestRank": 15,
+      "code": "SC",
+      "reachPriority": 15
+    },
+    {
+      "state": "Illinois",
+      "antlered": 78433,
+      "antlerless": 92889,
+      "harvest": 171322,
+      "hunters": null,
+      "deerHunters": null,
+      "harvestRank": 16,
+      "code": "IL",
+      "reachPriority": 18
+    },
+    {
+      "state": "Minnesota",
+      "antlered": 100954,
+      "antlerless": 69725,
+      "harvest": 170679,
+      "hunters": 542085,
+      "deerHunters": 448304,
+      "harvestRank": 17,
+      "code": "MN",
+      "reachPriority": 7
+    },
+    {
+      "state": "Tennessee",
+      "antlered": 91207,
+      "antlerless": 76773,
+      "harvest": 167980,
+      "hunters": null,
+      "deerHunters": 230611,
+      "harvestRank": 18,
+      "code": "TN",
+      "reachPriority": 12
+    },
+    {
+      "state": "Kentucky",
+      "antlered": 78568,
+      "antlerless": 71300,
+      "harvest": 149868,
+      "hunters": 308209,
+      "deerHunters": null,
+      "harvestRank": 19,
+      "code": "KY",
+      "reachPriority": 19
+    },
+    {
+      "state": "Oklahoma",
+      "antlered": 67360,
+      "antlerless": 61015,
+      "harvest": 128375,
+      "hunters": 450000,
+      "deerHunters": null,
+      "harvestRank": 20,
+      "code": "OK",
+      "reachPriority": 20
+    },
+    {
+      "state": "Kansas",
+      "antlered": 39215,
+      "antlerless": 35370,
+      "harvest": 74585,
+      "hunters": 201920,
+      "deerHunters": 70874,
+      "code": "KS",
+      "harvestRank": 26,
+      "reachPriority": null,
+      "inclusion": "Added explicitly at owner request; outside the original top-20 harvest cohort"
+    }
+  ],
+  "launchCohortSize": 20,
+  "requestedAdditions": [
+    "KS"
+  ]
+}

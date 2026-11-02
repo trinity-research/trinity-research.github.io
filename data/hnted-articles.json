@@ -1,0 +1,265 @@
+[
+  {
+    "slug": "barometric-pressure-and-deer-movement",
+    "category": "WEATHER / 01",
+    "title": "Does barometric pressure predict deer movement?",
+    "description": "How to read rising and falling pressure without turning a weather pattern into a promise about deer.",
+    "date": "2026-11-01",
+    "answer": "I think pressure is worth watching. What I want to know is whether it helps us make a better hunting decision, rather than just giving us another number to look at.",
+    "sections": [
+      {
+        "heading": "What does the research tell us?",
+        "paragraphs": [
+          {
+            "text": "Pressure changes along with wind, temperature, and rain. Mississippi's wildlife agency points out that it is hard to separate those effects. Their summary does not give us one pressure reading that reliably means bucks will be moving in daylight.",
+            "sources": [
+              "mdwfp"
+            ]
+          },
+          {
+            "text": "An Oklahoma GPS study found weather relationships that changed with the season, the hour, and whether the deer were bucks or does. Pressure showed a relationship in a few comparisons. That makes me interested in the pattern, but I would be careful about building a whole hunt around a particular reading.",
+            "sources": [
+              "webb"
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "How I would use it",
+        "paragraphs": [
+          {
+            "text": "For HNTED, I want to see where pressure is now and what it has done over the last three hours. An upward bar means rising pressure. A downward bar means falling pressure. I still want the wind, temperature change, and rain beside it so I can see the whole situation."
+          },
+          {
+            "text": "Say the pressure is falling before an afternoon change. I would look at when the wind is expected to turn and whether that changes the stand I can use. That is already useful information, even before we know whether the pressure trend adds anything to a movement prediction."
+          }
+        ]
+      },
+      {
+        "heading": "Let the cameras help answer it",
+        "paragraphs": [
+          {
+            "text": "This is where I think deer cameras could help. We could compare separate visits with the weather at the time the pictures were taken. A burst of ten pictures of one deer should not count as ten different visits. We would also need to know when the camera was actually working."
+          },
+          {
+            "text": "I want to keep the quiet mornings in that record too. Otherwise we will mostly remember the days that worked. After enough similar days, we may find a pattern on that ground. Until then, I would use pressure as another piece of the picture and keep watching what the deer actually do."
+          }
+        ]
+      }
+    ],
+    "sources": {
+      "mdwfp": {
+        "title": "Mississippi DWFP: Weather Conditions That Influence Deer Movement",
+        "url": "https://www.mdwfp.com/wildlife-hunting/private-lands-program/habitat-and-wildlife-information/weather-conditions-influence-deer-movement",
+        "type": "Agency research summary"
+      },
+      "webb": {
+        "title": "Webb et al. (2010): Measuring Fine-Scale White-Tailed Deer Movements",
+        "url": "https://onlinelibrary.wiley.com/doi/full/10.1155/2010/459610",
+        "type": "Peer-reviewed GPS study; Oklahoma"
+      }
+    }
+  },
+  {
+    "slug": "deer-movement-before-a-cold-front",
+    "category": "WEATHER / 02",
+    "title": "Do deer move more a few hours before a cold front?",
+    "description": "What pre-front observations can tell you, what the research tested, and how to check a two-hour window with cameras.",
+    "date": "2026-11-01",
+    "answer": "I've noticed more deer movement a couple of hours before a front. What I'm interested in is whether that happens often enough to help us plan a hunt.",
+    "sections": [
+      {
+        "heading": "What has actually been tested?",
+        "paragraphs": [
+          {
+            "text": "Penn State looked at adult female deer around winter storms and did not find a consistent movement increase in the preceding 24 hours. That is useful research, but it is a different question from bucks moving a couple of hours before a fall front.",
+            "sources": [
+              "psu"
+            ]
+          },
+          {
+            "text": "I would not throw out a hunting observation because one study asked a broader question. I also would not turn one busy afternoon into a rule. What I want to do is write the timing down and see whether the same thing keeps happening, including the fronts when nothing shows up."
+          }
+        ]
+      },
+      {
+        "heading": "Get the front timing right",
+        "paragraphs": [
+          {
+            "text": "A cold front brings advancing colder air. A wind shift, temperature change, and pressure trend can help us recognize its passage. Falling pressure by itself is not enough to say exactly when a front arrives. That matters if we are trying to look at a two-hour window.",
+            "sources": [
+              "nws"
+            ]
+          },
+          {
+            "text": "If two forecasts disagree about the arrival time, I want HNTED to show that. A front expected at three in the afternoon is a different planning question from one expected after dark. We should keep the forecast we saw beforehand and compare it with the conditions that actually arrived."
+          }
+        ]
+      },
+      {
+        "heading": "What I would compare",
+        "paragraphs": [
+          {
+            "text": "I would start by comparing separate camera visits in the three hours before passage, then the three-to-six-hour and six-to-twelve-hour periods before it. Those are test windows I would choose, not proven deer rules. I would compare similar times of day and parts of the season."
+          },
+          {
+            "text": "The camera's capture time is important here. A picture delivered late to the app could put the deer in the wrong weather window. Keep camera downtime and quiet periods in the record as well. If the same pattern holds across several fronts, then we have something more useful than a memory of one really good sit."
+          }
+        ]
+      }
+    ],
+    "sources": {
+      "psu": {
+        "title": "Penn State Deer-Forest Study: Spidey Sense?",
+        "url": "https://www.deer.psu.edu/spidey-sense/",
+        "type": "University research report; adult females and winter storms"
+      },
+      "nws": {
+        "title": "National Weather Service: Weather Education",
+        "url": "https://www.weather.gov/crp/weather_education",
+        "type": "Meteorological background; not a deer study"
+      }
+    }
+  },
+  {
+    "slug": "moon-phase-and-best-deer-hunting-times",
+    "category": "MOON / 03",
+    "title": "Can the moon tell you the best time to hunt deer?",
+    "description": "Moon phase and moon position are different. Here is how to use lunar windows while keeping their limits in view.",
+    "date": "2026-11-01",
+    "answer": "I've used hunting-time guides before, including an old app and a paper wheel. I like having something to plan around. I also want to understand what those predictions are based on.",
+    "sections": [
+      {
+        "heading": "What is the moon guide measuring?",
+        "paragraphs": [
+          {
+            "text": "Moon phase and moon position are different things. Phase tells us how much of the visible moon is lit. Position tells us when it rises, passes overhead, sets, or moves underfoot. Before comparing two guides, I would check which of those events each one is highlighting."
+          },
+          {
+            "text": "Mississippi State followed 48 GPS-collared bucks over two years in central Mississippi. Its Extension report tested several popular moon ideas and did not find a meaningful activity improvement associated with those predictions. That is a reason to be careful about what we promise, while remembering where and how the study was done.",
+            "sources": [
+              "msu"
+            ]
+          },
+          {
+            "text": "Another study in South Carolina did find some lunar associations, but they changed with phase and did not line up neatly with solunar-chart claims. To me, that means there is more to investigate. It does not give us a dependable promise about when a buck will walk past.",
+            "sources": [
+              "seafwa"
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What does our number mean?",
+        "paragraphs": [
+          {
+            "text": "HNTED carries forward the formulas recovered from the old Time2Hunt app. The number describes astronomical timing and weighting rules. An 80 does not mean an 80 percent chance of seeing a deer. I want that distinction to be easy to understand when someone first opens the forecast."
+          },
+          {
+            "text": "I would keep the moon windows alongside sunrise, sunset, local rut timing, and the weather. Then someone can look at the hours they actually have available. A lower moon score should not make a good local rut window disappear from the top of the screen."
+          }
+        ]
+      },
+      {
+        "heading": "Give it a fair test",
+        "paragraphs": [
+          {
+            "text": "The useful question is whether these windows help on our ground. Cameras could let us compare independent visits inside and outside the highlighted periods, while keeping time of day, season, weather, and camera uptime in view. Include the quiet days and several lunar cycles. That would give us something we can check instead of simply assuming the guide is right."
+          }
+        ]
+      }
+    ],
+    "sources": {
+      "msu": {
+        "title": "Mississippi State Extension: Lunar Legends (P4068)",
+        "url": "https://extension.msstate.edu/publications/lunar-legends-does-the-moon-influence-buck-activity",
+        "type": "Extension research publication; central Mississippi bucks"
+      },
+      "seafwa": {
+        "title": "Movement with the Moon: White-tailed Deer Activity and Solunar Events (2016)",
+        "url": "https://seafwa.org/journal/2016/movement-moon-white-tailed-deer-activity-and-solunar-events",
+        "type": "Peer-reviewed GPS study; South Carolina bucks"
+      }
+    }
+  },
+  {
+    "slug": "deer-rut-timing-north-to-south",
+    "category": "RUT / 04",
+    "title": "Does the deer rut move from north to south?",
+    "description": "Why rut timing varies by region, why peak breeding can differ from peak movement, and how to use a local breeding map.",
+    "date": "2026-11-01",
+    "answer": "From my hunting experience, the rut can change movement in a big way. I've also noticed the timing seem to move from north to south. I wanted to see how well that holds up in the data.",
+    "sections": [
+      {
+        "heading": "The rut deserves a place at the top",
+        "paragraphs": [
+          {
+            "text": "Mississippi State's tracking research describes bucks changing their movements as they search for receptive does, including trips outside their usual areas. That supports giving the breeding season a prominent place in a hunting forecast. It does not tell us to multiply every movement score by the same amount.",
+            "sources": [
+              "movement"
+            ]
+          },
+          {
+            "text": "What I want HNTED to do is make that seasonal context obvious. If we are approaching a supported local movement window, say so. If we are in it, put that where someone can see it before deciding how much time to spend in the woods."
+          }
+        ]
+      },
+      {
+        "heading": "The local dates matter",
+        "paragraphs": [
+          {
+            "text": "Mississippi's wildlife agency describes substantial breeding-date differences within the state, connected with population origins and genetics. That tells me we need the information for each person's hunting ground rather than one date for a whole state.",
+            "sources": [
+              "mississippi"
+            ]
+          },
+          {
+            "text": "Florida is a good reminder that the pattern has exceptions. Its wildlife agency reports breeding from July in southern Florida to February in the northwest. So I would keep my north-to-south observation as a starting question, then let the local information tell us what applies.",
+            "sources": [
+              "florida"
+            ]
+          },
+          {
+            "text": "I would also check what a map means by its dates. Is it showing average conception, the busiest movement period, or an estimate based on road collisions? Those can all be useful, but I want the app to explain which one it is using."
+          }
+        ]
+      },
+      {
+        "heading": "Put that information to work",
+        "paragraphs": [
+          {
+            "text": "Louisiana's agency points out that peak buck movement can happen one to two weeks before peak breeding. A buck searching for a doe and a buck staying with one are different situations. Being in the breeding window does not mean every buck will be covering the most ground.",
+            "sources": [
+              "louisiana"
+            ]
+          },
+          {
+            "text": "My approach would be to start with the best regional information, show an approaching or active window, and then compare that with dated camera visits. Chasing, tending pairs, and changes in daylight visits could help us understand the local picture. That is a practical way to use the research while continuing to learn from the ground we hunt."
+          }
+        ]
+      }
+    ],
+    "sources": {
+      "movement": {
+        "title": "Mississippi State Extension: Understanding Buck Movement (P3927)",
+        "url": "https://extension.msstate.edu/publications/understanding-buck-movement-how-when-and-why-bucks-navigate-the-landscape",
+        "type": "Extension research publication; tracked Mississippi bucks"
+      },
+      "mississippi": {
+        "title": "Mississippi DWFP: Understanding the White-Tailed Deer Rut",
+        "url": "https://www.mdwfp.com/wildlife-hunting/private-lands-program/habitat-and-wildlife-information/understanding-white-tailed-deer-rut",
+        "type": "Wildlife-agency research summary and regional breeding map"
+      },
+      "florida": {
+        "title": "Florida FWC: White-tailed Deer",
+        "url": "https://myfwc.com/hunting/deer/",
+        "type": "Wildlife-agency overview of Florida breeding chronology"
+      },
+      "louisiana": {
+        "title": "Louisiana LDWF: Estimated Deer Breeding Periods",
+        "url": "https://www.wlf.louisiana.gov/page/deer-breeding-periods",
+        "type": "Wildlife-agency regional estimates from reproductive data"
+      }
+    }
+  }
+]

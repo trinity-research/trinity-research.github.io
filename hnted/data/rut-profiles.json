@@ -1,0 +1,349 @@
+{
+  "checkedAt": "2026-11-01",
+  "modelVersion": "rut-context-1",
+  "method": "Recurring seasonal planning windows. For breeding ranges, the opportunity window starts 14 days before the source range and ends with it. For point estimates, HNTED uses seven days on either side. Those offsets are planning assumptions, not measured confidence intervals or encounter probabilities.",
+  "profiles": [
+    {
+      "id": "mo-state",
+      "state": "MO",
+      "region": "Missouri statewide baseline",
+      "kind": "breeding",
+      "start": "11-08",
+      "end": "11-21",
+      "sourceLabel": "Missouri Department of Conservation",
+      "source": "https://mdc.mo.gov/sites/default/files/2024-10/Hunting%20White-Tailed%20Deer%20in%20Missouri_2024_508.pdf",
+      "sourceEdition": "2024 hunting biology guide",
+      "original": "Most adult does bred in the second and third weeks of November.",
+      "interpretation": "HNTED represents the second and third weeks as November 8-21 and includes the preceding 14 days as an estimated searching opportunity.",
+      "quality": "Statewide seasonal baseline"
+    },
+    {
+      "id": "pa-state",
+      "state": "PA",
+      "region": "Pennsylvania adult-doe baseline",
+      "kind": "breeding",
+      "start": "11-11",
+      "end": "11-17",
+      "sourceLabel": "Pennsylvania Game Commission",
+      "source": "https://www.pa.gov/agencies/pgc/wildlife/discover-pa-wildlife/white-tailed-deer/ask-a-deer-question",
+      "sourceEdition": "Agency describes conception data collected 2000-2007",
+      "original": "Median adult-doe conception timing in mid-November, November 11-17.",
+      "interpretation": "A regional adult-doe baseline, with a 14-day earlier planning lead. Younger females can breed later.",
+      "quality": "Statewide historical baseline"
+    },
+    {
+      "id": "wi-state",
+      "state": "WI",
+      "region": "Wisconsin statewide camera baseline",
+      "kind": "movement",
+      "start": "10-25",
+      "end": "11-07",
+      "sourceLabel": "Wisconsin DNR Snapshot Wisconsin",
+      "source": "https://dnr.wisconsin.gov/snapshot/articles/february2024",
+      "sourceEdition": "February 2024 summary of 2019-2021 camera data",
+      "original": "Antlered camera detections peaked in week 44 across three years, described as late October or early November.",
+      "interpretation": "HNTED uses October 25-November 7 to represent late October/early November. These calendar boundaries are an interpretation of the reported timing, not measured start/end dates.",
+      "quality": "Statewide camera research baseline"
+    },
+    {
+      "id": "ny-state",
+      "state": "NY",
+      "region": "New York statewide baseline",
+      "kind": "breeding",
+      "start": "11-10",
+      "end": "11-20",
+      "sourceLabel": "New York Department of Environmental Conservation",
+      "source": "https://extapps.dec.ny.gov/docs/administration_pdf/deer2.pdf",
+      "sourceEdition": "DEC species information sheet; older publication",
+      "original": "Breeding season October-January with peak activity in mid-November.",
+      "interpretation": "HNTED represents mid-November as November 10-20, with a 14-day earlier planning lead. The publication does not supply those exact boundaries.",
+      "quality": "Broad historical seasonal baseline"
+    },
+    {
+      "id": "va-state",
+      "state": "VA",
+      "region": "Virginia statewide baseline",
+      "kind": "breeding",
+      "start": "11-15",
+      "end": "11-30",
+      "sourceLabel": "Virginia Department of Wildlife Resources",
+      "source": "https://dwr.virginia.gov/wildlife/information/white-tailed-deer/",
+      "sourceEdition": "Agency species account checked November 2026",
+      "original": "Breeding concentrated in the last two weeks of November.",
+      "interpretation": "HNTED represents the last two weeks as November 15-30, with a 14-day earlier planning lead.",
+      "quality": "Broad statewide seasonal baseline"
+    },
+    {
+      "id": "ar-state",
+      "state": "AR",
+      "region": "Most of Arkansas; broad baseline",
+      "kind": "breeding",
+      "start": "11-15",
+      "end": "11-30",
+      "sourceLabel": "Arkansas Game and Fish Commission",
+      "source": "https://www.agfc.com/news/still-a-lot-of-deer-season-left-for-arkansas-deer-hunters/",
+      "sourceEdition": "Historical agency article, 2018",
+      "original": "Peak rutting activity in mid- to late November in most of the state.",
+      "interpretation": "HNTED represents mid/late November as November 15-30 and adds a 14-day planning lead. Local exceptions remain possible.",
+      "quality": "Broad historical seasonal baseline"
+    },
+    {
+      "id": "sc-state",
+      "state": "SC",
+      "region": "South Carolina general baseline",
+      "kind": "breeding",
+      "start": "10-18",
+      "end": "11-14",
+      "sourceLabel": "South Carolina Department of Natural Resources",
+      "source": "https://www.dnr.sc.gov/wildlife/deer/faqsdeer.html",
+      "sourceEdition": "Agency FAQ checked November 2026",
+      "original": "Generally the last two weeks of October through the first two weeks of November.",
+      "interpretation": "HNTED represents this wording as October 18-November 14. A local breeding-map match would be more specific than this broad baseline.",
+      "quality": "Broad statewide seasonal baseline"
+    },
+    {
+      "id": "il-state",
+      "state": "IL",
+      "region": "Illinois seasonal movement baseline",
+      "kind": "movement",
+      "start": "10-25",
+      "end": "11-09",
+      "sourceLabel": "Illinois Natural History Survey Learn to Hunt",
+      "source": "https://hunt.inhs.illinois.edu/hunting-trapping/deer-hunting/deer-ecology/",
+      "sourceEdition": "University hunting-ecology guidance checked November 2026",
+      "original": "Chasing described as late October to early November, followed by an approximate November 10-20 breeding/tending period.",
+      "interpretation": "HNTED uses October 25-November 9 for the described chasing phase. Exact start/end dates are a calendar interpretation.",
+      "quality": "Statewide educational baseline",
+      "tendingStart": "11-10",
+      "tendingEnd": "11-20"
+    },
+    {
+      "id": "ky-state",
+      "state": "KY",
+      "region": "Kentucky broad November baseline",
+      "kind": "movement",
+      "start": "11-01",
+      "end": "11-30",
+      "sourceLabel": "Kentucky Department of Fish and Wildlife Resources",
+      "source": "https://www.kentucky.gov/Pages/Activity-stream.aspx?n=FishandWildlife&prId=504",
+      "sourceEdition": "Historical agency statement, 2020",
+      "original": "November described as usually the top month of deer activity due to the rut.",
+      "interpretation": "The entire month is a broad seasonal baseline. The source does not establish an exact local peak or property-level timing.",
+      "quality": "Broad historical month-level baseline"
+    },
+    {
+      "id": "mn-state",
+      "state": "MN",
+      "region": "Minnesota historical seasonal baseline",
+      "kind": "breeding",
+      "start": "11-09",
+      "end": "11-15",
+      "sourceLabel": "Minnesota DNR Whitetail Basics",
+      "source": "https://www.leg.mn.gov/docs/pre2003/other/020016.pdf",
+      "sourceEdition": "Historical DNR education publication archived by the Minnesota Legislature, 2002",
+      "original": "Rutting activity peaks during the week of November 12.",
+      "interpretation": "HNTED represents that week as November 9-15, with a 14-day earlier planning lead. This is an older educational baseline awaiting a newer local dataset.",
+      "quality": "Broad historical seasonal baseline"
+    },
+    {
+      "id": "ks-state-baseline",
+      "state": "KS",
+      "region": "Kansas statewide seasonal baseline",
+      "kind": "breeding",
+      "peak": "11-15",
+      "sourceLabel": "Kansas Department of Wildlife and Parks",
+      "source": "https://www.ksoutdoors.gov/discover-learn/wildlife-of-kansas/wildlife-vehicle-crashes",
+      "sourceEdition": "Undated agency biology guidance, verified November 1, 2026",
+      "original": "Deer breeding season (rut) peaks in mid-November, and this marks the period when deer-vehicle collisions are most frequent.",
+      "interpretation": "November 15 is HNTED's approximate anchor for the agency's phrase mid-November, not an exact measured peak day. The existing seven-day planning margin is an HNTED assumption. This agency page discusses breeding and collision risk; collisions are not treated as a direct measurement of local movement or hunter sightings.",
+      "quality": "Broad agency seasonal baseline; no published county distribution or sample sizes in this source",
+      "corroboration": {
+        "sourceLabel": "Kansas State University Extension, Johnson County",
+        "source": "https://www.johnson.k-state.edu/programs/natural-resources/agent-articles/nuisance-wildlife/deer-season-in-kansas-city.html",
+        "sourceEdition": "Page updated August 24, 2026",
+        "original": "It is generally accepted that the peak of breeding will happen close to November 15th in the Midwest.",
+        "finding": "K-State describes increased movement during finding and chasing in the week or two before breeding. Scope is the Midwest, in a Kansas City outreach article, not a Kansas conception study. Applies to white-tailed deer; do not imply independently validated mule-deer timing."
+      },
+      "verification": "KDWP page was available through the search index but direct web retrieval returned HTTP 403. Wording was independently corroborated by the accessible K-State article."
+    },
+    {
+      "id": "ok-state-baseline",
+      "state": "OK",
+      "region": "Oklahoma statewide seasonal baseline",
+      "kind": "breeding",
+      "peak": "11-11",
+      "sourceLabel": "Oklahoma Department of Wildlife Conservation",
+      "source": "https://www.wildlifedepartment.com/outdoor-news/deer-hunters-eager-nov-20-gun-season-opener",
+      "sourceEdition": "November 10, 2021; recurring baseline wording, not a live rut report",
+      "original": "The rut, or deer breeding season, normally peaks around the second week of November.",
+      "interpretation": "November 11 is HNTED's approximate anchor for the phrase second week of November, not an agency-published exact date. The existing seven-day planning margin is an HNTED assumption. Retain source age and do not present the 2021 observations or hunting rules as current. This is a broad white-tailed-deer baseline; regional timing can differ.",
+      "quality": "Broad agency seasonal baseline; no statewide conception distribution or county precision supplied",
+      "corroboration": [
+        {
+          "source": "https://www.wildlifedepartment.com/outdoor-news/deer-gun-season-opens-nov-21-take-doe-urged",
+          "sourceEdition": "November 13, 2020",
+          "finding": "A separate ODWC release describes the peak around the second week of November, confirming this is repeated guidance rather than merely one year's field observation."
+        },
+        {
+          "sourceLabel": "OSU Extension wildlife specialist Mark Turner on SUNUP / PBS",
+          "source": "https://www.pbs.org/video/dec-6-2025-kwwvjh/",
+          "sourceEdition": "December 6, 2025",
+          "original": "But generally most of the breeding occurs around the middle of November with some occurring before and after that.",
+          "finding": "Recent university outreach describes Oklahoma white-tailed deer breeding mostly during November, with some October and December breeding. This corroborates the broad November season but uses middle of November rather than ODWC's second week; avoid claiming day-level agreement."
+        }
+      ],
+      "historicalResearchNotForImport": {
+        "source": "https://ojs.library.okstate.edu/osu/index.php/OAS/article/download/5012/4682",
+        "citation": "M. R. Dunbar, Breeding Season of White-Tailed Deer in Eastern Oklahoma, Proceedings of the Oklahoma Academy of Science 56:24-25 (1976)",
+        "finding": "1972 specimens from eastern Oklahoma sites produced a mean conception date of November 13 from eight embryos found in twelve sampled does. Old, small, site-specific sample; do not use this exact date as statewide or current county data."
+      }
+    },
+    {
+      "id": "mi-state",
+      "state": "MI",
+      "region": "Michigan broad November baseline",
+      "kind": "breeding",
+      "start": "11-01",
+      "end": "11-30",
+      "sourceLabel": "Huron-Clinton Metropolitan Authority",
+      "source": "https://www.metroparks.com/wp-content/uploads/2021/12/12_December-2021_updated-FINAL.pdf#page=113",
+      "sourceEdition": "December 9, 2021 board packet, Deer Herd and Ecosystem Management Plan; printed page 109, PDF page 113",
+      "original": "Peak mating activity is in November.",
+      "interpretation": "HNTED represents the named month as November 1-30 and applies its 14-day earlier planning lead. This is broad Michigan biology guidance in a regional park authority's plan, not statewide conception measurements or an Upper/Lower Peninsula schedule. Local cameras and field observations should refine it.",
+      "quality": "Broad historical month-level educational baseline",
+      "measurementType": "Agency educational description; no sample or conception distribution reported for this sentence",
+      "geographicScope": "The reproduction section explicitly describes northern deer including Michigan; the publishing authority manages southeast Michigan parks",
+      "corroboration": [
+        {
+          "sourceLabel": "Michigan Department of Natural Resources",
+          "source": "https://www.michigan.gov/dnr/education/michigan-species/mammals/moose/research-updates",
+          "sourceEdition": "Q3 Update: July 1-Sept. 30, 2026",
+          "finding": "A DNR northern Michigan research specialist refers to the deer rut in November while explaining fall moose collisions. This corroborates a month-level deer baseline, not a measured peak date."
+        },
+        {
+          "sourceLabel": "Michigan Department of Natural Resources",
+          "source": "https://www.michigan.gov/dnr/managing-resources/wildlife/nuisance-wildlife/deer",
+          "sourceEdition": "Undated agency page checked November 2026",
+          "finding": "Names October-November as breeding season without giving a peak day."
+        }
+      ]
+    },
+    {
+      "id": "oh-state",
+      "state": "OH",
+      "region": "Ohio historical breeding baseline",
+      "kind": "breeding",
+      "start": "11-01",
+      "end": "11-15",
+      "sourceLabel": "Ohio Department of Natural Resources, Division of Wildlife",
+      "source": "https://dam.assets.ohio.gov/image/upload/ohiodnr.gov/documents/wildlife/education/White-tailed%20Deer%20PW.pdf#page=11",
+      "sourceEdition": "Ohio's Wildlife: The White-tailed Deer, a Project WILD supplement; historical PDF created February 2009, modified March 2009; exact print date not stated",
+      "original": "Peak Breeding Activity: Early to mid-November; begins as early as mid-October and runs through mid-January",
+      "interpretation": "HNTED represents early to mid-November as November 1-15 and applies its 14-day earlier planning lead. Those exact boundary days are a calendar interpretation of agency wording. The broader breeding season continues outside this peak, and this older education sheet is not a current local observation.",
+      "quality": "Broad historical educational breeding baseline",
+      "measurementType": "Agency species life-history description; no sample size or annual conception data given",
+      "geographicScope": "Ohio species education; no county subdivision",
+      "verification": "Visually verified At a Glance on PDF page 11. Cover identifies ODNR Division of Wildlife and a Project WILD supplement. PDF metadata dates are scan/file dates, not established publication dates.",
+      "corroboration": [
+        {
+          "sourceLabel": "Ohio Department of Natural Resources",
+          "source": "https://ohiodnr.gov/discover-and-learn/safety-conservation/wildlife-management/nuisance-wildlife/nuisance-deer",
+          "sourceEdition": "Undated agency page checked November 2026",
+          "finding": "Current deer-conflicts guidance identifies October and November as peak breeding season without a narrower date window."
+        }
+      ]
+    },
+    {
+      "id": "tn-state",
+      "state": "TN",
+      "region": "Tennessee broad November baseline",
+      "kind": "breeding",
+      "start": "11-01",
+      "end": "11-30",
+      "sourceLabel": "Tennessee Watchable Wildlife, a TWRA-sponsored program",
+      "source": "https://tnwatchablewildlife.org/details2.cfm?DISPLAYHABITAT=&Taxonomicgroup=Mammal+-+Large&commonname=White-tailed+Deer++%28Hunted%29&sort=aounumber&typename=Mammal&uid=11081615361672064",
+      "sourceEdition": "Undated program species account checked November 2026; underlying cited book edition is 2001, not a Tennessee conception dataset",
+      "original": "The peak of the rutting season is in November, but does can breed between September and February.",
+      "interpretation": "HNTED represents the named month as November 1-30 and applies its 14-day earlier planning lead. This is a broad educational baseline, not a Tennessee-wide measured conception range. Timing varies locally: University of Tennessee's 2025 Southern Blue Ridge guide places peak mating in late November to early December in the southern Appalachians, and a southwest Tennessee university study uses a later peak-rut period. A user-confirmed regional profile should take precedence when available.",
+      "quality": "Broad month-level educational baseline; important regional exceptions",
+      "measurementType": "TWRA-sponsored educational species description; not measured local conception dates",
+      "geographicScope": "General Tennessee species account, not subdivided by county",
+      "provenanceSource": "https://tnwatchablewildlife.org/about.cfm",
+      "provenanceNote": "About page identifies TWRA sponsorship in partnership with Tennessee Wildlife Resources Foundation. University of Tennessee Arboretum independently links the site as TWRA's Watchable Wildlife site: https://utarboretum.tennessee.edu/mammals/ . The species page and About page are indexed but can intermittently show bot-verification screens.",
+      "regionalCautionSource": "https://naturalresources.tennessee.edu/wp-content/uploads/sites/24/2025/01/Considerations-for-Wildlife-and-Fire_2025-Revision.pdf#page=23"
+    }
+  ],
+  "regionalSources": [
+    {
+      "state": "TX",
+      "source": "https://tpwd.texas.gov/huntwild/hunt/planning/rut_whitetailed_deer/",
+      "label": "Texas Parks and Wildlife regional breeding study",
+      "reason": "Timing varies across ecological regions. A verified region match is needed before assigning this spot a prediction."
+    },
+    {
+      "state": "AL",
+      "source": "https://www.outdooralabama.com/what-hunt/deer-hunting-alabama",
+      "label": "Alabama official rut map",
+      "reason": "Local breeding regions differ substantially. The map is verified; automatic regional boundaries are not yet imported."
+    },
+    {
+      "state": "GA",
+      "source": "https://georgiawildlife.com/index.php/rut-map",
+      "label": "Georgia DNR deer-movement map",
+      "reason": "County-level movement timing is available in the official map; the geographic/date layer still needs a validated import."
+    },
+    {
+      "state": "MS",
+      "source": "https://www.mdwfp.com/wildlife-hunting/private-lands-program/habitat-and-wildlife-information/understanding-white-tailed-deer-rut",
+      "label": "Mississippi DWFP regional breeding map",
+      "reason": "Breeding timing varies substantially within the state. A local region match is needed."
+    },
+    {
+      "state": "LA",
+      "source": "https://www.wlf.louisiana.gov/page/deer-breeding-periods",
+      "label": "Louisiana LDWF estimated breeding periods",
+      "reason": "The official map has regional two-week breeding windows. Automatic regional boundaries are not yet imported."
+    },
+    {
+      "state": "NC",
+      "source": "https://www.ncwildlife.gov/media/4373/download?attachment=",
+      "label": "North Carolina WRC 2025 county conception map",
+      "reason": "County estimates and sample counts are published. A validated county/date import is still needed."
+    },
+    {
+      "state": "FL",
+      "source": "https://myfwc.com/hunting/deer/",
+      "label": "Florida FWC regional conception maps",
+      "reason": "Timing varies greatly within Florida. Automatic source-region boundaries are not yet imported."
+    }
+  ],
+  "indiana": {
+    "state": "IN",
+    "source": "https://www.in.gov/dnr/fish-and-wildlife/wildlife-resources/animals/white-tailed-deer-biology",
+    "sourceLabel": "Indiana Department of Natural Resources",
+    "sourceEdition": "County GIS item modified May 7, 2026; historical collision averages",
+    "kind": "collisionPeak",
+    "quality": "County-level collision indicator",
+    "interpretation": "The source provides an average peak date from deer-vehicle collisions. HNTED uses seven days on either side as a planning window; this is not a measured confidence interval or a conception date."
+  },
+  "manualRegionalProfiles": [
+    {
+      "id": "tn-southern-appalachians",
+      "state": "TN",
+      "region": "Southern Appalachian mountains (user-confirmed region)",
+      "kind": "breeding",
+      "start": "11-21",
+      "end": "12-10",
+      "sourceLabel": "University of Tennessee Institute of Agriculture, School of Natural Resources",
+      "source": "https://naturalresources.tennessee.edu/wp-content/uploads/sites/24/2025/01/Considerations-for-Wildlife-and-Fire_2025-Revision.pdf#page=23",
+      "sourceEdition": "Considerations for Wildlife & Fire in the Southern Blue Ridge, 2025 Revision; Craig A. Harper and J. Adam Warwick; printed page 17, PDF page 23",
+      "original": "Peak of mating (rutting) occurs in late November to early December in the southern Appalachians.",
+      "interpretation": "HNTED represents late November to early December as November 21-December 10 and applies its 14-day earlier planning lead. These exact boundary days are HNTED's interpretation of broad university guidance. It applies to the named Appalachian region, not all of east Tennessee or all of Tennessee. Require explicit user region selection until a defensible source-aligned geographic boundary is imported.",
+      "quality": "Broad regional educational baseline, 2025 revision",
+      "measurementType": "University regional species-life-history summary; no conception distribution provided on the page",
+      "geographicScope": "Southern Appalachians/Southern Blue Ridge; source does not define a county-by-county rut region",
+      "selection": "manual-only",
+      "verification": "Downloaded and visually verified the complete white-tailed-deer life-history page. Replaces older PB1869 wording that said late November-December; that older URL currently returns 404."
+    }
+  ]
+}
