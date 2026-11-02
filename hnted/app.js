@@ -33,7 +33,7 @@ function render(){
   $('date-input').value=key;$('example-banner').hidden=!location.sample;
   $('daily-score').textContent=f.daily??'—';$('score-dial').style.setProperty('--score',f.daily??0);
   $('daily-title').textContent=f.daily===null?'No lunar rating today.':f.daily>=75?'Strong lunar alignment.':f.daily>=55?'Moderate lunar alignment.':f.daily>=35?'Some lunar alignment.':'Limited lunar alignment.';
-  $('daily-copy').textContent=f.polar?'Continuous daylight or darkness today. Sun-based hunting ratings are unavailable.':'An index of sun and moon timing—not the chance of seeing a deer. Read it alongside weather and your knowledge of this spot.';
+  $('daily-copy').textContent=f.polar?'Continuous daylight or darkness today. Sun-based hunting ratings are unavailable.':'When a moon window lines up with dawn or dusk, I pay closer attention. In my experience, those are times worth being in the woods. Local rut timing and what you’re seeing on your ground help round out the picture.';
   updateRutPanel({key,location:{...location},lunarTitle:$('daily-title').textContent,lunarCopy:$('daily-copy').textContent});
   const daylightMinutes=Math.round((f.daylight??0)*60);
   const daylight=f.daylight===null?'No sunrise / sunset':`${Math.floor(daylightMinutes/60)}h ${daylightMinutes%60}m daylight`;
