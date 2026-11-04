@@ -1,6 +1,7 @@
 import {dateKey} from '../engine.js';
 const fields={Mallard:'mallard',BlackDuck:'blackDuck',WoodDuck:'woodDuck',Gadwall:'gadwall',Wigeon:'wigeon',Pintail:'northernPintail',B_Wteal:'blueWingedTeal',G_Wteal:'greenWingedTeal',Shoveler:'northernShoveler',UnidDabbler:'unidentifiedDabbler'};
 const count=value=>value===null?null:typeof value==='number'&&Number.isInteger(value)&&value>=0?value:(()=>{throw new Error('Invalid TWRA count.');})();
+export function tennesseeNotes(notes){const message='No prior-count trend is calculated by this adapter.';return [...notes.filter(n=>!n.includes('No previous comparable')&&n!==message),message];}
 export function latestBlackBayou(payload,{today=dateKey(new Date(),'America/Chicago')}={}){
   if(payload?.error||payload?.exceededTransferLimit||!Array.isArray(payload?.features))throw new Error('Incomplete TWRA response.');
   const rows=payload.features.map(f=>f.attributes).filter(a=>a?.AreaSurveyed==='Black Bayou'&&a.SurveyType==='ground'&&a.StateSurveyed?.toLowerCase()==='tn');

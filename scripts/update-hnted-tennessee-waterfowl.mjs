@@ -1,7 +1,7 @@
 import {readFile,writeFile,mkdir,rename} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {dateKey} from '../hnted/engine.js';
-import {latestBlackBayou} from '../hnted/waterfowl/tennessee-data.js';
+import {latestBlackBayou,tennesseeNotes} from '../hnted/waterfowl/tennessee-data.js';
 import {validateReports} from '../hnted/waterfowl/report-data.js';
 const root=new URL('../',import.meta.url),file=new URL('data/hnted-waterfowl/waterfowl-east-tn-in.json',root),raw=new URL('.hnted-runtime/waterfowl/',root);
 const service='https://services3.arcgis.com/PWXNAH2YKmZY7lBq/arcgis/rest/services/service_e17e08b94e004c26ba2a532f36ad411b/FeatureServer/0';
@@ -27,7 +27,7 @@ Object.assign(report,{id:'twra-black-bayou-'+latest.date,reportDate:latest.date,
 report.scope.description='Latest reported ground survey at Black Bayou Refuge in the queried reporting season. This is one refuge, not statewide Tennessee coverage; the state outline is a report reference.';
 report.areas=[{id:'twra-row-'+latest.objectId,name:'Black Bayou Refuge',date:latest.date,mallardCount:latest.mallardCount,allDucks:latest.allDucks,surveyType:'ground',counts:latest.counts,sourceGroupCounts:latest.sourceGroupCounts,sourceWaterConditionText:latest.sourceWaterConditionText,waterConditionNote:'The source does not define this percentage; no flooded-acre estimate is inferred.'}];
 report.provenance='Official TWRA-linked feature service row '+latest.objectId+'. Original Mallard and DuckTotals fields. Source response SHA256 '+result.sha256+'.';
-report.notes=report.notes.filter(n=>!n.includes('No previous comparable'));report.notes.push('No prior-count trend is calculated by this adapter.');
+report.notes=tennesseeNotes(report.notes);
 validateReports(document);
 const pending=new URL('data/hnted-waterfowl/waterfowl-east-tn-in.pending.json',root);await writeFile(pending,JSON.stringify(document,null,2)+'\n');await rename(pending,file);
 console.log('TWRA checked: Black Bayou survey '+latest.date+'; '+latest.allDucks+' ducks, '+latest.mallardCount+' mallards. Other agency reports retain their reviewed records.');
