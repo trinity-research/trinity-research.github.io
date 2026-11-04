@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-04T11:56:31Z",
+  "status": "verified-current-tennessee-count-and-indiana-reuse-status",
+  "sources": [
+    {
+      "id": "twra-refuge-counts",
+      "name": "Tennessee Wildlife Resources Agency",
+      "indexUrl": "https://www.tn.gov/twra/hunting/migratory-birds/waterfowl-counts.html",
+      "reportUrl": "https://www.arcgis.com/apps/dashboards/5a158cd3c7194625838f3b1048959ce3",
+      "serviceUrl": "https://services3.arcgis.com/PWXNAH2YKmZY7lBq/arcgis/rest/services/service_e17e08b94e004c26ba2a532f36ad411b/FeatureServer/0",
+      "retrievedAt": "2026-11-04T12:04:43.591Z",
+      "documentSha256": "c5be27f89e3133c16e144785b211e0c3f19e8210c58771a3b5ce75887360af28",
+      "dashboardDataSha256": "c54374fe6223a9313b9a2d056415814d85bbd9fe1005adbc5a658c9b2b620b66",
+      "access": "Official page links this public ArcGIS dashboard. Anonymous dashboard/service metadata and a bounded current-season query returned HTTP 200. Direct requests to the tn.gov page timed out during this audit; its text and dashboard link were checked through the web tool.",
+      "reuseDecision": "Extracted factual survey date/species counts with agency attribution and original dashboard link. No report artwork, personal contacts, or full dashboard copied; no blanket open-data licence asserted. Dashboard and feature-service item metadata supplied no restrictive licence text.",
+      "verification": "Latest Black Bayou ground-survey row from the bounded current-season official service. Numbered duplicate count fields are excluded.",
+      "cadence": "Agency dashboard describes bi-weekly refuge surveys during November-February; actual row dates control freshness.",
+      "dateWarning": "The agency landing page still labels its dashboard 2025-2026, but the underlying official service already contains the November 2, 2026 observation. Do not infer availability from that stale page label alone.",
+      "lastAutomaticCheckAt": "2026-11-04T12:04:43.591Z"
+    },
+    {
+      "id": "indiana-dnr-waterfowl-counts",
+      "name": "Indiana Department of Natural Resources",
+      "indexUrl": "https://www.in.gov/dnr/fish-and-wildlife/hunting-and-trapping/waterfowl-and-migratory-game-birds/waterfowl-counts/",
+      "reportUrl": "https://experience.arcgis.com/experience/5a21345dea4b4fdcac57e73a8cf8086a",
+      "termsUrl": "https://www.arcgis.com/sharing/rest/content/items/5a21345dea4b4fdcac57e73a8cf8086a?f=json",
+      "retrievedAt": "2026-11-04T11:53:53.961Z",
+      "documentSha256": "5cd879d7f1742315dd32b80bee5221cc283f2ba7d0c80c8903286889b7233b85",
+      "indexSha256": "ad04ca7e8fd4c4dd49ec38c6e693830ca06770b207ce42780bca782fd532d41f",
+      "access": "Official Indiana page and linked public dashboard metadata are readable anonymously. The page says surveys occur weekly from late August through January, with possible late or missing property reports.",
+      "reuseDecision": "Public availability does not resolve the explicit item licence restriction to IDNR and approved partners. No underlying observation counts were queried or imported. Keep the official dashboard link until reuse permission is clarified; no agency contact initiated.",
+      "status": "reuse-permission-unresolved"
+    }
+  ],
+  "reports": [
+    {
+      "id": "twra-black-bayou-2026-11-02",
+      "sourceId": "twra-refuge-counts",
+      "type": "survey-counts",
+      "title": "Black Bayou refuge waterfowl count",
+      "reportDate": "2026-11-02",
+      "datePrecision": "survey-date",
+      "url": "https://www.arcgis.com/apps/dashboards/5a158cd3c7194625838f3b1048959ce3",
+      "scope": {
+        "kind": "one-refuge-ground-count",
+        "name": "Black Bayou Refuge, Tennessee",
+        "state": "TN",
+        "referenceStates": [
+          "TN"
+        ],
+        "description": "Latest reported ground survey at Black Bayou Refuge in the queried reporting season. This is one refuge, not statewide Tennessee coverage; the state outline is a report reference.",
+        "marker": null,
+        "surveyGeometry": null
+      },
+      "method": "TWRA refuge inventory recorded as a ground survey. Actual survey dates are retained; a daily source check does not create a new observation.",
+      "summary": {
+        "mallardCount": 50,
+        "allDucks": 350,
+        "previousMallardCount": null,
+        "previousAllDucks": null,
+        "allDucksDefinition": "Original DuckTotals field for the Black Bayou row, not geese, cranes, coots, all birds, or a statewide total."
+      },
+      "areas": [
+        {
+          "id": "twra-row-1760",
+          "name": "Black Bayou Refuge",
+          "date": "2026-11-02",
+          "mallardCount": 50,
+          "allDucks": 350,
+          "surveyType": "ground",
+          "counts": {
+            "mallard": 50,
+            "blackDuck": 0,
+            "woodDuck": 100,
+            "gadwall": 0,
+            "wigeon": 0,
+            "northernPintail": 0,
+            "blueWingedTeal": 0,
+            "greenWingedTeal": 200,
+            "northernShoveler": 0,
+            "unidentifiedDabbler": 0
+          },
+          "sourceGroupCounts": {
+            "dabblers": 350,
+            "divers": null,
+            "seaDucks": null,
+            "mergansers": null
+          },
+          "sourceWaterConditionText": "60%",
+          "waterConditionNote": "The source does not define this percentage; no flooded-acre estimate is inferred."
+        }
+      ],
+      "provenance": "Official TWRA-linked feature service row 1760. Original Mallard and DuckTotals fields. Source response SHA256 c5be27f89e3133c16e144785b211e0c3f19e8210c58771a3b5ce75887360af28.",
+      "notes": [
+        "This is a single refuge observation, not a statewide Tennessee duck count or an arrival prediction.",
+        "The dashboard's numbered Mallard2/DuckTotals2 fields repeat the original counts. Only the original fields are used; no duplicates are added.",
+        "Null diver, sea-duck, and merganser group fields remain unreported rather than observed zeros. The source's DuckTotals value is preserved as reported.",
+        "No prior-count trend is calculated by this adapter."
+      ],
+      "checkedAt": "2026-11-04T12:04:43.591Z"
+    }
+  ],
+  "pendingSources": [
+    {
+      "id": "indiana-dnr-waterfowl-reuse",
+      "sourceId": "indiana-dnr-waterfowl-counts",
+      "name": "Indiana weekly waterfowl counts",
+      "state": "IN",
+      "url": "https://www.in.gov/dnr/fish-and-wildlife/hunting-and-trapping/waterfowl-and-migratory-game-birds/waterfowl-counts/",
+      "status": "reuse-permission-unresolved",
+      "checkedAt": "2026-11-04T11:56:31Z",
+      "note": "Indiana publishes a weekly counts dashboard, but its item metadata restricts the item and underlying data to IDNR and approved partners. Follow the official link for current counts; republication permission remains unresolved, so no counts are imported."
+    }
+  ]
+}

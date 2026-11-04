@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-04T00:17:32.588Z",
+  "sources": [],
+  "reports": [],
+  "pendingSources": [
+    {
+      "id": "kansas-kdwp",
+      "name": "Kansas waterfowl reports",
+      "url": "https://www.ksoutdoors.gov/outdoor-activities/hunting-in-kansas/hunting-forecasts/waterfowl-reports",
+      "status": "source-access-unavailable",
+      "checkedOn": "2026-11-03",
+      "note": "The official report page returned HTTP 403 during both direct retrieval and the web check. No current bird counts were imported. Open the agency page for its latest public report."
+    },
+    {
+      "id": "oklahoma-odwc",
+      "name": "Oklahoma waterfowl and wetland reports",
+      "url": "https://www.wildlifedepartment.com/hunting/resources/waterfowl/reports",
+      "status": "awaiting-current-season",
+      "checkedOn": "2026-11-03",
+      "nextAnnouncedReportDate": "2026-11-12",
+      "note": "The agency announces a new reporting cycle starting November 12. The viewed area entries still carry prior-season dates, so they are not imported as current conditions."
+    }
+  ]
+}

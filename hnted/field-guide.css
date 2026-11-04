@@ -4,6 +4,7 @@ body{font-size:16px;line-height:1.5}
 .site-header{background:#f7f3e7;border-top:5px solid #263e30;border-bottom:1px solid #b3b6a3}
 .header-inner{padding:18px 36px;gap:30px}.header-inner nav{gap:24px}.header-inner nav a,.nav-link{font-size:14px;min-height:44px;display:inline-flex;align-items:center;color:#4d5849}
 .nav-active:after{width:100%;left:0;background:#805626}.brand .brand-wordmark{font-weight:700;letter-spacing:2px}.brand .brand-ending{color:#805626;font-weight:700}.brand .brand-wordmark small{font-size:9px;letter-spacing:.6px;color:#4d5849}
+@media(max-width:700px){.header-inner nav .week-nav-link{display:none}}
 .page{padding-top:35px}.eyebrow,.intro-label,.section-heading .eyebrow,.outlook-top .eyebrow,.card-heading .eyebrow{font-size:11px;letter-spacing:1.2px;color:#536049}
 .intro-label{padding-bottom:12px;border-bottom:3px double #adb19b;display:block;letter-spacing:2px}
 h1{font-size:49px;letter-spacing:-1.5px}.page-heading p{font-size:16px;color:var(--muted)}.page-heading{margin-bottom:25px}

@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-04T00:10:45Z",
+  "sources": [
+    {
+      "id": "minnesota-dnr-field",
+      "name": "Minnesota Department of Natural Resources",
+      "indexUrl": "https://www.dnr.state.mn.us/hunting/waterfowl/report.html",
+      "reportUrl": "https://www.dnr.state.mn.us/hunting/waterfowl/report.html",
+      "retrievedAt": "2026-11-04T00:09:12Z",
+      "documentSha256": "ecd0032e41e21e7a6d83630c93ff60421d8590311176527ff624b1f9b1405396",
+      "access": "Public official HTML. The embedded weeklyWaterfowlReport array was parsed as JSON without executing source code; the static fallback alone omits the actual reports.",
+      "cadence": "Weekly during the waterfowl season.",
+      "reuseDecision": "Original short paraphrases of factual agency observations, with attribution and source links. Original report prose, artwork, and personal contacts are not republished.",
+      "verification": "Compared the embedded statewide and named-office records with the dated page. No-report entries remain missing."
+    },
+    {
+      "id": "south-dakota-gfp-field",
+      "name": "South Dakota Game, Fish and Parks",
+      "indexUrl": "https://gfp.sd.gov/migration-reports/",
+      "reportUrl": "https://gfp.sd.gov/migration-reports/",
+      "retrievedAt": "2026-11-04T00:09:13Z",
+      "documentSha256": "a8e465ddcb88ad98cca18ac22af540524078182bb6797cec16fcf69aed813835",
+      "access": "Public official HTML, 2026 Waterfowl Report, newest visible report week October 26.",
+      "cadence": "Dated seasonal report weeks; check the actual newest heading, not retrieval date.",
+      "reuseDecision": "Original short paraphrases of factual agency observations, with attribution and source links. Original report prose and artwork are not republished.",
+      "verification": "Read all six regional sections under Week of October 26; older weekly headings were excluded from these summaries."
+    }
+  ],
+  "reports": [
+    {
+      "id": "minnesota-field-2026-10-29",
+      "sourceId": "minnesota-dnr-field",
+      "type": "field-notes",
+      "title": "Minnesota field reports",
+      "reportDate": "2026-10-29",
+      "datePrecision": "report-updated",
+      "sourceUpdatedAt": "2026-10-29T13:43:00-05:00",
+      "url": "https://www.dnr.state.mn.us/hunting/waterfowl/report.html",
+      "scope": {
+        "kind": "selected-regional-office-notes",
+        "name": "Minnesota DNR reporting offices",
+        "state": "MN",
+        "referenceStates": ["MN"],
+        "description": "Selected office observations from a statewide reporting page. The state outline locates the report, not surveyed coverage or flock positions.",
+        "marker": null,
+        "surveyGeometry": null
+      },
+      "method": "Narrative observations compiled from state and federal wildlife managers and surveys; these summaries are not standardized abundance estimates.",
+      "headline": "Different pictures across the state.",
+      "summaryNote": "DNR described arrivals in several regions, with stronger numbers in the south and west.",
+      "summary": {"mallardCount": null, "allDucks": null},
+      "regions": [
+        {"name": "Fergus Falls", "note": "More birds, including mallards; lake levels remained low.", "mallardObservation": "Mallards reported present.", "count": null},
+        {"name": "Roseau River WMA", "note": "Bird numbers and activity declined; pool habitat remained favorable.", "mallardObservation": "Mallards appeared in harvest observations; no abundance count supplied.", "count": null},
+        {"name": "Lac qui Parle WMA", "note": "No clear influx of new birds; wetlands were drying.", "mallardObservation": null, "count": null},
+        {"name": "Appleton", "note": "Small, temporary arrivals without a major concentration.", "mallardObservation": "Mallard hunting remained difficult.", "count": null},
+        {"name": "Aitkin", "note": null, "mallardObservation": null, "count": null, "status": "no-report"}
+      ],
+      "provenance": "Official page Updated October 29, 2026; embedded weeklyWaterfowlReport records General, Fergus Falls, Roseau River WMA, Lac qui Parle WMA, Appleton, and Aitkin.",
+      "notes": ["These are dated field observations. Weather expectations stated in the original report belong to that report week, not today's forecast.", "Hunter harvest descriptions are not converted into bird abundance."]
+    },
+    {
+      "id": "south-dakota-field-2026-10-26",
+      "sourceId": "south-dakota-gfp-field",
+      "type": "field-notes",
+      "title": "South Dakota field reports",
+      "reportDate": "2026-10-26",
+      "datePrecision": "report-week-label",
+      "url": "https://gfp.sd.gov/migration-reports/",
+      "scope": {
+        "kind": "regional-narrative-reports",
+        "name": "South Dakota reporting regions",
+        "state": "SD",
+        "referenceStates": ["SD"],
+        "description": "Six agency reporting regions. The state outline is a geographic reference; regional boundaries and flock positions are not inferred.",
+        "marker": null,
+        "surveyGeometry": null
+      },
+      "method": "Regional agency field narratives. Directional observations are retained without assigning counts or numerical migration bonuses.",
+      "headline": "Some arrivals; water still matters.",
+      "summaryNote": "Reports described uneven arrivals and dry wetlands in parts of the state.",
+      "summary": {"mallardCount": null, "allDucks": null},
+      "regions": [
+        {"name": "Northeast", "note": "Migration remained slow; mallards were scarce and divers were gathering.", "count": null},
+        {"name": "East Central", "note": "Some new mallards followed northern cold and light snow.", "count": null},
+        {"name": "Southeast", "note": "Mixed duck arrivals used areas holding water.", "count": null},
+        {"name": "Lower River / South Central", "note": "Several duck species arrived, but many waterholes remained dry.", "count": null},
+        {"name": "James River Valley", "note": "Duck numbers improved after north winds, including mallards.", "count": null},
+        {"name": "Pierre / Central", "note": "Birds increased around Mobridge; farther south, groups remained scattered.", "count": null}
+      ],
+      "provenance": "Official 2026 Waterfowl Report, Week of October 26, six regional sections before Week of October 19.",
+      "notes": ["Regional descriptions do not establish exact departure times, arrival times, or standardized counts."]
+    }
+  ]
+}

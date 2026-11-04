@@ -1,0 +1,473 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-04T00:12:41.480045Z",
+  "status": "verified-official-report-snapshot",
+  "sources": [
+    {
+      "id": "mdc-waterfowl-counts",
+      "name": "Missouri Department of Conservation",
+      "indexUrl": "https://mdc12.mdc.mo.gov/Applications/publicreportviewer?listFor=WaterFowl&reporttitle=Waterfowl+Hunting+Information",
+      "reportUrl": "https://mdc12.mdc.mo.gov/Applications/PublicReportViewer/ReportView/ReportViewer.aspx?report=400",
+      "retrievedAt": "2026-11-04T00:10:37.703037Z",
+      "documentSha256": "38ac3d544791eaeaf275515171b1efc14a16d818ea4dd7bcfc6da11b1451cefe",
+      "csvSha256": "db2099b3e7df59b0709e4245e88af796bc59d6c35085c0f4cb88fc86a342fda5",
+      "htmlSha256": "c4276ada1460a000a39d4b3244535d49652f5f5e1a4a947687b4204020967894",
+      "access": "Public report 400 and its exposed PDF/CSV exports downloaded successfully.",
+      "termsUrl": "https://mdc.mo.gov/terms-use",
+      "reuseDecision": "Factual numeric observations with attribution and source link; original report artwork and full files remain local. No blanket open-data licence asserted.",
+      "verification": "HTML, CSV and PDF agree; numeric table columns visually checked on PDF pages 1, 3, 5, 7 and 9. Area sums reconcile with the published summary.",
+      "linkBehavior": "Live viewer defaults to the latest survey; it is not an immutable report archive."
+    }
+  ],
+  "reports": [
+    {
+      "id": "missouri-2026-10-27",
+      "sourceId": "mdc-waterfowl-counts",
+      "type": "survey-counts",
+      "title": "Missouri coordinated waterfowl survey",
+      "reportDate": "2026-10-27",
+      "datePrecision": "agency-survey-week-label",
+      "observationPeriod": {
+        "start": "2026-10-26",
+        "end": "2026-10-29",
+        "datesVaryByArea": true
+      },
+      "referenceStates": [
+        "MO"
+      ],
+      "url": "https://mdc12.mdc.mo.gov/Applications/PublicReportViewer/ReportView/ReportViewer.aspx?report=400",
+      "scope": {
+        "kind": "aggregate-survey-areas",
+        "name": "Missouri surveyed conservation areas and refuges",
+        "state": "MO",
+        "description": "Eighteen surveyed conservation areas and refuges; not a census of every wetland or duck in Missouri.",
+        "marker": null,
+        "surveyGeometry": null
+      },
+      "method": "Coordinated waterfowl estimates from conservation-area wetlands and national wildlife refuges, approximately fortnightly during the season.",
+      "provenance": {
+        "summary": "Report comments labelled October 27, 2026.",
+        "areas": "Specific Area Results; each row retains its actual survey date.",
+        "latestCheck": "Viewer offered October 13 and October 27 survey weeks; October 27 selected at retrieval."
+      },
+      "summary": {
+        "allDucks": 132025,
+        "mallardCount": 4850,
+        "areaCount": 18,
+        "previousAllDucks": null,
+        "previousMallardCount": null
+      },
+      "comparisons": {
+        "fiveYearAverage": {
+          "allDucks": 147256,
+          "mallardCount": 32581,
+          "allDucksPercentChange": -10.3,
+          "mallardPercentChange": -85.1
+        },
+        "twentyYearAverage": {
+          "allDucks": 197968,
+          "mallardCount": 53735,
+          "allDucksPercentChange": -33.3,
+          "mallardPercentChange": -91.0
+        },
+        "basis": "Agency-reported comparisons for surveyed areas, not week-over-week changes."
+      },
+      "areas": [
+        {
+          "name": "BK Leach CA",
+          "date": "2026-10-29",
+          "allDucks": 885,
+          "mallardCount": 130,
+          "counts": {
+            "gadwall": 110,
+            "mallard": 130,
+            "mixedDabblers": 200,
+            "mixedDivers": 0,
+            "mixedDucks": 0,
+            "northernPintail": 200,
+            "ringNeckedDuck": 0,
+            "northernShoveler": 0,
+            "tealGroup": 175,
+            "wigeonGroup": 30
+          },
+          "surveyGeometry": null,
+          "marker": null
+        },
+        {
+          "name": "Bob Brown CA",
+          "date": "2026-10-26",
+          "allDucks": 14147,
+          "mallardCount": 1374,
+          "counts": {
+            "gadwall": 717,
+            "mallard": 1374,
+            "mixedDabblers": 0,
+            "mixedDivers": 0,
+            "mixedDucks": 0,
+            "northernPintail": 9960,
+            "ringNeckedDuck": 40,
+            "northernShoveler": 697,
+            "tealGroup": 632,
+            "wigeonGroup": 687
+          },
+          "surveyGeometry": null,
+          "marker": null
+        },
+        {
+          "name": "Coon Island CA",
+          "date": "2026-10-26",
+          "allDucks": 70,
+          "mallardCount": 10,
+          "counts": {
+            "gadwall": 0,
+            "mallard": 10,
+            "mixedDabblers": 0,
+            "mixedDivers": 0,
+            "mixedDucks": 0,
+            "northernPintail": 30,
+            "ringNeckedDuck": 0,
+            "northernShoveler": 5,
+            "tealGroup": 10,
+            "wigeonGroup": 0
+          },
+          "surveyGeometry": null,
+          "marker": null
+        },
+        {
+          "name": "Duck Creek CA",
+          "date": "2026-10-26",
+          "allDucks": 5260,
+          "mallardCount": 325,
+          "counts": {
+            "gadwall": 1325,
+            "mallard": 325,
+            "mixedDabblers": 0,
+            "mixedDivers": 0,
+            "mixedDucks": 0,
+            "northernPintail": 1140,
+            "ringNeckedDuck": 1735,
+            "northernShoveler": 375,
+            "tealGroup": 175,
+            "wigeonGroup": 0
+          },
+          "surveyGeometry": null,
+          "marker": null
+        },
+        {
+          "name": "Eagle Bluffs CA",
+          "date": "2026-10-26",
+          "allDucks": 200,
+          "mallardCount": 0,
+          "counts": {
+            "gadwall": 10,
+            "mallard": 0,
+            "mixedDabblers": 0,
+            "mixedDivers": 0,
+            "mixedDucks": 0,
+            "northernPintail": 75,
+            "ringNeckedDuck": 0,
+            "northernShoveler": 0,
+            "tealGroup": 115,
+            "wigeonGroup": 0
+          },
+          "surveyGeometry": null,
+          "marker": null
+        },
+        {
+          "name": "Fountain Grove CA",
+          "date": "2026-10-26",
+          "allDucks": 18000,
+          "mallardCount": 0,
+          "counts": {
+            "gadwall": 1260,
+            "mallard": 0,
+            "mixedDabblers": 0,
+            "mixedDivers": 0,
+            "mixedDucks": 0,
+            "northernPintail": 9000,
+            "ringNeckedDuck": 0,
+            "northernShoveler": 540,
+            "tealGroup": 6120,
+            "wigeonGroup": 540
+          },
+          "surveyGeometry": null,
+          "marker": null
+        },
+        {
+          "name": "Four Rivers CA",
+          "date": "2026-10-26",
+          "allDucks": 4920,
+          "mallardCount": 320,
+          "counts": {
+            "gadwall": 0,
+            "mallard": 320,
+            "mixedDabblers": 4000,
+            "mixedDivers": 0,
+            "mixedDucks": 0,
+            "northernPintail": 50,
+            "ringNeckedDuck": 0,
+            "northernShoveler": 300,
+            "tealGroup": 250,
+            "wigeonGroup": 0
+          },
+          "surveyGeometry": null,
+          "marker": null
+        },
+        {
+          "name": "Grand Pass CA",
+          "date": "2026-10-26",
+          "allDucks": 18000,
+          "mallardCount": 900,
+          "counts": {
+            "gadwall": 3600,
+            "mallard": 900,
+            "mixedDabblers": 900,
+            "mixedDivers": 0,
+            "mixedDucks": 0,
+            "northernPintail": 7200,
+            "ringNeckedDuck": 0,
+            "northernShoveler": 0,
+            "tealGroup": 5400,
+            "wigeonGroup": 0
+          },
+          "surveyGeometry": null,
+          "marker": null
+        },
+        {
+          "name": "Little River CA",
+          "date": "2026-10-26",
+          "allDucks": 125,
+          "mallardCount": 6,
+          "counts": {
+            "gadwall": 36,
+            "mallard": 6,
+            "mixedDabblers": 0,
+            "mixedDivers": 0,
+            "mixedDucks": 0,
+            "northernPintail": 6,
+            "ringNeckedDuck": 0,
+            "northernShoveler": 5,
+            "tealGroup": 50,
+            "wigeonGroup": 10
+          },
+          "surveyGeometry": null,
+          "marker": null
+        },
+        {
+          "name": "Loess Bluffs NWR",
+          "date": "2026-10-27",
+          "allDucks": 43775,
+          "mallardCount": 170,
+          "counts": {
+            "gadwall": 7565,
+            "mallard": 170,
+            "mixedDabblers": 0,
+            "mixedDivers": 0,
+            "mixedDucks": 0,
+            "northernPintail": 16020,
+            "ringNeckedDuck": 3995,
+            "northernShoveler": 1145,
+            "tealGroup": 13855,
+            "wigeonGroup": 25
+          },
+          "surveyGeometry": null,
+          "marker": null,
+          "overlapReportId": "loess-bluffs-2026-10-27"
+        },
+        {
+          "name": "Marais Temps Clair CA",
+          "date": "2026-10-29",
+          "allDucks": 60,
+          "mallardCount": 0,
+          "counts": {
+            "gadwall": 0,
+            "mallard": 0,
+            "mixedDabblers": 60,
+            "mixedDivers": 0,
+            "mixedDucks": 0,
+            "northernPintail": 0,
+            "ringNeckedDuck": 0,
+            "northernShoveler": 0,
+            "tealGroup": 0,
+            "wigeonGroup": 0
+          },
+          "surveyGeometry": null,
+          "marker": null
+        },
+        {
+          "name": "Montrose CA",
+          "date": "2026-10-26",
+          "allDucks": 0,
+          "mallardCount": 0,
+          "counts": {
+            "gadwall": 0,
+            "mallard": 0,
+            "mixedDabblers": 0,
+            "mixedDivers": 0,
+            "mixedDucks": 0,
+            "northernPintail": 0,
+            "ringNeckedDuck": 0,
+            "northernShoveler": 0,
+            "tealGroup": 0,
+            "wigeonGroup": 0
+          },
+          "surveyGeometry": null,
+          "marker": null
+        },
+        {
+          "name": "Nodaway Valley CA",
+          "date": "2026-10-26",
+          "allDucks": 4485,
+          "mallardCount": 0,
+          "counts": {
+            "gadwall": 0,
+            "mallard": 0,
+            "mixedDabblers": 4485,
+            "mixedDivers": 0,
+            "mixedDucks": 0,
+            "northernPintail": 0,
+            "ringNeckedDuck": 0,
+            "northernShoveler": 0,
+            "tealGroup": 0,
+            "wigeonGroup": 0
+          },
+          "surveyGeometry": null,
+          "marker": null
+        },
+        {
+          "name": "Otter Slough CA",
+          "date": "2026-10-26",
+          "allDucks": 11861,
+          "mallardCount": 686,
+          "counts": {
+            "gadwall": 821,
+            "mallard": 686,
+            "mixedDabblers": 0,
+            "mixedDivers": 0,
+            "mixedDucks": 0,
+            "northernPintail": 7525,
+            "ringNeckedDuck": 0,
+            "northernShoveler": 1273,
+            "tealGroup": 1055,
+            "wigeonGroup": 351
+          },
+          "surveyGeometry": null,
+          "marker": null
+        },
+        {
+          "name": "Schell-Osage CA",
+          "date": "2026-10-26",
+          "allDucks": 2512,
+          "mallardCount": 34,
+          "counts": {
+            "gadwall": 2,
+            "mallard": 34,
+            "mixedDabblers": 150,
+            "mixedDivers": 0,
+            "mixedDucks": 0,
+            "northernPintail": 900,
+            "ringNeckedDuck": 0,
+            "northernShoveler": 110,
+            "tealGroup": 1120,
+            "wigeonGroup": 0
+          },
+          "surveyGeometry": null,
+          "marker": null
+        },
+        {
+          "name": "Settle's Ford CA",
+          "date": "2026-10-26",
+          "allDucks": 0,
+          "mallardCount": 0,
+          "counts": {
+            "gadwall": 0,
+            "mallard": 0,
+            "mixedDabblers": 0,
+            "mixedDivers": 0,
+            "mixedDucks": 0,
+            "northernPintail": 0,
+            "ringNeckedDuck": 0,
+            "northernShoveler": 0,
+            "tealGroup": 0,
+            "wigeonGroup": 0
+          },
+          "surveyGeometry": null,
+          "marker": null
+        },
+        {
+          "name": "Ted Shanks CA",
+          "date": "2026-10-26",
+          "allDucks": 7200,
+          "mallardCount": 720,
+          "counts": {
+            "gadwall": 1440,
+            "mallard": 720,
+            "mixedDabblers": 0,
+            "mixedDivers": 0,
+            "mixedDucks": 0,
+            "northernPintail": 864,
+            "ringNeckedDuck": 0,
+            "northernShoveler": 360,
+            "tealGroup": 3096,
+            "wigeonGroup": 0
+          },
+          "surveyGeometry": null,
+          "marker": null,
+          "possibleOverlap": {
+            "sourceId": "inhs-central-mississippi",
+            "sourceLabel": "Shanks Refuge",
+            "status": "similar-place-name; exact footprint and independence unverified"
+          }
+        },
+        {
+          "name": "Ten Mile Pond CA",
+          "date": "2026-10-26",
+          "allDucks": 525,
+          "mallardCount": 175,
+          "counts": {
+            "gadwall": 50,
+            "mallard": 175,
+            "mixedDabblers": 0,
+            "mixedDivers": 0,
+            "mixedDucks": 0,
+            "northernPintail": 50,
+            "ringNeckedDuck": 0,
+            "northernShoveler": 0,
+            "tealGroup": 50,
+            "wigeonGroup": 0
+          },
+          "surveyGeometry": null,
+          "marker": null
+        }
+      ],
+      "overlaps": [
+        {
+          "reportId": "loess-bluffs-2026-10-27",
+          "areaName": "Loess Bluffs NWR",
+          "status": "confirmed-same-site-date-and-values",
+          "allDucks": 43775,
+          "mallardCount": 170
+        },
+        {
+          "sourceId": "inhs-central-mississippi",
+          "areaName": "Ted Shanks CA",
+          "possibleSourceArea": "Shanks Refuge",
+          "status": "potential-geographic-overlap; exact footprint unverified"
+        }
+      ],
+      "validation": {
+        "areaAllDucksSum": 132025,
+        "areaMallardSum": 4850,
+        "publishedTotalsMatchAreaSums": true,
+        "missingAreaCounts": 0
+      },
+      "notes": [
+        "Loess Bluffs is included in this total; do not add its separate report again.",
+        "Mixed groups remain groups; zero listed mallards does not establish absence among unidentified ducks.",
+        "Report date labels the survey week; individual observations extend through October 29.",
+        "Species-composition rows are preserved as listed and are not assumed to be an exhaustive partition of each all-duck total.",
+        "No composite flyway population or hunting-success metric is calculated."
+      ]
+    }
+  ]
+}

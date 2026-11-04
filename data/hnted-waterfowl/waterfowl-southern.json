@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-04T00:16:46.223636Z",
+  "status": "official-report-and-source-availability-audit",
+  "sources": [
+    {
+      "id": "ldwf-coastal-aerial",
+      "name": "Louisiana Department of Wildlife and Fisheries",
+      "indexUrl": "https://www.wlf.louisiana.gov/page/aerial-waterfowl-surveys",
+      "reportUrl": "https://www.wlf.louisiana.gov/assets/Resources/Publications/Waterfowl/Aerial-Surveys/waterseptember2026.pdf",
+      "retrievedAt": "2026-11-04T00:14:31.127845Z",
+      "documentSha256": "68acf8ee4c9c9217664855c7b742f6b01232585c62cd7cc550989b3dfe3e1f07",
+      "access": "Public official PDF successfully retrieved by ordinary HTTPS GET. Both pages rendered and visually checked.",
+      "status": "current-season-report-located-with-partial-data",
+      "latestVerification": "September 17, 2026 is the newest accessible 2026 report located in this audit; no later report was verified. The landing page was retrieved, but its report listing was not exposed as direct dated links in the downloaded HTML.",
+      "methodSource": "https://www.wlf.louisiana.gov/page/aerial-waterfowl-surveys",
+      "reuseDecision": "Factual estimates and source qualifications extracted with attribution and original-report link. Report artwork and full PDF are not republished; no blanket open-data licence asserted.",
+      "verification": "Original PDF table and limitation paragraphs visually checked on pages 1-2."
+    },
+    {
+      "id": "agfc-aerial",
+      "name": "Arkansas Game and Fish Commission",
+      "indexUrl": "https://www.agfc.com/education/waterfowl-surveys-and-reports/",
+      "status": "awaiting-current-season-aerial-report",
+      "retrievedAt": "2026-11-04T00:13:51.680512Z",
+      "indexSha256": "3e164b4af0fd05d3299b76b9a9d76f5e213b3e8d2cd9aa279a219c6f3fdaa833",
+      "access": "Official survey index successfully retrieved. Newest listed aerial report is from the 2025-2026 winter season.",
+      "latestListedSurveyPeriod": {
+        "start": "2026-01-19",
+        "end": "2026-01-23"
+      },
+      "latestListedReportUrl": "https://drive.google.com/file/d/18z4J9oCkHmz-nB-YwryN1EcmA3fIOm5S/view?usp=sharing",
+      "latestAvailableReportDate": "2026-01-23",
+      "dateNote": "Latest date is the end of the agency-listed survey interval, not a verified PDF publication date.",
+      "currentSeasonNumbers": null,
+      "verification": "Official index dated link text and winter-season heading checked; current-season numbers were not substituted from last winter."
+    }
+  ],
+  "reports": [
+    {
+      "id": "ldwf-coastal-2026-09-17",
+      "type": "survey-counts",
+      "sourceId": "ldwf-coastal-aerial",
+      "title": "Louisiana coastal and Little River Basin survey",
+      "reportDate": "2026-09-17",
+      "observationPeriod": {
+        "start": "2026-09-13",
+        "end": "2026-09-15",
+        "coastalZone": "September 13-15, 2026",
+        "littleRiverBasin": "September 14, 2026"
+      },
+      "datePrecision": "survey-interval",
+      "url": "https://www.wlf.louisiana.gov/assets/Resources/Publications/Waterfowl/Aerial-Surveys/waterseptember2026.pdf",
+      "scope": {
+        "kind": "regional-aerial-estimate",
+        "name": "Coastal Louisiana below U.S. Highway 90 and Little River Basin",
+        "referenceStates": [
+          "LA"
+        ],
+        "description": "Agency coastal-zone and Little River Basin survey areas; not a statewide Louisiana census. A state outline is only a report reference.",
+        "marker": null,
+        "surveyGeometry": null
+      },
+      "method": "Aircraft observations expanded to regional population estimates under the agency survey program. Counts from one observer on three southwest transects were not recorded in this survey.",
+      "reportedBy": [
+        "J. Olszak",
+        "F. Burks"
+      ],
+      "pilot": "J. Rayfield",
+      "quality": {
+        "status": "incomplete",
+        "label": "Partial survey",
+        "note": "A recording failure lost one observer's counts on southwest Louisiana transects 8-10. The southwest and overall estimates are incomplete; the size of the undercount is unknown."
+      },
+      "summary": {
+        "mallardCount": null,
+        "allDucks": 89000,
+        "previousMallardCount": null,
+        "previousAllDucks": null,
+        "allDucksEstimateIncomplete": true,
+        "mallardCountNote": "The original table's mallard row is blank; no mallard estimate is supplied.",
+        "allDucksDefinition": "Original TOTAL DUCKS row. It excludes the black-bellied whistling ducks discussed separately in the narrative."
+      },
+      "speciesEstimates": {
+        "blueWingedTeal": 73000,
+        "mottledDuck": 16000,
+        "mallard": null
+      },
+      "areas": [
+        {
+          "name": "Southwest coastal zone",
+          "mallardCount": null,
+          "allDucks": 50000,
+          "blueWingedTeal": 44000,
+          "mottledDuck": 6000,
+          "quality": {
+            "status": "incomplete",
+            "label": "Partial survey"
+          }
+        },
+        {
+          "name": "Southeast coastal zone",
+          "mallardCount": null,
+          "allDucks": 37000,
+          "blueWingedTeal": 27000,
+          "mottledDuck": 10000
+        },
+        {
+          "name": "Little River Basin",
+          "mallardCount": null,
+          "allDucks": 2000,
+          "blueWingedTeal": 2000,
+          "mottledDuck": null
+        }
+      ],
+      "habitat": {
+        "southwestAgriculturalFlooding": {
+          "operator": "less-than",
+          "percent": 5
+        },
+        "description": "Agency describes much of southwest Louisiana and Little River Basin as extremely dry; coastal marsh conditions and water levels generally near average."
+      },
+      "provenance": {
+        "counts": "PDF page 1, species table MOTTLED, BW TEAL, and TOTAL DUCKS rows; asterisks identify partial-data estimates.",
+        "quality": "PDF page 1, table footnote and Survey Limitation paragraph: recording failure along transects 8-10.",
+        "habitat": "PDF page 2, first full habitat paragraph.",
+        "countDefinition": "PDF page 2, black-bellied whistling duck paragraph explicitly excludes those birds from the table."
+      },
+      "notes": [
+        "This September report is dated seasonal context, not a current November bird count or a mallard migration signal.",
+        "The 89,000 printed table estimate is partial; do not treat it as a fully comparable trend or infer an exact population from it.",
+        "Blank table cells remain unknown rather than observed zeros. The narrative separately states that no green-winged teal were observed.",
+        "The narrative lists 20,000 partial southwest and 1,000 southeast black-bellied whistling duck estimates outside the table total. These were not added to TOTAL DUCKS.",
+        "The table also marks some Little River Basin species estimates as less than 1,000; no exact values were fabricated."
+      ]
+    }
+  ],
+  "pendingSources": [
+    {
+      "id": "agfc-aerial-current",
+      "sourceId": "agfc-aerial",
+      "name": "Arkansas aerial waterfowl surveys",
+      "state": "AR",
+      "status": "awaiting-current-season-report",
+      "label": "Current-season count not available",
+      "url": "https://www.agfc.com/education/waterfowl-surveys-and-reports/",
+      "checkedAt": "2026-11-04T00:16:46.223636Z",
+      "latestAvailableReportDate": "2026-01-23",
+      "latestListedSeason": "2025-2026",
+      "latestAvailableReportUrl": "https://drive.google.com/file/d/18z4J9oCkHmz-nB-YwryN1EcmA3fIOm5S/view?usp=sharing",
+      "note": "The official index currently lists January 19-23, 2026 as its newest aerial survey. No 2026-2027 aerial count was located; previous-season numbers are not shown as current.",
+      "mallardCount": null,
+      "allDucks": null
+    }
+  ]
+}

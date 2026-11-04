@@ -1,7 +1,12 @@
 [
   {
     "path": "/hnted/",
-    "modified": "2026-11-02",
+    "modified": "2026-11-04",
+    "priority": "0.8"
+  },
+  {
+    "path": "/hnted/waterfowl/",
+    "modified": "2026-11-04",
     "priority": "0.8"
   },
   {

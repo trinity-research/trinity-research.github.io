@@ -16,12 +16,15 @@ automation, predictive modeling, and data ingestion systems.
 | `signals.html` | Generated. Business automation and applied AI, updated on weekdays. |
 | `hnted/` | HNTED hunting dashboard: sun/moon timing, both daily lunar windows, and regional whitetail rut context. |
 | `hnted/field-notes/` | Four short, source-linked hunting research articles. |
+| `hnted/waterfowl/` | Free waterfowl guide: upstream forecasts, dated snow/cold/river observations, and sourced bird reports. |
 
 ## HNTED
 
 HNTED is a static, browser-based field-planning project by Trinity Research.
-Weather integration is deferred, with NWS the preferred future US source;
-camera import, accounts, and automatic article generation are not enabled.
+The deer dashboard's weather integration remains deferred. The waterfowl guide
+connects saved NWS/ECCC forecasts, NOAA snow analysis and daily station history,
+USGS river stages, and dated agency reports. Camera import, accounts, and
+automatic article generation are not enabled.
 Sun/moon calculations and geographic rut matching run on the visitor's device.
 Saved spots and preferences stay in that browser.
 
@@ -37,6 +40,18 @@ Edit `data/hnted-articles.json` and rebuild reviewed articles with
 Hunting articles are separate from the business-automation Signals feed.
 The HNTED app requires no server route; only its static files are published.
 Its astronomy library license is retained in `hnted/vendor/SUNCALC-LICENSE.txt`.
+
+Waterfowl data can be refreshed with `node scripts/refresh-hnted-waterfowl.mjs`.
+The workflow in `.github/workflows/daily-waterfowl.yml` runs at 4:17 AM
+America/Chicago, with a manual run available in GitHub Actions. Its source
+reference is retained in `docs/daily-waterfowl-workflow.yml`.
+It refreshes weather, snow/cold/river snapshots, and the Tennessee Black Bayou
+count, validates them, commits only generated public records, and explicitly
+requests a Pages build. Other agency reports remain separately reviewed;
+rebuilding their checked source files does not fetch new observations. Daily
+checks do not create daily surveys. Source dates stay visible, with older data
+retained when a refresh fails and partial coverage labeled when permitted.
+No external API keys or local Windows routine are needed for this data job.
 
 `slssm-01.html`, `signals.html`, `feed.xml`, and `sitemap.xml` are the only
 pages with generated content; everything else is hand-written.
@@ -85,9 +100,9 @@ ages out.
 
 **This runs locally, not in CI.** A working GitHub Actions version is kept at
 [`docs/daily-signals-workflow.yml`](docs/daily-signals-workflow.yml) as a
-reference copy — deliberately not under `.github/workflows/`, both because it
-needs the Claude GitHub App (not installed) and because pushing into that
-directory requires the `workflow` OAuth scope the gh token here does not carry.
+reference copy — deliberately not under `.github/workflows/` because it
+needs the Claude GitHub App (not installed). This separate Signals workflow
+has not been enabled by the HNTED data publication.
 Activation steps are in the file's header.
 
 ```powershell

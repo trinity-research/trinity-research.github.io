@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-04T11:54:18Z",
+  "status": "official-source-availability-audit",
+  "sources": [
+    {
+      "id": "kentucky-kdfwr-surveys",
+      "name": "Kentucky Department of Fish and Wildlife Resources",
+      "indexUrl": "https://fw.ky.gov/Hunt/Pages/Waterfowl-Reports-and-Surveys.aspx",
+      "retrievedAt": "2026-11-04T11:53:26.932Z",
+      "documentSha256": "a24e02a8e1e95c9e3d4344a7f954acdcca9cd26d55dc2b1afd4dca137a0193a1",
+      "status": "awaiting-current-season-report",
+      "access": "Official public report index returned HTTP 200 by ordinary HTTPS GET.",
+      "verification": "Newest listed ground-count archive covers November 21, 2025 through February 13, 2026. The newest midwinter survey is January 5-12, 2026. No 2026-27 ground-count series was listed at the check.",
+      "scopeNote": "The page separates duck abundance surveys from harvest/hunt logs and sandhill crane counts. Those other series are not substituted for duck abundance."
+    },
+    {
+      "id": "mdwfp-weekly-wingbeat",
+      "name": "Mississippi Department of Wildlife, Fisheries, and Parks",
+      "indexUrl": "https://www.mdwfp.com/wildlife-hunting/wildlife-species-program/waterfowl-program/weekly-waterfowl-reports",
+      "retrievedAt": "2026-11-04T11:54:00.351366Z",
+      "documentSha256": "d28a58ee13728cb9b21b1839055a71c94b95079bc26feb4ef669ce4b24bd4e60",
+      "status": "awaiting-current-season-weekly-report",
+      "access": "Official public report index returned HTTP 200 using standard system-trusted HTTPS certificate validation.",
+      "verification": "Newest listed weekly report is January 22, 2026 under 2025-26. No 2026-27 Weekly Wingbeat was listed at the check.",
+      "scopeNote": "Weekly Wingbeat compiles public/private land reports and habitat assessments. It is a distinct series from MDWFP Delta aerial surveys."
+    }
+  ],
+  "reports": [],
+  "pendingSources": [
+    {
+      "id": "kentucky-kdfwr-current",
+      "sourceId": "kentucky-kdfwr-surveys",
+      "name": "Kentucky waterfowl ground counts and aerial surveys",
+      "state": "KY",
+      "url": "https://fw.ky.gov/Hunt/Pages/Waterfowl-Reports-and-Surveys.aspx",
+      "status": "awaiting-current-season-report",
+      "checkedAt": "2026-11-04T11:54:18Z",
+      "latestListedSeason": "2025-26",
+      "latestListedReportLabel": "Waterfowl Ground Counts, Nov. 21, 2025 - Feb. 13, 2026",
+      "latestAvailableReportUrl": "https://fw.ky.gov/Hunt/Documents/2025-26-Weekly-Waterfowl-Ground-Count-Rpts.pdf",
+      "note": "The newest listed ground-count archive covers November 2025-February 2026. No 2026-27 series was listed when checked; last winter's counts are not shown as current.",
+      "mallardCount": null,
+      "allDucks": null
+    },
+    {
+      "id": "mississippi-mdwfp-weekly-current",
+      "sourceId": "mdwfp-weekly-wingbeat",
+      "name": "Mississippi Weekly Wingbeat field and habitat reports",
+      "state": "MS",
+      "url": "https://www.mdwfp.com/wildlife-hunting/wildlife-species-program/waterfowl-program/weekly-waterfowl-reports",
+      "status": "awaiting-current-season-weekly-report",
+      "checkedAt": "2026-11-04T11:54:18Z",
+      "latestListedSeason": "2025-26",
+      "latestListedReportLabel": "Jan 22, 2026 Weekly Wingbeat",
+      "latestAvailableReportUrl": "https://www.mdwfp.com/media/5645",
+      "note": "The weekly field/habitat index currently ends with January 22, 2026. No 2026-27 Weekly Wingbeat was listed when checked. Its observations will keep their report dates when new issues become available.",
+      "mallardCount": null,
+      "allDucks": null
+    }
+  ]
+}

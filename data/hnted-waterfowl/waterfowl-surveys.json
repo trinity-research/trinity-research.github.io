@@ -1,0 +1,305 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-03T14:34:22Z",
+  "status": "manually-verified-official-report-snapshot",
+  "scopeNote": "Dated survey observations for a local prototype, not live tracking, a complete flyway census, or a migration forecast.",
+  "sources": [
+    {
+      "id": "usfws-loess-bluffs",
+      "name": "U.S. Fish and Wildlife Service - Loess Bluffs National Wildlife Refuge",
+      "indexUrl": "https://www.fws.gov/library/collections/loess-bluffs-2026-waterfowl-and-bald-eagle-surveys",
+      "reportUrl": "https://www.fws.gov/sites/default/files/documents/2026-10/loess_bluffs_waterfowl_survey_20261027.pdf",
+      "reportLandingUrl": "https://www.fws.gov/media/loess-bluffs-waterfowl-survey-10-27-2026",
+      "retrievedAt": "2026-11-03T14:32:15Z",
+      "documentSha256": "c0c970f0f1860a0614d8c373ed6e025921bd2561f688c5b68de4c87f46cd0af9",
+      "access": "Public official PDF, successfully downloaded. Newest entry in the official 2026 collection at retrieval.",
+      "indexDiscovery": "The collection's public search response uses /fws_search/library_collections_content with nid=[\"5385546\"]. Its first item lists the October 27 report.",
+      "termsUrl": "https://www.fws.gov/disclaimer",
+      "reuseDecision": "Extracted factual survey values with agency attribution and links; original artwork, service marks, logos and full report are not republished. USFWS warns that not all site materials are public domain.",
+      "cadence": "Agency describes weekly staff surveys during fall through spring migration.",
+      "verification": "Both PDF pages rendered and visually checked against extracted table values."
+    },
+    {
+      "id": "iowa-dnr-migration",
+      "name": "Iowa Department of Natural Resources",
+      "indexUrl": "https://www.iowadnr.gov/things-do/hunting-trapping/types-hunting-trapping/migratory-game-bird-hunting/waterfowl-migration-survey",
+      "reportUrl": "https://www.iowadnr.gov/media/9964/download?inline=",
+      "retrievedAt": "2026-11-03T14:30:47Z",
+      "documentSha256": "5b1378e52c12919e3d2742a8387c349713f2633c797af126e91ec94d3513a26e",
+      "access": "Public official PDF, successfully downloaded. Newest report linked by the migration-survey page at retrieval.",
+      "termsUrl": "https://www.iowa.gov/policies",
+      "reuseDecision": "Extracted factual numeric observations with attribution and original-report links. No blanket public-domain or open-data licence was established from the reviewed Iowa policies; report artwork and full PDF are not republished.",
+      "cadence": "Fall weekly reports; the index lists reports for weeks ending September 4 through October 30, 2026.",
+      "verification": "PDF page 3 table rendered and visually checked against extracted values."
+    }
+  ],
+  "reports": [
+    {
+      "id": "loess-bluffs-2026-10-27",
+      "sourceId": "usfws-loess-bluffs",
+      "title": "Loess Bluffs habitat and waterfowl survey",
+      "reportDate": "2026-10-27",
+      "url": "https://www.fws.gov/sites/default/files/documents/2026-10/loess_bluffs_waterfowl_survey_20261027.pdf",
+      "scope": {
+        "kind": "refuge-survey",
+        "name": "Loess Bluffs National Wildlife Refuge",
+        "state": "MO",
+        "description": "Refuge waterfowl use reported by staff; the marker identifies the refuge, not the exact location of a flock or a surveyed polygon.",
+        "marker": {
+          "lat": 40.0695041,
+          "lon": -95.226156,
+          "kind": "official-refuge-location",
+          "sourceUrl": "https://www.fws.gov/refuge/loess-bluffs",
+          "sourceField": "HTML meta geo.position and embedded geodata POINT"
+        },
+        "surveyGeometry": null
+      },
+      "method": "IWMM area, block or modified block count estimates; habitat rated using visual estimates. The report labels each bird-count column as the week of its date.",
+      "datePrecision": "report-week-label",
+      "exactObservationTimes": null,
+      "provenance": {
+        "species": "PDF pages 1-2, Waterfowl Species Summary; columns 10/06/2026, 10/13/2026, 10/20/2026, 10/27/2026.",
+        "groups": "PDF page 2, Species Group Summary; row All Ducks.",
+        "habitat": "PDF page 1, Habitat Conditions Summary; rows Habitat Conditions Rating, Acres of wetlands flooded, Percentage of Wetlands Frozen."
+      },
+      "observations": [
+        {
+          "weekOf": "2026-10-06",
+          "counts": {
+            "mallard": 0,
+            "gadwall": 0,
+            "americanWigeon": 10,
+            "northernPintail": 1760,
+            "greenWingedTeal": 30,
+            "blueWingedTeal": 3932
+          },
+          "allDucks": 5872,
+          "habitat": {
+            "condition": "Fair",
+            "floodedAcres": 2845,
+            "frozenWetlandPercent": 0
+          }
+        },
+        {
+          "weekOf": "2026-10-13",
+          "counts": {
+            "mallard": 80,
+            "gadwall": 830,
+            "americanWigeon": 5,
+            "northernPintail": 13305,
+            "greenWingedTeal": 1010,
+            "blueWingedTeal": 8885
+          },
+          "allDucks": 25100,
+          "habitat": {
+            "condition": "Fair",
+            "floodedAcres": 3260,
+            "frozenWetlandPercent": 0
+          }
+        },
+        {
+          "weekOf": "2026-10-20",
+          "counts": {
+            "mallard": 155,
+            "gadwall": 0,
+            "americanWigeon": 0,
+            "northernPintail": 9050,
+            "greenWingedTeal": 4350,
+            "blueWingedTeal": 325
+          },
+          "allDucks": 15237,
+          "habitat": {
+            "condition": "Fair",
+            "floodedAcres": 3340,
+            "frozenWetlandPercent": 0
+          }
+        },
+        {
+          "weekOf": "2026-10-27",
+          "counts": {
+            "mallard": 170,
+            "gadwall": 7565,
+            "americanWigeon": 25,
+            "northernPintail": 16020,
+            "greenWingedTeal": 13730,
+            "blueWingedTeal": 125
+          },
+          "allDucks": 43775,
+          "habitat": {
+            "condition": "Fair",
+            "floodedAcres": 3380,
+            "frozenWetlandPercent": 0
+          }
+        }
+      ],
+      "notes": [
+        "All Ducks is the agency's duck-group total, not a sum of the selected species in counts. Geese, swans, coots and grebes must not be added to it.",
+        "These are dated refuge estimates and can change with habitat, observation and local movements; they do not prove a southbound migration arrival or predict a nearby hunter's success."
+      ]
+    },
+    {
+      "id": "iowa-2026-10-30",
+      "sourceId": "iowa-dnr-migration",
+      "title": "Iowa fall migration waterfowl survey",
+      "reportDate": "2026-10-30",
+      "url": "https://www.iowadnr.gov/media/9964/download?inline=",
+      "scope": {
+        "kind": "aggregate-survey-areas",
+        "name": "Iowa DNR surveyed areas",
+        "state": "IA",
+        "description": "Sum of the areas reported in this weekly table. DNR says most named primary sites aggregate several nearby areas; these values are not a population estimate for all of Iowa.",
+        "marker": null,
+        "surveyGeometry": null
+      },
+      "method": "Agency fall migration survey counts and rounded species-composition percentages.",
+      "datePrecision": "week-ending",
+      "observationPeriod": {
+        "weekEnding": "2026-10-30",
+        "exactStart": null,
+        "exactObservationTimes": null
+      },
+      "provenance": {
+        "totals": "PDF page 3, Fall Migration Waterfowl Survey, Week Ending October 30, 2026; Total row under Ducks/Abundance and Ducks/Composition (%).",
+        "speciesChange": "PDF page 3, Species / % Change in count from Previous Week; Mallard row.",
+        "areas": "PDF page 3, named Survey Area rows; ducks total/previous week and Mallard composition columns."
+      },
+      "summary": {
+        "allDucks": 69133,
+        "previousAllDucks": 45895,
+        "mallardCount": null,
+        "mallardCompositionPercent": 16,
+        "mallardChangePercent": -3.1,
+        "allDucksChangePercent": 50.6,
+        "changePercentSource": "Agency-reported figures, not recomputed species counts from rounded percentages."
+      },
+      "areas": [
+        {
+          "name": "Bays Branch Areas",
+          "allDucks": 3285,
+          "previousAllDucks": 1335,
+          "mallardCompositionPercent": 16
+        },
+        {
+          "name": "Big Marsh",
+          "allDucks": 2090,
+          "previousAllDucks": 2200,
+          "mallardCompositionPercent": 36
+        },
+        {
+          "name": "Black Hawk Areas",
+          "allDucks": 1900,
+          "previousAllDucks": 1580,
+          "mallardCompositionPercent": 20
+        },
+        {
+          "name": "Coralville Areas",
+          "allDucks": 4400,
+          "previousAllDucks": 3310,
+          "mallardCompositionPercent": 16
+        },
+        {
+          "name": "Grand River Areas",
+          "allDucks": 138,
+          "previousAllDucks": 143,
+          "mallardCompositionPercent": 0
+        },
+        {
+          "name": "Green Island",
+          "allDucks": 3709,
+          "previousAllDucks": 9153,
+          "mallardCompositionPercent": 27
+        },
+        {
+          "name": "Ingham Areas",
+          "allDucks": 380,
+          "previousAllDucks": 193,
+          "mallardCompositionPercent": 68
+        },
+        {
+          "name": "Lake Odessa Areas",
+          "allDucks": 3596,
+          "previousAllDucks": 525,
+          "mallardCompositionPercent": 17
+        },
+        {
+          "name": "Lake Sugema Areas",
+          "allDucks": 346,
+          "previousAllDucks": 260,
+          "mallardCompositionPercent": 32
+        },
+        {
+          "name": "Missouri River Oxbows",
+          "allDucks": 2811,
+          "previousAllDucks": 3342,
+          "mallardCompositionPercent": 29
+        },
+        {
+          "name": "Otter Creek",
+          "allDucks": 1820,
+          "previousAllDucks": 1250,
+          "mallardCompositionPercent": 13
+        },
+        {
+          "name": "Princeton",
+          "allDucks": 1025,
+          "previousAllDucks": 1225,
+          "mallardCompositionPercent": 15
+        },
+        {
+          "name": "Rathbun Areas",
+          "allDucks": 8775,
+          "previousAllDucks": 4060,
+          "mallardCompositionPercent": 15
+        },
+        {
+          "name": "Red Rock",
+          "allDucks": 12450,
+          "previousAllDucks": 7000,
+          "mallardCompositionPercent": 8
+        },
+        {
+          "name": "Rice Lake/Clear Lake",
+          "allDucks": 4957,
+          "previousAllDucks": 2689,
+          "mallardCompositionPercent": 35
+        },
+        {
+          "name": "Riverton/Fremont Co.",
+          "allDucks": 11635,
+          "previousAllDucks": 5410,
+          "mallardCompositionPercent": 4
+        },
+        {
+          "name": "Ruthven Areas",
+          "allDucks": 300,
+          "previousAllDucks": 450,
+          "mallardCompositionPercent": 28
+        },
+        {
+          "name": "Saylorville Areas",
+          "allDucks": null,
+          "previousAllDucks": null,
+          "mallardCompositionPercent": null
+        },
+        {
+          "name": "Spirit Lake Areas",
+          "allDucks": 1616,
+          "previousAllDucks": null,
+          "mallardCompositionPercent": 33
+        },
+        {
+          "name": "Sweet Marsh",
+          "allDucks": 3900,
+          "previousAllDucks": 1770,
+          "mallardCompositionPercent": 6
+        }
+      ],
+      "notes": [
+        "Do not multiply the rounded 16% composition by 69,133 and present the result as an exact mallard count. The report provides mallard percentage change, but not a separate exact mallard total in this table.",
+        "The report shows total ducks increasing while mallards decreased 3.1%; a total-duck change is not a mallard movement signal.",
+        "Saylorville is missing, not zero. Spirit Lake has no previous-week count, so the reported total change is not automatically a matched-site comparison.",
+        "No individual survey-site coordinates or geographic survey polygons were verified in this audit."
+      ]
+    }
+  ]
+}

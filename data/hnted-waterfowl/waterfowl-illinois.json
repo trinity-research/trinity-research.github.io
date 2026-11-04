@@ -1,0 +1,516 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-04T00:12:24.234269Z",
+  "status": "manually-verified-official-report-snapshot",
+  "sources": [
+    {
+      "id": "inhs-illinois-river",
+      "name": "Illinois Natural History Survey / Forbes Biological Station",
+      "indexUrl": "https://forbes-bio-station.inhs.illinois.edu/research/waterfowl-aerial-inventories/",
+      "reportUrl": "https://uofi.box.com/s/xq060cf633pkzqoah60kf2l8kjr696nd",
+      "reportFilename": "IL102826.pdf",
+      "retrievedAt": "2026-11-04T00:10:26.697321Z",
+      "documentSha256": "f93c950d8e6c8659317753c5d5fbf5d4aef3d089d809506b8141f7d8474d33cb",
+      "access": "Public Box share linked by official university index. Anonymous public-page metadata enabled download; original one-page PDF successfully downloaded.",
+      "cadence": "Index describes weekly autumn aerial inventories, subject to actual flight dates and weather.",
+      "reuseDecision": "Extracted factual table values with source attribution and links; no report artwork, university logo, or original PDF republished. No blanket open licence is asserted.",
+      "verification": "The complete PDF page was rendered and visually checked. Site-row mallard and total-duck sums reconcile with printed totals."
+    },
+    {
+      "id": "inhs-central-mississippi",
+      "name": "Illinois Natural History Survey / Forbes Biological Station",
+      "indexUrl": "https://forbes-bio-station.inhs.illinois.edu/research/waterfowl-aerial-inventories/",
+      "reportUrl": "https://uofi.box.com/s/i3h4a882ic209il54uzh8nzi4cvprkab",
+      "reportFilename": "MS102826.pdf",
+      "retrievedAt": "2026-11-04T00:10:27.974806Z",
+      "documentSha256": "2180924cb4212737aabc695880f011b556c8053f43bd9fb9f5da531ff35aa25a",
+      "access": "Public Box share linked by official university index. Anonymous public-page metadata enabled download; original one-page PDF successfully downloaded.",
+      "cadence": "Index describes weekly autumn aerial inventories, subject to actual flight dates and weather.",
+      "reuseDecision": "Extracted factual table values with source attribution and links; no report artwork, university logo, or original PDF republished. No blanket open licence is asserted.",
+      "verification": "The complete PDF page was rendered and visually checked. Site-row mallard and total-duck sums reconcile with printed totals."
+    }
+  ],
+  "reports": [
+    {
+      "id": "inhs-illinois-river-2026-10-28",
+      "type": "survey-counts",
+      "sourceId": "inhs-illinois-river",
+      "title": "Illinois River aerial inventory",
+      "reportDate": "2026-10-28",
+      "observationDate": "2026-10-28",
+      "datePrecision": "survey-date",
+      "url": "https://uofi.box.com/s/xq060cf633pkzqoah60kf2l8kjr696nd",
+      "scope": {
+        "kind": "river-corridor-inventory",
+        "name": "Illinois River surveyed areas",
+        "referenceStates": [
+          "IL"
+        ],
+        "description": "Named areas in the INHS river-valley inventory. This is a monitored river corridor, not a statewide census. Illinois is only a geographic report reference, not the survey footprint.",
+        "marker": null,
+        "surveyGeometry": null
+      },
+      "method": "Agency aerial species estimates used as a temporal index across monitored locations; not complete counts of every bird in a region.",
+      "observer": "Joshua Osborn",
+      "summary": {
+        "mallardCount": 19850,
+        "allDucks": 176195,
+        "previousMallardCount": null,
+        "previousAllDucks": null
+      },
+      "referenceBaseline": {
+        "label": "Printed 10-Year Average, 2016-2025",
+        "mallardCount": 52997,
+        "allDucks": 257073,
+        "note": "Source-printed reference values; the PDF does not define the date-matching calculation. These are not previous-week counts."
+      },
+      "areas": [
+        {
+          "id": "inhs-illinois-river-upper-01",
+          "name": "Hennepin/Hopper",
+          "region": "Upper",
+          "wetPercent": 100,
+          "icePercent": 0,
+          "mallardCount": 600,
+          "allDucks": 4840
+        },
+        {
+          "id": "inhs-illinois-river-upper-02",
+          "name": "Goose Lake",
+          "region": "Upper",
+          "wetPercent": 70,
+          "icePercent": 0,
+          "mallardCount": 0,
+          "allDucks": 610
+        },
+        {
+          "id": "inhs-illinois-river-upper-03",
+          "name": "Senachwine Lake",
+          "region": "Upper",
+          "wetPercent": 100,
+          "icePercent": 0,
+          "mallardCount": 115,
+          "allDucks": 4445
+        },
+        {
+          "id": "inhs-illinois-river-upper-04",
+          "name": "Hitchcock Slough",
+          "region": "Upper",
+          "wetPercent": 40,
+          "icePercent": 0,
+          "mallardCount": 0,
+          "allDucks": 0
+        },
+        {
+          "id": "inhs-illinois-river-upper-05",
+          "name": "Douglas Lake",
+          "region": "Upper",
+          "wetPercent": 90,
+          "icePercent": 0,
+          "mallardCount": 805,
+          "allDucks": 9765
+        },
+        {
+          "id": "inhs-illinois-river-upper-06",
+          "name": "Goose Lake",
+          "region": "Upper",
+          "wetPercent": 90,
+          "icePercent": 0,
+          "mallardCount": 1000,
+          "allDucks": 13000
+        },
+        {
+          "id": "inhs-illinois-river-upper-07",
+          "name": "Upper Peoria",
+          "region": "Upper",
+          "wetPercent": 100,
+          "icePercent": 0,
+          "mallardCount": 15,
+          "allDucks": 8445
+        },
+        {
+          "id": "inhs-illinois-river-upper-08",
+          "name": "Powerton",
+          "region": "Upper",
+          "wetPercent": 100,
+          "icePercent": 0,
+          "mallardCount": 10,
+          "allDucks": 90
+        },
+        {
+          "id": "inhs-illinois-river-lower-09",
+          "name": "Goose Lake",
+          "region": "Lower",
+          "wetPercent": 90,
+          "icePercent": 0,
+          "mallardCount": 125,
+          "allDucks": 200
+        },
+        {
+          "id": "inhs-illinois-river-lower-10",
+          "name": "Rice Lake",
+          "region": "Lower",
+          "wetPercent": 100,
+          "icePercent": 0,
+          "mallardCount": 315,
+          "allDucks": 995
+        },
+        {
+          "id": "inhs-illinois-river-lower-11",
+          "name": "Big Lake",
+          "region": "Lower",
+          "wetPercent": 90,
+          "icePercent": 0,
+          "mallardCount": 555,
+          "allDucks": 2165
+        },
+        {
+          "id": "inhs-illinois-river-lower-12",
+          "name": "Banner Marsh",
+          "region": "Lower",
+          "wetPercent": 90,
+          "icePercent": 0,
+          "mallardCount": 45,
+          "allDucks": 175
+        },
+        {
+          "id": "inhs-illinois-river-lower-13",
+          "name": "Duck Creek",
+          "region": "Lower",
+          "wetPercent": 100,
+          "icePercent": 0,
+          "mallardCount": 330,
+          "allDucks": 390
+        },
+        {
+          "id": "inhs-illinois-river-lower-14",
+          "name": "Clear Lake",
+          "region": "Lower",
+          "wetPercent": 80,
+          "icePercent": 0,
+          "mallardCount": 1250,
+          "allDucks": 5140
+        },
+        {
+          "id": "inhs-illinois-river-lower-15",
+          "name": "Chautauqua",
+          "region": "Lower",
+          "wetPercent": 70,
+          "icePercent": 0,
+          "mallardCount": 6890,
+          "allDucks": 48120
+        },
+        {
+          "id": "inhs-illinois-river-lower-16",
+          "name": "Emiquon/Spoon Btm",
+          "region": "Lower",
+          "wetPercent": 70,
+          "icePercent": 0,
+          "mallardCount": 2405,
+          "allDucks": 25090
+        },
+        {
+          "id": "inhs-illinois-river-lower-17",
+          "name": "Grass Lake",
+          "region": "Lower",
+          "wetPercent": 100,
+          "icePercent": 0,
+          "mallardCount": 0,
+          "allDucks": 0
+        },
+        {
+          "id": "inhs-illinois-river-lower-18",
+          "name": "Jack Lake",
+          "region": "Lower",
+          "wetPercent": 100,
+          "icePercent": 0,
+          "mallardCount": 0,
+          "allDucks": 25
+        },
+        {
+          "id": "inhs-illinois-river-lower-19",
+          "name": "Stewart Lake",
+          "region": "Lower",
+          "wetPercent": 90,
+          "icePercent": 0,
+          "mallardCount": 10,
+          "allDucks": 4880
+        },
+        {
+          "id": "inhs-illinois-river-lower-20",
+          "name": "Crane Lake",
+          "region": "Lower",
+          "wetPercent": 100,
+          "icePercent": 0,
+          "mallardCount": 215,
+          "allDucks": 1010
+        },
+        {
+          "id": "inhs-illinois-river-lower-21",
+          "name": "Cuba Island",
+          "region": "Lower",
+          "wetPercent": 90,
+          "icePercent": 0,
+          "mallardCount": 4000,
+          "allDucks": 39620
+        },
+        {
+          "id": "inhs-illinois-river-lower-22",
+          "name": "Sanganois",
+          "region": "Lower",
+          "wetPercent": 100,
+          "icePercent": 0,
+          "mallardCount": 260,
+          "allDucks": 280
+        },
+        {
+          "id": "inhs-illinois-river-lower-23",
+          "name": "Big Lake",
+          "region": "Lower",
+          "wetPercent": 80,
+          "icePercent": 0,
+          "mallardCount": 800,
+          "allDucks": 5400
+        },
+        {
+          "id": "inhs-illinois-river-lower-24",
+          "name": "Spunky Bottoms",
+          "region": "Lower",
+          "wetPercent": 90,
+          "icePercent": 0,
+          "mallardCount": 105,
+          "allDucks": 1200
+        },
+        {
+          "id": "inhs-illinois-river-lower-25",
+          "name": "Meredosia Lake",
+          "region": "Lower",
+          "wetPercent": 80,
+          "icePercent": 0,
+          "mallardCount": 0,
+          "allDucks": 310
+        }
+      ],
+      "provenance": {
+        "totals": "PDF page 1, TOTAL ILLINOIS row; MALL and TOTAL DUCKS columns.",
+        "areas": "PDF page 1, named location rows under UPPER and LOWER headings; %WET, %ICE, MALL, and TOTAL DUCKS columns.",
+        "baseline": "PDF page 1, 10-Year Average 2016-2025 row; MALL and TOTAL DUCKS columns."
+      },
+      "notes": [
+        "Duck-group totals exclude separately tabulated geese, coots, swans, and other waterbirds.",
+        "Repeated place names are retained as separate printed rows, distinguished by section and row ID; do not merge them by name alone.",
+        "No previous-week trend is supplied because no earlier report was imported in this record."
+      ]
+    },
+    {
+      "id": "inhs-central-mississippi-2026-10-28",
+      "type": "survey-counts",
+      "sourceId": "inhs-central-mississippi",
+      "title": "Central Mississippi River aerial inventory",
+      "reportDate": "2026-10-28",
+      "observationDate": "2026-10-28",
+      "datePrecision": "survey-date",
+      "url": "https://uofi.box.com/s/i3h4a882ic209il54uzh8nzi4cvprkab",
+      "scope": {
+        "kind": "river-corridor-inventory",
+        "name": "Central Mississippi River surveyed areas",
+        "referenceStates": [
+          "IL"
+        ],
+        "description": "Named areas in the INHS river-valley inventory. This is a monitored river corridor, not a statewide census. Illinois is only a geographic report reference, not the survey footprint.",
+        "marker": null,
+        "surveyGeometry": null
+      },
+      "method": "Agency aerial species estimates used as a temporal index across monitored locations; not complete counts of every bird in a region.",
+      "observer": "Joshua Osborn",
+      "summary": {
+        "mallardCount": 17885,
+        "allDucks": 235485,
+        "previousMallardCount": null,
+        "previousAllDucks": null
+      },
+      "referenceBaseline": {
+        "label": "Printed 10-Year Average, 2016-2025",
+        "mallardCount": 47569,
+        "allDucks": 222916,
+        "note": "Source-printed reference values; the PDF does not define the date-matching calculation. These are not previous-week counts."
+      },
+      "areas": [
+        {
+          "id": "inhs-central-mississippi-upper-01",
+          "name": "Keokuk-Nauvoo",
+          "region": "Upper",
+          "wetPercent": 100,
+          "icePercent": 0,
+          "mallardCount": 75,
+          "allDucks": 16330
+        },
+        {
+          "id": "inhs-central-mississippi-upper-02",
+          "name": "Arthur Refuge",
+          "region": "Upper",
+          "wetPercent": 90,
+          "icePercent": 0,
+          "mallardCount": 0,
+          "allDucks": 405
+        },
+        {
+          "id": "inhs-central-mississippi-upper-03",
+          "name": "Nauvoo-Ft. Madison",
+          "region": "Upper",
+          "wetPercent": 100,
+          "icePercent": 0,
+          "mallardCount": 335,
+          "allDucks": 5740
+        },
+        {
+          "id": "inhs-central-mississippi-upper-04",
+          "name": "Ft. Madison-Dallas",
+          "region": "Upper",
+          "wetPercent": 100,
+          "icePercent": 0,
+          "mallardCount": 15,
+          "allDucks": 15
+        },
+        {
+          "id": "inhs-central-mississippi-upper-05",
+          "name": "Henderson Creek",
+          "region": "Upper",
+          "wetPercent": 80,
+          "icePercent": 0,
+          "mallardCount": 215,
+          "allDucks": 8265
+        },
+        {
+          "id": "inhs-central-mississippi-upper-06",
+          "name": "Keithsburg Refuge",
+          "region": "Upper",
+          "wetPercent": 50,
+          "icePercent": 0,
+          "mallardCount": 40,
+          "allDucks": 430
+        },
+        {
+          "id": "inhs-central-mississippi-upper-07",
+          "name": "Louisa Refuge",
+          "region": "Upper",
+          "wetPercent": 80,
+          "icePercent": 0,
+          "mallardCount": 1020,
+          "allDucks": 3205
+        },
+        {
+          "id": "inhs-central-mississippi-lower-08",
+          "name": "Swan Lake",
+          "region": "Lower",
+          "wetPercent": 90,
+          "icePercent": 0,
+          "mallardCount": 2100,
+          "allDucks": 43860
+        },
+        {
+          "id": "inhs-central-mississippi-lower-09",
+          "name": "Gilbert Lake",
+          "region": "Lower",
+          "wetPercent": 100,
+          "icePercent": 0,
+          "mallardCount": 0,
+          "allDucks": 0
+        },
+        {
+          "id": "inhs-central-mississippi-lower-10",
+          "name": "Long Lake",
+          "region": "Lower",
+          "wetPercent": 100,
+          "icePercent": 0,
+          "mallardCount": 420,
+          "allDucks": 5300
+        },
+        {
+          "id": "inhs-central-mississippi-lower-11",
+          "name": "Dardenne Club",
+          "region": "Lower",
+          "wetPercent": 90,
+          "icePercent": 0,
+          "mallardCount": 6000,
+          "allDucks": 73980
+        },
+        {
+          "id": "inhs-central-mississippi-lower-12",
+          "name": "Cuivre Club",
+          "region": "Lower",
+          "wetPercent": 90,
+          "icePercent": 0,
+          "mallardCount": 485,
+          "allDucks": 2320
+        },
+        {
+          "id": "inhs-central-mississippi-lower-13",
+          "name": "Batchtown Refuge",
+          "region": "Lower",
+          "wetPercent": 80,
+          "icePercent": 0,
+          "mallardCount": 1500,
+          "allDucks": 21230
+        },
+        {
+          "id": "inhs-central-mississippi-lower-14",
+          "name": "Cannon Refuge",
+          "region": "Lower",
+          "wetPercent": 60,
+          "icePercent": 0,
+          "mallardCount": 3400,
+          "allDucks": 29690
+        },
+        {
+          "id": "inhs-central-mississippi-lower-15",
+          "name": "Towhead Lake",
+          "region": "Lower",
+          "wetPercent": 40,
+          "icePercent": 0,
+          "mallardCount": 370,
+          "allDucks": 5080
+        },
+        {
+          "id": "inhs-central-mississippi-lower-16",
+          "name": "Delair Refuge",
+          "region": "Lower",
+          "wetPercent": 70,
+          "icePercent": 0,
+          "mallardCount": 430,
+          "allDucks": 9655
+        },
+        {
+          "id": "inhs-central-mississippi-lower-17",
+          "name": "Shanks Refuge",
+          "region": "Lower",
+          "wetPercent": 40,
+          "icePercent": 0,
+          "mallardCount": 1480,
+          "allDucks": 9980
+        },
+        {
+          "id": "inhs-central-mississippi-lower-18",
+          "name": "Meyer-Keokuk",
+          "region": "Lower",
+          "wetPercent": 100,
+          "icePercent": 0,
+          "mallardCount": 0,
+          "allDucks": 0
+        }
+      ],
+      "provenance": {
+        "totals": "PDF page 1, TOTAL MISSISSIPPI row; MALL and TOTAL DUCKS columns.",
+        "areas": "PDF page 1, named location rows under UPPER and LOWER headings; %WET, %ICE, MALL, and TOTAL DUCKS columns.",
+        "baseline": "PDF page 1, 10-Year Average 2016-2025 row; MALL and TOTAL DUCKS columns."
+      },
+      "notes": [
+        "Duck-group totals exclude separately tabulated geese, coots, swans, and other waterbirds.",
+        "Repeated place names are retained as separate printed rows, distinguished by section and row ID; do not merge them by name alone.",
+        "No previous-week trend is supplied because no earlier report was imported in this record.",
+        "Central Mississippi means the river corridor, not the state of Mississippi.",
+        "Shanks Refuge and other river sites may overlap areas in Missouri agency inventories. Matching footprints and observation dates are needed before deduplication; do not sum this index with Missouri or refuge reports as independent populations."
+      ]
+    }
+  ]
+}

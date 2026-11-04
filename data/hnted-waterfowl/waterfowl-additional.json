@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-04T11:04:45Z",
+  "status": "verified-official-narrative-and-source-availability-snapshot",
+  "sources": [
+    {
+      "id": "agfc-habitat-news",
+      "name": "Arkansas Game and Fish Commission",
+      "indexUrl": "https://www.agfc.com/news/",
+      "reportUrl": "https://www.agfc.com/news/wetland-habitat-waterfowl-hunting-opportunities-likely-decreased-by-extended-drought/",
+      "retrievedAt": "2026-11-04T11:02:48.181631Z",
+      "documentSha256": "5f40c7354aae9537542c3ba755fac7d9a9a9fe74c4107d93199d40e5b0a3ba8c",
+      "access": "Official public HTML returned HTTP 200 by ordinary HTTPS GET.",
+      "reuseDecision": "Brief original paraphrases of factual habitat observations, with attribution and original link. No report artwork, photographs, or full article republished.",
+      "verification": "Publication date and habitat limitations checked against the downloaded article. Early-October capability figures remain dated to that period, not the retrieval date."
+    },
+    {
+      "id": "fhsu-kwec-sightings",
+      "name": "Kansas Wetlands Education Center / Fort Hays State University",
+      "indexUrl": "https://wetlandscenter.fhsu.edu/news/bird-watch/recent-bird-sightings.html",
+      "reportUrl": "https://wetlandscenter.fhsu.edu/news/bird-watch/2026/recent-bird-sightings-october-13.html",
+      "retrievedAt": "2026-11-04T11:02:48.182631Z",
+      "documentSha256": "82ccea853cb6226d23dac0b94a74bd09d9337c6a4bed6e99eeb3270bfcea3a13",
+      "access": "Official public-university HTML returned HTTP 200 by ordinary HTTPS GET. This is a separate source from the inaccessible KDWP report page.",
+      "reuseDecision": "Brief original paraphrases of the center's published factual narrative and selected species-presence facts, with attribution and original link. No underlying eBird records or birder submissions requested, downloaded, or imported.",
+      "verification": "October 13 publication label, preceding-weeks observation scope, Cheyenne Bottoms habitat paragraphs, and mallard presence checked in the downloaded page."
+    },
+    {
+      "id": "mdwfp-delta-aerial",
+      "name": "Mississippi Department of Wildlife, Fisheries, and Parks",
+      "indexUrl": "https://www.mdwfp.com/wildlife-hunting/wildlife-species-program/waterfowl-program/aerial-survey-reports",
+      "retrievedAt": "2026-11-04T11:02:48.182631Z",
+      "documentSha256": "c2bd8bcb752e4c18f9a4acebd25651559c7609e6e85fa9cf9d53943fb87acb5e",
+      "status": "awaiting-current-season-aerial-report",
+      "access": "Official survey index returned HTTP 200 by ordinary HTTPS GET.",
+      "verification": "Newest season heading is 2025-26; newest listed report is Early January 2026. No 2026-27 aerial report was located."
+    }
+  ],
+  "reports": [
+    {
+      "id": "arkansas-habitat-2026-10-22",
+      "sourceId": "agfc-habitat-news",
+      "type": "field-notes",
+      "title": "Arkansas wetland habitat update",
+      "reportDate": "2026-10-22",
+      "datePrecision": "publication-date",
+      "url": "https://www.agfc.com/news/wetland-habitat-waterfowl-hunting-opportunities-likely-decreased-by-extended-drought/",
+      "scope": {
+        "kind": "dated-habitat-program-narrative",
+        "name": "Selected AGFC-managed wetlands and statewide habitat context",
+        "state": "AR",
+        "referenceStates": ["AR"],
+        "description": "Agency habitat update, not an aerial duck survey. State reference only; no surveyed footprint or current flock positions supplied.",
+        "marker": null,
+        "surveyGeometry": null
+      },
+      "method": "Published agency account of managed-wetland water availability; no standardized bird abundance estimates.",
+      "headline": "Water was limiting the habitat.",
+      "summaryNote": "AGFC described prolonged drought and constrained flooding of managed wetlands ahead of the season.",
+      "summary": {"mallardCount": null, "allDucks": null},
+      "regions": [
+        {"name": "Managed moist-soil units", "note": "At the beginning of October, water was available to flood only 42% of AGFC-managed units.", "count": null},
+        {"name": "Surface-water sources", "note": "Many lakes, streams, and ditches were too low for existing pumps.", "count": null},
+        {"name": "Raft Creek WMA", "note": "Pumping was underway, with limited floodable acreage described in the report.", "count": null}
+      ],
+      "habitat": {
+        "managedMoistSoilFloodingCapability": {
+          "percent": 42,
+          "referencePeriod": "Beginning of October 2026",
+          "definition": "AGFC-managed moist-soil units with adequate water available for flooding, not the percentage already flooded."
+        }
+      },
+      "provenance": "October 22, 2026 publication; Low-Water Woes and The Problem With Pumping sections. Some conditions were presented at an October 7 committee meeting.",
+      "notes": [
+        "Publication and observation periods differ. This is dated seasonal habitat context, not today's conditions or a bird-arrival prediction.",
+        "Flooding capability does not establish actual inundation or duck abundance."
+      ]
+    },
+    {
+      "id": "kansas-kwec-2026-10-13",
+      "sourceId": "fhsu-kwec-sightings",
+      "type": "field-notes",
+      "title": "Cheyenne Bottoms field observations",
+      "reportDate": "2026-10-13",
+      "datePrecision": "publication-date",
+      "observationPeriodLabel": "Sightings reported over the couple of weeks preceding October 13, 2026; exact dates not supplied.",
+      "url": "https://wetlandscenter.fhsu.edu/news/bird-watch/2026/recent-bird-sightings-october-13.html",
+      "scope": {
+        "kind": "local-compiled-field-sightings",
+        "name": "Cheyenne Bottoms and nearby wetlands, Kansas",
+        "state": "KS",
+        "referenceStates": ["KS"],
+        "description": "Public-university field observations around Cheyenne Bottoms. The Kansas outline is only a report reference, not statewide observation coverage.",
+        "marker": null,
+        "surveyGeometry": null
+      },
+      "method": "Education-center narrative compiled from local bird sightings; species presence is not a standardized count or trend.",
+      "headline": "More habitat, with ducks in the mix.",
+      "summaryNote": "The center reported improving duck diversity after rain and canal water replenished Cheyenne Bottoms pools.",
+      "summary": {"mallardCount": null, "allDucks": null},
+      "regions": [
+        {"name": "Cheyenne Bottoms habitat", "note": "Rain and incoming canal water improved wetland habitat; stored water had been redistributed among pools.", "count": null},
+        {"name": "Reported duck species", "note": "Mallards, gadwall, northern pintails, and green-winged teal appeared in the preceding-weeks sightings list; counts were not supplied.", "count": null}
+      ],
+      "speciesReported": ["mallard", "gadwall", "northernPintail", "greenWingedTeal"],
+      "provenance": "October 13, 2026 page date; opening habitat paragraphs and the species list explicitly covering the last couple of weeks.",
+      "notes": [
+        "The observation window is approximate; October 13 is the publication date, not a single-day survey.",
+        "Only the center's published summary is used. Underlying birder submissions and eBird records were not imported."
+      ]
+    }
+  ],
+  "pendingSources": [
+    {
+      "id": "mississippi-mdwfp-current",
+      "sourceId": "mdwfp-delta-aerial",
+      "name": "Mississippi Delta aerial waterfowl surveys",
+      "state": "MS",
+      "url": "https://www.mdwfp.com/wildlife-hunting/wildlife-species-program/waterfowl-program/aerial-survey-reports",
+      "status": "awaiting-current-season-report",
+      "checkedAt": "2026-11-04T11:04:45Z",
+      "latestListedSeason": "2025-26",
+      "latestListedReportLabel": "Early January 2026 Aerial Waterfowl survey report",
+      "latestAvailableReportUrl": "https://www.mdwfp.com/media/5646",
+      "note": "The latest listed aerial report is Early January 2026 under the 2025-26 season. No 2026-27 aerial report was located; last winter's numbers are not presented as current.",
+      "mallardCount": null,
+      "allDucks": null
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+name: Daily HNTED waterfowl data
+
+on:
+  schedule:
+    - cron: '17 4 * * *'
+      timezone: America/Chicago
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: hnted-waterfowl-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Refresh public weather, ground observations, and Tennessee refuge report
+        run: node scripts/refresh-hnted-waterfowl.mjs
+      - name: Validate saved data and runtime
+        run: node scripts/verify-hnted-waterfowl.mjs
+      - name: Save only generated public snapshots
+        id: save
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- hnted/waterfowl/data/weather.json hnted/waterfowl/data/conditions.json hnted/waterfowl/data/surveys.json hnted/waterfowl/data/update-status.json data/hnted-waterfowl/waterfowl-east-tn-in.json 'hnted/waterfowl/data/snow-analysis-*.png'
+          if git diff --cached --quiet; then
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+          else
+            git commit -m 'Refresh dated HNTED waterfowl data'
+            git push origin HEAD:main
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+          fi
+      - name: Publish the updated branch through GitHub Pages
+        if: steps.save.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh api --method POST "repos/$GH_REPO/pages/builds" --silent
