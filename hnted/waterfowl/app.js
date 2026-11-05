@@ -5,6 +5,7 @@ import {referenceStates,selectReports,validateReports} from './report-data.js';
 import {renderReportCards} from './report-cards.js';
 import {validateConditions} from './conditions-data.js';
 import {renderColdCards,renderGaugeCards} from './conditions-cards.js';
+import {updateHealth} from './update-health.js';
 
 const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -18,7 +19,7 @@ const savedWaterfowl=read('hnted-waterfowl-spot',null),savedDeer=read('t2h-locat
 let spot=validSpot(savedWaterfowl)?savedWaterfowl:validSpot(savedDeer)?savedDeer:{name:'Shreveport, LA',lat:32.52515,lon:-93.75018,zone:'America/Chicago',sample:true};
 let weather,surveys,geography,conditions,key,dates,selectedSite,view='map',species='mallard',reportState='',reportType='all',zoom=1,viewCentre=[480,380],searchGeneration=0;
 let release={audience:'local',automaticWeatherConditions:false,automaticReports:[]},refreshState;
-const refreshNote=()=>{const failed=refreshState?.jobs?.some(j=>j.status==='failed');return (release.automaticWeatherConditions?'Daily updates are scheduled around 4:17 AM Central; source observation dates remain visible.':'This is a saved snapshot, refreshed manually.')+(failed?' Some sources could not refresh; check their saved dates.':'');};
+const refreshNote=()=>{const failed=refreshState?.jobs?.some(j=>j.status==='failed');return (release.audience==='local'?'Local preview uses the saved files on this computer; the live guide updates separately.':release.automaticWeatherConditions?'Daily updates are scheduled around 4:17 AM Central, with backup freshness checks.':'This is a saved snapshot, refreshed manually.')+(failed?' Some sources could not refresh; check their saved dates.':'');};
 const NS='http://www.w3.org/2000/svg';
 function svg(tag,attributes={},text){const element=document.createElementNS(NS,tag);for(const [k,v] of Object.entries(attributes))element.setAttribute(k,String(v));if(text!==undefined)element.textContent=text;return element;}
 const merc=lat=>Math.log(Math.tan(Math.PI/4+Math.min(80,Math.max(-80,lat))*Math.PI/360));
@@ -32,7 +33,14 @@ function geoPath(geometry){
   return '';
 }
 function dayFor(site){return summarizeDay(site.points,key,site.zone);}
-function actualTime(value,zone=spot.zone){const d=new Date(value);return Number.isFinite(+d)?new Intl.DateTimeFormat('en-US',{timeZone:zone,month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'}).format(d):'Unavailable';}
+function actualTime(value,zone=spot.zone){if(value===null||value===undefined||value==='')return 'Unavailable';const d=new Date(value);return Number.isFinite(+d)?new Intl.DateTimeFormat('en-US',{timeZone:zone,month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'}).format(d):'Unavailable';}
+function renderRefreshStatus(){
+  if(!weather)return;
+  const state=snapshotState(weather),health=updateHealth(weather,conditions,refreshState,{automatic:release.automaticWeatherConditions}),updated=actualTime(weather.generatedAt);
+  const warning=health.ageHours===null?'The refresh date is unavailable. ':health.overdue?'An update is overdue or a source needs attention. ':health.agedSites.length?health.agedSites.length+' forecast source(s) have older issue dates. ':'';
+  $('load-status').textContent=`Weather data saved ${updated}. ${warning}${refreshNote()}`;
+  $('load-status').classList.toggle('stale',health.overdue||state.stale);$('live-guide-link').hidden=release.audience!=='local';$('reload-data').disabled=false;
+}
 const mapSize=()=>matchMedia('(max-width:580px)').matches?[620,840]:[960,760];
 function setViewBox(){const [width,height]=mapSize(),w=width/zoom,h=height/zoom;$('field-map').setAttribute('viewBox',`${viewCentre[0]-w/2} ${viewCentre[1]-h/2} ${w} ${h}`);$('field-map').dataset.zoomed=String(zoom>1);}
 function renderMap(){
@@ -165,7 +173,7 @@ function setSpot(next){
 }
 async function load(){
   try{
-    const get=async path=>{const response=await fetch(path);if(!response.ok)throw new Error(`${path}: HTTP ${response.status}`);return response.json();};
+    const get=async path=>{const response=await fetch(path,{cache:'no-store'});if(!response.ok)throw new Error(`${path}: HTTP ${response.status}`);return response.json();};
     [weather,surveys,geography]=await Promise.all([get('data/weather.json'),get('data/surveys.json'),get('data/basemap.geojson')]);
     try{release=await get('data/release.json');}catch{}
     try{refreshState=await get('data/update-status.json');}catch{}
@@ -176,10 +184,9 @@ async function load(){
     for(const code of [...new Set(surveys.reports.flatMap(referenceStates))].sort()){const option=document.createElement('option');option.value=code;option.textContent=geography.features.find(f=>f.properties.code===code)?.properties.name??code;$('report-state').append(option);}
     dates=availableDates(weather,spot.zone);key=dates[0];selectedSite=nearestSite(spot,weather.sites).site;
     $('spot-name').textContent=spot.name;$('spot-detail').textContent=`${spot.sample?'Sample spot · ':''}${spot.lat.toFixed(3)}°, ${spot.lon.toFixed(3)}° · change`;
-    const state=snapshotState(weather),updated=actualTime(weather.generatedAt);
+    const updated=actualTime(weather.generatedAt);
     if(release.audience==='public'){$('edition-badge').textContent='PUBLIC FIELD STUDY';$('study-copy').textContent='Weather to the north, ground observations, and dated bird reports in one place. We’re building and testing the migration outlook.';}
-    $('load-status').textContent=`${state.label} · saved ${updated}. ${state.stale?'The weather is older than our refresh window; check its dates. ':''}${refreshNote()}`;
-    $('load-status').classList.toggle('stale',state.stale);$('app-content').hidden=false;
+    renderRefreshStatus();$('app-content').hidden=false;
     $('snapshot-detail').textContent=`Weather snapshot saved ${updated}. ${weather.sites.length} named samples. ${weather.errors.length?weather.errors.length+' sample retrievals failed. ':''}No migration scores have been calculated.`;
     $('sample-count').textContent=`${weather.sites.length} weather samples`;
     $('sample-breakdown').textContent=`${weather.sites.filter(s=>s.provider==='NWS').length} U.S. cities and ${weather.sites.filter(s=>s.provider==='ECCC').length} Canadian cities in this snapshot.`;
@@ -206,4 +213,7 @@ $('location-dialog').addEventListener('close',()=>{searchGeneration++;$('town-st
 $('town-form').addEventListener('submit',async event=>{event.preventDefault();const generation=++searchGeneration;$('town-status').textContent='Searching the local town index…';$('town-results').replaceChildren();try{const results=await findTowns($('town-query').value);if(generation!==searchGeneration)return;$('town-status').textContent=results.length?'Choose your town below.':'No match. Try a town and state, or enter coordinates.';for(const t of results){const b=document.createElement('button');b.textContent=`${t.name}, ${t.admin1}`;b.addEventListener('click',()=>setSpot({name:`${t.name}, ${t.admin1}`,lat:t.latitude,lon:t.longitude,zone:t.timezone}));$('town-results').append(b);}}catch{if(generation===searchGeneration)$('town-status').textContent='Town index unavailable. You can enter coordinates below.';}});
 $('coords-form').addEventListener('submit',event=>{event.preventDefault();const lat=Number($('latitude').value),lon=Number($('longitude').value),zone=$('time-zone').value.trim(),next={name:'My hunting spot',lat,lon,zone};if(!validSpot(next)){$('coords-status').textContent='Enter valid coordinates and an IANA time zone such as America/Chicago.';return;}$('coords-status').textContent='';setSpot(next);});
 new ResizeObserver(()=>{if(weather&&geography)renderMap();}).observe($('map-wrap'));
+$('reload-data').addEventListener('click',()=>location.reload());
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')renderRefreshStatus();});
+setInterval(()=>{if(document.visibilityState==='visible')renderRefreshStatus();},60000);
 load();

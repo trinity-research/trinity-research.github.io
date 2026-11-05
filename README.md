@@ -42,16 +42,28 @@ The HNTED app requires no server route; only its static files are published.
 Its astronomy library license is retained in `hnted/vendor/SUNCALC-LICENSE.txt`.
 
 Waterfowl data can be refreshed with `node scripts/refresh-hnted-waterfowl.mjs`.
-The workflow in `.github/workflows/daily-waterfowl.yml` runs at 4:17 AM
-America/Chicago, with a manual run available in GitHub Actions. Its source
+The workflow in `.github/workflows/daily-waterfowl.yml` is scheduled at 4:17 AM
+America/Chicago, with hourly backup checks at minute 41 UTC and a manual run
+available in GitHub Actions. Healthy backup checks skip provider collection. Its source
 reference is retained in `docs/daily-waterfowl-workflow.yml`.
 It refreshes weather, snow/cold/river snapshots, and the Tennessee Black Bayou
 count, validates them, commits only generated public records, and explicitly
-requests a Pages build. Other agency reports remain separately reviewed;
+requests a Pages build, waits for it, and verifies current live data. Normal
+pushes retry transient errors without force pushes or overwriting branch changes.
+Other agency reports remain separately reviewed;
 rebuilding their checked source files does not fetch new observations. Daily
 checks do not create daily surveys. Source dates stay visible, with older data
 retained when a refresh fails and partial coverage labeled when permitted.
 No external API keys or local Windows routine are needed for this data job.
+
+Run `node scripts/check-hnted-waterfowl-health.mjs --require-fresh --live` to
+check saved timestamps, actual forecast coverage, river observation times,
+failed jobs, and the published data. GitHub schedules can be delayed or dropped;
+the hourly backup uses the same scheduler. On November 5 the missed daily
+update was recovered manually, and a transient GitHub push rejection cleared
+on retry. A successful manual run does not prove scheduled triggering.
+Local development snapshots update separately; the page displays their saved
+time and offers a Check for updates button that bypasses cached data.
 
 `slssm-01.html`, `signals.html`, `feed.xml`, and `sitemap.xml` are the only
 pages with generated content; everything else is hand-written.

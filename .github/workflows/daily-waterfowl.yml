@@ -4,6 +4,7 @@ on:
   schedule:
     - cron: '17 4 * * *'
       timezone: America/Chicago
+    - cron: '41 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -17,7 +18,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v6
         with:
@@ -26,11 +27,16 @@ jobs:
         with:
           node-version: '24'
           package-manager-cache: false
+      - name: Check daily freshness and live publication
+        id: health
+        run: node scripts/check-hnted-waterfowl-health.mjs --probe-live
       - name: Refresh public weather, ground observations, and Tennessee refuge report
+        if: steps.health.outputs.needed == 'true'
         run: node scripts/refresh-hnted-waterfowl.mjs
       - name: Validate saved data and runtime
         run: node scripts/verify-hnted-waterfowl.mjs
       - name: Save only generated public snapshots
+        if: steps.health.outputs.needed == 'true'
         id: save
         run: |
           git config user.name 'github-actions[bot]'
@@ -40,13 +46,13 @@ jobs:
             echo 'changed=false' >> "$GITHUB_OUTPUT"
           else
             git commit -m 'Refresh dated HNTED waterfowl data'
-            git push origin HEAD:main
             echo 'changed=true' >> "$GITHUB_OUTPUT"
           fi
       - name: Publish the updated branch through GitHub Pages
-        if: steps.save.outputs.changed == 'true'
+        if: steps.save.outputs.changed == 'true' || steps.health.outputs.publish == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
-        run: |
-          gh api --method POST "repos/$GH_REPO/pages/builds" --silent
+        run: node scripts/publish-hnted-waterfowl-data.mjs
+      - name: Verify fresh data is actually live
+        run: node scripts/check-hnted-waterfowl-health.mjs --require-fresh --live --wait-live
