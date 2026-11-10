@@ -1,4 +1,5 @@
 import {spawnSync,execFileSync} from 'node:child_process';
+import {waitForPagesBuild} from './pages-builds.mjs';
 const root=new URL('../',import.meta.url),repo=process.env.GITHUB_REPOSITORY;
 if(!repo||!/^[\w.-]+\/[\w.-]+$/.test(repo))throw new Error('A GitHub repository is required.');
 const git=(...args)=>execFileSync('git',args,{cwd:root,encoding:'utf8'}).trim();
@@ -13,15 +14,19 @@ for(let attempt=0;attempt<4;attempt++){
   if(attempt<3)await pause((attempt+1)*10000);
 }
 if(!pushed)throw new Error('GitHub did not accept the normal data push after four attempts.');
-execFileSync('gh',['api','--method','POST','repos/'+repo+'/pages/builds','--silent'],{cwd:root,stdio:'inherit'});
-for(let attempt=0;attempt<36;attempt++){
-  const build=JSON.parse(execFileSync('gh',['api','repos/'+repo+'/pages/builds/latest'],{cwd:root,encoding:'utf8'}));
-  if(build.status==='errored')throw new Error('Pages build failed: '+(build.error?.message??'unknown error'));
-  if(build.status==='built'){
-    let included=build.commit===target;
-    if(!included){git('fetch','origin','main');included=spawnSync('git',['merge-base','--is-ancestor',target,build.commit],{cwd:root,stdio:'ignore'}).status===0;}
-    if(included){console.log('Pages built the refreshed commit '+target+'.');process.exit(0);}
+const requestedAt=Date.now(),includedCommits=new Map([[target,true]]);
+await waitForPagesBuild({target,
+  requestBuild:()=>execFileSync('gh',['api','--method','POST','repos/'+repo+'/pages/builds','--silent'],{cwd:root,stdio:'inherit'}),
+  listBuilds:()=>JSON.parse(execFileSync('gh',['api','repos/'+repo+'/pages/builds?per_page=20'],{cwd:root,encoding:'utf8'})),
+  includesTarget:build=>{
+    if(build.commit===target)return true;
+    // Only consider newer successful commits, and prove they contain our update.
+    if(build.status!=='built'||!(/^[a-f0-9]{40}$/.test(build.commit??''))||!(Date.parse(build.created_at)>=requestedAt-5000))return false;
+    if(!includedCommits.has(build.commit)){
+      git('fetch','origin','main');
+      includedCommits.set(build.commit,spawnSync('git',['merge-base','--is-ancestor',target,build.commit],{cwd:root,stdio:'ignore'}).status===0);
+    }
+    return includedCommits.get(build.commit);
   }
-  await pause(10000);
-}
-throw new Error('Pages has not confirmed the refreshed commit within six minutes.');
+});
+console.log('Pages built the refreshed commit '+target+' or a verified newer commit containing it.');

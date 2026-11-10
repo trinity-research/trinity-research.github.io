@@ -50,6 +50,10 @@ It refreshes weather, snow/cold/river snapshots, and the Tennessee Black Bayou
 count, validates them, commits only generated public records, and explicitly
 requests a Pages build, waits for it, and verifies current live data. Normal
 pushes retry transient errors without force pushes or overwriting branch changes.
+Pages polling checks all recent matching builds, so a failed sibling does not
+override a successful or in-progress build of the same commit. Persistent build
+failure permits at most two additional rebuild requests within the bounded wait;
+actual failures and stale live data still fail the workflow.
 Other agency reports remain separately reviewed;
 rebuilding their checked source files does not fetch new observations. Daily
 checks do not create daily surveys. Source dates stay visible, with older data
