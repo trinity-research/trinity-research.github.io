@@ -51,7 +51,8 @@ agency report feeds, and imports six numeric survey series after strict date
 and table validation: Loess Bluffs, Iowa, both INHS river inventories, Missouri,
 and Tennessee Black Bayou. Other sources receive newer-report notices or
 unavailable-check warnings. Hourly backup checks trigger another source sweep
-after six hours; GitHub's schedule is approximate. The job validates its data,
+after six hours. Forecast collection has its own three-hour target and refreshes
+the other public sources in that same bounded run; GitHub's schedule is approximate. The job validates its data,
 commits only generated public records, and explicitly
 requests a Pages build, waits for it, and verifies current live data. Normal
 pushes retry transient errors without force pushes or overwriting branch changes.
@@ -74,8 +75,14 @@ GitHub schedules can be delayed or dropped;
 the hourly backup uses the same scheduler. On November 5 the missed daily
 update was recovered manually, and a transient GitHub push rejection cleared
 on retry. A successful manual run does not prove scheduled triggering.
-Local development snapshots update separately; the page displays their saved
-time and offers a Check for updates button that bypasses cached data.
+Local development snapshots update separately. The page checks its published
+completion marker every 15 minutes while visible and when returning after at
+least five minutes. Check for updates forces a check. New files update in place,
+preserving the selected day, city, species, filters, and map/list view. Failed or
+inconsistent downloads retain the prior view and show a warning. These requests
+fetch shared static files and do not send visitor coordinates. Daily cold-history
+cards distinguish NOAA archive observation dates from source-check times; those
+records can lag even when today's forecasts and collection job are current.
 
 `slssm-01.html`, `signals.html`, `feed.xml`, and `sitemap.xml` are the only
 pages with generated content; everything else is hand-written.

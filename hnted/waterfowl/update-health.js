@@ -1,12 +1,13 @@
 import {dateKey} from '../engine.js';
 const HOUR=3600000;
-export function updateHealth(weather,conditions,status,{now=new Date(),automatic=true,monitoring=null,requireReportChecks=false,reportCheckIntervalHours=6}={}){
+export function updateHealth(weather,conditions,status,{now=new Date(),automatic=true,monitoring=null,requireReportChecks=false,reportCheckIntervalHours=6,weatherRefreshIntervalHours=3}={}){
   const time=+now,age=value=>{const n=Date.parse(value);return Number.isFinite(n)&&n<=time+300000?Math.max(0,(time-n)/HOUR):null;};
   const ageHours=age(weather?.generatedAt),groundAgeHours=age(conditions?.generatedAt),today=dateKey(now,'America/Chicago');
   const parts=new Intl.DateTimeFormat('en-GB',{timeZone:'America/Chicago',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(now),part=type=>Number(parts.find(p=>p.type===type)?.value);
   const minutes=part('hour')*60+part('minute'),lastDay=ageHours===null?null:dateKey(new Date(weather.generatedAt),'America/Chicago');
   const reportAgeHours=age(monitoring?.checkedAt),lastReportDay=reportAgeHours===null?null:dateKey(new Date(monitoring.checkedAt),'America/Chicago');
   const reportSources=Array.isArray(monitoring?.sources)?monitoring.sources:[];
+  const weatherIntervalDue=automatic&&ageHours!==null&&ageHours>=weatherRefreshIntervalHours;
   const reportIntervalDue=requireReportChecks&&reportAgeHours!==null&&reportAgeHours>=reportCheckIntervalHours;
   const reportChecksDue=requireReportChecks&&automatic&&minutes>=257&&lastReportDay!==today;
   const dailyDue=automatic&&minutes>=257&&lastDay!==today||reportChecksDue;
@@ -25,5 +26,5 @@ export function updateHealth(weather,conditions,status,{now=new Date(),automatic
   const reportRetry=requireReportChecks&&reportAgeHours!==null&&reportAgeHours>=6&&reportSources.some(s=>s.status==='check-failed'||s.retryable);
   const partial=agedSites.length>0||(weather?.errors?.length??0)>0||(conditions?.errors?.length??0)>0||Boolean(reportRetry);
   const partialRetry=partial&&ageHours!==null&&ageHours>=6||reportRetry;
-  return {ageHours,groundAgeHours,reportAgeHours,reportChecksDue,freshNws,agedSites,failedJobs,partial,dailyDue,needsRefresh:dailyDue||reportIntervalDue||reasons.length>0||partialRetry,overdue:reasons.length>0||(dailyDue&&minutes>=347),reasons,lastRefreshAt:weather?.generatedAt??null};
+  return {ageHours,groundAgeHours,reportAgeHours,reportChecksDue,weatherIntervalDue,freshNws,agedSites,failedJobs,partial,dailyDue,needsRefresh:dailyDue||weatherIntervalDue||reportIntervalDue||reasons.length>0||partialRetry,overdue:reasons.length>0||(dailyDue&&minutes>=347),reasons,lastRefreshAt:weather?.generatedAt??null};
 }
