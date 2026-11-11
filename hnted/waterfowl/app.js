@@ -6,6 +6,7 @@ import {renderReportCards} from './report-cards.js';
 import {validateConditions} from './conditions-data.js';
 import {renderColdCards,renderGaugeCards} from './conditions-cards.js';
 import {updateHealth} from './update-health.js';
+import {checksSummary,renderSourceChecks} from './report-monitor.js';
 
 const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -36,7 +37,7 @@ function dayFor(site){return summarizeDay(site.points,key,site.zone);}
 function actualTime(value,zone=spot.zone){if(value===null||value===undefined||value==='')return 'Unavailable';const d=new Date(value);return Number.isFinite(+d)?new Intl.DateTimeFormat('en-US',{timeZone:zone,month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'}).format(d):'Unavailable';}
 function renderRefreshStatus(){
   if(!weather)return;
-  const state=snapshotState(weather),health=updateHealth(weather,conditions,refreshState,{automatic:release.automaticWeatherConditions}),updated=actualTime(weather.generatedAt);
+  const state=snapshotState(weather),health=updateHealth(weather,conditions,refreshState,{automatic:release.automaticWeatherConditions,monitoring:surveys?.monitoring,requireReportChecks:release.automaticReportChecks===true}),updated=actualTime(weather.generatedAt);
   const warning=health.ageHours===null?'The refresh date is unavailable. ':health.overdue?'An update is overdue or a source needs attention. ':health.agedSites.length?health.agedSites.length+' forecast source(s) have older issue dates. ':'';
   $('load-status').textContent=`Weather data saved ${updated}. ${warning}${refreshNote()}`;
   $('load-status').classList.toggle('stale',health.overdue||state.stale);$('live-guide-link').hidden=release.audience!=='local';$('reload-data').disabled=false;
@@ -139,14 +140,18 @@ function renderDays(){
 }
 function renderReports(){
   const selected=selectReports(surveys.reports,{state:reportState,type:reportType});
-  $('report-cards').innerHTML=selected.length?renderReportCards(selected,{species,today:dateKey(new Date(),spot.zone),sources:surveys.sources}):'<p class="report-empty">No reports match these filters. Try all report types or another reference state.</p>';
+  $('report-cards').innerHTML=selected.length?renderReportCards(selected,{species,today:dateKey(new Date(),spot.zone),sources:surveys.sources,monitoring:surveys.monitoring,zone:spot.zone}):'<p class="report-empty">No reports match these filters. Try all report types or another reference state.</p>';
   $('reports-checked').textContent=selected.length+' of '+surveys.reports.length+' dated reports. Each keeps its own observation date.';
   $('report-count').textContent=surveys.reports.length+' dated reports';
   const fields=surveys.reports.filter(r=>r.type==='field-notes').length;
   $('report-breakdown').textContent=(surveys.reports.length-fields)+' survey reports and '+fields+' regional field reports.';
   const pending=surveys.pendingSources??[];
-  $('source-statuses').hidden=!pending.length;
-  $('source-status-list').innerHTML=pending.map(s=>'<li><a href="'+esc(s.url??s.indexUrl)+'" target="_blank" rel="noreferrer">'+esc(s.name)+'</a><p>'+esc(s.note??s.reason??'Current report import is pending.')+'</p><small>Checked '+esc(actualTime(s.checkedAt))+'</small></li>').join('');
+  $('source-statuses').hidden=!pending.length&&!surveys.monitoring?.sources?.length;
+  $('source-status-summary').textContent=checksSummary(surveys.monitoring,{zone:spot.zone});
+  const checks=surveys.monitoring?.sources??[],newer=checks.filter(s=>s.newerAvailable).length,unavailable=checks.filter(s=>['access-blocked','check-failed'].includes(s.status)).length;
+  $('report-checks-link').textContent=checks.length?(newer?newer+' newer source reports':checks.length+' source checks')+(unavailable?' · '+unavailable+' checks unavailable':'')+' ↓':'See agency report checks ↓';
+  $('source-checks-toggle').textContent='See '+(surveys.monitoring?.sources?.length??pending.length)+' source checks';
+  $('source-status-list').innerHTML=surveys.monitoring?.sources?.length?renderSourceChecks(surveys.monitoring,{zone:spot.zone}):pending.map(s=>'<li><a href="'+esc(s.url??s.indexUrl)+'" target="_blank" rel="noreferrer">'+esc(s.name)+'</a><p>'+esc(s.note??s.reason??'Current report import is pending.')+'</p><small>Last reviewed '+esc(actualTime(s.checkedAt))+'</small></li>').join('');
 }
 function renderConditions(){
   if(!conditions){$('conditions-status').textContent='Ground observations unavailable in this saved snapshot.';$('cold-cards').innerHTML='<p>Refresh the public ground-data snapshot to load observations.</p>';$('ground-count').textContent='Ground observations unavailable';return;}

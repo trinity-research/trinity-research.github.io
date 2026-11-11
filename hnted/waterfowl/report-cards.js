@@ -1,5 +1,6 @@
 import {reportMetric,referenceStates} from './report-data.js';
 import {dateKey} from '../engine.js';
+import {renderReportCheck} from './report-monitor.js';
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const number=value=>typeof value==='number'&&Number.isFinite(value)?value.toLocaleString('en-US'):'—';
 const signed=value=>`${value>=0?'+':''}${number(value)}`;
@@ -21,12 +22,13 @@ function history(report,species){
   return `<div class="mini-history" aria-label="Dated agency estimates">${report.observations.map(o=>`<div><b>${number(value(o))}</b><i style="height:${typeof value(o)==='number'?Math.max(2,value(o)/max*44):0}px"></i><small>${date(o.weekOf)}</small></div>`).join('')}</div>`;
 }
 function context(report,species){
-  if(report.sourceId==='iowa-dnr-migration')return species==='mallard'?`The report's ${number(report.summary.allDucks)} total ducks increased while mallard counts decreased.`:`Mallards were ${report.summary.mallardCompositionPercent}% of the mix; their reported count changed ${report.summary.mallardChangePercent}% from the previous week.`;
+  if(report.sourceId==='iowa-dnr-migration')return `Mallards were ${number(report.summary.mallardCompositionPercent)}% of the surveyed mix; their reported count changed ${signed(report.summary.mallardChangePercent)}% from the previous week. Rounded species shares are not converted into exact counts.`;
   const duplicate=report.overlaps?.find(o=>o.status==='confirmed-same-site-date-and-values');
   if(duplicate)return 'Includes the Loess Bluffs count shown in its own card. These reports overlap and are not added together.';
+  if(report.overlaps?.some(o=>o.sourceId==='usfws-loess-bluffs'||o.areaName==='Loess Bluffs NWR'))return 'Includes a Loess Bluffs observation whose date differs from the latest refuge report. This coverage overlaps; the reports are not added together.';
   return report.areas?.length?`${report.areas.length} named source rows. ${report.scope.description}`:report.scope.description;
 }
-export function renderReportCards(reports,{species='mallard',today=dateKey(new Date(),'America/Chicago'),sources=[]}={}){
+export function renderReportCards(reports,{species='mallard',today=dateKey(new Date(),'America/Chicago'),sources=[],monitoring=null,zone='America/Chicago'}={}){
   return reports.map(report=>{
     const source=sources.find(s=>s.id===report.sourceId),metric=reportMetric(report,species),age=Math.max(0,Math.round((Date.parse(today)-Date.parse(report.reportDate))/86400000));
     const fields=report.type==='field-notes',state=referenceStates(report).join(' / '),sourceName=source?.name??report.sourceId;
@@ -42,6 +44,6 @@ export function renderReportCards(reports,{species='mallard',today=dateKey(new D
     const baseline=report.referenceBaseline,baselineValue=species==='mallard'?baseline?.mallardCount:baseline?.allDucks;
     const comparisons=report.comparisons?.fiveYearAverage,comparisonValue=species==='mallard'?comparisons?.mallardCount:comparisons?.allDucks;
     const provenance=typeof report.provenance==='string'?report.provenance:Object.values(report.provenance??{}).join(' ');
-    return `<article id="report-${esc(report.id)}" class="report-card${fields?' field-report-card':''}" tabindex="-1"><div class="report-meta"><span>${fields?'FIELD NOTES':'SURVEY COUNTS'} / ${esc(state)}</span><span>${age} days old</span></div><h3>${esc(report.title)}</h3><p class="report-scope">${esc(reportDate(report))}</p>${body}<p class="report-agency">${esc(sourceName)}</p><a class="source-link" href="${esc(report.url)}" target="_blank" rel="noreferrer">Read the original report ↗</a><details><summary>${fields?'See regional notes and source scope':'See source areas, scope, and comparisons'}</summary><p>${esc(report.scope.description)}</p><p>${esc(report.method)}</p>${fields?`<ul class="field-regions">${report.regions.map(r=>`<li><strong>${esc(r.name)}</strong><span>${esc(r.note??'No report supplied.')}</span></li>`).join('')}</ul>`:areaTable(report)}${baseline?`<p><strong>Historical reference:</strong> ${number(baselineValue)} ${esc(metric.label)}. ${esc(baseline.label)}. ${esc(baseline.note)}</p>`:''}${comparisons?`<p><strong>Published five-year reference:</strong> ${number(comparisonValue)} ${esc(metric.label)}. ${esc(report.comparisons.basis)}</p>`:''}${(report.notes??[]).map(note=>`<p>${esc(note)}</p>`).join('')}<p>${esc(provenance)}</p></details></article>`;
+    return `<article id="report-${esc(report.id)}" class="report-card${fields?' field-report-card':''}" tabindex="-1"><div class="report-meta"><span>${fields?'FIELD NOTES':'SURVEY COUNTS'} / ${esc(state)}</span><span>${age} day${age===1?"":"s"} old</span></div><h3>${esc(report.title)}</h3><p class="report-scope">${esc(reportDate(report))}</p>${renderReportCheck(monitoring?.sources?.find(s=>s.sourceId===report.sourceId),{zone})}${body}<p class="report-agency">${esc(sourceName)}</p><a class="source-link" href="${esc(report.url)}" target="_blank" rel="noreferrer">Read the original report ↗</a><details><summary>${fields?'See regional notes and source scope':'See source areas, scope, and comparisons'}</summary><p>${esc(report.scope.description)}</p><p>${esc(report.method)}</p>${fields?`<ul class="field-regions">${report.regions.map(r=>`<li><strong>${esc(r.name)}</strong><span>${esc(r.note??'No report supplied.')}</span></li>`).join('')}</ul>`:areaTable(report)}${baseline?`<p><strong>Historical reference:</strong> ${number(baselineValue)} ${esc(metric.label)}. ${esc(baseline.label)}. ${esc(baseline.note)}</p>`:''}${comparisons?`<p><strong>Published five-year reference:</strong> ${number(comparisonValue)} ${esc(metric.label)}. ${esc(report.comparisons.basis)}</p>`:''}${(report.notes??[]).map(note=>`<p>${esc(note)}</p>`).join('')}<p>${esc(provenance)}</p></details></article>`;
   }).join('');
 }

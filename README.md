@@ -46,23 +46,31 @@ The workflow in `.github/workflows/daily-waterfowl.yml` is scheduled at 4:17 AM
 America/Chicago, with hourly backup checks at minute 41 UTC and a manual run
 available in GitHub Actions. Healthy backup checks skip provider collection. Its source
 reference is retained in `docs/daily-waterfowl-workflow.yml`.
-It refreshes weather, snow/cold/river snapshots, and the Tennessee Black Bayou
-count, validates them, commits only generated public records, and explicitly
+It refreshes weather and snow/cold/river snapshots, checks all 18 configured
+agency report feeds, and imports six numeric survey series after strict date
+and table validation: Loess Bluffs, Iowa, both INHS river inventories, Missouri,
+and Tennessee Black Bayou. Other sources receive newer-report notices or
+unavailable-check warnings. Hourly backup checks trigger another source sweep
+after six hours; GitHub's schedule is approximate. The job validates its data,
+commits only generated public records, and explicitly
 requests a Pages build, waits for it, and verifies current live data. Normal
 pushes retry transient errors without force pushes or overwriting branch changes.
 Pages polling checks all recent matching builds, so a failed sibling does not
 override a successful or in-progress build of the same commit. Persistent build
 failure permits at most two additional rebuild requests within the bounded wait;
 actual failures and stale live data still fail the workflow.
-Other agency reports remain separately reviewed;
-rebuilding their checked source files does not fetch new observations. Daily
-checks do not create daily surveys. Source dates stay visible, with older data
+Narrative summaries and unsupported numeric formats still require review;
+the guide links newer reports without relabeling old observations. Daily
+checks do not create daily surveys. Source-check and survey dates stay separate, with older data
 retained when a refresh fails and partial coverage labeled when permitted.
 No external API keys or local Windows routine are needed for this data job.
 
 Run `node scripts/check-hnted-waterfowl-health.mjs --require-fresh --live` to
 check saved timestamps, actual forecast coverage, river observation times,
-failed jobs, and the published data. GitHub schedules can be delayed or dropped;
+agency-source monitoring, failed jobs, and the published data. Numeric PDF
+imports require Poppler's `pdftotext`; the workflow installs it from Ubuntu's
+package repository when needed. No PDF-reader executable is committed.
+GitHub schedules can be delayed or dropped;
 the hourly backup uses the same scheduler. On November 5 the missed daily
 update was recovered manually, and a transient GitHub push rejection cleared
 on retry. A successful manual run does not prove scheduled triggering.

@@ -10,6 +10,20 @@ export function reportMetric(report,species='mallard'){
   return {value,unit:'count',label:species==='mallard'?'mallards':'ducks (source total)',change:count(value)&&count(previous)?value-previous:null,changeUnit:'count'};
 }
 
+export function reconcileOverlaps(data){
+  for(const report of data.reports)for(const overlap of report.overlaps??[]){
+    if(!/same-site|reconciliation/.test(overlap.status??''))continue;
+    const other=data.reports.find(r=>r.id===overlap.reportId)??(overlap.areaName==='Loess Bluffs NWR'?data.reports.find(r=>r.sourceId==='usfws-loess-bluffs'):null);
+    if(!other)continue;
+    const area=report.areas?.find(a=>a.name===overlap.areaName),otherDate=other.observations?.at(-1)?.weekOf??other.reportDate;
+    overlap.sourceId=other.sourceId;overlap.reportId=other.id;
+    const same=area&&area.date===otherDate&&area.mallardCount===reportMetric(other,'mallard').value&&area.allDucks===reportMetric(other,'allDucks').value;
+    overlap.status=same?'confirmed-same-site-date-and-values':'same-site-different-observation';
+    if(area){overlap.observationDate=area.date;overlap.mallardCount=area.mallardCount;overlap.allDucks=area.allDucks;}
+  }
+  return data;
+}
+
 export function validateReports(data){
   if(!Array.isArray(data.sources)||!Array.isArray(data.reports)||!data.reports.length)throw new Error('Report sources and records are required.');
   const sources=new Set(),ids=new Set();
