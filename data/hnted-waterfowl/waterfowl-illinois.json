@@ -9,14 +9,14 @@
       "indexUrl": "https://forbes-bio-station.inhs.illinois.edu/research/waterfowl-aerial-inventories/",
       "reportUrl": "https://uofi.box.com/s/phvunx3ev6brq484xeila97izwl8llur",
       "reportFilename": "IL102826.pdf",
-      "retrievedAt": "2026-11-11T18:22:15.355Z",
+      "retrievedAt": "2026-11-11T19:11:47.418Z",
       "documentSha256": "990054ec51a7d7a2b1e2cf27753aadd1f759dd6f3ae8ee4b95768428db6c00b5",
       "access": "Public Box share linked by official university index. Anonymous public-page metadata enabled download; original one-page PDF successfully downloaded.",
       "cadence": "Index describes weekly autumn aerial inventories, subject to actual flight dates and weather.",
       "reuseDecision": "Extracted factual table values with source attribution and links; no report artwork, university logo, or original PDF republished. No blanket open licence is asserted.",
       "verification": "Automatically parsed with date, schema, units, missing-value and count-reconciliation checks.",
       "lastReportSha256": "990054ec51a7d7a2b1e2cf27753aadd1f759dd6f3ae8ee4b95768428db6c00b5",
-      "lastAutomaticCheckAt": "2026-11-11T18:22:13.169Z"
+      "lastAutomaticCheckAt": "2026-11-11T19:11:45.629Z"
     },
     {
       "id": "inhs-central-mississippi",
@@ -24,14 +24,14 @@
       "indexUrl": "https://forbes-bio-station.inhs.illinois.edu/research/waterfowl-aerial-inventories/",
       "reportUrl": "https://uofi.box.com/s/i3h4a882ic209il54uzh8nzi4cvprkab",
       "reportFilename": "MS102826.pdf",
-      "retrievedAt": "2026-11-11T18:22:17.385Z",
+      "retrievedAt": "2026-11-11T19:11:49.169Z",
       "documentSha256": "2180924cb4212737aabc695880f011b556c8053f43bd9fb9f5da531ff35aa25a",
       "access": "Public Box share linked by official university index. Anonymous public-page metadata enabled download; original one-page PDF successfully downloaded.",
       "cadence": "Index describes weekly autumn aerial inventories, subject to actual flight dates and weather.",
       "reuseDecision": "Extracted factual table values with source attribution and links; no report artwork, university logo, or original PDF republished. No blanket open licence is asserted.",
       "verification": "Automatically parsed with date, schema, units, missing-value and count-reconciliation checks.",
       "lastReportSha256": "2180924cb4212737aabc695880f011b556c8053f43bd9fb9f5da531ff35aa25a",
-      "lastAutomaticCheckAt": "2026-11-11T18:22:13.169Z"
+      "lastAutomaticCheckAt": "2026-11-11T19:11:45.629Z"
     }
   ],
   "reports": [
@@ -1157,7 +1157,7 @@
         "Repeated place names remain separate printed rows, distinguished by section and row ID.",
         "No previous-survey count is inferred from the printed ten-year average."
       ],
-      "checkedAt": "2026-11-11T18:22:15.355Z"
+      "checkedAt": "2026-11-11T19:11:47.418Z"
     },
     {
       "type": "survey-counts",
@@ -2009,7 +2009,7 @@
         "No previous-survey count is inferred from the printed ten-year average.",
         "Central Mississippi means the river corridor, not the state of Mississippi. Some coverage may overlap Missouri surveys, including Shanks; do not sum sources as independent populations."
       ],
-      "checkedAt": "2026-11-11T18:22:17.385Z"
+      "checkedAt": "2026-11-11T19:11:49.169Z"
     }
   ]
 }

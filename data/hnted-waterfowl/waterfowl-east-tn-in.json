@@ -9,7 +9,7 @@
       "indexUrl": "https://www.tn.gov/twra/hunting/migratory-birds/waterfowl-counts.html",
       "reportUrl": "https://www.arcgis.com/apps/dashboards/5a158cd3c7194625838f3b1048959ce3",
       "serviceUrl": "https://services3.arcgis.com/PWXNAH2YKmZY7lBq/arcgis/rest/services/service_e17e08b94e004c26ba2a532f36ad411b/FeatureServer/0",
-      "retrievedAt": "2026-11-11T18:22:08.679Z",
+      "retrievedAt": "2026-11-11T19:11:43.512Z",
       "documentSha256": "c5be27f89e3133c16e144785b211e0c3f19e8210c58771a3b5ce75887360af28",
       "dashboardDataSha256": "c54374fe6223a9313b9a2d056415814d85bbd9fe1005adbc5a658c9b2b620b66",
       "access": "Official page links this public ArcGIS dashboard. Anonymous dashboard/service metadata and a bounded current-season query returned HTTP 200. Direct requests to the tn.gov page timed out during this audit; its text and dashboard link were checked through the web tool.",
@@ -17,7 +17,7 @@
       "verification": "Latest Black Bayou ground-survey row from the bounded current-season official service. Numbered duplicate count fields are excluded.",
       "cadence": "Agency dashboard describes bi-weekly refuge surveys during November-February; actual row dates control freshness.",
       "dateWarning": "The agency landing page still labels its dashboard 2025-2026, but the underlying official service already contains the November 2, 2026 observation. Do not infer availability from that stale page label alone.",
-      "lastAutomaticCheckAt": "2026-11-11T18:22:08.679Z"
+      "lastAutomaticCheckAt": "2026-11-11T19:11:43.512Z"
     },
     {
       "id": "indiana-dnr-waterfowl-counts",
@@ -98,7 +98,7 @@
         "Null diver, sea-duck, and merganser group fields remain unreported rather than observed zeros. The source's DuckTotals value is preserved as reported.",
         "No prior-count trend is calculated by this adapter."
       ],
-      "checkedAt": "2026-11-11T18:22:08.679Z"
+      "checkedAt": "2026-11-11T19:11:43.512Z"
     }
   ],
   "pendingSources": [
