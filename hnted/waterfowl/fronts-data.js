@@ -11,6 +11,7 @@ export function validateFronts(data){
   for(const frame of data.frames){
     if(!frame.id||ids.has(frame.id)||!['analysis','forecast'].includes(frame.kind)||!validTime(frame.validAt)||!validTime(frame.issuedAt)||!Array.isArray(frame.features)||frame.features.length>1000)throw new Error('Invalid or duplicate front-map frame.');
     if(Date.parse(frame.issuedAt)>Date.parse(data.generatedAt)+300000||Date.parse(frame.validAt)>Date.parse(data.generatedAt)+10*86400000)throw new Error('Implausible front-map source date.');
+    if(frame.omissions!==undefined&&(!Array.isArray(frame.omissions)||frame.omissions.length>2||frame.omissions.some(o=>typeof o.sourceCode!=='string'||typeof o.reason!=='string'||o.reason.length>220)))throw new Error('Invalid partial-front metadata.');
     ids.add(frame.id);publicUrl(frame.sourceUrl);
     for(const f of frame.features){
       const type=f.properties?.type;if(f.type!=='Feature'||!FRONT_TYPES[type])throw new Error('Unknown NOAA front type.');

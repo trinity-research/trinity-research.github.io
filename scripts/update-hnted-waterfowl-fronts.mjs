@@ -5,7 +5,7 @@ import {WPC_ANALYSIS_URL,WPC_FORECAST_URL,parseWpcSurfaceBulletin,parseWpcForeca
 const root=new URL('../',import.meta.url),out=new URL('hnted/waterfowl/data/fronts.json',root),raw=new URL('.hnted-runtime/waterfowl/',root);
 const previous=await readFile(out,'utf8').then(JSON.parse).then(validateFronts).catch(()=>null),frames=[],errors=[];
 const headers={'User-Agent':'HNTED-FrontMaps/1.0 (https://trinity-research.com/hnted/)','Accept':'text/plain'};
-for(const [kind,url,parse] of [['analysis',WPC_ANALYSIS_URL,text=>[parseWpcSurfaceBulletin(text)]],['forecast',WPC_FORECAST_URL,parseWpcForecastBulletin]]){
+for(const [kind,url,parse] of [['analysis',WPC_ANALYSIS_URL,text=>[parseWpcSurfaceBulletin(text,{allowPartialFeatures:true})]],['forecast',WPC_FORECAST_URL,parseWpcForecastBulletin]]){
   try{
     const parsedUrl=new URL(url);if(parsedUrl.protocol!=='https:'||parsedUrl.hostname!=='www.wpc.ncep.noaa.gov')throw new Error('Unsupported front-map host.');
     let response;

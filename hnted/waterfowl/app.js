@@ -58,9 +58,9 @@ function renderFronts(){
   if(!frame){frontFrameId=null;const option=document.createElement('option');option.textContent='No position for this date';picker.append(option);$('front-status').classList.remove('front-warning');$('front-status').textContent=fronts?'NOAA has no front position for '+formatDate(key)+'. Choose another forecast day; no positions are interpolated.':'NOAA front data has not loaded. Other map layers remain available.';$('front-detail').textContent='';$('front-source').href='https://www.wpc.ncep.noaa.gov/basicwx/basicwx_ndfd.php';return null;}
   frontFrameId=frame.id;picker.value=frame.id;
   const state=frontFrameStatus(fronts,frame),centers=frame.features.filter(f=>['high','low'].includes(f.properties.type)).length,boundaries=frame.features.length-centers;
-  $('front-status').textContent=(state.stale?'Older source · ':state.earlierForecast?'Earlier forecast · ':'')+(frame.kind==='analysis'?'Surface analysis':'Forecast front positions')+' valid '+actualTime(frame.validAt)+'. Issued '+actualTime(frame.issuedAt)+'.';
-  $('front-status').classList.toggle('front-warning',state.stale);
-  $('front-detail').textContent='NOAA chart: '+boundaries+' front/boundary segments · '+centers+' pressure centers. '+(state.drawable?'Positions apply at this time; they do not establish an arrival time at your spot.':'This older analysis is not drawn. Await the next source update.')+(fronts.errors?.length?' Some NOAA source updates were unavailable; saved source dates are retained.':'');
+  $('front-status').textContent=(frame.omissions?.length?'Partial geometry · ':'')+(state.stale?'Older source · ':state.earlierForecast?'Earlier forecast · ':'')+(frame.kind==='analysis'?'Surface analysis':'Forecast front positions')+' valid '+actualTime(frame.validAt)+'. Issued '+actualTime(frame.issuedAt)+'.';
+  $('front-status').classList.toggle('front-warning',state.stale||Boolean(frame.omissions?.length));
+  $('front-detail').textContent='NOAA chart: '+boundaries+' front/boundary segments · '+centers+' pressure centers. '+(state.drawable?'Positions apply at this time; they do not establish an arrival time at your spot.':'This older analysis is not drawn. Await the next source update.')+(frame.omissions?.length?' '+frame.omissions.length+' boundary segment(s) omitted because NOAA supplied incomplete coordinates.':'')+(fronts.errors?.length?' Some NOAA source updates were unavailable; saved source dates are retained.':'');
   $('front-source').href=frame.sourceUrl;
   return $('fronts-layer').checked&&state.drawable?frame:null;
 }

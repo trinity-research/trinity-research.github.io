@@ -76,6 +76,9 @@ their saved dates; analyses older than 12 hours are not drawn. The pure decoder
 is `scripts/wpc-fronts.mjs`; the collector is
 `scripts/update-hnted-waterfowl-fronts.mjs`. The coding guide is
 [NOAA's bulletin documentation](https://www.wpc.ncep.noaa.gov/html/read_coded_bull_hr.shtml).
+An isolated malformed analysis boundary can be omitted with an explicit
+partial-geometry notice. Missing coordinates are never guessed; broader errors
+retain the previous source frames. Forecast parsing remains strict.
 
 Run `node scripts/check-hnted-waterfowl-health.mjs --require-fresh --live` to
 check saved timestamps, actual forecast coverage, river observation times,

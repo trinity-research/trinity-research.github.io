@@ -26,7 +26,7 @@ export function updateHealth(weather,conditions,status,{now=new Date(),automatic
   if(requireReportChecks&&(!reportSources.length||reportAgeHours===null||reportAgeHours>24))reasons.push('report-source-checks-overdue');
   if(requireFronts&&(frontAgeHours===null||frontAgeHours>12||frontAnalysisAgeHours===null||frontAnalysisAgeHours>12))reasons.push('front-map-overdue');
   const reportRetry=requireReportChecks&&reportAgeHours!==null&&reportAgeHours>=6&&reportSources.some(s=>s.status==='check-failed'||s.retryable);
-  const partial=agedSites.length>0||(weather?.errors?.length??0)>0||(conditions?.errors?.length??0)>0||(fronts?.errors?.length??0)>0||Boolean(reportRetry);
+  const partial=agedSites.length>0||(weather?.errors?.length??0)>0||(conditions?.errors?.length??0)>0||(fronts?.errors?.length??0)>0||Boolean(fronts?.frames?.some(f=>f.omissions?.length))||Boolean(reportRetry);
   const partialRetry=partial&&ageHours!==null&&ageHours>=6||reportRetry;
   return {ageHours,groundAgeHours,reportAgeHours,frontAgeHours,frontAnalysisAgeHours,reportChecksDue,weatherIntervalDue,freshNws,agedSites,failedJobs,partial,dailyDue,needsRefresh:dailyDue||weatherIntervalDue||reportIntervalDue||reasons.length>0||partialRetry,overdue:reasons.length>0||(dailyDue&&minutes>=347),reasons,lastRefreshAt:weather?.generatedAt??null};
 }
