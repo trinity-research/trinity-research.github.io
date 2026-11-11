@@ -37,7 +37,7 @@ jobs:
             sudo apt-get update -qq
             sudo apt-get install -y --no-install-recommends poppler-utils
           fi
-      - name: Refresh weather, ground observations, and agency report sources
+      - name: Refresh weather, fronts, ground observations, and agency report sources
         if: steps.health.outputs.needed == 'true'
         run: node scripts/refresh-hnted-waterfowl.mjs
       - name: Validate saved data and runtime
@@ -48,7 +48,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -- hnted/waterfowl/data/weather.json hnted/waterfowl/data/conditions.json hnted/waterfowl/data/surveys.json hnted/waterfowl/data/update-status.json data/hnted-waterfowl/waterfowl-surveys.json data/hnted-waterfowl/waterfowl-illinois.json data/hnted-waterfowl/waterfowl-missouri.json data/hnted-waterfowl/waterfowl-northern.json data/hnted-waterfowl/waterfowl-southern.json data/hnted-waterfowl/waterfowl-source-status.json data/hnted-waterfowl/waterfowl-additional.json data/hnted-waterfowl/waterfowl-east-tn-in.json data/hnted-waterfowl/waterfowl-east-ky-ms.json data/hnted-waterfowl/waterfowl-monitoring.json 'hnted/waterfowl/data/snow-analysis-*.png'
+          git add -- hnted/waterfowl/data/weather.json hnted/waterfowl/data/fronts.json hnted/waterfowl/data/conditions.json hnted/waterfowl/data/surveys.json hnted/waterfowl/data/update-status.json data/hnted-waterfowl/waterfowl-surveys.json data/hnted-waterfowl/waterfowl-illinois.json data/hnted-waterfowl/waterfowl-missouri.json data/hnted-waterfowl/waterfowl-northern.json data/hnted-waterfowl/waterfowl-southern.json data/hnted-waterfowl/waterfowl-source-status.json data/hnted-waterfowl/waterfowl-additional.json data/hnted-waterfowl/waterfowl-east-tn-in.json data/hnted-waterfowl/waterfowl-east-ky-ms.json data/hnted-waterfowl/waterfowl-monitoring.json 'hnted/waterfowl/data/snow-analysis-*.png'
           if git diff --cached --quiet; then
             echo 'changed=false' >> "$GITHUB_OUTPUT"
           else

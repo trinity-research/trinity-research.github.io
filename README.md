@@ -66,6 +66,17 @@ checks do not create daily surveys. Source-check and survey dates stay separate,
 retained when a refresh fails and partial coverage labeled when permitted.
 No external API keys or local Windows routine are needed for this data job.
 
+The Weather fronts layer decodes NOAA WPC's public coded surface analysis and
+short-range forecast bulletins into `hnted/waterfowl/data/fronts.json`. It shows
+front/boundary lines and H/L pressure centers at explicit valid times, using the
+same map projection and zoom. The selected spot's calendar day filters the
+available positions; no missing times or local arrival estimates are invented.
+The cloud routine collects fronts alongside weather. Failed sources retain
+their saved dates; analyses older than 12 hours are not drawn. The pure decoder
+is `scripts/wpc-fronts.mjs`; the collector is
+`scripts/update-hnted-waterfowl-fronts.mjs`. The coding guide is
+[NOAA's bulletin documentation](https://www.wpc.ncep.noaa.gov/html/read_coded_bull_hr.shtml).
+
 Run `node scripts/check-hnted-waterfowl-health.mjs --require-fresh --live` to
 check saved timestamps, actual forecast coverage, river observation times,
 agency-source monitoring, failed jobs, and the published data. Numeric PDF

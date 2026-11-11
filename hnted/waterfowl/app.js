@@ -8,6 +8,7 @@ import {renderColdCards,renderGaugeCards} from './conditions-cards.js';
 import {updateHealth} from './update-health.js';
 import {checksSummary,renderSourceChecks,validateMonitoring} from './report-monitor.js';
 import {createSnapshotRefresher} from './snapshot-refresh.js';
+import {FRONT_TYPES,validateFronts,frontFramesForDay,chooseFrontFrame,frontFrameStatus,frontLinePath} from './fronts-data.js';
 
 const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -22,6 +23,7 @@ let spot=validSpot(savedWaterfowl)?savedWaterfowl:validSpot(savedDeer)?savedDeer
 let weather,surveys,geography,conditions,key,dates,selectedSite,view='map',species='mallard',reportState='',reportType='all',zoom=1,viewCentre=[480,380],searchGeneration=0;
 let release={audience:'local',automaticWeatherConditions:false,automaticReports:[]},refreshState;
 let snapshotRefresher,lastWebsiteCheckAt,websiteCheckFailed=false;
+let fronts=null,frontFrameId=null;
 const getJson=async path=>{const response=await fetch(path+'?check='+Date.now(),{cache:'no-store',signal:AbortSignal.timeout(20000)});if(!response.ok)throw new Error(`${path}: HTTP ${response.status}`);return response.json();};
 const refreshNote=()=>{const failed=refreshState?.jobs?.some(j=>j.status==='failed');return (release.audience==='local'?'Local preview uses the saved files on this computer; the live guide updates separately.':release.automaticWeatherConditions?'Forecast collection targets every '+(release.weatherRefreshIntervalHours??3)+' hours through the cloud routine; scheduled checks can run late.':'This is a saved snapshot, refreshed manually.')+(failed?' Some sources could not refresh; check their saved dates.':'');};
 const NS='http://www.w3.org/2000/svg';
@@ -40,13 +42,28 @@ function dayFor(site){return summarizeDay(site.points,key,site.zone);}
 function actualTime(value,zone=spot.zone){if(value===null||value===undefined||value==='')return 'Unavailable';const d=new Date(value);return Number.isFinite(+d)?new Intl.DateTimeFormat('en-US',{timeZone:zone,month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'}).format(d):'Unavailable';}
 function renderRefreshStatus(){
   if(!weather)return;
-  const state=snapshotState(weather),health=updateHealth(weather,conditions,refreshState,{automatic:release.automaticWeatherConditions,weatherRefreshIntervalHours:release.weatherRefreshIntervalHours??3,monitoring:surveys?.monitoring,requireReportChecks:release.automaticReportChecks===true}),updated=actualTime(weather.generatedAt);
+  const state=snapshotState(weather),health=updateHealth(weather,conditions,refreshState,{automatic:release.automaticWeatherConditions,weatherRefreshIntervalHours:release.weatherRefreshIntervalHours??3,monitoring:surveys?.monitoring,requireReportChecks:release.automaticReportChecks===true,fronts,requireFronts:release.automaticFronts===true}),updated=actualTime(weather.generatedAt);
   const warning=websiteCheckFailed?'Could not check for updates; showing the last loaded data. ':health.ageHours===null?'The refresh date is unavailable. ':health.overdue?'An update is overdue or a source needs attention. ':health.agedSites.length?health.agedSites.length+' forecast source(s) have older issue dates. ':health.weatherIntervalDue?'A newer forecast collection is due. ':'';
   $('load-status').textContent=`Forecasts saved ${updated}. ${warning}${refreshNote()}${lastWebsiteCheckAt?' Page checked '+actualTime(lastWebsiteCheckAt)+'.':''}`;
   $('load-status').classList.toggle('stale',websiteCheckFailed||health.overdue||state.stale);$('live-guide-link').hidden=release.audience!=='local';
 }
 const mapSize=()=>matchMedia('(max-width:580px)').matches?[620,840]:[960,760];
 function setViewBox(){const [width,height]=mapSize(),w=width/zoom,h=height/zoom;$('field-map').setAttribute('viewBox',`${viewCentre[0]-w/2} ${viewCentre[1]-h/2} ${w} ${h}`);$('field-map').dataset.zoomed=String(zoom>1);}
+function renderFronts(){
+  $('fronts-layer').disabled=!fronts?.frames.length;
+  $('front-controls').hidden=!$('fronts-layer').checked;
+  const frames=frontFramesForDay(fronts,key,spot.zone),frame=chooseFrontFrame(fronts,key,spot.zone,{requestedId:frontFrameId}),picker=$('front-frame');
+  picker.replaceChildren();picker.disabled=!frames.length;
+  for(const f of frames){const option=document.createElement('option');option.value=f.id;option.textContent=(f.kind==='analysis'?'Analysis · ':'Forecast · ')+actualTime(f.validAt);picker.append(option);}
+  if(!frame){frontFrameId=null;const option=document.createElement('option');option.textContent='No position for this date';picker.append(option);$('front-status').classList.remove('front-warning');$('front-status').textContent=fronts?'NOAA has no front position for '+formatDate(key)+'. Choose another forecast day; no positions are interpolated.':'NOAA front data has not loaded. Other map layers remain available.';$('front-detail').textContent='';$('front-source').href='https://www.wpc.ncep.noaa.gov/basicwx/basicwx_ndfd.php';return null;}
+  frontFrameId=frame.id;picker.value=frame.id;
+  const state=frontFrameStatus(fronts,frame),centers=frame.features.filter(f=>['high','low'].includes(f.properties.type)).length,boundaries=frame.features.length-centers;
+  $('front-status').textContent=(state.stale?'Older source · ':state.earlierForecast?'Earlier forecast · ':'')+(frame.kind==='analysis'?'Surface analysis':'Forecast front positions')+' valid '+actualTime(frame.validAt)+'. Issued '+actualTime(frame.issuedAt)+'.';
+  $('front-status').classList.toggle('front-warning',state.stale);
+  $('front-detail').textContent='NOAA chart: '+boundaries+' front/boundary segments · '+centers+' pressure centers. '+(state.drawable?'Positions apply at this time; they do not establish an arrival time at your spot.':'This older analysis is not drawn. Await the next source update.')+(fronts.errors?.length?' Some NOAA source updates were unavailable; saved source dates are retained.':'');
+  $('front-source').href=frame.sourceUrl;
+  return $('fronts-layer').checked&&state.drawable?frame:null;
+}
 function renderMap(){
   const map=$('field-map');while(map.lastChild&&map.lastChild.tagName!=='desc')map.lastChild.remove();
   const unitScale=mapSize()[0]/zoom/(map.getBoundingClientRect().width||960);
@@ -56,6 +73,14 @@ function renderMap(){
   for(const lon of [-110,-100,-90,-80]){const x=project([lon,40])[0];base.append(svg('path',{d:`M${x},0V760`,class:'graticule'}));}
   for(const f of geography.features)base.append(svg('path',{d:geoPath(f.geometry),class:f.properties.kind==='country'?'land':f.properties.kind==='lake'?'lake':f.properties.kind==='river'?'river':'state','fill-rule':'evenodd'}));
   if($('snow-layer').checked&&conditions?.snowAnalysis)base.append(svg('image',{href:conditions.snowAnalysis.image,x:0,y:0,width:960,height:760,preserveAspectRatio:'none',opacity:.8}));
+  const frontFrame=renderFronts();
+  if(frontFrame){
+    const frontGroup=svg('g',{class:'weather-front-layer','aria-label':'NOAA '+frontFrame.kind+' valid '+actualTime(frontFrame.validAt)});base.append(frontGroup);
+    for(const f of frontFrame.features){const type=f.properties.type,label=FRONT_TYPES[type].label;
+      if(['high','low'].includes(type)){const [x,y]=project(f.geometry.coordinates),g=svg('g',{class:'front-center front-'+type});g.append(svg('text',{x,y,'text-anchor':'middle',style:'font-size:'+22*unitScale+'px'},type==='high'?'H':'L'));if(f.properties.pressureHpa)g.append(svg('text',{x,y:y+15*unitScale,'text-anchor':'middle',class:'front-pressure',style:'font-size:'+10*unitScale+'px'},f.properties.pressureHpa+' hPa'));frontGroup.append(g);}
+      else {const d=frontLinePath(f.geometry,project),path=svg('path',{d,class:'weather-front front-'+type});path.append(svg('title',{},label+' · '+actualTime(frontFrame.validAt)));frontGroup.append(path);if(type==='stationary')frontGroup.append(svg('path',{d,class:'weather-front front-stationary-warm'}));}
+    }
+  }
   for(const f of geography.features.filter(f=>f.properties.kind==='state')){const p=f.properties,[x,y]=project([p.lon,p.lat]);if(x>24&&x<935&&y>60&&y<720)base.append(svg('text',{x,y,class:'state-label'},p.code));}
   const canada=project([-105,51.7]);base.append(svg('text',{x:canada[0],y:canada[1],class:'country-label'},'CANADA'));
   if($('reports-layer').checked){
@@ -109,7 +134,7 @@ function renderMap(){
   $('snow-status').hidden=!$('snow-layer').checked;
   $('snow-status').textContent=conditions?.snowAnalysis?'NOAA snow analysis · '+actualTime(conditions.snowAnalysis.validAt)+' · stays on this analysis date as you change forecast days.':'Snow raster unavailable. Daily station records are shown below.';
   $('snow-legend').hidden=!$('snow-layer').checked||!conditions?.snowAnalysis;
-  $('map-date').textContent=`${formatDate(key,{weekday:'short',month:'short',day:'numeric',year:'numeric'})} · dates local to each sample`;
+  $('map-date').textContent=`${formatDate(key,{weekday:'short',month:'short',day:'numeric',year:'numeric'})}${frontFrame?' · fronts '+actualTime(frontFrame.validAt):' · dates local to each sample'}`;
   setViewBox();
 }
 function renderList(){
@@ -186,6 +211,7 @@ async function load(){
     try{release=await get('data/release.json');}catch{}
     try{refreshState=await get('data/update-status.json');}catch{}
     try{conditions=validateConditions(await get('data/conditions.json'));}catch{conditions=null;}
+    try{fronts=validateFronts(await get('data/fronts.json'));}catch{fronts=null;}
     $('snow-layer').disabled=!conditions?.coldSites?.length&&!conditions?.snowAnalysis;$('water-layer').disabled=!conditions?.gauges?.length;
     if(!weather.sites?.length||!surveys.reports?.length||!geography.features?.length)throw new Error('Incomplete prototype data.');
     validateReports(surveys);
@@ -205,14 +231,16 @@ async function load(){
     for(const [index,s] of [...choices,...sampleChoices].entries()){const o=document.createElement('option');o.value=String(index);o.textContent=`${s.sample?'Sample':'Saved'} · ${s.name}`;$('sample-spot').append(o);}
     $('sample-spot').addEventListener('change',event=>{if(event.target.value!=='')setSpot([...choices,...sampleChoices][Number(event.target.value)]);event.target.value='';});
     render();
-    snapshotRefresher=createSnapshotRefresher({initialVersion:refreshState?.finishedAt,initialTimes:{weather:weather.generatedAt,surveys:surveys.generatedAt,conditions:conditions?.generatedAt},readStatus:()=>getJson('data/update-status.json'),readSnapshot:async()=>{
+    snapshotRefresher=createSnapshotRefresher({initialVersion:refreshState?.finishedAt,initialTimes:{weather:weather.generatedAt,surveys:surveys.generatedAt,conditions:conditions?.generatedAt,fronts:fronts?.generatedAt},readStatus:()=>getJson('data/update-status.json'),readSnapshot:async()=>{
       const [nextWeather,nextSurveys,nextConditions]=await Promise.all([getJson('data/weather.json'),getJson('data/surveys.json'),getJson('data/conditions.json')]);
       if(!nextWeather.sites?.length||!Number.isFinite(Date.parse(nextWeather.generatedAt)))throw new Error('Forecast data is incomplete.');
       validateReports(nextSurveys);validateMonitoring(nextSurveys.monitoring);validateConditions(nextConditions);
-      return {weather:nextWeather,surveys:nextSurveys,conditions:nextConditions};
+      const next={weather:nextWeather,surveys:nextSurveys,conditions:nextConditions};
+      if(release.automaticFronts||fronts)next.fronts=validateFronts(await getJson('data/fronts.json'));
+      return next;
     },onUpdate:(next,status)=>{
       const oldSite=selectedSite?.id;
-      weather=next.weather;surveys=next.surveys;conditions=next.conditions;refreshState=status;
+      weather=next.weather;surveys=next.surveys;conditions=next.conditions;fronts=next.fronts??fronts;refreshState=status;
       $('snow-layer').disabled=!conditions.coldSites?.length&&!conditions.snowAnalysis;$('water-layer').disabled=!conditions.gauges?.length;
       dates=availableDates(weather,spot.zone);if(!dates.includes(key))key=dates[0];
       selectedSite=weather.sites.find(s=>s.id===oldSite)??nearestSite(spot,weather.sites).site;
@@ -228,7 +256,8 @@ async function checkPublishedData(force=false){
   catch{websiteCheckFailed=true;}
   finally{$('reload-data').disabled=false;$('reload-data').textContent='Check for updates';renderRefreshStatus();}
 }
-for(const id of ['weather-layer','reports-layer','spot-layer','snow-layer','water-layer'])$(id).addEventListener('change',()=>{renderMap();renderList();});
+for(const id of ['weather-layer','reports-layer','spot-layer','snow-layer','water-layer','fronts-layer'])$(id).addEventListener('change',()=>{renderMap();renderList();});
+$('front-frame').addEventListener('change',event=>{frontFrameId=event.target.value;renderMap();});
 $('species').addEventListener('change',event=>{species=event.target.value;renderReports();});
 $('report-state').addEventListener('change',event=>{reportState=event.target.value;renderReports();renderMap();});
 $('report-type').addEventListener('change',event=>{reportType=event.target.value;renderReports();renderMap();});

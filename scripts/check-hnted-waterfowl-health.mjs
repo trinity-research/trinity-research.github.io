@@ -2,18 +2,18 @@ import {readFile,appendFile} from 'node:fs/promises';
 import {updateHealth} from '../hnted/waterfowl/update-health.js';
 const root=new URL('../',import.meta.url),runtime=new URL('hnted/waterfowl/',root);
 const get=async name=>JSON.parse(await readFile(new URL('data/'+name,runtime),'utf8'));
-const [weather,conditions,status,surveys]=await Promise.all([get('weather.json').catch(()=>null),get('conditions.json').catch(()=>null),get('update-status.json').catch(()=>null),get('surveys.json').catch(()=>null)]);
-const health=updateHealth(weather,conditions,status,{monitoring:surveys?.monitoring,requireReportChecks:true}),needed=process.env.GITHUB_EVENT_NAME==='workflow_dispatch'||health.needsRefresh;
+const [weather,conditions,status,surveys,fronts]=await Promise.all([get('weather.json').catch(()=>null),get('conditions.json').catch(()=>null),get('update-status.json').catch(()=>null),get('surveys.json').catch(()=>null),get('fronts.json').catch(()=>null)]);
+const health=updateHealth(weather,conditions,status,{monitoring:surveys?.monitoring,requireReportChecks:true,fronts,requireFronts:true}),needed=process.env.GITHUB_EVENT_NAME==='workflow_dispatch'||health.needsRefresh;
 let publishNeeded=false,liveError;
 if(process.argv.includes('--live')||process.argv.includes('--probe-live')){
 const attempts=process.argv.includes('--wait-live')?12:1;
 for(let attempt=0;attempt<attempts;attempt++){try{
   const base='https://trinity-research.com/hnted/waterfowl/data/',stamp=Date.now();
   const fetchJson=async file=>{const response=await fetch(base+file+'?check='+stamp,{signal:AbortSignal.timeout(30000)});if(!response.ok)throw new Error('Live data HTTP '+response.status);return response.json();};
-  const [liveWeather,liveConditions,liveStatus,liveSurveys]=await Promise.all([fetchJson('weather.json'),fetchJson('conditions.json'),fetchJson('update-status.json'),fetchJson('surveys.json')]);
+  const [liveWeather,liveConditions,liveStatus,liveSurveys,liveFronts]=await Promise.all([fetchJson('weather.json'),fetchJson('conditions.json'),fetchJson('update-status.json'),fetchJson('surveys.json'),fetchJson('fronts.json')]);
   const behind=(actual,expected)=>!Number.isFinite(Date.parse(actual))||(Number.isFinite(Date.parse(expected))&&Date.parse(actual)<Date.parse(expected));
-  if(behind(liveWeather.generatedAt,weather?.generatedAt)||behind(liveConditions.generatedAt,conditions?.generatedAt)||behind(liveStatus.finishedAt,status?.finishedAt)||behind(liveSurveys.generatedAt,surveys?.generatedAt))throw new Error('The live website is behind the saved refresh.');
-  const liveHealth=updateHealth(liveWeather,liveConditions,liveStatus,{monitoring:liveSurveys.monitoring,requireReportChecks:true});if(liveHealth.overdue)throw new Error('The published observations or report source checks are not current.');
+  if(behind(liveWeather.generatedAt,weather?.generatedAt)||behind(liveConditions.generatedAt,conditions?.generatedAt)||behind(liveStatus.finishedAt,status?.finishedAt)||behind(liveSurveys.generatedAt,surveys?.generatedAt)||behind(liveFronts.generatedAt,fronts?.generatedAt))throw new Error('The live website is behind the saved refresh.');
+  const liveHealth=updateHealth(liveWeather,liveConditions,liveStatus,{monitoring:liveSurveys.monitoring,requireReportChecks:true,fronts:liveFronts,requireFronts:true});if(liveHealth.overdue)throw new Error('The published observations, front map, or report source checks are not current.');
   console.log('Live refresh dates and forecast coverage verified.');
   liveError=undefined;publishNeeded=false;break;
 }catch(error){publishNeeded=true;liveError=error;console.log('Live publication check: '+error.message);if(attempt+1<attempts)await new Promise(resolve=>setTimeout(resolve,10000));}}

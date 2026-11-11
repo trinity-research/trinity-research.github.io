@@ -3,7 +3,7 @@ import {readFile,writeFile,readdir,unlink} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 const root=new URL('../',import.meta.url),runtime=new URL('hnted/waterfowl/',root),startedAt=new Date().toISOString(),jobs=[];
 const run=name=>spawnSync(process.execPath,[fileURLToPath(new URL(name,import.meta.url))],{cwd:root,stdio:'inherit',timeout:360000});
-for(const [id,script]of [['weather','update-hnted-waterfowl-weather.mjs'],['conditions','update-hnted-waterfowl-conditions.mjs'],['tennessee','update-hnted-tennessee-waterfowl.mjs'],['reports','update-hnted-waterfowl-reports.mjs']]){
+for(const [id,script]of [['weather','update-hnted-waterfowl-weather.mjs'],['conditions','update-hnted-waterfowl-conditions.mjs'],['fronts','update-hnted-waterfowl-fronts.mjs'],['tennessee','update-hnted-tennessee-waterfowl.mjs'],['reports','update-hnted-waterfowl-reports.mjs']]){
   const result=run(script);jobs.push({id,status:result.status===0?'success':'failed',checkedAt:new Date().toISOString()});
 }
 if(jobs.every(j=>j.status==='failed'))throw new Error('All refreshes failed; previous public snapshots are retained.');
