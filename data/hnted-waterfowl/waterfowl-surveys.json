@@ -8,38 +8,42 @@
       "id": "usfws-loess-bluffs",
       "name": "U.S. Fish and Wildlife Service - Loess Bluffs National Wildlife Refuge",
       "indexUrl": "https://www.fws.gov/library/collections/loess-bluffs-2026-waterfowl-and-bald-eagle-surveys",
-      "reportUrl": "https://www.fws.gov/sites/default/files/documents/2026-10/loess_bluffs_waterfowl_survey_20261027.pdf",
+      "reportUrl": "https://www.fws.gov/sites/default/files/documents/2026-11/loess_bluffs_waterfowl_survey_20261110.pdf",
       "reportLandingUrl": "https://www.fws.gov/media/loess-bluffs-waterfowl-survey-10-27-2026",
-      "retrievedAt": "2026-11-03T14:32:15Z",
-      "documentSha256": "c0c970f0f1860a0614d8c373ed6e025921bd2561f688c5b68de4c87f46cd0af9",
+      "retrievedAt": "2026-11-11T18:22:09.834Z",
+      "documentSha256": "b025eccaddc1fcce5869180cc4341a14bd0cb2355002404e642b44dcd502b242",
       "access": "Public official PDF, successfully downloaded. Newest entry in the official 2026 collection at retrieval.",
       "indexDiscovery": "The collection's public search response uses /fws_search/library_collections_content with nid=[\"5385546\"]. Its first item lists the October 27 report.",
       "termsUrl": "https://www.fws.gov/disclaimer",
       "reuseDecision": "Extracted factual survey values with agency attribution and links; original artwork, service marks, logos and full report are not republished. USFWS warns that not all site materials are public domain.",
       "cadence": "Agency describes weekly staff surveys during fall through spring migration.",
-      "verification": "Both PDF pages rendered and visually checked against extracted table values."
+      "verification": "Automatically parsed with date, schema, units, missing-value and count-reconciliation checks.",
+      "lastReportSha256": "b025eccaddc1fcce5869180cc4341a14bd0cb2355002404e642b44dcd502b242",
+      "lastAutomaticCheckAt": "2026-11-11T18:22:09.032Z"
     },
     {
       "id": "iowa-dnr-migration",
       "name": "Iowa Department of Natural Resources",
       "indexUrl": "https://www.iowadnr.gov/things-do/hunting-trapping/types-hunting-trapping/migratory-game-bird-hunting/waterfowl-migration-survey",
-      "reportUrl": "https://www.iowadnr.gov/media/9964/download?inline=",
-      "retrievedAt": "2026-11-03T14:30:47Z",
-      "documentSha256": "5b1378e52c12919e3d2742a8387c349713f2633c797af126e91ec94d3513a26e",
+      "reportUrl": "https://www.iowadnr.gov/media/9977/download?inline",
+      "retrievedAt": "2026-11-11T18:22:10.105Z",
+      "documentSha256": "bcf6144cfd599215d67b09d10bfa8891518d23360dd835eda709995e57f9c717",
       "access": "Public official PDF, successfully downloaded. Newest report linked by the migration-survey page at retrieval.",
       "termsUrl": "https://www.iowa.gov/policies",
       "reuseDecision": "Extracted factual numeric observations with attribution and original-report links. No blanket public-domain or open-data licence was established from the reviewed Iowa policies; report artwork and full PDF are not republished.",
       "cadence": "Fall weekly reports; the index lists reports for weeks ending September 4 through October 30, 2026.",
-      "verification": "PDF page 3 table rendered and visually checked against extracted values."
+      "verification": "Automatically parsed with date, schema, units, missing-value and count-reconciliation checks.",
+      "lastReportSha256": "bcf6144cfd599215d67b09d10bfa8891518d23360dd835eda709995e57f9c717",
+      "lastAutomaticCheckAt": "2026-11-11T18:22:09.991Z"
     }
   ],
   "reports": [
     {
-      "id": "loess-bluffs-2026-10-27",
+      "id": "loess-bluffs-2026-11-10",
       "sourceId": "usfws-loess-bluffs",
       "title": "Loess Bluffs habitat and waterfowl survey",
-      "reportDate": "2026-10-27",
-      "url": "https://www.fws.gov/sites/default/files/documents/2026-10/loess_bluffs_waterfowl_survey_20261027.pdf",
+      "reportDate": "2026-11-10",
+      "url": "https://www.fws.gov/sites/default/files/documents/2026-11/loess_bluffs_waterfowl_survey_20261110.pdf",
       "scope": {
         "kind": "refuge-survey",
         "name": "Loess Bluffs National Wildlife Refuge",
@@ -58,9 +62,9 @@
       "datePrecision": "report-week-label",
       "exactObservationTimes": null,
       "provenance": {
-        "species": "PDF pages 1-2, Waterfowl Species Summary; columns 10/06/2026, 10/13/2026, 10/20/2026, 10/27/2026.",
-        "groups": "PDF page 2, Species Group Summary; row All Ducks.",
-        "habitat": "PDF page 1, Habitat Conditions Summary; rows Habitat Conditions Rating, Acres of wetlands flooded, Percentage of Wetlands Frozen."
+        "species": "PDF pages 1-2, Waterfowl Species Summary; four columns 2026-10-20, 2026-10-27, 2026-11-03, 2026-11-10.",
+        "groups": "PDF page 2, Species Group Summary; All Ducks equals Dabblers + Divers; independent species sums retained in observation validation.",
+        "habitat": "PDF page 1, Habitat Conditions Summary; dates, condition, flooded acres and frozen percent retained."
       },
       "observations": [
         {
@@ -100,49 +104,215 @@
         {
           "weekOf": "2026-10-20",
           "counts": {
-            "mallard": 155,
+            "woodDuck": 413,
             "gadwall": 0,
             "americanWigeon": 0,
+            "americanBlackDuck": 0,
+            "mallard": 155,
+            "blueWingedTeal": 325,
+            "cinnamonTeal": 0,
+            "northernShoveler": 633,
             "northernPintail": 9050,
             "greenWingedTeal": 4350,
-            "blueWingedTeal": 325
+            "canvasback": 0,
+            "redhead": 0,
+            "ringNeckedDuck": 310,
+            "scaupGroup": 0,
+            "bufflehead": 0,
+            "commonGoldeneye": 0,
+            "hoodedMerganser": 1,
+            "commonMerganser": 0,
+            "redBreastedMerganser": 0,
+            "ruddyDuck": 0
+          },
+          "otherBirdCounts": {
+            "greaterWhiteFrontedGoose": 2290,
+            "snowGoose": 20,
+            "rossGoose": 0,
+            "canadaGoose": 376,
+            "trumpeterSwan": 0,
+            "tundraSwan": 0,
+            "piedBilledGrebe": 85,
+            "hornedGrebe": 0,
+            "earedGrebe": 0,
+            "americanCoot": 4758
           },
           "allDucks": 15237,
           "habitat": {
             "condition": "Fair",
             "floodedAcres": 3340,
             "frozenWetlandPercent": 0
+          },
+          "validation": {
+            "speciesDuckSum": 15237,
+            "groupDuckSum": 15237,
+            "publishedTotalMatchesSpecies": true,
+            "publishedTotalMatchesGroups": true
           }
         },
         {
           "weekOf": "2026-10-27",
           "counts": {
-            "mallard": 170,
+            "woodDuck": 855,
             "gadwall": 7565,
             "americanWigeon": 25,
+            "americanBlackDuck": 0,
+            "mallard": 170,
+            "blueWingedTeal": 125,
+            "cinnamonTeal": 0,
+            "northernShoveler": 1145,
             "northernPintail": 16020,
             "greenWingedTeal": 13730,
-            "blueWingedTeal": 125
+            "canvasback": 0,
+            "redhead": 5,
+            "ringNeckedDuck": 3995,
+            "scaupGroup": 140,
+            "bufflehead": 0,
+            "commonGoldeneye": 0,
+            "hoodedMerganser": 0,
+            "commonMerganser": 0,
+            "redBreastedMerganser": 0,
+            "ruddyDuck": 0
+          },
+          "otherBirdCounts": {
+            "greaterWhiteFrontedGoose": 11600,
+            "snowGoose": 35,
+            "rossGoose": 0,
+            "canadaGoose": 265,
+            "trumpeterSwan": 0,
+            "tundraSwan": 0,
+            "piedBilledGrebe": 188,
+            "hornedGrebe": 0,
+            "earedGrebe": 0,
+            "americanCoot": 18205
           },
           "allDucks": 43775,
           "habitat": {
             "condition": "Fair",
             "floodedAcres": 3380,
             "frozenWetlandPercent": 0
+          },
+          "validation": {
+            "speciesDuckSum": 43775,
+            "groupDuckSum": 43775,
+            "publishedTotalMatchesSpecies": true,
+            "publishedTotalMatchesGroups": true
+          }
+        },
+        {
+          "weekOf": "2026-11-03",
+          "counts": {
+            "woodDuck": 1110,
+            "gadwall": 24400,
+            "americanWigeon": 105,
+            "americanBlackDuck": 0,
+            "mallard": 710,
+            "blueWingedTeal": 70,
+            "cinnamonTeal": 0,
+            "northernShoveler": 1905,
+            "northernPintail": 20830,
+            "greenWingedTeal": 22305,
+            "canvasback": 0,
+            "redhead": 0,
+            "ringNeckedDuck": 2910,
+            "scaupGroup": 0,
+            "bufflehead": 0,
+            "commonGoldeneye": 0,
+            "hoodedMerganser": 2,
+            "commonMerganser": 0,
+            "redBreastedMerganser": 0,
+            "ruddyDuck": 0
+          },
+          "otherBirdCounts": {
+            "greaterWhiteFrontedGoose": 34600,
+            "snowGoose": 65,
+            "rossGoose": 0,
+            "canadaGoose": 118,
+            "trumpeterSwan": 1,
+            "tundraSwan": 0,
+            "piedBilledGrebe": 87,
+            "hornedGrebe": 0,
+            "earedGrebe": 0,
+            "americanCoot": 45005
+          },
+          "allDucks": 74337,
+          "habitat": {
+            "condition": "Fair",
+            "floodedAcres": 3550,
+            "frozenWetlandPercent": 0
+          },
+          "validation": {
+            "speciesDuckSum": 74347,
+            "groupDuckSum": 74337,
+            "publishedTotalMatchesSpecies": false,
+            "publishedTotalMatchesGroups": true
+          }
+        },
+        {
+          "weekOf": "2026-11-10",
+          "counts": {
+            "woodDuck": 977,
+            "gadwall": 28635,
+            "americanWigeon": 70,
+            "americanBlackDuck": 0,
+            "mallard": 4975,
+            "blueWingedTeal": 35,
+            "cinnamonTeal": 0,
+            "northernShoveler": 2210,
+            "northernPintail": 25135,
+            "greenWingedTeal": 15220,
+            "canvasback": 1,
+            "redhead": 0,
+            "ringNeckedDuck": 6180,
+            "scaupGroup": 0,
+            "bufflehead": 0,
+            "commonGoldeneye": 0,
+            "hoodedMerganser": 2,
+            "commonMerganser": 0,
+            "redBreastedMerganser": 0,
+            "ruddyDuck": 0
+          },
+          "otherBirdCounts": {
+            "greaterWhiteFrontedGoose": 18400,
+            "snowGoose": 260,
+            "rossGoose": 0,
+            "canadaGoose": 746,
+            "trumpeterSwan": 36,
+            "tundraSwan": 0,
+            "piedBilledGrebe": 131,
+            "hornedGrebe": 1,
+            "earedGrebe": 0,
+            "americanCoot": 15420
+          },
+          "allDucks": 83440,
+          "habitat": {
+            "condition": "Fair",
+            "floodedAcres": 3550,
+            "frozenWetlandPercent": 0
+          },
+          "validation": {
+            "speciesDuckSum": 83440,
+            "groupDuckSum": 83440,
+            "publishedTotalMatchesSpecies": true,
+            "publishedTotalMatchesGroups": true
           }
         }
       ],
       "notes": [
         "All Ducks is the agency's duck-group total, not a sum of the selected species in counts. Geese, swans, coots and grebes must not be added to it.",
-        "These are dated refuge estimates and can change with habitat, observation and local movements; they do not prove a southbound migration arrival or predict a nearby hunter's success."
-      ]
+        "These are dated refuge estimates and can change with habitat, observation and local movements; they do not prove a southbound migration arrival or predict a nearby hunter's success.",
+        "Published species-total check: 2026-11-03 duck species sum 74347, while the agency All Ducks total is 74337; both source values are retained."
+      ],
+      "type": "survey-counts",
+      "referenceStates": [
+        "MO"
+      ],
+      "checkedAt": "2026-11-11T18:22:09.834Z"
     },
     {
-      "id": "iowa-2026-10-30",
       "sourceId": "iowa-dnr-migration",
       "title": "Iowa fall migration waterfowl survey",
-      "reportDate": "2026-10-30",
-      "url": "https://www.iowadnr.gov/media/9964/download?inline=",
+      "url": "https://www.iowadnr.gov/media/9977/download?inline",
       "scope": {
         "kind": "aggregate-survey-areas",
         "name": "Iowa DNR surveyed areas",
@@ -153,153 +323,329 @@
       },
       "method": "Agency fall migration survey counts and rounded species-composition percentages.",
       "datePrecision": "week-ending",
+      "id": "iowa-2026-11-06",
+      "type": "survey-counts",
+      "reportDate": "2026-11-06",
       "observationPeriod": {
-        "weekEnding": "2026-10-30",
+        "weekEnding": "2026-11-06",
         "exactStart": null,
         "exactObservationTimes": null
       },
-      "provenance": {
-        "totals": "PDF page 3, Fall Migration Waterfowl Survey, Week Ending October 30, 2026; Total row under Ducks/Abundance and Ducks/Composition (%).",
-        "speciesChange": "PDF page 3, Species / % Change in count from Previous Week; Mallard row.",
-        "areas": "PDF page 3, named Survey Area rows; ducks total/previous week and Mallard composition columns."
-      },
       "summary": {
-        "allDucks": 69133,
-        "previousAllDucks": 45895,
+        "allDucks": 83179,
+        "previousAllDucks": 69133,
         "mallardCount": null,
-        "mallardCompositionPercent": 16,
-        "mallardChangePercent": -3.1,
-        "allDucksChangePercent": 50.6,
-        "changePercentSource": "Agency-reported figures, not recomputed species counts from rounded percentages."
+        "previousMallardCount": null,
+        "mallardCompositionPercent": 18,
+        "mallardChangePercent": 38.6,
+        "allDucksChangePercent": 20.3,
+        "changePercentSource": "Mallard change is agency-reported; all-duck change is calculated from the printed current and previous table totals. Rounded composition is never converted to a count."
+      },
+      "speciesChangePercent": {
+        "canadaGoose": -9.7,
+        "greaterWhiteFrontedGoose": 40.5,
+        "snowGoose": 0,
+        "mallard": 38.6,
+        "gadwall": 33.5,
+        "americanWigeon": 9.1,
+        "northernPintail": 7.9,
+        "greenWingedTeal": 43.2,
+        "blueWingedTeal": -41.4,
+        "northernShoveler": 17.1,
+        "woodDuck": -23.9,
+        "divingDucks": 90.5
+      },
+      "gooseSummary": {
+        "total": 11725,
+        "previousTotal": 12639,
+        "darkCompositionPercent": 100,
+        "lightCompositionPercent": 0
+      },
+      "duckCompositionPercent": {
+        "mallard": 18,
+        "otherDabblers": 75,
+        "divers": 7
       },
       "areas": [
         {
           "name": "Bays Branch Areas",
-          "allDucks": 3285,
-          "previousAllDucks": 1335,
-          "mallardCompositionPercent": 16
+          "allDucks": 3291,
+          "previousAllDucks": 3285,
+          "mallardCount": null,
+          "mallardCompositionPercent": 19,
+          "otherDabblersCompositionPercent": 81,
+          "diversCompositionPercent": 0,
+          "gooseCount": 725,
+          "previousGooseCount": 900,
+          "darkGooseCompositionPercent": 100,
+          "lightGooseCompositionPercent": 0
         },
         {
           "name": "Big Marsh",
-          "allDucks": 2090,
-          "previousAllDucks": 2200,
-          "mallardCompositionPercent": 36
+          "allDucks": 3140,
+          "previousAllDucks": 2090,
+          "mallardCount": null,
+          "mallardCompositionPercent": 32,
+          "otherDabblersCompositionPercent": 68,
+          "diversCompositionPercent": 0,
+          "gooseCount": 25,
+          "previousGooseCount": 100,
+          "darkGooseCompositionPercent": 100,
+          "lightGooseCompositionPercent": 0
         },
         {
           "name": "Black Hawk Areas",
-          "allDucks": 1900,
-          "previousAllDucks": 1580,
-          "mallardCompositionPercent": 20
+          "allDucks": 1975,
+          "previousAllDucks": 1900,
+          "mallardCount": null,
+          "mallardCompositionPercent": 22,
+          "otherDabblersCompositionPercent": 72,
+          "diversCompositionPercent": 6,
+          "gooseCount": 805,
+          "previousGooseCount": 705,
+          "darkGooseCompositionPercent": 100,
+          "lightGooseCompositionPercent": 0
         },
         {
           "name": "Coralville Areas",
-          "allDucks": 4400,
-          "previousAllDucks": 3310,
-          "mallardCompositionPercent": 16
+          "allDucks": 5511,
+          "previousAllDucks": 4400,
+          "mallardCount": null,
+          "mallardCompositionPercent": 20,
+          "otherDabblersCompositionPercent": 78,
+          "diversCompositionPercent": 2,
+          "gooseCount": 0,
+          "previousGooseCount": 50,
+          "darkGooseCompositionPercent": null,
+          "lightGooseCompositionPercent": null
         },
         {
           "name": "Grand River Areas",
-          "allDucks": 138,
-          "previousAllDucks": 143,
-          "mallardCompositionPercent": 0
+          "allDucks": 73,
+          "previousAllDucks": 138,
+          "mallardCount": null,
+          "mallardCompositionPercent": 0,
+          "otherDabblersCompositionPercent": 52,
+          "diversCompositionPercent": 48,
+          "gooseCount": 0,
+          "previousGooseCount": 22,
+          "darkGooseCompositionPercent": null,
+          "lightGooseCompositionPercent": null
         },
         {
           "name": "Green Island",
-          "allDucks": 3709,
-          "previousAllDucks": 9153,
-          "mallardCompositionPercent": 27
+          "allDucks": 4754,
+          "previousAllDucks": 3709,
+          "mallardCount": null,
+          "mallardCompositionPercent": 42,
+          "otherDabblersCompositionPercent": 58,
+          "diversCompositionPercent": 0,
+          "gooseCount": 1250,
+          "previousGooseCount": 1001,
+          "darkGooseCompositionPercent": 100,
+          "lightGooseCompositionPercent": 0
         },
         {
           "name": "Ingham Areas",
-          "allDucks": 380,
-          "previousAllDucks": 193,
-          "mallardCompositionPercent": 68
+          "allDucks": 205,
+          "previousAllDucks": 380,
+          "mallardCount": null,
+          "mallardCompositionPercent": 54,
+          "otherDabblersCompositionPercent": 46,
+          "diversCompositionPercent": 0,
+          "gooseCount": 20,
+          "previousGooseCount": 1220,
+          "darkGooseCompositionPercent": 100,
+          "lightGooseCompositionPercent": 0
         },
         {
           "name": "Lake Odessa Areas",
-          "allDucks": 3596,
-          "previousAllDucks": 525,
-          "mallardCompositionPercent": 17
+          "allDucks": 4520,
+          "previousAllDucks": 3596,
+          "mallardCount": null,
+          "mallardCompositionPercent": 22,
+          "otherDabblersCompositionPercent": 78,
+          "diversCompositionPercent": 0,
+          "gooseCount": 690,
+          "previousGooseCount": 550,
+          "darkGooseCompositionPercent": 100,
+          "lightGooseCompositionPercent": 0
         },
         {
           "name": "Lake Sugema Areas",
-          "allDucks": 346,
-          "previousAllDucks": 260,
-          "mallardCompositionPercent": 32
+          "allDucks": 130,
+          "previousAllDucks": 346,
+          "mallardCount": null,
+          "mallardCompositionPercent": 31,
+          "otherDabblersCompositionPercent": 69,
+          "diversCompositionPercent": 0,
+          "gooseCount": 20,
+          "previousGooseCount": 120,
+          "darkGooseCompositionPercent": 100,
+          "lightGooseCompositionPercent": 0
         },
         {
           "name": "Missouri River Oxbows",
-          "allDucks": 2811,
-          "previousAllDucks": 3342,
-          "mallardCompositionPercent": 29
+          "allDucks": 4482,
+          "previousAllDucks": 2811,
+          "mallardCount": null,
+          "mallardCompositionPercent": 24,
+          "otherDabblersCompositionPercent": 73,
+          "diversCompositionPercent": 4,
+          "gooseCount": 2090,
+          "previousGooseCount": 1825,
+          "darkGooseCompositionPercent": 100,
+          "lightGooseCompositionPercent": 0
         },
         {
           "name": "Otter Creek",
-          "allDucks": 1820,
-          "previousAllDucks": 1250,
-          "mallardCompositionPercent": 13
+          "allDucks": 1310,
+          "previousAllDucks": 1820,
+          "mallardCount": null,
+          "mallardCompositionPercent": 23,
+          "otherDabblersCompositionPercent": 77,
+          "diversCompositionPercent": 0,
+          "gooseCount": 50,
+          "previousGooseCount": 250,
+          "darkGooseCompositionPercent": 100,
+          "lightGooseCompositionPercent": 0
         },
         {
           "name": "Princeton",
           "allDucks": 1025,
-          "previousAllDucks": 1225,
-          "mallardCompositionPercent": 15
+          "previousAllDucks": 1025,
+          "mallardCount": null,
+          "mallardCompositionPercent": 24,
+          "otherDabblersCompositionPercent": 76,
+          "diversCompositionPercent": 0,
+          "gooseCount": 0,
+          "previousGooseCount": 0,
+          "darkGooseCompositionPercent": null,
+          "lightGooseCompositionPercent": null
         },
         {
           "name": "Rathbun Areas",
-          "allDucks": 8775,
-          "previousAllDucks": 4060,
-          "mallardCompositionPercent": 15
+          "allDucks": 9760,
+          "previousAllDucks": 8775,
+          "mallardCount": null,
+          "mallardCompositionPercent": 15,
+          "otherDabblersCompositionPercent": 79,
+          "diversCompositionPercent": 5,
+          "gooseCount": 1270,
+          "previousGooseCount": 1175,
+          "darkGooseCompositionPercent": 100,
+          "lightGooseCompositionPercent": 0
         },
         {
           "name": "Red Rock",
-          "allDucks": 12450,
-          "previousAllDucks": 7000,
-          "mallardCompositionPercent": 8
+          "allDucks": 12900,
+          "previousAllDucks": 12450,
+          "mallardCount": null,
+          "mallardCompositionPercent": 12,
+          "otherDabblersCompositionPercent": 78,
+          "diversCompositionPercent": 10,
+          "gooseCount": 500,
+          "previousGooseCount": 450,
+          "darkGooseCompositionPercent": 100,
+          "lightGooseCompositionPercent": 0
         },
         {
           "name": "Rice Lake/Clear Lake",
-          "allDucks": 4957,
-          "previousAllDucks": 2689,
-          "mallardCompositionPercent": 35
+          "allDucks": 5018,
+          "previousAllDucks": 4957,
+          "mallardCount": null,
+          "mallardCompositionPercent": 32,
+          "otherDabblersCompositionPercent": 45,
+          "diversCompositionPercent": 23,
+          "gooseCount": 2658,
+          "previousGooseCount": 2750,
+          "darkGooseCompositionPercent": 100,
+          "lightGooseCompositionPercent": 0
         },
         {
           "name": "Riverton/Fremont Co.",
-          "allDucks": 11635,
-          "previousAllDucks": 5410,
-          "mallardCompositionPercent": 4
+          "allDucks": 16895,
+          "previousAllDucks": 11635,
+          "mallardCount": null,
+          "mallardCompositionPercent": 6,
+          "otherDabblersCompositionPercent": 88,
+          "diversCompositionPercent": 6,
+          "gooseCount": 80,
+          "previousGooseCount": 95,
+          "darkGooseCompositionPercent": 100,
+          "lightGooseCompositionPercent": 0
         },
         {
           "name": "Ruthven Areas",
-          "allDucks": 300,
-          "previousAllDucks": 450,
-          "mallardCompositionPercent": 28
+          "allDucks": 390,
+          "previousAllDucks": 300,
+          "mallardCount": null,
+          "mallardCompositionPercent": 62,
+          "otherDabblersCompositionPercent": 38,
+          "diversCompositionPercent": 0,
+          "gooseCount": 0,
+          "previousGooseCount": 25,
+          "darkGooseCompositionPercent": null,
+          "lightGooseCompositionPercent": null
         },
         {
           "name": "Saylorville Areas",
-          "allDucks": null,
+          "allDucks": 4300,
           "previousAllDucks": null,
-          "mallardCompositionPercent": null
+          "mallardCount": null,
+          "mallardCompositionPercent": 17,
+          "otherDabblersCompositionPercent": 65,
+          "diversCompositionPercent": 17,
+          "gooseCount": 150,
+          "previousGooseCount": null,
+          "darkGooseCompositionPercent": 100,
+          "lightGooseCompositionPercent": 0
         },
         {
           "name": "Spirit Lake Areas",
-          "allDucks": 1616,
-          "previousAllDucks": null,
-          "mallardCompositionPercent": 33
+          "allDucks": 240,
+          "previousAllDucks": 1616,
+          "mallardCount": null,
+          "mallardCompositionPercent": 50,
+          "otherDabblersCompositionPercent": 25,
+          "diversCompositionPercent": 25,
+          "gooseCount": 142,
+          "previousGooseCount": 401,
+          "darkGooseCompositionPercent": 100,
+          "lightGooseCompositionPercent": 0
         },
         {
           "name": "Sweet Marsh",
-          "allDucks": 3900,
-          "previousAllDucks": 1770,
-          "mallardCompositionPercent": 6
+          "allDucks": 3260,
+          "previousAllDucks": 3900,
+          "mallardCount": null,
+          "mallardCompositionPercent": 12,
+          "otherDabblersCompositionPercent": 72,
+          "diversCompositionPercent": 16,
+          "gooseCount": 1250,
+          "previousGooseCount": 1000,
+          "darkGooseCompositionPercent": 100,
+          "lightGooseCompositionPercent": 0
         }
       ],
+      "coverage": {
+        "areaCount": 20,
+        "currentAreasReported": 20,
+        "previousAreasReported": 19,
+        "matchedAreaComparison": false
+      },
+      "provenance": {
+        "totals": "Fall Migration Waterfowl Survey table, Total row; Ducks abundance/composition columns.",
+        "areas": "Named survey-area rows, with all nine numeric/-- cells validated against the printed header.",
+        "speciesChange": "Species / % Change in count from Previous Week table; agency-reported figures."
+      },
       "notes": [
-        "Do not multiply the rounded 16% composition by 69,133 and present the result as an exact mallard count. The report provides mallard percentage change, but not a separate exact mallard total in this table.",
-        "The report shows total ducks increasing while mallards decreased 3.1%; a total-duck change is not a mallard movement signal.",
-        "Saylorville is missing, not zero. Spirit Lake has no previous-week count, so the reported total change is not automatically a matched-site comparison.",
-        "No individual survey-site coordinates or geographic survey polygons were verified in this audit."
-      ]
+        "Exact mallard counts are not reported in this table. Rounded composition percentages must not be multiplied into an exact species count.",
+        "DNR primary survey sites may aggregate nearby areas; this is a dated surveyed-area sum, not a complete statewide population estimate.",
+        "At least one area lacks a current or previous observation. Total changes are not a matched-site comparison; missing values are not zero.",
+        "Ducks and geese remain separate groups; species-change percentages are not counts."
+      ],
+      "checkedAt": "2026-11-11T18:22:10.105Z"
     }
   ]
 }

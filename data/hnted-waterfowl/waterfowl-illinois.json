@@ -7,14 +7,16 @@
       "id": "inhs-illinois-river",
       "name": "Illinois Natural History Survey / Forbes Biological Station",
       "indexUrl": "https://forbes-bio-station.inhs.illinois.edu/research/waterfowl-aerial-inventories/",
-      "reportUrl": "https://uofi.box.com/s/xq060cf633pkzqoah60kf2l8kjr696nd",
+      "reportUrl": "https://uofi.box.com/s/phvunx3ev6brq484xeila97izwl8llur",
       "reportFilename": "IL102826.pdf",
-      "retrievedAt": "2026-11-04T00:10:26.697321Z",
-      "documentSha256": "f93c950d8e6c8659317753c5d5fbf5d4aef3d089d809506b8141f7d8474d33cb",
+      "retrievedAt": "2026-11-11T18:22:15.355Z",
+      "documentSha256": "990054ec51a7d7a2b1e2cf27753aadd1f759dd6f3ae8ee4b95768428db6c00b5",
       "access": "Public Box share linked by official university index. Anonymous public-page metadata enabled download; original one-page PDF successfully downloaded.",
       "cadence": "Index describes weekly autumn aerial inventories, subject to actual flight dates and weather.",
       "reuseDecision": "Extracted factual table values with source attribution and links; no report artwork, university logo, or original PDF republished. No blanket open licence is asserted.",
-      "verification": "The complete PDF page was rendered and visually checked. Site-row mallard and total-duck sums reconcile with printed totals."
+      "verification": "Automatically parsed with date, schema, units, missing-value and count-reconciliation checks.",
+      "lastReportSha256": "990054ec51a7d7a2b1e2cf27753aadd1f759dd6f3ae8ee4b95768428db6c00b5",
+      "lastAutomaticCheckAt": "2026-11-11T18:22:13.169Z"
     },
     {
       "id": "inhs-central-mississippi",
@@ -22,24 +24,23 @@
       "indexUrl": "https://forbes-bio-station.inhs.illinois.edu/research/waterfowl-aerial-inventories/",
       "reportUrl": "https://uofi.box.com/s/i3h4a882ic209il54uzh8nzi4cvprkab",
       "reportFilename": "MS102826.pdf",
-      "retrievedAt": "2026-11-04T00:10:27.974806Z",
+      "retrievedAt": "2026-11-11T18:22:17.385Z",
       "documentSha256": "2180924cb4212737aabc695880f011b556c8053f43bd9fb9f5da531ff35aa25a",
       "access": "Public Box share linked by official university index. Anonymous public-page metadata enabled download; original one-page PDF successfully downloaded.",
       "cadence": "Index describes weekly autumn aerial inventories, subject to actual flight dates and weather.",
       "reuseDecision": "Extracted factual table values with source attribution and links; no report artwork, university logo, or original PDF republished. No blanket open licence is asserted.",
-      "verification": "The complete PDF page was rendered and visually checked. Site-row mallard and total-duck sums reconcile with printed totals."
+      "verification": "Automatically parsed with date, schema, units, missing-value and count-reconciliation checks.",
+      "lastReportSha256": "2180924cb4212737aabc695880f011b556c8053f43bd9fb9f5da531ff35aa25a",
+      "lastAutomaticCheckAt": "2026-11-11T18:22:13.169Z"
     }
   ],
   "reports": [
     {
-      "id": "inhs-illinois-river-2026-10-28",
       "type": "survey-counts",
       "sourceId": "inhs-illinois-river",
       "title": "Illinois River aerial inventory",
-      "reportDate": "2026-10-28",
-      "observationDate": "2026-10-28",
       "datePrecision": "survey-date",
-      "url": "https://uofi.box.com/s/xq060cf633pkzqoah60kf2l8kjr696nd",
+      "url": "https://uofi.box.com/s/phvunx3ev6brq484xeila97izwl8llur",
       "scope": {
         "kind": "river-corridor-inventory",
         "name": "Illinois River surveyed areas",
@@ -51,18 +52,45 @@
         "surveyGeometry": null
       },
       "method": "Agency aerial species estimates used as a temporal index across monitored locations; not complete counts of every bird in a region.",
+      "id": "inhs-illinois-river-2026-11-06",
+      "reportDate": "2026-11-06",
+      "observationDate": "2026-11-06",
       "observer": "Joshua Osborn",
       "summary": {
-        "mallardCount": 19850,
-        "allDucks": 176195,
+        "mallardCount": 42715,
+        "allDucks": 242710,
         "previousMallardCount": null,
         "previousAllDucks": null
       },
-      "referenceBaseline": {
-        "label": "Printed 10-Year Average, 2016-2025",
-        "mallardCount": 52997,
-        "allDucks": 257073,
-        "note": "Source-printed reference values; the PDF does not define the date-matching calculation. These are not previous-week counts."
+      "speciesCounts": {
+        "MALL": 42715,
+        "ABDU": 55,
+        "NOPI": 51345,
+        "BWTE": 410,
+        "GWTE": 61615,
+        "AMWI": 1570,
+        "GADW": 24105,
+        "NSHO": 13960,
+        "LESC": 2280,
+        "RNDU": 23805,
+        "CANV": 90,
+        "REDH": 300,
+        "RUDU": 20420,
+        "COGO": 0,
+        "BUFF": 30,
+        "COME": 0,
+        "HOME": 10
+      },
+      "otherBirdCounts": {
+        "CAGO": 3430,
+        "GWFG": 0,
+        "LSGO": 0,
+        "AWPE": 2420,
+        "AMCO": 64415,
+        "AD": 25,
+        "IMM": 28,
+        "DCCO": 465,
+        "SWN": 400
       },
       "areas": [
         {
@@ -71,8 +99,38 @@
           "region": "Upper",
           "wetPercent": 100,
           "icePercent": 0,
-          "mallardCount": 600,
-          "allDucks": 4840
+          "mallardCount": 800,
+          "allDucks": 5170,
+          "speciesCounts": {
+            "MALL": 800,
+            "ABDU": 0,
+            "NOPI": 600,
+            "BWTE": 0,
+            "GWTE": 200,
+            "AMWI": 200,
+            "GADW": 2400,
+            "NSHO": 200,
+            "LESC": 150,
+            "RNDU": 300,
+            "CANV": 0,
+            "REDH": 20,
+            "RUDU": 300,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 415,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 95,
+            "AMCO": 12050,
+            "AD": 0,
+            "IMM": 0,
+            "DCCO": 0,
+            "SWN": 85
+          }
         },
         {
           "id": "inhs-illinois-river-upper-02",
@@ -80,8 +138,38 @@
           "region": "Upper",
           "wetPercent": 70,
           "icePercent": 0,
-          "mallardCount": 0,
-          "allDucks": 610
+          "mallardCount": 530,
+          "allDucks": 5340,
+          "speciesCounts": {
+            "MALL": 530,
+            "ABDU": 0,
+            "NOPI": 1120,
+            "BWTE": 0,
+            "GWTE": 3020,
+            "AMWI": 0,
+            "GADW": 355,
+            "NSHO": 315,
+            "LESC": 0,
+            "RNDU": 0,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 20,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 0,
+            "AMCO": 1150,
+            "AD": 1,
+            "IMM": 1,
+            "DCCO": 0,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-illinois-river-upper-03",
@@ -89,17 +177,77 @@
           "region": "Upper",
           "wetPercent": 100,
           "icePercent": 0,
-          "mallardCount": 115,
-          "allDucks": 4445
+          "mallardCount": 1225,
+          "allDucks": 5020,
+          "speciesCounts": {
+            "MALL": 1225,
+            "ABDU": 0,
+            "NOPI": 900,
+            "BWTE": 0,
+            "GWTE": 2015,
+            "AMWI": 0,
+            "GADW": 500,
+            "NSHO": 380,
+            "LESC": 0,
+            "RNDU": 0,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 0,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 40,
+            "AMCO": 90,
+            "AD": 1,
+            "IMM": 2,
+            "DCCO": 0,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-illinois-river-upper-04",
           "name": "Hitchcock Slough",
           "region": "Upper",
-          "wetPercent": 40,
+          "wetPercent": 30,
           "icePercent": 0,
-          "mallardCount": 0,
-          "allDucks": 0
+          "mallardCount": 20,
+          "allDucks": 150,
+          "speciesCounts": {
+            "MALL": 20,
+            "ABDU": 0,
+            "NOPI": 90,
+            "BWTE": 0,
+            "GWTE": 40,
+            "AMWI": 0,
+            "GADW": 0,
+            "NSHO": 0,
+            "LESC": 0,
+            "RNDU": 0,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 0,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 130,
+            "AMCO": 0,
+            "AD": 0,
+            "IMM": 0,
+            "DCCO": 0,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-illinois-river-upper-05",
@@ -107,8 +255,38 @@
           "region": "Upper",
           "wetPercent": 90,
           "icePercent": 0,
-          "mallardCount": 805,
-          "allDucks": 9765
+          "mallardCount": 3900,
+          "allDucks": 31785,
+          "speciesCounts": {
+            "MALL": 3900,
+            "ABDU": 10,
+            "NOPI": 9100,
+            "BWTE": 50,
+            "GWTE": 8900,
+            "AMWI": 150,
+            "GADW": 1200,
+            "NSHO": 2800,
+            "LESC": 105,
+            "RNDU": 5340,
+            "CANV": 0,
+            "REDH": 80,
+            "RUDU": 150,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 205,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 130,
+            "AMCO": 4060,
+            "AD": 3,
+            "IMM": 1,
+            "DCCO": 0,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-illinois-river-upper-06",
@@ -116,8 +294,38 @@
           "region": "Upper",
           "wetPercent": 90,
           "icePercent": 0,
-          "mallardCount": 1000,
-          "allDucks": 13000
+          "mallardCount": 4700,
+          "allDucks": 27575,
+          "speciesCounts": {
+            "MALL": 4700,
+            "ABDU": 5,
+            "NOPI": 7500,
+            "BWTE": 0,
+            "GWTE": 8100,
+            "AMWI": 100,
+            "GADW": 100,
+            "NSHO": 1050,
+            "LESC": 280,
+            "RNDU": 3460,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 2280,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 180,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 0,
+            "AMCO": 0,
+            "AD": 0,
+            "IMM": 0,
+            "DCCO": 0,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-illinois-river-upper-07",
@@ -125,8 +333,38 @@
           "region": "Upper",
           "wetPercent": 100,
           "icePercent": 0,
-          "mallardCount": 15,
-          "allDucks": 8445
+          "mallardCount": 340,
+          "allDucks": 11340,
+          "speciesCounts": {
+            "MALL": 340,
+            "ABDU": 0,
+            "NOPI": 0,
+            "BWTE": 0,
+            "GWTE": 0,
+            "AMWI": 0,
+            "GADW": 250,
+            "NSHO": 0,
+            "LESC": 1190,
+            "RNDU": 560,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 9000,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 165,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 475,
+            "AMCO": 310,
+            "AD": 2,
+            "IMM": 3,
+            "DCCO": 0,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-illinois-river-upper-08",
@@ -134,8 +372,38 @@
           "region": "Upper",
           "wetPercent": 100,
           "icePercent": 0,
-          "mallardCount": 10,
-          "allDucks": 90
+          "mallardCount": 15,
+          "allDucks": 95,
+          "speciesCounts": {
+            "MALL": 15,
+            "ABDU": 0,
+            "NOPI": 0,
+            "BWTE": 0,
+            "GWTE": 0,
+            "AMWI": 0,
+            "GADW": 80,
+            "NSHO": 0,
+            "LESC": 0,
+            "RNDU": 0,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 45,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 10,
+            "AMCO": 420,
+            "AD": 0,
+            "IMM": 0,
+            "DCCO": 0,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-illinois-river-lower-09",
@@ -143,8 +411,38 @@
           "region": "Lower",
           "wetPercent": 90,
           "icePercent": 0,
-          "mallardCount": 125,
-          "allDucks": 200
+          "mallardCount": 210,
+          "allDucks": 560,
+          "speciesCounts": {
+            "MALL": 210,
+            "ABDU": 0,
+            "NOPI": 0,
+            "BWTE": 0,
+            "GWTE": 310,
+            "AMWI": 0,
+            "GADW": 0,
+            "NSHO": 40,
+            "LESC": 0,
+            "RNDU": 0,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 0,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 0,
+            "AMCO": 480,
+            "AD": 2,
+            "IMM": 0,
+            "DCCO": 0,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-illinois-river-lower-10",
@@ -152,8 +450,38 @@
           "region": "Lower",
           "wetPercent": 100,
           "icePercent": 0,
-          "mallardCount": 315,
-          "allDucks": 995
+          "mallardCount": 750,
+          "allDucks": 2625,
+          "speciesCounts": {
+            "MALL": 750,
+            "ABDU": 5,
+            "NOPI": 600,
+            "BWTE": 0,
+            "GWTE": 990,
+            "AMWI": 0,
+            "GADW": 110,
+            "NSHO": 170,
+            "LESC": 0,
+            "RNDU": 0,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 30,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 0,
+            "AMCO": 155,
+            "AD": 0,
+            "IMM": 0,
+            "DCCO": 0,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-illinois-river-lower-11",
@@ -161,17 +489,77 @@
           "region": "Lower",
           "wetPercent": 90,
           "icePercent": 0,
-          "mallardCount": 555,
-          "allDucks": 2165
+          "mallardCount": 3150,
+          "allDucks": 16025,
+          "speciesCounts": {
+            "MALL": 3150,
+            "ABDU": 20,
+            "NOPI": 2460,
+            "BWTE": 0,
+            "GWTE": 4120,
+            "AMWI": 105,
+            "GADW": 1600,
+            "NSHO": 400,
+            "LESC": 60,
+            "RNDU": 3760,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 350,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 120,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 0,
+            "AMCO": 3400,
+            "AD": 0,
+            "IMM": 0,
+            "DCCO": 0,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-illinois-river-lower-12",
           "name": "Banner Marsh",
           "region": "Lower",
-          "wetPercent": 90,
+          "wetPercent": 100,
           "icePercent": 0,
-          "mallardCount": 45,
-          "allDucks": 175
+          "mallardCount": 75,
+          "allDucks": 640,
+          "speciesCounts": {
+            "MALL": 75,
+            "ABDU": 0,
+            "NOPI": 0,
+            "BWTE": 0,
+            "GWTE": 140,
+            "AMWI": 0,
+            "GADW": 375,
+            "NSHO": 50,
+            "LESC": 0,
+            "RNDU": 0,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 390,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 40,
+            "AMCO": 2650,
+            "AD": 0,
+            "IMM": 2,
+            "DCCO": 10,
+            "SWN": 190
+          }
         },
         {
           "id": "inhs-illinois-river-lower-13",
@@ -179,8 +567,38 @@
           "region": "Lower",
           "wetPercent": 100,
           "icePercent": 0,
-          "mallardCount": 330,
-          "allDucks": 390
+          "mallardCount": 1250,
+          "allDucks": 2275,
+          "speciesCounts": {
+            "MALL": 1250,
+            "ABDU": 0,
+            "NOPI": 70,
+            "BWTE": 0,
+            "GWTE": 210,
+            "AMWI": 0,
+            "GADW": 500,
+            "NSHO": 40,
+            "LESC": 0,
+            "RNDU": 205,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 305,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 0,
+            "AMCO": 80,
+            "AD": 2,
+            "IMM": 1,
+            "DCCO": 0,
+            "SWN": 30
+          }
         },
         {
           "id": "inhs-illinois-river-lower-14",
@@ -188,8 +606,38 @@
           "region": "Lower",
           "wetPercent": 80,
           "icePercent": 0,
-          "mallardCount": 1250,
-          "allDucks": 5140
+          "mallardCount": 3740,
+          "allDucks": 10320,
+          "speciesCounts": {
+            "MALL": 3740,
+            "ABDU": 10,
+            "NOPI": 400,
+            "BWTE": 0,
+            "GWTE": 2650,
+            "AMWI": 0,
+            "GADW": 2100,
+            "NSHO": 405,
+            "LESC": 55,
+            "RNDU": 450,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 500,
+            "COGO": 0,
+            "BUFF": 10,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 155,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 340,
+            "AMCO": 1550,
+            "AD": 1,
+            "IMM": 0,
+            "DCCO": 0,
+            "SWN": 15
+          }
         },
         {
           "id": "inhs-illinois-river-lower-15",
@@ -197,8 +645,38 @@
           "region": "Lower",
           "wetPercent": 70,
           "icePercent": 0,
-          "mallardCount": 6890,
-          "allDucks": 48120
+          "mallardCount": 8750,
+          "allDucks": 45615,
+          "speciesCounts": {
+            "MALL": 8750,
+            "ABDU": 0,
+            "NOPI": 6100,
+            "BWTE": 220,
+            "GWTE": 11450,
+            "AMWI": 155,
+            "GADW": 4950,
+            "NSHO": 2400,
+            "LESC": 420,
+            "RNDU": 3150,
+            "CANV": 80,
+            "REDH": 160,
+            "RUDU": 7750,
+            "COGO": 0,
+            "BUFF": 20,
+            "COME": 0,
+            "HOME": 10
+          },
+          "otherBirdCounts": {
+            "CAGO": 395,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 395,
+            "AMCO": 9110,
+            "AD": 5,
+            "IMM": 6,
+            "DCCO": 25,
+            "SWN": 35
+          }
         },
         {
           "id": "inhs-illinois-river-lower-16",
@@ -206,8 +684,38 @@
           "region": "Lower",
           "wetPercent": 70,
           "icePercent": 0,
-          "mallardCount": 2405,
-          "allDucks": 25090
+          "mallardCount": 2150,
+          "allDucks": 14160,
+          "speciesCounts": {
+            "MALL": 2150,
+            "ABDU": 0,
+            "NOPI": 1755,
+            "BWTE": 60,
+            "GWTE": 4960,
+            "AMWI": 340,
+            "GADW": 2785,
+            "NSHO": 785,
+            "LESC": 20,
+            "RNDU": 1165,
+            "CANV": 10,
+            "REDH": 40,
+            "RUDU": 90,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 210,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 60,
+            "AMCO": 17070,
+            "AD": 1,
+            "IMM": 2,
+            "DCCO": 210,
+            "SWN": 45
+          }
         },
         {
           "id": "inhs-illinois-river-lower-17",
@@ -216,7 +724,37 @@
           "wetPercent": 100,
           "icePercent": 0,
           "mallardCount": 0,
-          "allDucks": 0
+          "allDucks": 0,
+          "speciesCounts": {
+            "MALL": 0,
+            "ABDU": 0,
+            "NOPI": 0,
+            "BWTE": 0,
+            "GWTE": 0,
+            "AMWI": 0,
+            "GADW": 0,
+            "NSHO": 0,
+            "LESC": 0,
+            "RNDU": 0,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 0,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 650,
+            "AMCO": 0,
+            "AD": 1,
+            "IMM": 1,
+            "DCCO": 0,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-illinois-river-lower-18",
@@ -224,17 +762,77 @@
           "region": "Lower",
           "wetPercent": 100,
           "icePercent": 0,
-          "mallardCount": 0,
-          "allDucks": 25
+          "mallardCount": 15,
+          "allDucks": 15,
+          "speciesCounts": {
+            "MALL": 15,
+            "ABDU": 0,
+            "NOPI": 0,
+            "BWTE": 0,
+            "GWTE": 0,
+            "AMWI": 0,
+            "GADW": 0,
+            "NSHO": 0,
+            "LESC": 0,
+            "RNDU": 0,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 0,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 20,
+            "AMCO": 950,
+            "AD": 3,
+            "IMM": 4,
+            "DCCO": 220,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-illinois-river-lower-19",
           "name": "Stewart Lake",
           "region": "Lower",
-          "wetPercent": 90,
+          "wetPercent": 80,
           "icePercent": 0,
-          "mallardCount": 10,
-          "allDucks": 4880
+          "mallardCount": 1360,
+          "allDucks": 6260,
+          "speciesCounts": {
+            "MALL": 1360,
+            "ABDU": 0,
+            "NOPI": 1060,
+            "BWTE": 0,
+            "GWTE": 1210,
+            "AMWI": 0,
+            "GADW": 1400,
+            "NSHO": 1230,
+            "LESC": 0,
+            "RNDU": 0,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 0,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 15,
+            "AMCO": 0,
+            "AD": 0,
+            "IMM": 0,
+            "DCCO": 0,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-illinois-river-lower-20",
@@ -242,8 +840,38 @@
           "region": "Lower",
           "wetPercent": 100,
           "icePercent": 0,
-          "mallardCount": 215,
-          "allDucks": 1010
+          "mallardCount": 275,
+          "allDucks": 2955,
+          "speciesCounts": {
+            "MALL": 275,
+            "ABDU": 0,
+            "NOPI": 90,
+            "BWTE": 0,
+            "GWTE": 0,
+            "AMWI": 0,
+            "GADW": 390,
+            "NSHO": 50,
+            "LESC": 0,
+            "RNDU": 2150,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 35,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 0,
+            "AMCO": 3390,
+            "AD": 1,
+            "IMM": 0,
+            "DCCO": 0,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-illinois-river-lower-21",
@@ -252,7 +880,37 @@
           "wetPercent": 90,
           "icePercent": 0,
           "mallardCount": 4000,
-          "allDucks": 39620
+          "allDucks": 35075,
+          "speciesCounts": {
+            "MALL": 4000,
+            "ABDU": 5,
+            "NOPI": 14000,
+            "BWTE": 80,
+            "GWTE": 7800,
+            "AMWI": 500,
+            "GADW": 2980,
+            "NSHO": 2550,
+            "LESC": 0,
+            "RNDU": 3160,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 600,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 0,
+            "AMCO": 3300,
+            "AD": 0,
+            "IMM": 3,
+            "DCCO": 0,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-illinois-river-lower-22",
@@ -260,8 +918,38 @@
           "region": "Lower",
           "wetPercent": 100,
           "icePercent": 0,
-          "mallardCount": 260,
-          "allDucks": 280
+          "mallardCount": 2850,
+          "allDucks": 5350,
+          "speciesCounts": {
+            "MALL": 2850,
+            "ABDU": 0,
+            "NOPI": 300,
+            "BWTE": 0,
+            "GWTE": 550,
+            "AMWI": 20,
+            "GADW": 1220,
+            "NSHO": 305,
+            "LESC": 0,
+            "RNDU": 105,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 20,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 0,
+            "AMCO": 450,
+            "AD": 2,
+            "IMM": 1,
+            "DCCO": 0,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-illinois-river-lower-23",
@@ -269,8 +957,38 @@
           "region": "Lower",
           "wetPercent": 80,
           "icePercent": 0,
-          "mallardCount": 800,
-          "allDucks": 5400
+          "mallardCount": 1800,
+          "allDucks": 6050,
+          "speciesCounts": {
+            "MALL": 1800,
+            "ABDU": 0,
+            "NOPI": 2150,
+            "BWTE": 0,
+            "GWTE": 1200,
+            "AMWI": 0,
+            "GADW": 400,
+            "NSHO": 500,
+            "LESC": 0,
+            "RNDU": 0,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 50,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 0,
+            "AMCO": 3750,
+            "AD": 0,
+            "IMM": 1,
+            "DCCO": 0,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-illinois-river-lower-24",
@@ -278,8 +996,38 @@
           "region": "Lower",
           "wetPercent": 90,
           "icePercent": 0,
-          "mallardCount": 105,
-          "allDucks": 1200
+          "mallardCount": 200,
+          "allDucks": 1300,
+          "speciesCounts": {
+            "MALL": 200,
+            "ABDU": 0,
+            "NOPI": 500,
+            "BWTE": 0,
+            "GWTE": 600,
+            "AMWI": 0,
+            "GADW": 0,
+            "NSHO": 0,
+            "LESC": 0,
+            "RNDU": 0,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 50,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 0,
+            "AMCO": 0,
+            "AD": 0,
+            "IMM": 0,
+            "DCCO": 0,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-illinois-river-lower-25",
@@ -287,28 +1035,134 @@
           "region": "Lower",
           "wetPercent": 80,
           "icePercent": 0,
-          "mallardCount": 0,
-          "allDucks": 310
+          "mallardCount": 610,
+          "allDucks": 7010,
+          "speciesCounts": {
+            "MALL": 610,
+            "ABDU": 0,
+            "NOPI": 2550,
+            "BWTE": 0,
+            "GWTE": 3150,
+            "AMWI": 0,
+            "GADW": 410,
+            "NSHO": 290,
+            "LESC": 0,
+            "RNDU": 0,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 40,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 20,
+            "AMCO": 0,
+            "AD": 0,
+            "IMM": 0,
+            "DCCO": 0,
+            "SWN": 0
+          }
         }
       ],
+      "regions": [
+        {
+          "name": "UPPER",
+          "mallardCount": 11530,
+          "allDucks": 86475,
+          "speciesCounts": {
+            "MALL": 11530,
+            "ABDU": 15,
+            "NOPI": 19310,
+            "BWTE": 50,
+            "GWTE": 22275,
+            "AMWI": 450,
+            "GADW": 4885,
+            "NSHO": 4745,
+            "LESC": 1725,
+            "RNDU": 9660,
+            "CANV": 0,
+            "REDH": 100,
+            "RUDU": 11730,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 1030,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 880,
+            "AMCO": 18080,
+            "AD": 7,
+            "IMM": 7,
+            "DCCO": 0,
+            "SWN": 85
+          }
+        },
+        {
+          "name": "LOWER",
+          "mallardCount": 31185,
+          "allDucks": 156235,
+          "speciesCounts": {
+            "MALL": 31185,
+            "ABDU": 40,
+            "NOPI": 32035,
+            "BWTE": 360,
+            "GWTE": 39340,
+            "AMWI": 1120,
+            "GADW": 19220,
+            "NSHO": 9215,
+            "LESC": 555,
+            "RNDU": 14145,
+            "CANV": 90,
+            "REDH": 200,
+            "RUDU": 8690,
+            "COGO": 0,
+            "BUFF": 30,
+            "COME": 0,
+            "HOME": 10
+          },
+          "otherBirdCounts": {
+            "CAGO": 2400,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 1540,
+            "AMCO": 46335,
+            "AD": 18,
+            "IMM": 21,
+            "DCCO": 465,
+            "SWN": 315
+          }
+        }
+      ],
+      "referenceBaseline": {
+        "label": "Printed 10-Year Average, 2016-2025",
+        "mallardCount": 91180,
+        "allDucks": 317654,
+        "note": "Source-printed ten-year reference values, not a previous survey or previous week."
+      },
       "provenance": {
-        "totals": "PDF page 1, TOTAL ILLINOIS row; MALL and TOTAL DUCKS columns.",
-        "areas": "PDF page 1, named location rows under UPPER and LOWER headings; %WET, %ICE, MALL, and TOTAL DUCKS columns.",
-        "baseline": "PDF page 1, 10-Year Average 2016-2025 row; MALL and TOTAL DUCKS columns."
+        "totals": "TOTAL ILLINOIS row, MALL and TOTAL DUCKS columns; full printed bird columns retained by agency abbreviation.",
+        "areas": "Named rows under UPPER/LOWER; all 29 cells checked against the column header and duck species/group totals.",
+        "baseline": "Printed 10-Year Average row, retained separately from prior survey counts."
       },
       "notes": [
-        "Duck-group totals exclude separately tabulated geese, coots, swans, and other waterbirds.",
-        "Repeated place names are retained as separate printed rows, distinguished by section and row ID; do not merge them by name alone.",
-        "No previous-week trend is supplied because no earlier report was imported in this record."
-      ]
+        "Duck-group totals exclude separately tabulated geese, coots, swans and other waterbirds.",
+        "Repeated place names remain separate printed rows, distinguished by section and row ID.",
+        "No previous-survey count is inferred from the printed ten-year average."
+      ],
+      "checkedAt": "2026-11-11T18:22:15.355Z"
     },
     {
-      "id": "inhs-central-mississippi-2026-10-28",
       "type": "survey-counts",
       "sourceId": "inhs-central-mississippi",
       "title": "Central Mississippi River aerial inventory",
-      "reportDate": "2026-10-28",
-      "observationDate": "2026-10-28",
       "datePrecision": "survey-date",
       "url": "https://uofi.box.com/s/i3h4a882ic209il54uzh8nzi4cvprkab",
       "scope": {
@@ -322,6 +1176,9 @@
         "surveyGeometry": null
       },
       "method": "Agency aerial species estimates used as a temporal index across monitored locations; not complete counts of every bird in a region.",
+      "id": "inhs-central-mississippi-2026-10-28",
+      "reportDate": "2026-10-28",
+      "observationDate": "2026-10-28",
       "observer": "Joshua Osborn",
       "summary": {
         "mallardCount": 17885,
@@ -329,11 +1186,35 @@
         "previousMallardCount": null,
         "previousAllDucks": null
       },
-      "referenceBaseline": {
-        "label": "Printed 10-Year Average, 2016-2025",
-        "mallardCount": 47569,
-        "allDucks": 222916,
-        "note": "Source-printed reference values; the PDF does not define the date-matching calculation. These are not previous-week counts."
+      "speciesCounts": {
+        "MALL": 17885,
+        "ABDU": 0,
+        "NOPI": 81250,
+        "BWTE": 1055,
+        "GWTE": 77850,
+        "AMWI": 2485,
+        "GADW": 22215,
+        "NSHO": 10660,
+        "LESC": 205,
+        "RNDU": 4830,
+        "CANV": 0,
+        "REDH": 0,
+        "RUDU": 17050,
+        "COGO": 0,
+        "BUFF": 0,
+        "COME": 0,
+        "HOME": 0
+      },
+      "otherBirdCounts": {
+        "CAGO": 2705,
+        "GWFG": 70,
+        "LSGO": 0,
+        "AWPE": 1225,
+        "AMCO": 23455,
+        "AD": 13,
+        "IMM": 26,
+        "DCCO": 760,
+        "SWN": 55
       },
       "areas": [
         {
@@ -343,7 +1224,37 @@
           "wetPercent": 100,
           "icePercent": 0,
           "mallardCount": 75,
-          "allDucks": 16330
+          "allDucks": 16330,
+          "speciesCounts": {
+            "MALL": 75,
+            "ABDU": 0,
+            "NOPI": 0,
+            "BWTE": 0,
+            "GWTE": 90,
+            "AMWI": 0,
+            "GADW": 130,
+            "NSHO": 0,
+            "LESC": 205,
+            "RNDU": 1830,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 14000,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 130,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 20,
+            "AMCO": 330,
+            "AD": 0,
+            "IMM": 1,
+            "DCCO": 180,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-central-mississippi-upper-02",
@@ -352,7 +1263,37 @@
           "wetPercent": 90,
           "icePercent": 0,
           "mallardCount": 0,
-          "allDucks": 405
+          "allDucks": 405,
+          "speciesCounts": {
+            "MALL": 0,
+            "ABDU": 0,
+            "NOPI": 0,
+            "BWTE": 0,
+            "GWTE": 405,
+            "AMWI": 0,
+            "GADW": 0,
+            "NSHO": 0,
+            "LESC": 0,
+            "RNDU": 0,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 60,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 0,
+            "AMCO": 0,
+            "AD": 0,
+            "IMM": 0,
+            "DCCO": 0,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-central-mississippi-upper-03",
@@ -361,7 +1302,37 @@
           "wetPercent": 100,
           "icePercent": 0,
           "mallardCount": 335,
-          "allDucks": 5740
+          "allDucks": 5740,
+          "speciesCounts": {
+            "MALL": 335,
+            "ABDU": 0,
+            "NOPI": 650,
+            "BWTE": 0,
+            "GWTE": 1650,
+            "AMWI": 40,
+            "GADW": 380,
+            "NSHO": 35,
+            "LESC": 0,
+            "RNDU": 0,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 2650,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 345,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 210,
+            "AMCO": 160,
+            "AD": 2,
+            "IMM": 4,
+            "DCCO": 465,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-central-mississippi-upper-04",
@@ -370,7 +1341,37 @@
           "wetPercent": 100,
           "icePercent": 0,
           "mallardCount": 15,
-          "allDucks": 15
+          "allDucks": 15,
+          "speciesCounts": {
+            "MALL": 15,
+            "ABDU": 0,
+            "NOPI": 0,
+            "BWTE": 0,
+            "GWTE": 0,
+            "AMWI": 0,
+            "GADW": 0,
+            "NSHO": 0,
+            "LESC": 0,
+            "RNDU": 0,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 45,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 0,
+            "AMCO": 0,
+            "AD": 0,
+            "IMM": 2,
+            "DCCO": 0,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-central-mississippi-upper-05",
@@ -379,7 +1380,37 @@
           "wetPercent": 80,
           "icePercent": 0,
           "mallardCount": 215,
-          "allDucks": 8265
+          "allDucks": 8265,
+          "speciesCounts": {
+            "MALL": 215,
+            "ABDU": 0,
+            "NOPI": 3100,
+            "BWTE": 0,
+            "GWTE": 4050,
+            "AMWI": 0,
+            "GADW": 300,
+            "NSHO": 600,
+            "LESC": 0,
+            "RNDU": 0,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 130,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 15,
+            "AMCO": 2570,
+            "AD": 2,
+            "IMM": 1,
+            "DCCO": 0,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-central-mississippi-upper-06",
@@ -388,7 +1419,37 @@
           "wetPercent": 50,
           "icePercent": 0,
           "mallardCount": 40,
-          "allDucks": 430
+          "allDucks": 430,
+          "speciesCounts": {
+            "MALL": 40,
+            "ABDU": 0,
+            "NOPI": 0,
+            "BWTE": 0,
+            "GWTE": 320,
+            "AMWI": 0,
+            "GADW": 0,
+            "NSHO": 70,
+            "LESC": 0,
+            "RNDU": 0,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 30,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 0,
+            "AMCO": 20,
+            "AD": 0,
+            "IMM": 0,
+            "DCCO": 0,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-central-mississippi-upper-07",
@@ -397,7 +1458,37 @@
           "wetPercent": 80,
           "icePercent": 0,
           "mallardCount": 1020,
-          "allDucks": 3205
+          "allDucks": 3205,
+          "speciesCounts": {
+            "MALL": 1020,
+            "ABDU": 0,
+            "NOPI": 1100,
+            "BWTE": 0,
+            "GWTE": 230,
+            "AMWI": 50,
+            "GADW": 415,
+            "NSHO": 185,
+            "LESC": 0,
+            "RNDU": 205,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 540,
+            "GWFG": 70,
+            "LSGO": 0,
+            "AWPE": 0,
+            "AMCO": 1910,
+            "AD": 0,
+            "IMM": 2,
+            "DCCO": 115,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-central-mississippi-lower-08",
@@ -406,7 +1497,37 @@
           "wetPercent": 90,
           "icePercent": 0,
           "mallardCount": 2100,
-          "allDucks": 43860
+          "allDucks": 43860,
+          "speciesCounts": {
+            "MALL": 2100,
+            "ABDU": 0,
+            "NOPI": 15500,
+            "BWTE": 400,
+            "GWTE": 19000,
+            "AMWI": 300,
+            "GADW": 2660,
+            "NSHO": 3000,
+            "LESC": 0,
+            "RNDU": 500,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 400,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 215,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 505,
+            "AMCO": 4300,
+            "AD": 1,
+            "IMM": 2,
+            "DCCO": 0,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-central-mississippi-lower-09",
@@ -415,7 +1536,37 @@
           "wetPercent": 100,
           "icePercent": 0,
           "mallardCount": 0,
-          "allDucks": 0
+          "allDucks": 0,
+          "speciesCounts": {
+            "MALL": 0,
+            "ABDU": 0,
+            "NOPI": 0,
+            "BWTE": 0,
+            "GWTE": 0,
+            "AMWI": 0,
+            "GADW": 0,
+            "NSHO": 0,
+            "LESC": 0,
+            "RNDU": 0,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 85,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 0,
+            "AMCO": 0,
+            "AD": 0,
+            "IMM": 0,
+            "DCCO": 0,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-central-mississippi-lower-10",
@@ -424,7 +1575,37 @@
           "wetPercent": 100,
           "icePercent": 0,
           "mallardCount": 420,
-          "allDucks": 5300
+          "allDucks": 5300,
+          "speciesCounts": {
+            "MALL": 420,
+            "ABDU": 0,
+            "NOPI": 3050,
+            "BWTE": 0,
+            "GWTE": 1180,
+            "AMWI": 0,
+            "GADW": 450,
+            "NSHO": 200,
+            "LESC": 0,
+            "RNDU": 0,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 35,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 0,
+            "AMCO": 0,
+            "AD": 0,
+            "IMM": 0,
+            "DCCO": 0,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-central-mississippi-lower-11",
@@ -433,7 +1614,37 @@
           "wetPercent": 90,
           "icePercent": 0,
           "mallardCount": 6000,
-          "allDucks": 73980
+          "allDucks": 73980,
+          "speciesCounts": {
+            "MALL": 6000,
+            "ABDU": 0,
+            "NOPI": 29500,
+            "BWTE": 200,
+            "GWTE": 26500,
+            "AMWI": 580,
+            "GADW": 8000,
+            "NSHO": 2900,
+            "LESC": 0,
+            "RNDU": 300,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 120,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 0,
+            "AMCO": 2600,
+            "AD": 0,
+            "IMM": 3,
+            "DCCO": 0,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-central-mississippi-lower-12",
@@ -442,7 +1653,37 @@
           "wetPercent": 90,
           "icePercent": 0,
           "mallardCount": 485,
-          "allDucks": 2320
+          "allDucks": 2320,
+          "speciesCounts": {
+            "MALL": 485,
+            "ABDU": 0,
+            "NOPI": 950,
+            "BWTE": 0,
+            "GWTE": 650,
+            "AMWI": 0,
+            "GADW": 155,
+            "NSHO": 80,
+            "LESC": 0,
+            "RNDU": 0,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 0,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 0,
+            "AMCO": 0,
+            "AD": 0,
+            "IMM": 0,
+            "DCCO": 0,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-central-mississippi-lower-13",
@@ -451,7 +1692,37 @@
           "wetPercent": 80,
           "icePercent": 0,
           "mallardCount": 1500,
-          "allDucks": 21230
+          "allDucks": 21230,
+          "speciesCounts": {
+            "MALL": 1500,
+            "ABDU": 0,
+            "NOPI": 5300,
+            "BWTE": 105,
+            "GWTE": 8400,
+            "AMWI": 210,
+            "GADW": 2900,
+            "NSHO": 2000,
+            "LESC": 0,
+            "RNDU": 815,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 75,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 0,
+            "AMCO": 2120,
+            "AD": 0,
+            "IMM": 1,
+            "DCCO": 0,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-central-mississippi-lower-14",
@@ -460,7 +1731,37 @@
           "wetPercent": 60,
           "icePercent": 0,
           "mallardCount": 3400,
-          "allDucks": 29690
+          "allDucks": 29690,
+          "speciesCounts": {
+            "MALL": 3400,
+            "ABDU": 0,
+            "NOPI": 12500,
+            "BWTE": 0,
+            "GWTE": 7500,
+            "AMWI": 1000,
+            "GADW": 4000,
+            "NSHO": 900,
+            "LESC": 0,
+            "RNDU": 390,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 0,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 0,
+            "AMCO": 6130,
+            "AD": 0,
+            "IMM": 2,
+            "DCCO": 0,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-central-mississippi-lower-15",
@@ -469,7 +1770,37 @@
           "wetPercent": 40,
           "icePercent": 0,
           "mallardCount": 370,
-          "allDucks": 5080
+          "allDucks": 5080,
+          "speciesCounts": {
+            "MALL": 370,
+            "ABDU": 0,
+            "NOPI": 2660,
+            "BWTE": 0,
+            "GWTE": 1225,
+            "AMWI": 105,
+            "GADW": 425,
+            "NSHO": 105,
+            "LESC": 0,
+            "RNDU": 190,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 145,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 0,
+            "AMCO": 205,
+            "AD": 2,
+            "IMM": 0,
+            "DCCO": 0,
+            "SWN": 15
+          }
         },
         {
           "id": "inhs-central-mississippi-lower-16",
@@ -478,7 +1809,37 @@
           "wetPercent": 70,
           "icePercent": 0,
           "mallardCount": 430,
-          "allDucks": 9655
+          "allDucks": 9655,
+          "speciesCounts": {
+            "MALL": 430,
+            "ABDU": 0,
+            "NOPI": 3940,
+            "BWTE": 200,
+            "GWTE": 3150,
+            "AMWI": 100,
+            "GADW": 1600,
+            "NSHO": 235,
+            "LESC": 0,
+            "RNDU": 0,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 385,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 40,
+            "AMCO": 2210,
+            "AD": 0,
+            "IMM": 1,
+            "DCCO": 0,
+            "SWN": 40
+          }
         },
         {
           "id": "inhs-central-mississippi-lower-17",
@@ -487,7 +1848,37 @@
           "wetPercent": 40,
           "icePercent": 0,
           "mallardCount": 1480,
-          "allDucks": 9980
+          "allDucks": 9980,
+          "speciesCounts": {
+            "MALL": 1480,
+            "ABDU": 0,
+            "NOPI": 3000,
+            "BWTE": 150,
+            "GWTE": 3500,
+            "AMWI": 100,
+            "GADW": 800,
+            "NSHO": 350,
+            "LESC": 0,
+            "RNDU": 600,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 85,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 0,
+            "AMCO": 900,
+            "AD": 2,
+            "IMM": 1,
+            "DCCO": 0,
+            "SWN": 0
+          }
         },
         {
           "id": "inhs-central-mississippi-lower-18",
@@ -496,21 +1887,129 @@
           "wetPercent": 100,
           "icePercent": 0,
           "mallardCount": 0,
-          "allDucks": 0
+          "allDucks": 0,
+          "speciesCounts": {
+            "MALL": 0,
+            "ABDU": 0,
+            "NOPI": 0,
+            "BWTE": 0,
+            "GWTE": 0,
+            "AMWI": 0,
+            "GADW": 0,
+            "NSHO": 0,
+            "LESC": 0,
+            "RNDU": 0,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 0,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 280,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 435,
+            "AMCO": 0,
+            "AD": 4,
+            "IMM": 6,
+            "DCCO": 0,
+            "SWN": 0
+          }
         }
       ],
+      "regions": [
+        {
+          "name": "UPPER",
+          "mallardCount": 1700,
+          "allDucks": 34390,
+          "speciesCounts": {
+            "MALL": 1700,
+            "ABDU": 0,
+            "NOPI": 4850,
+            "BWTE": 0,
+            "GWTE": 6745,
+            "AMWI": 90,
+            "GADW": 1225,
+            "NSHO": 890,
+            "LESC": 205,
+            "RNDU": 2035,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 16650,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 1280,
+            "GWFG": 70,
+            "LSGO": 0,
+            "AWPE": 245,
+            "AMCO": 4990,
+            "AD": 4,
+            "IMM": 10,
+            "DCCO": 760,
+            "SWN": 0
+          }
+        },
+        {
+          "name": "LOWER",
+          "mallardCount": 16185,
+          "allDucks": 201095,
+          "speciesCounts": {
+            "MALL": 16185,
+            "ABDU": 0,
+            "NOPI": 76400,
+            "BWTE": 1055,
+            "GWTE": 71105,
+            "AMWI": 2395,
+            "GADW": 20990,
+            "NSHO": 9770,
+            "LESC": 0,
+            "RNDU": 2795,
+            "CANV": 0,
+            "REDH": 0,
+            "RUDU": 400,
+            "COGO": 0,
+            "BUFF": 0,
+            "COME": 0,
+            "HOME": 0
+          },
+          "otherBirdCounts": {
+            "CAGO": 1425,
+            "GWFG": 0,
+            "LSGO": 0,
+            "AWPE": 980,
+            "AMCO": 18465,
+            "AD": 9,
+            "IMM": 16,
+            "DCCO": 0,
+            "SWN": 55
+          }
+        }
+      ],
+      "referenceBaseline": {
+        "label": "Printed 10-Year Average, 2016-2025",
+        "mallardCount": 47569,
+        "allDucks": 222916,
+        "note": "Source-printed ten-year reference values, not a previous survey or previous week."
+      },
       "provenance": {
-        "totals": "PDF page 1, TOTAL MISSISSIPPI row; MALL and TOTAL DUCKS columns.",
-        "areas": "PDF page 1, named location rows under UPPER and LOWER headings; %WET, %ICE, MALL, and TOTAL DUCKS columns.",
-        "baseline": "PDF page 1, 10-Year Average 2016-2025 row; MALL and TOTAL DUCKS columns."
+        "totals": "TOTAL MISSISSIPPI row, MALL and TOTAL DUCKS columns; full printed bird columns retained by agency abbreviation.",
+        "areas": "Named rows under UPPER/LOWER; all 29 cells checked against the column header and duck species/group totals.",
+        "baseline": "Printed 10-Year Average row, retained separately from prior survey counts."
       },
       "notes": [
-        "Duck-group totals exclude separately tabulated geese, coots, swans, and other waterbirds.",
-        "Repeated place names are retained as separate printed rows, distinguished by section and row ID; do not merge them by name alone.",
-        "No previous-week trend is supplied because no earlier report was imported in this record.",
-        "Central Mississippi means the river corridor, not the state of Mississippi.",
-        "Shanks Refuge and other river sites may overlap areas in Missouri agency inventories. Matching footprints and observation dates are needed before deduplication; do not sum this index with Missouri or refuge reports as independent populations."
-      ]
+        "Duck-group totals exclude separately tabulated geese, coots, swans and other waterbirds.",
+        "Repeated place names remain separate printed rows, distinguished by section and row ID.",
+        "No previous-survey count is inferred from the printed ten-year average.",
+        "Central Mississippi means the river corridor, not the state of Mississippi. Some coverage may overlap Missouri surveys, including Shanks; do not sum sources as independent populations."
+      ],
+      "checkedAt": "2026-11-11T18:22:17.385Z"
     }
   ]
 }

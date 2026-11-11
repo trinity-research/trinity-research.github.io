@@ -12,7 +12,8 @@
       "status": "awaiting-current-season-report",
       "access": "Official public report index returned HTTP 200 by ordinary HTTPS GET.",
       "verification": "Newest listed ground-count archive covers November 21, 2025 through February 13, 2026. The newest midwinter survey is January 5-12, 2026. No 2026-27 ground-count series was listed at the check.",
-      "scopeNote": "The page separates duck abundance surveys from harvest/hunt logs and sandhill crane counts. Those other series are not substituted for duck abundance."
+      "scopeNote": "The page separates duck abundance surveys from harvest/hunt logs and sandhill crane counts. Those other series are not substituted for duck abundance.",
+      "lastAutomaticCheckAt": "2026-11-11T18:22:23.150Z"
     },
     {
       "id": "mdwfp-weekly-wingbeat",
@@ -23,7 +24,8 @@
       "status": "awaiting-current-season-weekly-report",
       "access": "Official public report index returned HTTP 200 using standard system-trusted HTTPS certificate validation.",
       "verification": "Newest listed weekly report is January 22, 2026 under 2025-26. No 2026-27 Weekly Wingbeat was listed at the check.",
-      "scopeNote": "Weekly Wingbeat compiles public/private land reports and habitat assessments. It is a distinct series from MDWFP Delta aerial surveys."
+      "scopeNote": "Weekly Wingbeat compiles public/private land reports and habitat assessments. It is a distinct series from MDWFP Delta aerial surveys.",
+      "lastAutomaticCheckAt": "2026-11-11T18:22:23.371Z"
     }
   ],
   "reports": [],
