@@ -205,7 +205,7 @@ async function load(){
     for(const [index,s] of [...choices,...sampleChoices].entries()){const o=document.createElement('option');o.value=String(index);o.textContent=`${s.sample?'Sample':'Saved'} · ${s.name}`;$('sample-spot').append(o);}
     $('sample-spot').addEventListener('change',event=>{if(event.target.value!=='')setSpot([...choices,...sampleChoices][Number(event.target.value)]);event.target.value='';});
     render();
-    snapshotRefresher=createSnapshotRefresher({initialVersion:refreshState?.finishedAt,readStatus:()=>getJson('data/update-status.json'),readSnapshot:async status=>{
+    snapshotRefresher=createSnapshotRefresher({initialVersion:refreshState?.finishedAt,initialTimes:{weather:weather.generatedAt,surveys:surveys.generatedAt,conditions:conditions?.generatedAt},readStatus:()=>getJson('data/update-status.json'),readSnapshot:async()=>{
       const [nextWeather,nextSurveys,nextConditions]=await Promise.all([getJson('data/weather.json'),getJson('data/surveys.json'),getJson('data/conditions.json')]);
       if(!nextWeather.sites?.length||!Number.isFinite(Date.parse(nextWeather.generatedAt)))throw new Error('Forecast data is incomplete.');
       validateReports(nextSurveys);validateMonitoring(nextSurveys.monitoring);validateConditions(nextConditions);
