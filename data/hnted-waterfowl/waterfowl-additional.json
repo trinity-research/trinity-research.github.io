@@ -13,7 +13,7 @@
       "access": "Official public HTML returned HTTP 200 by ordinary HTTPS GET.",
       "reuseDecision": "Brief original paraphrases of factual habitat observations, with attribution and original link. No report artwork, photographs, or full article republished.",
       "verification": "Publication date and habitat limitations checked against the downloaded article. Early-October capability figures remain dated to that period, not the retrieval date.",
-      "lastAutomaticCheckAt": "2026-11-12T13:11:54.466Z"
+      "lastAutomaticCheckAt": "2026-11-12T18:16:11.326Z"
     },
     {
       "id": "fhsu-kwec-sightings",
@@ -25,7 +25,7 @@
       "access": "Official public-university HTML returned HTTP 200 by ordinary HTTPS GET. This is a separate source from the inaccessible KDWP report page.",
       "reuseDecision": "Brief original paraphrases of the center's published factual narrative and selected species-presence facts, with attribution and original link. No underlying eBird records or birder submissions requested, downloaded, or imported.",
       "verification": "October 13 publication label, preceding-weeks observation scope, Cheyenne Bottoms habitat paragraphs, and mallard presence checked in the downloaded page.",
-      "lastAutomaticCheckAt": "2026-11-12T13:11:54.801Z"
+      "lastAutomaticCheckAt": "2026-11-12T18:16:11.664Z"
     },
     {
       "id": "mdwfp-delta-aerial",
@@ -36,7 +36,7 @@
       "status": "awaiting-current-season-aerial-report",
       "access": "Official survey index returned HTTP 200 by ordinary HTTPS GET.",
       "verification": "Newest season heading is 2025-26; newest listed report is Early January 2026. No 2026-27 aerial report was located.",
-      "lastAutomaticCheckAt": "2026-11-12T13:11:55.522Z"
+      "lastAutomaticCheckAt": "2026-11-12T18:16:12.260Z"
     }
   ],
   "reports": [

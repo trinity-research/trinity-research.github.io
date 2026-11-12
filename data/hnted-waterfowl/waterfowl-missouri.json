@@ -8,8 +8,8 @@
       "name": "Missouri Department of Conservation",
       "indexUrl": "https://mdc12.mdc.mo.gov/Applications/publicreportviewer?listFor=WaterFowl&reporttitle=Waterfowl+Hunting+Information",
       "reportUrl": "https://mdc12.mdc.mo.gov/Applications/PublicReportViewer/ReportView/ReportViewer.aspx?report=400",
-      "retrievedAt": "2026-11-12T13:11:52.593Z",
-      "documentSha256": "db2099b3e7df59b0709e4245e88af796bc59d6c35085c0f4cb88fc86a342fda5",
+      "retrievedAt": "2026-11-12T18:16:09.940Z",
+      "documentSha256": "33fa77af12339cc53b6f31c673c662f0ea47e30068f18497abe3e335ed21c25b",
       "csvSha256": "db2099b3e7df59b0709e4245e88af796bc59d6c35085c0f4cb88fc86a342fda5",
       "htmlSha256": "c4276ada1460a000a39d4b3244535d49652f5f5e1a4a947687b4204020967894",
       "access": "Public report 400 and its exposed PDF/CSV exports downloaded successfully.",
@@ -17,21 +17,21 @@
       "reuseDecision": "Factual numeric observations with attribution and source link; original report artwork and full files remain local. No blanket open-data licence asserted.",
       "verification": "Automatically parsed with date, schema, units, missing-value and count-reconciliation checks.",
       "linkBehavior": "Live viewer defaults to the latest survey; it is not an immutable report archive.",
-      "lastReportSha256": "db2099b3e7df59b0709e4245e88af796bc59d6c35085c0f4cb88fc86a342fda5",
-      "lastAutomaticCheckAt": "2026-11-12T13:11:52.506Z"
+      "lastReportSha256": "33fa77af12339cc53b6f31c673c662f0ea47e30068f18497abe3e335ed21c25b",
+      "lastAutomaticCheckAt": "2026-11-12T18:16:09.878Z"
     }
   ],
   "reports": [
     {
-      "id": "missouri-2026-10-27",
+      "id": "missouri-2026-11-10",
       "sourceId": "mdc-waterfowl-counts",
       "type": "survey-counts",
       "title": "Missouri coordinated waterfowl survey",
-      "reportDate": "2026-10-27",
+      "reportDate": "2026-11-10",
       "datePrecision": "agency-survey-week-label",
       "observationPeriod": {
-        "start": "2026-10-26",
-        "end": "2026-10-29",
+        "start": "2026-11-09",
+        "end": "2026-11-10",
         "datesVaryByArea": true
       },
       "referenceStates": [
@@ -42,69 +42,69 @@
         "kind": "aggregate-survey-areas",
         "name": "Missouri surveyed conservation areas and refuges",
         "state": "MO",
-        "description": "18 listed conservation areas and refuges; not a census of every wetland or duck in Missouri.",
+        "description": "19 listed conservation areas and refuges; not a census of every wetland or duck in Missouri.",
         "marker": null,
         "surveyGeometry": null
       },
       "method": "Coordinated waterfowl estimates from conservation-area wetlands and national wildlife refuges, approximately fortnightly during the season.",
       "provenance": {
-        "summary": "Report comments labelled 2026-10-27; factual values from the public CSV export.",
+        "summary": "Report comments labelled 2026-11-10; factual values from the public CSV export.",
         "areas": "Specific Area Results; each row retains its actual date and original species/group labels."
       },
       "summary": {
-        "allDucks": 132025,
-        "mallardCount": 4850,
-        "areaCount": 18,
+        "allDucks": 287323,
+        "mallardCount": 37752,
+        "areaCount": 19,
         "previousAllDucks": null,
         "previousMallardCount": null
       },
       "comparisons": {
         "basis": "Agency-reported comparisons for surveyed areas, not week-over-week changes.",
         "fiveYearAverage": {
-          "allDucks": 147256,
-          "mallardCount": 32581,
-          "allDucksPercentChange": -10.3,
-          "mallardPercentChange": -85.1
+          "allDucks": 472994,
+          "mallardCount": 199174,
+          "allDucksPercentChange": -39.3,
+          "mallardPercentChange": -81
         },
         "twentyYearAverage": {
-          "allDucks": 197968,
-          "mallardCount": 53735,
-          "allDucksPercentChange": -33.3,
-          "mallardPercentChange": -91
+          "allDucks": 507036,
+          "mallardCount": 264721,
+          "allDucksPercentChange": -43.3,
+          "mallardPercentChange": -85.7
         }
       },
       "areas": [
         {
           "name": "BK Leach CA",
-          "date": "2026-10-29",
-          "allDucks": 885,
-          "mallardCount": 130,
+          "date": "2026-11-09",
+          "allDucks": 1795,
+          "mallardCount": 150,
           "counts": {
-            "gadwall": 110,
-            "mallard": 130,
-            "mixedDabblers": 200,
+            "gadwall": 380,
+            "mallard": 150,
+            "mixedDabblers": 370,
             "mixedDivers": 0,
             "mixedDucks": 0,
-            "northernPintail": 200,
-            "ringNeckedDuck": 0,
-            "northernShoveler": 0,
-            "tealGroup": 175,
-            "wigeonGroup": 30
+            "northernPintail": 225,
+            "ringNeckedDuck": 15,
+            "northernShoveler": 175,
+            "tealGroup": 400,
+            "wigeonGroup": 0
           },
           "surveyGeometry": null,
           "marker": null,
           "speciesComposition": [
             {
               "label": "Gadwalls",
-              "count": 110
+              "count": 380
             },
             {
               "label": "Mallards",
-              "count": 130
+              "count": 150
             },
             {
               "label": "Mixed Dabblers",
-              "count": 200
+              "count": 370
             },
             {
               "label": "Mixed Divers",
@@ -116,31 +116,31 @@
             },
             {
               "label": "Pintails",
-              "count": 200
+              "count": 225
             },
             {
               "label": "Ring-Necked Ducks",
-              "count": 0
+              "count": 15
             },
             {
               "label": "Shovelers",
-              "count": 0
-            },
-            {
-              "label": "Teal",
               "count": 175
             },
             {
+              "label": "Teal",
+              "count": 400
+            },
+            {
               "label": "Wigeon",
-              "count": 30
+              "count": 0
             }
           ],
-          "canadaGeese": 40,
+          "canadaGeese": 30,
           "snowGeese": 0,
           "otherSpeciesComposition": [
             {
               "label": "Bald Eagles",
-              "count": 0
+              "count": 3
             },
             {
               "label": "Great Blue Herons",
@@ -148,7 +148,7 @@
             },
             {
               "label": "Trumpeter Swans",
-              "count": 0
+              "count": 4
             },
             {
               "label": "Tundra Swans",
@@ -166,39 +166,39 @@
         },
         {
           "name": "Bob Brown CA",
-          "date": "2026-10-26",
-          "allDucks": 14147,
-          "mallardCount": 1374,
+          "date": "2026-11-09",
+          "allDucks": 47164,
+          "mallardCount": 11000,
           "counts": {
-            "gadwall": 717,
-            "mallard": 1374,
-            "mixedDabblers": 0,
-            "mixedDivers": 0,
+            "gadwall": 1500,
+            "mallard": 11000,
+            "mixedDabblers": 1100,
+            "mixedDivers": 85,
             "mixedDucks": 0,
-            "northernPintail": 9960,
-            "ringNeckedDuck": 40,
-            "northernShoveler": 697,
-            "tealGroup": 632,
-            "wigeonGroup": 687
+            "northernPintail": 28500,
+            "ringNeckedDuck": 156,
+            "northernShoveler": 2050,
+            "tealGroup": 1500,
+            "wigeonGroup": 1250
           },
           "surveyGeometry": null,
           "marker": null,
           "speciesComposition": [
             {
               "label": "Gadwalls",
-              "count": 717
+              "count": 1500
             },
             {
               "label": "Mallards",
-              "count": 1374
+              "count": 11000
             },
             {
               "label": "Mixed Dabblers",
-              "count": 0
+              "count": 1100
             },
             {
               "label": "Mixed Divers",
-              "count": 0
+              "count": 85
             },
             {
               "label": "Mixed Ducks",
@@ -206,23 +206,23 @@
             },
             {
               "label": "Pintails",
-              "count": 9960
+              "count": 28500
             },
             {
               "label": "Ring-Necked Ducks",
-              "count": 40
+              "count": 156
             },
             {
               "label": "Shovelers",
-              "count": 697
+              "count": 2050
             },
             {
               "label": "Teal",
-              "count": 632
+              "count": 1500
             },
             {
               "label": "Wigeon",
-              "count": 687
+              "count": 1250
             }
           ],
           "canadaGeese": 0,
@@ -230,11 +230,11 @@
           "otherSpeciesComposition": [
             {
               "label": "Bald Eagles",
-              "count": 2
+              "count": 0
             },
             {
               "label": "Great Blue Herons",
-              "count": 0
+              "count": 12
             },
             {
               "label": "Trumpeter Swans",
@@ -256,19 +256,19 @@
         },
         {
           "name": "Coon Island CA",
-          "date": "2026-10-26",
-          "allDucks": 70,
-          "mallardCount": 10,
+          "date": "2026-11-09",
+          "allDucks": 450,
+          "mallardCount": 100,
           "counts": {
             "gadwall": 0,
-            "mallard": 10,
+            "mallard": 100,
             "mixedDabblers": 0,
             "mixedDivers": 0,
             "mixedDucks": 0,
-            "northernPintail": 30,
+            "northernPintail": 50,
             "ringNeckedDuck": 0,
-            "northernShoveler": 5,
-            "tealGroup": 10,
+            "northernShoveler": 75,
+            "tealGroup": 100,
             "wigeonGroup": 0
           },
           "surveyGeometry": null,
@@ -280,7 +280,7 @@
             },
             {
               "label": "Mallards",
-              "count": 10
+              "count": 100
             },
             {
               "label": "Mixed Dabblers",
@@ -296,7 +296,7 @@
             },
             {
               "label": "Pintails",
-              "count": 30
+              "count": 50
             },
             {
               "label": "Ring-Necked Ducks",
@@ -304,11 +304,11 @@
             },
             {
               "label": "Shovelers",
-              "count": 5
+              "count": 75
             },
             {
               "label": "Teal",
-              "count": 10
+              "count": 100
             },
             {
               "label": "Wigeon",
@@ -346,31 +346,31 @@
         },
         {
           "name": "Duck Creek CA",
-          "date": "2026-10-26",
-          "allDucks": 5260,
-          "mallardCount": 325,
+          "date": "2026-11-10",
+          "allDucks": 20750,
+          "mallardCount": 2060,
           "counts": {
-            "gadwall": 1325,
-            "mallard": 325,
+            "gadwall": 5990,
+            "mallard": 2060,
             "mixedDabblers": 0,
             "mixedDivers": 0,
             "mixedDucks": 0,
-            "northernPintail": 1140,
-            "ringNeckedDuck": 1735,
-            "northernShoveler": 375,
-            "tealGroup": 175,
-            "wigeonGroup": 0
+            "northernPintail": 5630,
+            "ringNeckedDuck": 5475,
+            "northernShoveler": 960,
+            "tealGroup": 350,
+            "wigeonGroup": 215
           },
           "surveyGeometry": null,
           "marker": null,
           "speciesComposition": [
             {
               "label": "Gadwalls",
-              "count": 1325
+              "count": 5990
             },
             {
               "label": "Mallards",
-              "count": 325
+              "count": 2060
             },
             {
               "label": "Mixed Dabblers",
@@ -386,35 +386,35 @@
             },
             {
               "label": "Pintails",
-              "count": 1140
+              "count": 5630
             },
             {
               "label": "Ring-Necked Ducks",
-              "count": 1735
+              "count": 5475
             },
             {
               "label": "Shovelers",
-              "count": 375
+              "count": 960
             },
             {
               "label": "Teal",
-              "count": 175
+              "count": 350
             },
             {
               "label": "Wigeon",
-              "count": 0
+              "count": 215
             }
           ],
-          "canadaGeese": 100,
+          "canadaGeese": 5,
           "snowGeese": 0,
           "otherSpeciesComposition": [
             {
               "label": "Bald Eagles",
-              "count": 12
+              "count": 15
             },
             {
               "label": "Great Blue Herons",
-              "count": 4
+              "count": 6
             },
             {
               "label": "Trumpeter Swans",
@@ -430,25 +430,25 @@
             },
             {
               "label": "White Fonted Geese",
-              "count": 10
+              "count": 125
             }
           ]
         },
         {
           "name": "Eagle Bluffs CA",
-          "date": "2026-10-26",
-          "allDucks": 200,
-          "mallardCount": 0,
+          "date": "2026-11-09",
+          "allDucks": 550,
+          "mallardCount": 55,
           "counts": {
-            "gadwall": 10,
-            "mallard": 0,
+            "gadwall": 120,
+            "mallard": 55,
             "mixedDabblers": 0,
             "mixedDivers": 0,
             "mixedDucks": 0,
-            "northernPintail": 75,
+            "northernPintail": 35,
             "ringNeckedDuck": 0,
-            "northernShoveler": 0,
-            "tealGroup": 115,
+            "northernShoveler": 120,
+            "tealGroup": 185,
             "wigeonGroup": 0
           },
           "surveyGeometry": null,
@@ -456,11 +456,11 @@
           "speciesComposition": [
             {
               "label": "Gadwalls",
-              "count": 10
+              "count": 120
             },
             {
               "label": "Mallards",
-              "count": 0
+              "count": 55
             },
             {
               "label": "Mixed Dabblers",
@@ -476,7 +476,7 @@
             },
             {
               "label": "Pintails",
-              "count": 75
+              "count": 35
             },
             {
               "label": "Ring-Necked Ducks",
@@ -484,18 +484,18 @@
             },
             {
               "label": "Shovelers",
-              "count": 0
+              "count": 120
             },
             {
               "label": "Teal",
-              "count": 115
+              "count": 185
             },
             {
               "label": "Wigeon",
               "count": 0
             }
           ],
-          "canadaGeese": 50,
+          "canadaGeese": 0,
           "snowGeese": 0,
           "otherSpeciesComposition": [
             {
@@ -526,31 +526,31 @@
         },
         {
           "name": "Fountain Grove CA",
-          "date": "2026-10-26",
-          "allDucks": 18000,
-          "mallardCount": 0,
+          "date": "2026-11-09",
+          "allDucks": 58000,
+          "mallardCount": 11600,
           "counts": {
-            "gadwall": 1260,
-            "mallard": 0,
+            "gadwall": 8700,
+            "mallard": 11600,
             "mixedDabblers": 0,
             "mixedDivers": 0,
             "mixedDucks": 0,
-            "northernPintail": 9000,
+            "northernPintail": 17400,
             "ringNeckedDuck": 0,
-            "northernShoveler": 540,
-            "tealGroup": 6120,
-            "wigeonGroup": 540
+            "northernShoveler": 580,
+            "tealGroup": 17400,
+            "wigeonGroup": 1160
           },
           "surveyGeometry": null,
           "marker": null,
           "speciesComposition": [
             {
               "label": "Gadwalls",
-              "count": 1260
+              "count": 8700
             },
             {
               "label": "Mallards",
-              "count": 0
+              "count": 11600
             },
             {
               "label": "Mixed Dabblers",
@@ -566,7 +566,7 @@
             },
             {
               "label": "Pintails",
-              "count": 9000
+              "count": 17400
             },
             {
               "label": "Ring-Necked Ducks",
@@ -574,27 +574,27 @@
             },
             {
               "label": "Shovelers",
-              "count": 540
+              "count": 580
             },
             {
               "label": "Teal",
-              "count": 6120
+              "count": 17400
             },
             {
               "label": "Wigeon",
-              "count": 540
+              "count": 1160
             }
           ],
-          "canadaGeese": 350,
+          "canadaGeese": 250,
           "snowGeese": 0,
           "otherSpeciesComposition": [
             {
               "label": "Bald Eagles",
-              "count": 12
+              "count": 7
             },
             {
               "label": "Great Blue Herons",
-              "count": 50
+              "count": 25
             },
             {
               "label": "Trumpeter Swans",
@@ -616,199 +616,19 @@
         },
         {
           "name": "Four Rivers CA",
-          "date": "2026-10-26",
-          "allDucks": 4920,
-          "mallardCount": 320,
+          "date": "2026-11-09",
+          "allDucks": 4570,
+          "mallardCount": 850,
           "counts": {
             "gadwall": 0,
-            "mallard": 320,
-            "mixedDabblers": 4000,
+            "mallard": 850,
+            "mixedDabblers": 3220,
             "mixedDivers": 0,
             "mixedDucks": 0,
-            "northernPintail": 50,
-            "ringNeckedDuck": 0,
-            "northernShoveler": 300,
-            "tealGroup": 250,
-            "wigeonGroup": 0
-          },
-          "surveyGeometry": null,
-          "marker": null,
-          "speciesComposition": [
-            {
-              "label": "Gadwalls",
-              "count": 0
-            },
-            {
-              "label": "Mallards",
-              "count": 320
-            },
-            {
-              "label": "Mixed Dabblers",
-              "count": 4000
-            },
-            {
-              "label": "Mixed Divers",
-              "count": 0
-            },
-            {
-              "label": "Mixed Ducks",
-              "count": 0
-            },
-            {
-              "label": "Pintails",
-              "count": 50
-            },
-            {
-              "label": "Ring-Necked Ducks",
-              "count": 0
-            },
-            {
-              "label": "Shovelers",
-              "count": 300
-            },
-            {
-              "label": "Teal",
-              "count": 250
-            },
-            {
-              "label": "Wigeon",
-              "count": 0
-            }
-          ],
-          "canadaGeese": 50,
-          "snowGeese": 0,
-          "otherSpeciesComposition": [
-            {
-              "label": "Bald Eagles",
-              "count": 7
-            },
-            {
-              "label": "Great Blue Herons",
-              "count": 11
-            },
-            {
-              "label": "Trumpeter Swans",
-              "count": 0
-            },
-            {
-              "label": "Tundra Swans",
-              "count": 0
-            },
-            {
-              "label": "Unidentified Swans",
-              "count": 0
-            },
-            {
-              "label": "White Fonted Geese",
-              "count": 0
-            }
-          ]
-        },
-        {
-          "name": "Grand Pass CA",
-          "date": "2026-10-26",
-          "allDucks": 18000,
-          "mallardCount": 900,
-          "counts": {
-            "gadwall": 3600,
-            "mallard": 900,
-            "mixedDabblers": 900,
-            "mixedDivers": 0,
-            "mixedDucks": 0,
-            "northernPintail": 7200,
+            "northernPintail": 40,
             "ringNeckedDuck": 0,
             "northernShoveler": 0,
-            "tealGroup": 5400,
-            "wigeonGroup": 0
-          },
-          "surveyGeometry": null,
-          "marker": null,
-          "speciesComposition": [
-            {
-              "label": "Gadwalls",
-              "count": 3600
-            },
-            {
-              "label": "Mallards",
-              "count": 900
-            },
-            {
-              "label": "Mixed Dabblers",
-              "count": 900
-            },
-            {
-              "label": "Mixed Divers",
-              "count": 0
-            },
-            {
-              "label": "Mixed Ducks",
-              "count": 0
-            },
-            {
-              "label": "Pintails",
-              "count": 7200
-            },
-            {
-              "label": "Ring-Necked Ducks",
-              "count": 0
-            },
-            {
-              "label": "Shovelers",
-              "count": 0
-            },
-            {
-              "label": "Teal",
-              "count": 5400
-            },
-            {
-              "label": "Wigeon",
-              "count": 0
-            }
-          ],
-          "canadaGeese": 120,
-          "snowGeese": 0,
-          "otherSpeciesComposition": [
-            {
-              "label": "Bald Eagles",
-              "count": 8
-            },
-            {
-              "label": "Great Blue Herons",
-              "count": 0
-            },
-            {
-              "label": "Trumpeter Swans",
-              "count": 0
-            },
-            {
-              "label": "Tundra Swans",
-              "count": 0
-            },
-            {
-              "label": "Unidentified Swans",
-              "count": 0
-            },
-            {
-              "label": "White Fonted Geese",
-              "count": 20
-            }
-          ]
-        },
-        {
-          "name": "Little River CA",
-          "date": "2026-10-26",
-          "allDucks": 125,
-          "mallardCount": 6,
-          "counts": {
-            "gadwall": 36,
-            "mallard": 6,
-            "mixedDabblers": 0,
-            "mixedDivers": 0,
-            "mixedDucks": 0,
-            "northernPintail": 6,
-            "ringNeckedDuck": 0,
-            "northernShoveler": 5,
-            "tealGroup": 50,
+            "tealGroup": 450,
             "wigeonGroup": 10
           },
           "surveyGeometry": null,
@@ -816,15 +636,15 @@
           "speciesComposition": [
             {
               "label": "Gadwalls",
-              "count": 36
+              "count": 0
             },
             {
               "label": "Mallards",
-              "count": 6
+              "count": 850
             },
             {
               "label": "Mixed Dabblers",
-              "count": 0
+              "count": 3220
             },
             {
               "label": "Mixed Divers",
@@ -836,7 +656,7 @@
             },
             {
               "label": "Pintails",
-              "count": 6
+              "count": 40
             },
             {
               "label": "Ring-Necked Ducks",
@@ -844,199 +664,18 @@
             },
             {
               "label": "Shovelers",
-              "count": 5
+              "count": 0
             },
             {
               "label": "Teal",
-              "count": 50
+              "count": 450
             },
             {
               "label": "Wigeon",
               "count": 10
             }
           ],
-          "canadaGeese": 0,
-          "snowGeese": 1,
-          "otherSpeciesComposition": [
-            {
-              "label": "Bald Eagles",
-              "count": 0
-            },
-            {
-              "label": "Great Blue Herons",
-              "count": 3
-            },
-            {
-              "label": "Trumpeter Swans",
-              "count": 0
-            },
-            {
-              "label": "Tundra Swans",
-              "count": 0
-            },
-            {
-              "label": "Unidentified Swans",
-              "count": 0
-            },
-            {
-              "label": "White Fonted Geese",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "Loess Bluffs NWR",
-          "date": "2026-10-27",
-          "allDucks": 43775,
-          "mallardCount": 170,
-          "counts": {
-            "gadwall": 7565,
-            "mallard": 170,
-            "mixedDabblers": 0,
-            "mixedDivers": 0,
-            "mixedDucks": 0,
-            "northernPintail": 16020,
-            "ringNeckedDuck": 3995,
-            "northernShoveler": 1145,
-            "tealGroup": 13855,
-            "wigeonGroup": 25
-          },
-          "surveyGeometry": null,
-          "marker": null,
-          "overlapReportId": "loess-bluffs-2026-10-27",
-          "speciesComposition": [
-            {
-              "label": "Gadwalls",
-              "count": 7565
-            },
-            {
-              "label": "Mallards",
-              "count": 170
-            },
-            {
-              "label": "Mixed Dabblers",
-              "count": 0
-            },
-            {
-              "label": "Mixed Divers",
-              "count": 0
-            },
-            {
-              "label": "Mixed Ducks",
-              "count": 0
-            },
-            {
-              "label": "Pintails",
-              "count": 16020
-            },
-            {
-              "label": "Ring-Necked Ducks",
-              "count": 3995
-            },
-            {
-              "label": "Shovelers",
-              "count": 1145
-            },
-            {
-              "label": "Teal",
-              "count": 13855
-            },
-            {
-              "label": "Wigeon",
-              "count": 25
-            }
-          ],
-          "canadaGeese": 265,
-          "snowGeese": 35,
-          "otherSpeciesComposition": [
-            {
-              "label": "Bald Eagles",
-              "count": 0
-            },
-            {
-              "label": "Great Blue Herons",
-              "count": 0
-            },
-            {
-              "label": "Trumpeter Swans",
-              "count": 0
-            },
-            {
-              "label": "Tundra Swans",
-              "count": 0
-            },
-            {
-              "label": "Unidentified Swans",
-              "count": 0
-            },
-            {
-              "label": "White Fonted Geese",
-              "count": 11600
-            }
-          ]
-        },
-        {
-          "name": "Marais Temps Clair CA",
-          "date": "2026-10-29",
-          "allDucks": 60,
-          "mallardCount": 0,
-          "counts": {
-            "gadwall": 0,
-            "mallard": 0,
-            "mixedDabblers": 60,
-            "mixedDivers": 0,
-            "mixedDucks": 0,
-            "northernPintail": 0,
-            "ringNeckedDuck": 0,
-            "northernShoveler": 0,
-            "tealGroup": 0,
-            "wigeonGroup": 0
-          },
-          "surveyGeometry": null,
-          "marker": null,
-          "speciesComposition": [
-            {
-              "label": "Gadwalls",
-              "count": 0
-            },
-            {
-              "label": "Mallards",
-              "count": 0
-            },
-            {
-              "label": "Mixed Dabblers",
-              "count": 60
-            },
-            {
-              "label": "Mixed Divers",
-              "count": 0
-            },
-            {
-              "label": "Mixed Ducks",
-              "count": 0
-            },
-            {
-              "label": "Pintails",
-              "count": 0
-            },
-            {
-              "label": "Ring-Necked Ducks",
-              "count": 0
-            },
-            {
-              "label": "Shovelers",
-              "count": 0
-            },
-            {
-              "label": "Teal",
-              "count": 0
-            },
-            {
-              "label": "Wigeon",
-              "count": 0
-            }
-          ],
-          "canadaGeese": 0,
+          "canadaGeese": 20,
           "snowGeese": 0,
           "otherSpeciesComposition": [
             {
@@ -1045,6 +684,96 @@
             },
             {
               "label": "Great Blue Herons",
+              "count": 6
+            },
+            {
+              "label": "Trumpeter Swans",
+              "count": 0
+            },
+            {
+              "label": "Tundra Swans",
+              "count": 0
+            },
+            {
+              "label": "Unidentified Swans",
+              "count": 0
+            },
+            {
+              "label": "White Fonted Geese",
+              "count": 10
+            }
+          ]
+        },
+        {
+          "name": "Grand Pass CA",
+          "date": "2026-11-09",
+          "allDucks": 25000,
+          "mallardCount": 2500,
+          "counts": {
+            "gadwall": 5000,
+            "mallard": 2500,
+            "mixedDabblers": 2500,
+            "mixedDivers": 0,
+            "mixedDucks": 0,
+            "northernPintail": 10000,
+            "ringNeckedDuck": 0,
+            "northernShoveler": 0,
+            "tealGroup": 5000,
+            "wigeonGroup": 0
+          },
+          "surveyGeometry": null,
+          "marker": null,
+          "speciesComposition": [
+            {
+              "label": "Gadwalls",
+              "count": 5000
+            },
+            {
+              "label": "Mallards",
+              "count": 2500
+            },
+            {
+              "label": "Mixed Dabblers",
+              "count": 2500
+            },
+            {
+              "label": "Mixed Divers",
+              "count": 0
+            },
+            {
+              "label": "Mixed Ducks",
+              "count": 0
+            },
+            {
+              "label": "Pintails",
+              "count": 10000
+            },
+            {
+              "label": "Ring-Necked Ducks",
+              "count": 0
+            },
+            {
+              "label": "Shovelers",
+              "count": 0
+            },
+            {
+              "label": "Teal",
+              "count": 5000
+            },
+            {
+              "label": "Wigeon",
+              "count": 0
+            }
+          ],
+          "canadaGeese": 25,
+          "snowGeese": 0,
+          "otherSpeciesComposition": [
+            {
+              "label": "Bald Eagles",
+              "count": 6
+            },
+            {
+              "label": "Great Blue Herons",
               "count": 0
             },
             {
@@ -1066,8 +795,188 @@
           ]
         },
         {
-          "name": "Montrose CA",
-          "date": "2026-10-26",
+          "name": "Little River CA",
+          "date": "2026-11-09",
+          "allDucks": 1019,
+          "mallardCount": 50,
+          "counts": {
+            "gadwall": 330,
+            "mallard": 50,
+            "mixedDabblers": 0,
+            "mixedDivers": 0,
+            "mixedDucks": 0,
+            "northernPintail": 40,
+            "ringNeckedDuck": 115,
+            "northernShoveler": 220,
+            "tealGroup": 160,
+            "wigeonGroup": 40
+          },
+          "surveyGeometry": null,
+          "marker": null,
+          "speciesComposition": [
+            {
+              "label": "Gadwalls",
+              "count": 330
+            },
+            {
+              "label": "Mallards",
+              "count": 50
+            },
+            {
+              "label": "Mixed Dabblers",
+              "count": 0
+            },
+            {
+              "label": "Mixed Divers",
+              "count": 0
+            },
+            {
+              "label": "Mixed Ducks",
+              "count": 0
+            },
+            {
+              "label": "Pintails",
+              "count": 40
+            },
+            {
+              "label": "Ring-Necked Ducks",
+              "count": 115
+            },
+            {
+              "label": "Shovelers",
+              "count": 220
+            },
+            {
+              "label": "Teal",
+              "count": 160
+            },
+            {
+              "label": "Wigeon",
+              "count": 40
+            }
+          ],
+          "canadaGeese": 0,
+          "snowGeese": 0,
+          "otherSpeciesComposition": [
+            {
+              "label": "Bald Eagles",
+              "count": 1
+            },
+            {
+              "label": "Great Blue Herons",
+              "count": 6
+            },
+            {
+              "label": "Trumpeter Swans",
+              "count": 0
+            },
+            {
+              "label": "Tundra Swans",
+              "count": 0
+            },
+            {
+              "label": "Unidentified Swans",
+              "count": 0
+            },
+            {
+              "label": "White Fonted Geese",
+              "count": 55
+            }
+          ]
+        },
+        {
+          "name": "Loess Bluffs NWR",
+          "date": "2026-11-10",
+          "allDucks": 83440,
+          "mallardCount": 4975,
+          "counts": {
+            "gadwall": 28635,
+            "mallard": 4975,
+            "mixedDabblers": 0,
+            "mixedDivers": 0,
+            "mixedDucks": 0,
+            "northernPintail": 25135,
+            "ringNeckedDuck": 6180,
+            "northernShoveler": 2210,
+            "tealGroup": 15255,
+            "wigeonGroup": 70
+          },
+          "surveyGeometry": null,
+          "marker": null,
+          "speciesComposition": [
+            {
+              "label": "Gadwalls",
+              "count": 28635
+            },
+            {
+              "label": "Mallards",
+              "count": 4975
+            },
+            {
+              "label": "Mixed Dabblers",
+              "count": 0
+            },
+            {
+              "label": "Mixed Divers",
+              "count": 0
+            },
+            {
+              "label": "Mixed Ducks",
+              "count": 0
+            },
+            {
+              "label": "Pintails",
+              "count": 25135
+            },
+            {
+              "label": "Ring-Necked Ducks",
+              "count": 6180
+            },
+            {
+              "label": "Shovelers",
+              "count": 2210
+            },
+            {
+              "label": "Teal",
+              "count": 15255
+            },
+            {
+              "label": "Wigeon",
+              "count": 70
+            }
+          ],
+          "canadaGeese": 746,
+          "snowGeese": 260,
+          "otherSpeciesComposition": [
+            {
+              "label": "Bald Eagles",
+              "count": 15
+            },
+            {
+              "label": "Great Blue Herons",
+              "count": 0
+            },
+            {
+              "label": "Trumpeter Swans",
+              "count": 36
+            },
+            {
+              "label": "Tundra Swans",
+              "count": 0
+            },
+            {
+              "label": "Unidentified Swans",
+              "count": 0
+            },
+            {
+              "label": "White Fonted Geese",
+              "count": 18400
+            }
+          ]
+        },
+        {
+          "name": "Marais Temps Clair CA",
+          "date": "2026-11-09",
           "allDucks": 0,
           "mallardCount": 0,
           "counts": {
@@ -1126,7 +1035,7 @@
               "count": 0
             }
           ],
-          "canadaGeese": 20,
+          "canadaGeese": 0,
           "snowGeese": 0,
           "otherSpeciesComposition": [
             {
@@ -1156,15 +1065,105 @@
           ]
         },
         {
-          "name": "Nodaway Valley CA",
-          "date": "2026-10-26",
-          "allDucks": 4485,
+          "name": "Mingo NWR",
+          "date": "2026-11-10",
+          "allDucks": 3011,
+          "mallardCount": 1162,
+          "counts": {
+            "gadwall": 674,
+            "mallard": 1162,
+            "mixedDabblers": 0,
+            "mixedDivers": 0,
+            "mixedDucks": 0,
+            "northernPintail": 50,
+            "ringNeckedDuck": 0,
+            "northernShoveler": 238,
+            "tealGroup": 395,
+            "wigeonGroup": 125
+          },
+          "speciesComposition": [
+            {
+              "label": "Gadwalls",
+              "count": 674
+            },
+            {
+              "label": "Mallards",
+              "count": 1162
+            },
+            {
+              "label": "Mixed Dabblers",
+              "count": 0
+            },
+            {
+              "label": "Mixed Divers",
+              "count": 0
+            },
+            {
+              "label": "Mixed Ducks",
+              "count": 0
+            },
+            {
+              "label": "Pintails",
+              "count": 50
+            },
+            {
+              "label": "Ring-Necked Ducks",
+              "count": 0
+            },
+            {
+              "label": "Shovelers",
+              "count": 238
+            },
+            {
+              "label": "Teal",
+              "count": 395
+            },
+            {
+              "label": "Wigeon",
+              "count": 125
+            }
+          ],
+          "canadaGeese": 0,
+          "snowGeese": 0,
+          "otherSpeciesComposition": [
+            {
+              "label": "Bald Eagles",
+              "count": 10
+            },
+            {
+              "label": "Great Blue Herons",
+              "count": 0
+            },
+            {
+              "label": "Trumpeter Swans",
+              "count": 0
+            },
+            {
+              "label": "Tundra Swans",
+              "count": 0
+            },
+            {
+              "label": "Unidentified Swans",
+              "count": 0
+            },
+            {
+              "label": "White Fonted Geese",
+              "count": 0
+            }
+          ],
+          "surveyGeometry": null,
+          "marker": null
+        },
+        {
+          "name": "Montrose CA",
+          "date": "2026-11-09",
+          "allDucks": 2000,
           "mallardCount": 0,
           "counts": {
             "gadwall": 0,
             "mallard": 0,
-            "mixedDabblers": 4485,
-            "mixedDivers": 0,
+            "mixedDabblers": 1800,
+            "mixedDivers": 200,
             "mixedDucks": 0,
             "northernPintail": 0,
             "ringNeckedDuck": 0,
@@ -1185,11 +1184,11 @@
             },
             {
               "label": "Mixed Dabblers",
-              "count": 4485
+              "count": 1800
             },
             {
               "label": "Mixed Divers",
-              "count": 0
+              "count": 200
             },
             {
               "label": "Mixed Ducks",
@@ -1246,110 +1245,20 @@
           ]
         },
         {
-          "name": "Otter Slough CA",
-          "date": "2026-10-26",
-          "allDucks": 11861,
-          "mallardCount": 686,
+          "name": "Nodaway Valley CA",
+          "date": "2026-11-09",
+          "allDucks": 13609,
+          "mallardCount": 0,
           "counts": {
-            "gadwall": 821,
-            "mallard": 686,
-            "mixedDabblers": 0,
+            "gadwall": 2722,
+            "mallard": 0,
+            "mixedDabblers": 1361,
             "mixedDivers": 0,
             "mixedDucks": 0,
-            "northernPintail": 7525,
-            "ringNeckedDuck": 0,
-            "northernShoveler": 1273,
-            "tealGroup": 1055,
-            "wigeonGroup": 351
-          },
-          "surveyGeometry": null,
-          "marker": null,
-          "speciesComposition": [
-            {
-              "label": "Gadwalls",
-              "count": 821
-            },
-            {
-              "label": "Mallards",
-              "count": 686
-            },
-            {
-              "label": "Mixed Dabblers",
-              "count": 0
-            },
-            {
-              "label": "Mixed Divers",
-              "count": 0
-            },
-            {
-              "label": "Mixed Ducks",
-              "count": 0
-            },
-            {
-              "label": "Pintails",
-              "count": 7525
-            },
-            {
-              "label": "Ring-Necked Ducks",
-              "count": 0
-            },
-            {
-              "label": "Shovelers",
-              "count": 1273
-            },
-            {
-              "label": "Teal",
-              "count": 1055
-            },
-            {
-              "label": "Wigeon",
-              "count": 351
-            }
-          ],
-          "canadaGeese": 110,
-          "snowGeese": 0,
-          "otherSpeciesComposition": [
-            {
-              "label": "Bald Eagles",
-              "count": 1
-            },
-            {
-              "label": "Great Blue Herons",
-              "count": 10
-            },
-            {
-              "label": "Trumpeter Swans",
-              "count": 0
-            },
-            {
-              "label": "Tundra Swans",
-              "count": 0
-            },
-            {
-              "label": "Unidentified Swans",
-              "count": 0
-            },
-            {
-              "label": "White Fonted Geese",
-              "count": 15
-            }
-          ]
-        },
-        {
-          "name": "Schell-Osage CA",
-          "date": "2026-10-26",
-          "allDucks": 2512,
-          "mallardCount": 34,
-          "counts": {
-            "gadwall": 2,
-            "mallard": 34,
-            "mixedDabblers": 150,
-            "mixedDivers": 0,
-            "mixedDucks": 0,
-            "northernPintail": 900,
-            "ringNeckedDuck": 0,
-            "northernShoveler": 110,
-            "tealGroup": 1120,
+            "northernPintail": 6124,
+            "ringNeckedDuck": 680,
+            "northernShoveler": 0,
+            "tealGroup": 2722,
             "wigeonGroup": 0
           },
           "surveyGeometry": null,
@@ -1357,15 +1266,15 @@
           "speciesComposition": [
             {
               "label": "Gadwalls",
-              "count": 2
+              "count": 2722
             },
             {
               "label": "Mallards",
-              "count": 34
+              "count": 0
             },
             {
               "label": "Mixed Dabblers",
-              "count": 150
+              "count": 1361
             },
             {
               "label": "Mixed Divers",
@@ -1377,35 +1286,35 @@
             },
             {
               "label": "Pintails",
-              "count": 900
+              "count": 6124
             },
             {
               "label": "Ring-Necked Ducks",
-              "count": 0
+              "count": 680
             },
             {
               "label": "Shovelers",
-              "count": 110
+              "count": 0
             },
             {
               "label": "Teal",
-              "count": 1120
+              "count": 2722
             },
             {
               "label": "Wigeon",
               "count": 0
             }
           ],
-          "canadaGeese": 478,
+          "canadaGeese": 4,
           "snowGeese": 0,
           "otherSpeciesComposition": [
             {
               "label": "Bald Eagles",
-              "count": 5
+              "count": 2
             },
             {
               "label": "Great Blue Herons",
-              "count": 7
+              "count": 0
             },
             {
               "label": "Trumpeter Swans",
@@ -1421,13 +1330,193 @@
             },
             {
               "label": "White Fonted Geese",
-              "count": 35
+              "count": 0
+            }
+          ]
+        },
+        {
+          "name": "Otter Slough CA",
+          "date": "2026-11-09",
+          "allDucks": 8175,
+          "mallardCount": 450,
+          "counts": {
+            "gadwall": 475,
+            "mallard": 450,
+            "mixedDabblers": 0,
+            "mixedDivers": 0,
+            "mixedDucks": 0,
+            "northernPintail": 4900,
+            "ringNeckedDuck": 150,
+            "northernShoveler": 950,
+            "tealGroup": 775,
+            "wigeonGroup": 325
+          },
+          "surveyGeometry": null,
+          "marker": null,
+          "speciesComposition": [
+            {
+              "label": "Gadwalls",
+              "count": 475
+            },
+            {
+              "label": "Mallards",
+              "count": 450
+            },
+            {
+              "label": "Mixed Dabblers",
+              "count": 0
+            },
+            {
+              "label": "Mixed Divers",
+              "count": 0
+            },
+            {
+              "label": "Mixed Ducks",
+              "count": 0
+            },
+            {
+              "label": "Pintails",
+              "count": 4900
+            },
+            {
+              "label": "Ring-Necked Ducks",
+              "count": 150
+            },
+            {
+              "label": "Shovelers",
+              "count": 950
+            },
+            {
+              "label": "Teal",
+              "count": 775
+            },
+            {
+              "label": "Wigeon",
+              "count": 325
+            }
+          ],
+          "canadaGeese": 5,
+          "snowGeese": 0,
+          "otherSpeciesComposition": [
+            {
+              "label": "Bald Eagles",
+              "count": 2
+            },
+            {
+              "label": "Great Blue Herons",
+              "count": 14
+            },
+            {
+              "label": "Trumpeter Swans",
+              "count": 0
+            },
+            {
+              "label": "Tundra Swans",
+              "count": 0
+            },
+            {
+              "label": "Unidentified Swans",
+              "count": 0
+            },
+            {
+              "label": "White Fonted Geese",
+              "count": 150
+            }
+          ]
+        },
+        {
+          "name": "Schell-Osage CA",
+          "date": "2026-11-09",
+          "allDucks": 790,
+          "mallardCount": 100,
+          "counts": {
+            "gadwall": 50,
+            "mallard": 100,
+            "mixedDabblers": 600,
+            "mixedDivers": 30,
+            "mixedDucks": 0,
+            "northernPintail": 0,
+            "ringNeckedDuck": 0,
+            "northernShoveler": 0,
+            "tealGroup": 10,
+            "wigeonGroup": 0
+          },
+          "surveyGeometry": null,
+          "marker": null,
+          "speciesComposition": [
+            {
+              "label": "Gadwalls",
+              "count": 50
+            },
+            {
+              "label": "Mallards",
+              "count": 100
+            },
+            {
+              "label": "Mixed Dabblers",
+              "count": 600
+            },
+            {
+              "label": "Mixed Divers",
+              "count": 30
+            },
+            {
+              "label": "Mixed Ducks",
+              "count": 0
+            },
+            {
+              "label": "Pintails",
+              "count": 0
+            },
+            {
+              "label": "Ring-Necked Ducks",
+              "count": 0
+            },
+            {
+              "label": "Shovelers",
+              "count": 0
+            },
+            {
+              "label": "Teal",
+              "count": 10
+            },
+            {
+              "label": "Wigeon",
+              "count": 0
+            }
+          ],
+          "canadaGeese": 150,
+          "snowGeese": 0,
+          "otherSpeciesComposition": [
+            {
+              "label": "Bald Eagles",
+              "count": 3
+            },
+            {
+              "label": "Great Blue Herons",
+              "count": 3
+            },
+            {
+              "label": "Trumpeter Swans",
+              "count": 0
+            },
+            {
+              "label": "Tundra Swans",
+              "count": 0
+            },
+            {
+              "label": "Unidentified Swans",
+              "count": 0
+            },
+            {
+              "label": "White Fonted Geese",
+              "count": 0
             }
           ]
         },
         {
           "name": "Settle's Ford CA",
-          "date": "2026-10-26",
+          "date": "2026-11-09",
           "allDucks": 0,
           "mallardCount": 0,
           "counts": {
@@ -1517,19 +1606,19 @@
         },
         {
           "name": "Ted Shanks CA",
-          "date": "2026-10-26",
-          "allDucks": 7200,
-          "mallardCount": 720,
+          "date": "2026-11-09",
+          "allDucks": 15000,
+          "mallardCount": 1500,
           "counts": {
-            "gadwall": 1440,
-            "mallard": 720,
+            "gadwall": 1500,
+            "mallard": 1500,
             "mixedDabblers": 0,
             "mixedDivers": 0,
             "mixedDucks": 0,
-            "northernPintail": 864,
+            "northernPintail": 3000,
             "ringNeckedDuck": 0,
-            "northernShoveler": 360,
-            "tealGroup": 3096,
+            "northernShoveler": 0,
+            "tealGroup": 7500,
             "wigeonGroup": 0
           },
           "surveyGeometry": null,
@@ -1542,11 +1631,11 @@
           "speciesComposition": [
             {
               "label": "Gadwalls",
-              "count": 1440
+              "count": 1500
             },
             {
               "label": "Mallards",
-              "count": 720
+              "count": 1500
             },
             {
               "label": "Mixed Dabblers",
@@ -1562,7 +1651,7 @@
             },
             {
               "label": "Pintails",
-              "count": 864
+              "count": 3000
             },
             {
               "label": "Ring-Necked Ducks",
@@ -1570,23 +1659,23 @@
             },
             {
               "label": "Shovelers",
-              "count": 360
+              "count": 0
             },
             {
               "label": "Teal",
-              "count": 3096
+              "count": 7500
             },
             {
               "label": "Wigeon",
               "count": 0
             }
           ],
-          "canadaGeese": 90,
+          "canadaGeese": 200,
           "snowGeese": 0,
           "otherSpeciesComposition": [
             {
               "label": "Bald Eagles",
-              "count": 2
+              "count": 1
             },
             {
               "label": "Great Blue Herons",
@@ -1612,19 +1701,19 @@
         },
         {
           "name": "Ten Mile Pond CA",
-          "date": "2026-10-26",
-          "allDucks": 525,
-          "mallardCount": 175,
+          "date": "2026-11-09",
+          "allDucks": 2000,
+          "mallardCount": 1200,
           "counts": {
-            "gadwall": 50,
-            "mallard": 175,
-            "mixedDabblers": 0,
+            "gadwall": 100,
+            "mallard": 1200,
+            "mixedDabblers": 200,
             "mixedDivers": 0,
             "mixedDucks": 0,
-            "northernPintail": 50,
+            "northernPintail": 100,
             "ringNeckedDuck": 0,
             "northernShoveler": 0,
-            "tealGroup": 50,
+            "tealGroup": 200,
             "wigeonGroup": 0
           },
           "surveyGeometry": null,
@@ -1632,15 +1721,15 @@
           "speciesComposition": [
             {
               "label": "Gadwalls",
-              "count": 50
+              "count": 100
             },
             {
               "label": "Mallards",
-              "count": 175
+              "count": 1200
             },
             {
               "label": "Mixed Dabblers",
-              "count": 0
+              "count": 200
             },
             {
               "label": "Mixed Divers",
@@ -1652,7 +1741,7 @@
             },
             {
               "label": "Pintails",
-              "count": 50
+              "count": 100
             },
             {
               "label": "Ring-Necked Ducks",
@@ -1664,7 +1753,7 @@
             },
             {
               "label": "Teal",
-              "count": 50
+              "count": 200
             },
             {
               "label": "Wigeon",
@@ -1676,11 +1765,11 @@
           "otherSpeciesComposition": [
             {
               "label": "Bald Eagles",
-              "count": 2
+              "count": 0
             },
             {
               "label": "Great Blue Herons",
-              "count": 5
+              "count": 3
             },
             {
               "label": "Trumpeter Swans",
@@ -1705,10 +1794,10 @@
         {
           "reportId": "loess-bluffs-2026-11-10",
           "areaName": "Loess Bluffs NWR",
-          "status": "same-site-different-observation",
-          "allDucks": 43775,
-          "mallardCount": 170,
-          "observationDate": "2026-10-27",
+          "status": "confirmed-same-site-date-and-values",
+          "allDucks": 83440,
+          "mallardCount": 4975,
+          "observationDate": "2026-11-10",
           "sourceId": "usfws-loess-bluffs"
         },
         {
@@ -1719,8 +1808,8 @@
         }
       ],
       "validation": {
-        "areaAllDucksSum": 132025,
-        "areaMallardSum": 4850,
+        "areaAllDucksSum": 287323,
+        "areaMallardSum": 37752,
         "publishedTotalsMatchAreaSums": true,
         "missingAreaCounts": 0
       },
@@ -1731,7 +1820,7 @@
         "No composite flyway population or hunting-success metric is calculated.",
         "Report date labels the agency survey week; individual area dates are retained separately."
       ],
-      "checkedAt": "2026-11-12T13:11:52.593Z"
+      "checkedAt": "2026-11-12T18:16:09.940Z"
     }
   ]
 }

@@ -10,7 +10,7 @@
       "indexUrl": "https://www.fws.gov/library/collections/loess-bluffs-2026-waterfowl-and-bald-eagle-surveys",
       "reportUrl": "https://www.fws.gov/sites/default/files/documents/2026-11/loess_bluffs_waterfowl_survey_20261110.pdf",
       "reportLandingUrl": "https://www.fws.gov/media/loess-bluffs-waterfowl-survey-10-27-2026",
-      "retrievedAt": "2026-11-12T13:11:45.215Z",
+      "retrievedAt": "2026-11-12T18:16:02.641Z",
       "documentSha256": "b025eccaddc1fcce5869180cc4341a14bd0cb2355002404e642b44dcd502b242",
       "access": "Public official PDF, successfully downloaded. Newest entry in the official 2026 collection at retrieval.",
       "indexDiscovery": "The collection's public search response uses /fws_search/library_collections_content with nid=[\"5385546\"]. Its first item lists the October 27 report.",
@@ -19,14 +19,14 @@
       "cadence": "Agency describes weekly staff surveys during fall through spring migration.",
       "verification": "Automatically parsed with date, schema, units, missing-value and count-reconciliation checks.",
       "lastReportSha256": "b025eccaddc1fcce5869180cc4341a14bd0cb2355002404e642b44dcd502b242",
-      "lastAutomaticCheckAt": "2026-11-12T13:11:44.191Z"
+      "lastAutomaticCheckAt": "2026-11-12T18:15:51.427Z"
     },
     {
       "id": "iowa-dnr-migration",
       "name": "Iowa Department of Natural Resources",
       "indexUrl": "https://www.iowadnr.gov/things-do/hunting-trapping/types-hunting-trapping/migratory-game-bird-hunting/waterfowl-migration-survey",
       "reportUrl": "https://www.iowadnr.gov/media/9977/download?inline",
-      "retrievedAt": "2026-11-12T13:11:45.534Z",
+      "retrievedAt": "2026-11-12T18:16:03.083Z",
       "documentSha256": "bcf6144cfd599215d67b09d10bfa8891518d23360dd835eda709995e57f9c717",
       "access": "Public official PDF, successfully downloaded. Newest report linked by the migration-survey page at retrieval.",
       "termsUrl": "https://www.iowa.gov/policies",
@@ -34,7 +34,7 @@
       "cadence": "Fall weekly reports; the index lists reports for weeks ending September 4 through October 30, 2026.",
       "verification": "Automatically parsed with date, schema, units, missing-value and count-reconciliation checks.",
       "lastReportSha256": "bcf6144cfd599215d67b09d10bfa8891518d23360dd835eda709995e57f9c717",
-      "lastAutomaticCheckAt": "2026-11-12T13:11:45.404Z"
+      "lastAutomaticCheckAt": "2026-11-12T18:16:02.932Z"
     }
   ],
   "reports": [
@@ -307,7 +307,7 @@
       "referenceStates": [
         "MO"
       ],
-      "checkedAt": "2026-11-12T13:11:45.215Z"
+      "checkedAt": "2026-11-12T18:16:02.641Z"
     },
     {
       "sourceId": "iowa-dnr-migration",
@@ -645,7 +645,7 @@
         "At least one area lacks a current or previous observation. Total changes are not a matched-site comparison; missing values are not zero.",
         "Ducks and geese remain separate groups; species-change percentages are not counts."
       ],
-      "checkedAt": "2026-11-12T13:11:45.534Z"
+      "checkedAt": "2026-11-12T18:16:03.083Z"
     }
   ]
 }
