@@ -8,7 +8,7 @@
       "name": "Missouri Department of Conservation",
       "indexUrl": "https://mdc12.mdc.mo.gov/Applications/publicreportviewer?listFor=WaterFowl&reporttitle=Waterfowl+Hunting+Information",
       "reportUrl": "https://mdc12.mdc.mo.gov/Applications/PublicReportViewer/ReportView/ReportViewer.aspx?report=400",
-      "retrievedAt": "2026-11-13T09:56:13.150Z",
+      "retrievedAt": "2026-11-13T17:42:50.144Z",
       "documentSha256": "33fa77af12339cc53b6f31c673c662f0ea47e30068f18497abe3e335ed21c25b",
       "csvSha256": "db2099b3e7df59b0709e4245e88af796bc59d6c35085c0f4cb88fc86a342fda5",
       "htmlSha256": "c4276ada1460a000a39d4b3244535d49652f5f5e1a4a947687b4204020967894",
@@ -18,7 +18,7 @@
       "verification": "Automatically parsed with date, schema, units, missing-value and count-reconciliation checks.",
       "linkBehavior": "Live viewer defaults to the latest survey; it is not an immutable report archive.",
       "lastReportSha256": "33fa77af12339cc53b6f31c673c662f0ea47e30068f18497abe3e335ed21c25b",
-      "lastAutomaticCheckAt": "2026-11-13T09:56:13.085Z"
+      "lastAutomaticCheckAt": "2026-11-13T17:42:50.015Z"
     }
   ],
   "reports": [
@@ -1820,7 +1820,7 @@
         "No composite flyway population or hunting-success metric is calculated.",
         "Report date labels the agency survey week; individual area dates are retained separately."
       ],
-      "checkedAt": "2026-11-13T09:56:13.150Z"
+      "checkedAt": "2026-11-13T17:42:50.144Z"
     }
   ]
 }
