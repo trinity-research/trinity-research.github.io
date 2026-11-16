@@ -9,15 +9,15 @@
       "indexUrl": "https://www.tn.gov/twra/hunting/migratory-birds/waterfowl-counts.html",
       "reportUrl": "https://www.arcgis.com/apps/dashboards/5a158cd3c7194625838f3b1048959ce3",
       "serviceUrl": "https://services3.arcgis.com/PWXNAH2YKmZY7lBq/arcgis/rest/services/service_e17e08b94e004c26ba2a532f36ad411b/FeatureServer/0",
-      "retrievedAt": "2026-11-16T20:25:51.441Z",
-      "documentSha256": "dfd0097e96bf60f98c7abb9a507d411c0759ba75873218c9d5d6379d90049f5e",
+      "retrievedAt": "2026-11-16T22:28:30.885Z",
+      "documentSha256": "e27a3340e5d544e3dbe21a608c2a56d2e20f823dcc758955ed2fd9b63e37175a",
       "dashboardDataSha256": "c54374fe6223a9313b9a2d056415814d85bbd9fe1005adbc5a658c9b2b620b66",
       "access": "Official page links this public ArcGIS dashboard. Anonymous dashboard/service metadata and a bounded current-season query returned HTTP 200. Direct requests to the tn.gov page timed out during this audit; its text and dashboard link were checked through the web tool.",
       "reuseDecision": "Extracted factual survey date/species counts with agency attribution and original dashboard link. No report artwork, personal contacts, or full dashboard copied; no blanket open-data licence asserted. Dashboard and feature-service item metadata supplied no restrictive licence text.",
       "verification": "Latest Black Bayou ground-survey row from the bounded current-season official service. Numbered duplicate count fields are excluded.",
       "cadence": "Agency dashboard describes bi-weekly refuge surveys during November-February; actual row dates control freshness.",
       "dateWarning": "The agency landing page still labels its dashboard 2025-2026, but the underlying official service already contains the November 2, 2026 observation. Do not infer availability from that stale page label alone.",
-      "lastAutomaticCheckAt": "2026-11-16T20:25:51.441Z"
+      "lastAutomaticCheckAt": "2026-11-16T22:28:30.885Z"
     },
     {
       "id": "indiana-dnr-waterfowl-counts",
@@ -35,11 +35,11 @@
   ],
   "reports": [
     {
-      "id": "twra-black-bayou-2026-11-02",
+      "id": "twra-black-bayou-2026-11-16",
       "sourceId": "twra-refuge-counts",
       "type": "survey-counts",
       "title": "Black Bayou refuge waterfowl count",
-      "reportDate": "2026-11-02",
+      "reportDate": "2026-11-16",
       "datePrecision": "survey-date",
       "url": "https://www.arcgis.com/apps/dashboards/5a158cd3c7194625838f3b1048959ce3",
       "scope": {
@@ -55,34 +55,34 @@
       },
       "method": "TWRA refuge inventory recorded as a ground survey. Actual survey dates are retained; a daily source check does not create a new observation.",
       "summary": {
-        "mallardCount": 50,
-        "allDucks": 350,
+        "mallardCount": 4000,
+        "allDucks": 6000,
         "previousMallardCount": null,
         "previousAllDucks": null,
         "allDucksDefinition": "Original DuckTotals field for the Black Bayou row, not geese, cranes, coots, all birds, or a statewide total."
       },
       "areas": [
         {
-          "id": "twra-row-1760",
+          "id": "twra-row-1762",
           "name": "Black Bayou Refuge",
-          "date": "2026-11-02",
-          "mallardCount": 50,
-          "allDucks": 350,
+          "date": "2026-11-16",
+          "mallardCount": 4000,
+          "allDucks": 6000,
           "surveyType": "ground",
           "counts": {
-            "mallard": 50,
+            "mallard": 4000,
             "blackDuck": 0,
-            "woodDuck": 100,
-            "gadwall": 0,
+            "woodDuck": 200,
+            "gadwall": 1000,
             "wigeon": 0,
-            "northernPintail": 0,
+            "northernPintail": 50,
             "blueWingedTeal": 0,
-            "greenWingedTeal": 200,
+            "greenWingedTeal": 750,
             "northernShoveler": 0,
             "unidentifiedDabbler": 0
           },
           "sourceGroupCounts": {
-            "dabblers": 350,
+            "dabblers": 6000,
             "divers": null,
             "seaDucks": null,
             "mergansers": null
@@ -91,14 +91,14 @@
           "waterConditionNote": "The source does not define this percentage; no flooded-acre estimate is inferred."
         }
       ],
-      "provenance": "Official TWRA-linked feature service row 1760. Original Mallard and DuckTotals fields. Source response SHA256 dfd0097e96bf60f98c7abb9a507d411c0759ba75873218c9d5d6379d90049f5e.",
+      "provenance": "Official TWRA-linked feature service row 1762. Original Mallard and DuckTotals fields. Source response SHA256 e27a3340e5d544e3dbe21a608c2a56d2e20f823dcc758955ed2fd9b63e37175a.",
       "notes": [
         "This is a single refuge observation, not a statewide Tennessee duck count or an arrival prediction.",
         "The dashboard's numbered Mallard2/DuckTotals2 fields repeat the original counts. Only the original fields are used; no duplicates are added.",
         "Null diver, sea-duck, and merganser group fields remain unreported rather than observed zeros. The source's DuckTotals value is preserved as reported.",
         "No prior-count trend is calculated by this adapter."
       ],
-      "checkedAt": "2026-11-16T20:25:51.441Z"
+      "checkedAt": "2026-11-16T22:28:30.885Z"
     }
   ],
   "pendingSources": [
