@@ -1,0 +1,13 @@
+// Generated from content/menu-notice.json by scripts/build_menu_notice.py.
+const notice = {
+  "title": "Prices & menu availability",
+  "short": "Prices, menu items, and availability can change without notice. Updates may be delayed. Confirm current details directly with the restaurant before ordering.",
+  "summary": "Prices, menu items, and availability can change without notice. We do our best to keep information current, but updates may be delayed and errors or omissions can occur. We cannot guarantee that listings are current or complete. Please confirm current prices and menu details directly with the restaurant before ordering.",
+  "detailsTitle": "About menu accuracy",
+  "details": [
+    "Menus are provided for reference. They are not a live price feed or a price quote from theMenu. Prices may vary by location, time, or ordering method and may exclude taxes, fees, and optional extras.",
+    "A last-verified date records when information was checked. It does not guarantee that the restaurant has made no changes since. Some listings are excerpts and may omit items, options, or specials."
+  ]
+};
+notice.details = Object.freeze(notice.details);
+export const MENU_NOTICE = Object.freeze(notice);

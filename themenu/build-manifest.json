@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "source_sha256": "33fdb5f5fdbdacb1805b7bd90b8f5636d89298fdfc6e45b4e5ff976e9c1193b3",
+  "files": {
+    ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "README.md": "2c37d3ba46f3cb29a9331c50d1055d9b76d5c39404dd0602a09199eca4e6cf76",
+    "agents/index.html": "f57cf4df3d7c8e59ee022b0e6eb76ce462300b46e5f0f44895399d83a5bfaf63",
+    "agents/index.md": "5d5a1938833ecff14b2cc418b7919ee8cd73c68483efee91a6fb8d068e6cb288",
+    "assets/app.js": "2fe0190ba5074c7e6282588f6b5e9fbca084c8cd23aacf28cc50f7a84f88144a",
+    "assets/brand.css": "f83fce064cba71296ea22586b74c96a9706a0bdcb35e8fabba8e8fc541e1851f",
+    "assets/config.js": "086c2a84b6987e42f8a8787989ff0d6f3b45710baf477dd4ca4e44341da6cc97",
+    "assets/core.js": "ccd017c1c86f7871f69e4f734fe565ca911ddfa18e9acc6cb88c50df61ad2d82",
+    "assets/corrections.js": "9a39e3008efe05896c0ce21eb5888655766b306752343af334a324dc48ee2f31",
+    "assets/demo-cafe.svg": "29685e49e3ee9e55cd69783aa89c4f5b614be56331313e2903520a0866cdca2a",
+    "assets/menu-notice.js": "602c3859336041438ec8ea2bc25256e90d3ea3365af8a6d566501a986dd5f77d",
+    "assets/styles.css": "f5ff8b63d8af8b2d80f6ccb74049b84268049a1533dfbbf8f46737f9c6d9ff66",
+    "assets/wordmark.svg": "f07266c532669bddf16afaeb843639b2456e7d673f17454dd3736742f834a05f",
+    "corrections.html": "63376ad4738ac1ebd4f5be7a18f49ed40788e5f4970c6897f8ba92ba8342ef4f",
+    "data/demo.json": "ffe8c88078725c90679d507876349902c6d210bc04ae43ad8f44899494a3d670",
+    "data/menu-index.schema.json": "2fb03e595490523cbbe4d854016d9792a1f54dffe80d951a38b88f67a42e8f4f",
+    "data/restaurant.schema.json": "b3f4010937e83e46b08642b8a3397f257441b630d88f6fc3a8a69db8c639074d",
+    "data/restaurants.json": "bb161328b0753c703d9f511b3bc4a974b91964451dd8f2a7f0ed7472124dc2c1",
+    "data/schema.json": "027842d78fe19bfad1eb99b5f4663ea1614b3bade893fa278ba78b8ec6698678",
+    "index.html": "2930c181cd83130cf47e1362473f0f1896d57fc9a49bc9976eb25f8d3b95f840",
+    "index.md": "4310bc3f636d72fd837a01bc52a3ad96a87f6ab690e7c6bb20ae9ccf6a5d18ba",
+    "llms.txt": "a0e697540a8bc06edfbb65eb0c05a486bf79c6a2323117eedf3c81a988e9223a",
+    "menu-index.json": "6e0a8973aa2e47aaf3d60d1f4f83af2cf7f848667e5b47d8832fd338d9dbb163",
+    "robots.txt": "5ef2c0c741b787a63a0a0a621d302091e9a1434b3f24a28852ccb267f25b32b8"
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "theMenu discovery index v1",
+  "type": "object",
+  "required": [
+    "version",
+    "region",
+    "built_at",
+    "schema_url",
+    "freshness_policy",
+    "price_notice",
+    "reuse_notice",
+    "directory_json",
+    "restaurant_schema",
+    "restaurants"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "region": {
+      "type": "string",
+      "minLength": 1
+    },
+    "built_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "schema_url": {
+      "type": "string",
+      "format": "uri-reference",
+      "minLength": 1
+    },
+    "freshness_policy": {
+      "type": "object",
+      "required": [
+        "review_after_days",
+        "evaluated_on"
+      ],
+      "properties": {
+        "review_after_days": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "evaluated_on": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "additionalProperties": false
+    },
+    "price_notice": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reuse_notice": {
+      "type": "string",
+      "minLength": 1
+    },
+    "directory_json": {
+      "type": "string",
+      "format": "uri-reference",
+      "minLength": 1
+    },
+    "restaurant_schema": {
+      "type": "string",
+      "format": "uri-reference",
+      "minLength": 1
+    },
+    "restaurants": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "city",
+          "menu_status",
+          "recorded_menu_status",
+          "is_partial",
+          "last_verified",
+          "html_url",
+          "json_url",
+          "markdown_url"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "city": {
+            "type": "string",
+            "minLength": 1
+          },
+          "menu_status": {
+            "enum": [
+              "verified",
+              "needs_review",
+              "missing",
+              "outdated"
+            ]
+          },
+          "recorded_menu_status": {
+            "enum": [
+              "verified",
+              "needs_review",
+              "missing",
+              "outdated"
+            ]
+          },
+          "is_partial": {
+            "type": "boolean"
+          },
+          "last_verified": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "html_url": {
+            "type": "string",
+            "format": "uri-reference",
+            "minLength": 1
+          },
+          "json_url": {
+            "type": "string",
+            "format": "uri-reference",
+            "minLength": 1
+          },
+          "markdown_url": {
+            "type": "string",
+            "format": "uri-reference",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
