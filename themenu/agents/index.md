@@ -1,7 +1,7 @@
 # theMenu — menu data access
 
 theMenu is a curated restaurant-menu directory for Shreveport–Bossier City, Louisiana, USA.
-Published restaurants: 0. Publication data is reviewed; no demo records are included.
+Published restaurants: 4. Publication data is reviewed; no demo records are included.
 
 ## Start here
 
@@ -17,7 +17,7 @@ Resolve relative URLs against the document containing them. No account, API key,
 
 Prices, menu items, and availability can change without notice. We do our best to keep information current, but updates may be delayed and errors or omissions can occur. We cannot guarantee that listings are current or complete. Please confirm current prices and menu details directly with the restaurant before ordering.
 
-Review threshold: 30 days. The index computes effective status on 2026-11-17; built_at is a build timestamp, not restaurant verification.
+Review threshold: 30 days. The index computes effective status on 2026-11-21; built_at is a build timestamp, not restaurant verification.
 Recompute age from last_verified and each price_verified_at at consumption time. A build can become stale even if the URL has not changed.
 Individual menu.json files use the restaurant schema and a build-evaluated status. The canonical directory preserves recorded status; the index reports both. Publication builds do not invent new review dates.
 Statuses: verified, needs_review, outdated, missing. A verified snapshot can change immediately after checking. is_partial=true means excerpt, never a complete menu.

@@ -2,7 +2,7 @@
 
 ## Coverage and default approach
 
-The directory can cover independent restaurants and chains, including fast food. Restaurant opt-in is not a general prerequisite for a factual listing. Start with a Shreveport–Bossier pilot containing a mix of independent restaurants and specific chain locations, then expand geography using the same model. The current canonical directory still has no real records; no prices were invented or copied from the old prototype.
+The directory can cover independent restaurants and chains, including fast food. Restaurant opt-in is not a general prerequisite for a factual listing. Start with a Shreveport–Bossier pilot containing a mix of independent restaurants and specific chain locations, then expand geography using the same model. The first draft batch now contains four real locations, including two menu excerpts awaiting maintainer review and two chain listings with unavailable menus. No prices were invented or copied from the old prototype. See [the November 20 batch](imports/2026-11-20.md).
 
 The default is a text-only factual transcription: restaurant/location, item names, categories we normalize, sizes/options, numeric prices where actually verified, and a source URL/date. In our model, `menu.source.content_basis=public_facts` records this approach without claiming restaurant consent. Those imports omit descriptive prose. An empty description is acceptable. Private owner agreements and account credentials stay out of public Git data.
 

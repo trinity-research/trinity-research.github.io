@@ -16,7 +16,7 @@ class ValidationTests(unittest.TestCase):
         return validate(self.data, allow_demo=True, today=self.today)
 
     def test_public_directory_passes(self):
-        self.assertEqual(validate(read_json(ROOT / 'data/restaurants.json'), today=self.today), [])
+        self.assertEqual(validate(read_json(ROOT / 'data/restaurants.json'), today=date.today()), [])
 
     def test_explicitly_labeled_fixtures_pass(self):
         self.assertEqual(self.errors(), [])

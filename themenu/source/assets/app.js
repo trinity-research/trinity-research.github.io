@@ -75,7 +75,7 @@ function renderMenu(r) {
   provenance.append(node('p', labels[status]));
   provenance.append(node('p', `Last verified: ${dateText(r.menu.last_verified)}${r.menu.reviewer ? ` · Reviewed by ${r.menu.reviewer}` : ''}`));
   if (r.menu.categories.length) provenance.append(node('p', r.menu.is_partial ? 'This is an excerpt, not the full menu. Options or items may be omitted.' : 'A verified snapshot, not a live menu.'));
-  if (status === 'needs_review') provenance.append(node('p', `Needs a new review after ${CONFIG.staleAfterDays} days. Check the original source for current details.`));
+  if (status === 'needs_review') provenance.append(node('p', 'This menu is awaiting review. Check the original source for current details.'));
   if (r.menu.source) { const source = externalLink(`${r.menu.source.label} ↗`, r.menu.source.url, 'source-link'); if (source) provenance.append(source); }
   else if (r.official_url) { const official = externalLink('Restaurant website ↗', r.official_url, 'source-link'); if (official) provenance.append(official); }
   container.append(provenance);

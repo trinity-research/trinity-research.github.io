@@ -14,6 +14,7 @@ def main():
     subprocess.run([sys.executable, 'scripts/build_menu_notice.py', '--check'], cwd=ROOT, check=True)
     for arguments in [[], ['data/demo.json', '--demo']]:
         subprocess.run([sys.executable, 'scripts/validate_data.py', *arguments], cwd=ROOT, check=True)
+    subprocess.run([sys.executable, 'scripts/review_import.py'], cwd=ROOT, check=True)
     output = ROOT / 'dist'
     if output.exists():
         if output.is_symlink() or output.resolve() != ROOT.resolve() / 'dist':

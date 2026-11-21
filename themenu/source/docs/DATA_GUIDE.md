@@ -24,3 +24,17 @@ Review official sources manually and respect source terms, robots policy, licens
 ## Unpublished model migration
 
 The source field `menu.source.permission_basis` was renamed to `content_basis` before the first GitHub PR. `public_facts` is now supported for factual imports without claiming restaurant consent. Existing synthetic fixtures were migrated. Media keeps its distinct `permission_basis`; a public-facts source is not a media license. See INGESTION_PLAN.md for the scope and primary U.S. references.
+
+## First manual import lane
+
+`data/source-registry.json` records each location's identity/menu URLs, observation date, ordering context, refresh target, access-review status, and exact item/choice observations. This file is review metadata, not a public menu feed. The build excludes it from `dist/`. The current schema is deliberately limited to manual official-source facts; automation remains disabled.
+
+Run `python -B scripts/review_import.py` to compare the directory against this registry. A pending maintainer review cannot be labeled verified. Every name, price, and price date must match its observation, including null prices and separately named choices. This detects transcription drift; it does not prove that the website is current or independently confirm source facts.
+
+For a new import, save the current canonical JSON outside deployable output, edit the candidate plus registry, then run:
+
+```sh
+python -B scripts/review_import.py --baseline path/to/prior-restaurants.json --report path/to/review.md
+```
+
+The command only validates and reports. It never modifies the canonical directory, fetches a source, or publishes. Review the JSON diff, address, source scope, prices and sizes, and visible menu before approval. After an actual maintainer review, record the maintainer/date in the registry; update menu status/reviewer only to reflect that completed review. Do not mark an import approved merely to pass a check.

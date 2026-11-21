@@ -66,3 +66,15 @@ The user-supplied brief is applied. Both unit suites total 29 tests; token-deriv
 - Menu sources now use content_basis, including public_facts for names/prices transcribed in our own layout without claiming restaurant consent. Public-facts imports omit descriptive prose. Separate media permission metadata is unchanged. Tests cover public validation without owner consent, copied-description rejection in that import mode, and rejection of public_facts as a media permission.
 - All 55 tests pass: 41 Python and 14 Node. Export safety/integrity checks cover an unrecognized target, source/path escape, source/output drift, and removal of stale generated files without changing a parent homepage.
 - The planned /themenu/ URL and GitHub correction destination are configured, with indexable=false for the development draft. No live merge, Pages configuration, DNS, or homepage navigation change is part of packaging.
+
+
+## First real import - November 20, 2026
+
+- The active authoring folder is now `C:/Users/huntf/OneDrive/Documents/theMenu`. Its source matched the existing draft PR before this batch (ignoring checkout line endings).
+- Four actual locations were checked using official public source text. Superior Grill and Flying Heart have partial excerpts (14 dishes and 17 numeric item/size prices). Chick-fil-A and McDonald's have unavailable local menus. No coordinates, descriptions, media or guessed local prices were added.
+- Imported excerpts remain needs_review. The source registry has pending maintainer reviews and no approved automated access. The read-only review command checks complete item/choice observations, source URLs, dates, ordering contexts and review state. The build runs that check before generating output.
+- All 69 tests pass: 55 Python and 14 Node. The static build, brand/disclosure checks and directory/source validation pass. New cases cover source/price drift, null prices, size choices, duplicate/missing sources and observations, unsafe URLs, future dates, approval attribution and review-state enforcement. Discovery checks preserve ordering context in HTML, JSON, Markdown and JSON-LD and withhold structured Offer prices for pending menus.
+- Local HTTP checks returned 200 for all four HTML/JSON/Markdown/JSON-LD routes, discovery files and representative assets. The disclaimer precedes menu dishes, no fictional records enter the discovery index, the source registry is absent from deployable output, draft pages remain noindex and no sitemap is emitted.
+- Preview runs on this computer at http://127.0.0.1:8765/ and serves the OneDrive dist directory. It is not a published or cross-device URL.
+- Browser-control tools are unavailable in this session. No new browser screenshots, viewport/zoom checks, physical-device checks or screen-reader results are claimed. Prior browser results above concern earlier revisions; current visual release checks remain pending.
+- Source transcription does not constitute an independent maintainer approval or a live price-feed guarantee. The access-review and maintainer-review steps must be completed before enabling a collector or marking imports verified.

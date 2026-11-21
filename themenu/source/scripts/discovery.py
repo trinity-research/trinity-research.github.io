@@ -126,6 +126,7 @@ def restaurant_jsonld(r, *, base, today, days, notice):
             menu.update({'@id': url + '#menu', 'url': url})
         if r['menu']['source']:
             menu['isBasedOn'] = r['menu']['source']['url']
+            menu['description'] += ' Source context: ' + r['menu']['source']['label']
         for category in r['menu']['categories']:
             section = {'@type': 'MenuSection', 'name': category['name'], 'hasMenuItem': []}
             for item in category['items']:
@@ -189,6 +190,8 @@ def menu_body(r, notice, today, days):
     label = 'Verified menu excerpt' if status == 'verified' and menu['is_partial'] else STATUS[status]
     body += f'<div class="provenance{" warning" if status != "verified" else ""}"><p>{label}</p>'
     body += f'<p>Last verified: {escape(menu["last_verified"] or "Not yet verified")}</p>'
+    if status == 'needs_review':
+        body += '<p>This menu is awaiting review. Check the original source for current details.</p>'
     if menu['is_partial']:
         body += '<p>This is an excerpt, not the full menu. Items or options may be omitted.</p>'
     if menu['source']:
@@ -236,7 +239,7 @@ def menu_markdown(r, *, base, today, days, notice):
     lines.extend(notice['details'])
     if menu['source']:
         source = menu['source']
-        lines.extend(['', f'Source: {source["url"]}', f'Content basis: {source["content_basis"]}'])
+        lines.extend(['', f'Source: {source["url"]}', f'Source context: {markdown_text(source["label"])}', f'Content basis: {source["content_basis"]}'])
     for category in menu['categories']:
         lines.extend(['', f'## {markdown_text(category["name"])}'])
         for item in category['items']:

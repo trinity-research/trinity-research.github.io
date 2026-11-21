@@ -1,0 +1,235 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "restaurant_id": "superior-grill-shreveport",
+      "identity_url": "https://shreveport.superiorgrill.com/hours-location/",
+      "menu_url": "https://shreveport.superiorgrill.com/menu/",
+      "checked_on": "2026-11-20",
+      "collection_method": "manual_official_source",
+      "content_basis": "public_facts",
+      "ordering_context": "Shreveport main menu - published menu prices; specials and ordering fees not included",
+      "refresh_after_days": 30,
+      "automation_approved": false,
+      "access_review": "Automated access has not been reviewed. Manual public-page inspection only; no scraper or scheduled job enabled.",
+      "maintainer_review": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewed_on": null
+      },
+      "notes": [
+        "Location confirmed on the official Hours & Location page. Only eight dishes are included.",
+        "Cup and Bowl are separate prices, not surcharges. To-go-only sizes and optional additions are omitted."
+      ],
+      "observations": [
+        {
+          "item_id": "tiger-shrimp",
+          "choice_id": null,
+          "name": "Tiger Shrimp",
+          "price": 19.85,
+          "price_verified_at": "2026-11-20"
+        },
+        {
+          "item_id": "chile-con-queso",
+          "choice_id": null,
+          "name": "Original Chile Con Queso",
+          "price": null,
+          "price_verified_at": null
+        },
+        {
+          "item_id": "chile-con-queso",
+          "choice_id": "cup",
+          "name": "Cup",
+          "price": 9.95,
+          "price_verified_at": "2026-11-20"
+        },
+        {
+          "item_id": "chile-con-queso",
+          "choice_id": "bowl",
+          "name": "Bowl",
+          "price": 10.95,
+          "price_verified_at": "2026-11-20"
+        },
+        {
+          "item_id": "tortilla-soup",
+          "choice_id": null,
+          "name": "Tortilla Soup",
+          "price": null,
+          "price_verified_at": null
+        },
+        {
+          "item_id": "tortilla-soup",
+          "choice_id": "cup",
+          "name": "Cup",
+          "price": 6.95,
+          "price_verified_at": "2026-11-20"
+        },
+        {
+          "item_id": "tortilla-soup",
+          "choice_id": "bowl",
+          "name": "Bowl",
+          "price": 12.95,
+          "price_verified_at": "2026-11-20"
+        },
+        {
+          "item_id": "black-bean-soup",
+          "choice_id": null,
+          "name": "Black Bean Soup",
+          "price": null,
+          "price_verified_at": null
+        },
+        {
+          "item_id": "black-bean-soup",
+          "choice_id": "cup",
+          "name": "Cup",
+          "price": 6.95,
+          "price_verified_at": "2026-11-20"
+        },
+        {
+          "item_id": "black-bean-soup",
+          "choice_id": "bowl",
+          "name": "Bowl",
+          "price": 12.95,
+          "price_verified_at": "2026-11-20"
+        },
+        {
+          "item_id": "mesquite-hamburger",
+          "choice_id": null,
+          "name": "Mesquite Grilled Hamburger",
+          "price": 20.95,
+          "price_verified_at": "2026-11-20"
+        },
+        {
+          "item_id": "flan",
+          "choice_id": null,
+          "name": "Flan",
+          "price": 9.75,
+          "price_verified_at": "2026-11-20"
+        },
+        {
+          "item_id": "sopapillas",
+          "choice_id": null,
+          "name": "Sopapillas",
+          "price": 7.75,
+          "price_verified_at": "2026-11-20"
+        },
+        {
+          "item_id": "key-lime-pie",
+          "choice_id": null,
+          "name": "Margarita Key Lime Pie",
+          "price": 9.75,
+          "price_verified_at": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "restaurant_id": "flying-heart-bossier-city",
+      "identity_url": "https://www.flyingheartbrewing.com/",
+      "menu_url": "https://order.toasttab.com/online/flying-heart-brewing",
+      "checked_on": "2026-11-20",
+      "collection_method": "manual_official_source",
+      "content_basis": "public_facts",
+      "ordering_context": "Bossier City online-order menu - online prices; dine-in prices not confirmed",
+      "refresh_after_days": 30,
+      "automation_approved": false,
+      "access_review": "Automated access has not been reviewed. Manual public-page inspection only; no scraper or scheduled job enabled.",
+      "maintainer_review": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewed_on": null
+      },
+      "notes": [
+        "The restaurant's own website links this storefront as Order Now | Bossier City. Its selected header identifies 700 Barksdale Blvd; another location also appears in the storefront footer.",
+        "The multi-location menu at https://www.flyingheartbrewing.com/menus shows Cheese Bread at 12.00 and Pepperoni at 15.00; the linked Bossier online storefront shows 12.50 and 15.50. Preserve the online-order context; do not claim dine-in prices.",
+        "Ordering availability is not asserted. No requests to private APIs, accounts, or checkout were made."
+      ],
+      "observations": [
+        {
+          "item_id": "german-pretzel",
+          "choice_id": null,
+          "name": "Big German Pretzel",
+          "price": 13,
+          "price_verified_at": "2026-11-20"
+        },
+        {
+          "item_id": "cheese-bread",
+          "choice_id": null,
+          "name": "Firehouse Cheese Bread",
+          "price": 12.5,
+          "price_verified_at": "2026-11-20"
+        },
+        {
+          "item_id": "pretzel-bites",
+          "choice_id": null,
+          "name": "Pretzel Bites",
+          "price": 7.5,
+          "price_verified_at": "2026-11-20"
+        },
+        {
+          "item_id": "pepperoni-pizza",
+          "choice_id": null,
+          "name": "Pepperoni Pizza",
+          "price": 15.5,
+          "price_verified_at": "2026-11-20"
+        },
+        {
+          "item_id": "margherita-pizza",
+          "choice_id": null,
+          "name": "Margherita Pizza",
+          "price": 14,
+          "price_verified_at": "2026-11-20"
+        },
+        {
+          "item_id": "meat-jeffro-pizza",
+          "choice_id": null,
+          "name": "Meat Jeffro Pizza",
+          "price": 18,
+          "price_verified_at": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "restaurant_id": "chick-fil-a-youree-drive",
+      "identity_url": "https://www.chick-fil-a.com/locations/la/youree-drive",
+      "menu_url": null,
+      "checked_on": "2026-11-20",
+      "collection_method": "manual_official_source",
+      "content_basis": "public_facts",
+      "ordering_context": "Location listing only; local menu unavailable.",
+      "refresh_after_days": 30,
+      "automation_approved": false,
+      "access_review": "Automated access has not been reviewed. Manual public-page inspection only; no scraper or scheduled job enabled.",
+      "maintainer_review": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewed_on": null
+      },
+      "notes": [
+        "Official page confirms the location and says prices vary by location and require starting an order. No local menu items or prices were confirmed in the accessible source text."
+      ],
+      "observations": []
+    },
+    {
+      "restaurant_id": "mcdonalds-kings-highway",
+      "identity_url": "https://www.mcdonalds.com/us/en-us/location/la/shreveport/1100-kings-hwy/22683.html",
+      "menu_url": null,
+      "checked_on": "2026-11-20",
+      "collection_method": "manual_official_source",
+      "content_basis": "public_facts",
+      "ordering_context": "Location listing only; local menu unavailable.",
+      "refresh_after_days": 30,
+      "automation_approved": false,
+      "access_review": "Automated access has not been reviewed. Manual public-page inspection only; no scraper or scheduled job enabled.",
+      "maintainer_review": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewed_on": null
+      },
+      "notes": [
+        "Official location URL and page title identify 1100 Kings Hwy in Shreveport; ZIP corroborated by the official location search result.",
+        "Local menu facts and prices were not exposed in the accessible location-page text. Do not substitute national prices or third-party delivery prices."
+      ],
+      "observations": []
+    }
+  ]
+}

@@ -200,8 +200,19 @@ class DiscoveryTests(unittest.TestCase):
         self.assertFalse(robots.can_fetch('OAI-SearchBot', self.base + 'data/demo.json'))
         self.assertIn('no blanket reuse or training license', self.read('llms.txt'))
 
+    def test_pending_import_preserves_ordering_context_without_structured_offers(self):
+        r = self.data['restaurants'][0]
+        r['menu']['status'] = 'needs_review'
+        r['menu']['source']['label'] = 'Online-order prices; dine-in not confirmed'
+        self.build()
+        prefix = 'menus/' + r['id'] + '/'
+        for name in ['index.html', 'index.md', 'menu.json', 'menu.jsonld']:
+            self.assertIn(r['menu']['source']['label'], self.read(prefix + name))
+        self.assertNotIn('"offers"', self.read(prefix + 'menu.jsonld'))
+        self.assertIn('awaiting review', self.read(prefix + 'index.html'))
+
     def test_empty_public_directory_exports_no_synthetic_menu_content(self):
-        self.data = json.loads((ROOT / 'data/restaurants.json').read_text(encoding='utf-8'))
+        self.data = {'version': 2, 'region': 'Empty test region', 'restaurants': []}
         manifest = self.build()
         self.assertEqual(manifest['restaurants'], [])
         self.assertFalse((self.output / 'menus').exists())

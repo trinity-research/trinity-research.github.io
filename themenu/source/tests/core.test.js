@@ -8,7 +8,9 @@ const records = parseDirectory(data, { allowDemo: true });
 test('canonical directory is valid and does not contain fixtures', () => {
   const publicData = JSON.parse(readFileSync(new URL('../data/restaurants.json', import.meta.url)));
   assert.equal(publicData.demo, undefined);
-  assert.deepEqual(parseDirectory(publicData), []);
+  const realRecords = parseDirectory(publicData);
+  assert.equal(realRecords.length, publicData.restaurants.length);
+  assert.ok(realRecords.every(r => !r.id.startsWith('demo-') && !r.name.includes('(Fictional)')));
   assert.throws(() => parseDirectory(data), /Demo/);
 });
 test('search ignores accents and case, including dish descriptions', () => {

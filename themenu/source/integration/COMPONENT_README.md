@@ -18,6 +18,6 @@ python scripts/export_trinity.py --target ..
 
 Commit both `themenu/source/` and the regenerated component files. `build-manifest.json` lets CI check source/output synchronization and stale-file removal. CI also uploads a static preview ZIP; it does not deploy the main website.
 
-The current draft is noindex and contains no real restaurant records. `?demo=1` opts into visibly fictional samples; those records never enter discovery feeds. Indexability can be enabled in source/site.config.json after launch review.
+The current draft is noindex and contains four real locations: two official-source menu excerpts awaiting maintainer review and two chain locations with menus unavailable. See [the first import review](source/docs/imports/2026-11-20.md). `?demo=1` opts into visibly fictional samples; those records never enter discovery feeds. Indexability can be enabled in source/site.config.json after launch review.
 
 Menu ingestion supports independently recorded public facts for any restaurant, including fast-food chains. Record real sources, locations, and verification dates; separately licensed descriptions, logos, and photos have their own requirements. See [the ingestion proposal](source/docs/INGESTION_PLAN.md) and [data guide](source/docs/DATA_GUIDE.md).

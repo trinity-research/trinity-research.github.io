@@ -1,0 +1,26 @@
+{
+  "id": "mcdonalds-kings-highway",
+  "name": "McDonald's - Kings Highway",
+  "cuisine": "Burgers & fast food",
+  "address": {
+    "street": "1100 Kings Hwy",
+    "city": "Shreveport",
+    "region": "LA",
+    "postal_code": "71104",
+    "country": "US"
+  },
+  "coordinates": null,
+  "official_url": "https://www.mcdonalds.com/us/en-us/location/la/shreveport/1100-kings-hwy/22683.html",
+  "branding": {
+    "tier": "free",
+    "logo": null
+  },
+  "menu": {
+    "status": "missing",
+    "is_partial": false,
+    "last_verified": null,
+    "reviewer": null,
+    "source": null,
+    "categories": []
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Superior Grill menu — theMenu",
+  "description": "Menu excerpt for Superior Grill in Shreveport. Menu needs review. Confirm current details with the restaurant.",
+  "mainEntity": {
+    "@type": "Restaurant",
+    "name": "Superior Grill",
+    "servesCuisine": "Mexican",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "6123 Line Ave",
+      "addressLocality": "Shreveport",
+      "addressRegion": "LA",
+      "postalCode": "71106",
+      "addressCountry": "US"
+    },
+    "@id": "https://trinity-research.com/themenu/menus/superior-grill-shreveport/#restaurant",
+    "url": "https://trinity-research.com/themenu/menus/superior-grill-shreveport/",
+    "sameAs": "https://shreveport.superiorgrill.com/hours-location/",
+    "hasMenu": {
+      "@type": "Menu",
+      "name": "Superior Grill menu excerpt",
+      "description": "Menu needs review. Last verified: 2026-11-20. Prices, menu items, and availability can change without notice. We do our best to keep information current, but updates may be delayed and errors or omissions can occur. We cannot guarantee that listings are current or complete. Please confirm current prices and menu details directly with the restaurant before ordering. Source context: Shreveport main menu - published menu prices; specials and ordering fees not included",
+      "hasMenuSection": [
+        {
+          "@type": "MenuSection",
+          "name": "Starters",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Tiger Shrimp",
+              "@id": "https://trinity-research.com/themenu/menus/superior-grill-shreveport/#dish-tiger-shrimp"
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Original Chile Con Queso",
+              "@id": "https://trinity-research.com/themenu/menus/superior-grill-shreveport/#dish-chile-con-queso"
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Soups",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Tortilla Soup",
+              "@id": "https://trinity-research.com/themenu/menus/superior-grill-shreveport/#dish-tortilla-soup"
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Black Bean Soup",
+              "@id": "https://trinity-research.com/themenu/menus/superior-grill-shreveport/#dish-black-bean-soup"
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Burgers",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Mesquite Grilled Hamburger",
+              "@id": "https://trinity-research.com/themenu/menus/superior-grill-shreveport/#dish-mesquite-hamburger"
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Desserts",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Flan",
+              "@id": "https://trinity-research.com/themenu/menus/superior-grill-shreveport/#dish-flan"
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Sopapillas",
+              "@id": "https://trinity-research.com/themenu/menus/superior-grill-shreveport/#dish-sopapillas"
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Margarita Key Lime Pie",
+              "@id": "https://trinity-research.com/themenu/menus/superior-grill-shreveport/#dish-key-lime-pie"
+            }
+          ]
+        }
+      ],
+      "@id": "https://trinity-research.com/themenu/menus/superior-grill-shreveport/#menu",
+      "url": "https://trinity-research.com/themenu/menus/superior-grill-shreveport/",
+      "isBasedOn": "https://shreveport.superiorgrill.com/menu/"
+    }
+  },
+  "url": "https://trinity-research.com/themenu/menus/superior-grill-shreveport/"
+}
