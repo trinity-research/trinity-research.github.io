@@ -1,0 +1,26 @@
+{
+  "id": "chick-fil-a-youree-drive",
+  "name": "Chick-fil-A - Youree Drive",
+  "cuisine": "Chicken & fast food",
+  "address": {
+    "street": "7004 Youree Drive",
+    "city": "Shreveport",
+    "region": "LA",
+    "postal_code": "71105",
+    "country": "US"
+  },
+  "coordinates": null,
+  "official_url": "https://www.chick-fil-a.com/locations/la/youree-drive",
+  "branding": {
+    "tier": "free",
+    "logo": null
+  },
+  "menu": {
+    "status": "missing",
+    "is_partial": false,
+    "last_verified": null,
+    "reviewer": null,
+    "source": null,
+    "categories": []
+  }
+}

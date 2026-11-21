@@ -1,0 +1,176 @@
+{
+  "id": "superior-grill-shreveport",
+  "name": "Superior Grill",
+  "cuisine": "Mexican",
+  "address": {
+    "street": "6123 Line Ave",
+    "city": "Shreveport",
+    "region": "LA",
+    "postal_code": "71106",
+    "country": "US"
+  },
+  "coordinates": null,
+  "official_url": "https://shreveport.superiorgrill.com/hours-location/",
+  "branding": {
+    "tier": "free",
+    "logo": null
+  },
+  "menu": {
+    "status": "needs_review",
+    "is_partial": true,
+    "last_verified": "2026-11-20",
+    "reviewer": "Codex source transcription; maintainer review pending",
+    "source": {
+      "url": "https://shreveport.superiorgrill.com/menu/",
+      "label": "Shreveport main menu - published menu prices; specials and ordering fees not included",
+      "content_basis": "public_facts",
+      "evidence": "Factual item names and displayed USD prices read from the linked official source on 2026-11-20. Excerpt only. Descriptions and media omitted. Maintainer review pending.",
+      "verified_at": "2026-11-20"
+    },
+    "categories": [
+      {
+        "id": "starters",
+        "name": "Starters",
+        "items": [
+          {
+            "id": "tiger-shrimp",
+            "name": "Tiger Shrimp",
+            "description": "",
+            "price": 19.85,
+            "price_verified_at": "2026-11-20",
+            "currency": "USD",
+            "choices": [],
+            "photos": []
+          },
+          {
+            "id": "chile-con-queso",
+            "name": "Original Chile Con Queso",
+            "description": "",
+            "price": null,
+            "price_verified_at": null,
+            "currency": "USD",
+            "choices": [
+              {
+                "id": "cup",
+                "name": "Cup",
+                "price": 9.95,
+                "price_verified_at": "2026-11-20"
+              },
+              {
+                "id": "bowl",
+                "name": "Bowl",
+                "price": 10.95,
+                "price_verified_at": "2026-11-20"
+              }
+            ],
+            "photos": []
+          }
+        ]
+      },
+      {
+        "id": "soups",
+        "name": "Soups",
+        "items": [
+          {
+            "id": "tortilla-soup",
+            "name": "Tortilla Soup",
+            "description": "",
+            "price": null,
+            "price_verified_at": null,
+            "currency": "USD",
+            "choices": [
+              {
+                "id": "cup",
+                "name": "Cup",
+                "price": 6.95,
+                "price_verified_at": "2026-11-20"
+              },
+              {
+                "id": "bowl",
+                "name": "Bowl",
+                "price": 12.95,
+                "price_verified_at": "2026-11-20"
+              }
+            ],
+            "photos": []
+          },
+          {
+            "id": "black-bean-soup",
+            "name": "Black Bean Soup",
+            "description": "",
+            "price": null,
+            "price_verified_at": null,
+            "currency": "USD",
+            "choices": [
+              {
+                "id": "cup",
+                "name": "Cup",
+                "price": 6.95,
+                "price_verified_at": "2026-11-20"
+              },
+              {
+                "id": "bowl",
+                "name": "Bowl",
+                "price": 12.95,
+                "price_verified_at": "2026-11-20"
+              }
+            ],
+            "photos": []
+          }
+        ]
+      },
+      {
+        "id": "burgers",
+        "name": "Burgers",
+        "items": [
+          {
+            "id": "mesquite-hamburger",
+            "name": "Mesquite Grilled Hamburger",
+            "description": "",
+            "price": 20.95,
+            "price_verified_at": "2026-11-20",
+            "currency": "USD",
+            "choices": [],
+            "photos": []
+          }
+        ]
+      },
+      {
+        "id": "desserts",
+        "name": "Desserts",
+        "items": [
+          {
+            "id": "flan",
+            "name": "Flan",
+            "description": "",
+            "price": 9.75,
+            "price_verified_at": "2026-11-20",
+            "currency": "USD",
+            "choices": [],
+            "photos": []
+          },
+          {
+            "id": "sopapillas",
+            "name": "Sopapillas",
+            "description": "",
+            "price": 7.75,
+            "price_verified_at": "2026-11-20",
+            "currency": "USD",
+            "choices": [],
+            "photos": []
+          },
+          {
+            "id": "key-lime-pie",
+            "name": "Margarita Key Lime Pie",
+            "description": "",
+            "price": 9.75,
+            "price_verified_at": "2026-11-20",
+            "currency": "USD",
+            "choices": [],
+            "photos": []
+          }
+        ]
+      }
+    ]
+  }
+}

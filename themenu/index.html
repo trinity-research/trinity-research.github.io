@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A simple restaurant menu directory. Just the menu. Nothing else.">
+  <meta name="theme-color" content="#FFFFFF">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-RrTTS4Xe5gXS3dGIxE9ZM7p171WgwmMzhhEypVSGDKE='; style-src 'self'; img-src 'self' https:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>theMenu — Just the menu. Nothing else.</title>
+  <meta name="robots" content="noindex,follow"><link id="canonical" rel="canonical" href="https://trinity-research.com/themenu/"><link rel="alternate" type="application/json" href="menu-index.json" title="Menu discovery index"><link rel="alternate" type="text/markdown" href="index.md"><link rel="describedby" href="llms.txt" type="text/markdown"><script id="page-structured-data" type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"theMenu — restaurant menu directory","description":"Reviewed menu snapshots for Shreveport–Bossier City, Louisiana, USA","url":"https://trinity-research.com/themenu/","mainEntity":{"@type":"ItemList","itemListOrder":"https://schema.org/ItemListOrderAscending","numberOfItems":4,"itemListElement":[{"@type":"ListItem","position":1,"name":"Chick-fil-A - Youree Drive","url":"https://trinity-research.com/themenu/menus/chick-fil-a-youree-drive/"},{"@type":"ListItem","position":2,"name":"Flying Heart Brewing \u0026 Pub","url":"https://trinity-research.com/themenu/menus/flying-heart-bossier-city/"},{"@type":"ListItem","position":3,"name":"McDonald's - Kings Highway","url":"https://trinity-research.com/themenu/menus/mcdonalds-kings-highway/"},{"@type":"ListItem","position":4,"name":"Superior Grill","url":"https://trinity-research.com/themenu/menus/superior-grill-shreveport/"}]}}</script>
+  <link rel="stylesheet" href="./assets/brand.css">
+  <link rel="stylesheet" href="./assets/styles.css">
+  <script type="module" src="./assets/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to restaurants</a>
+  <header class="masthead"><div class="shell header-inner">
+    <a class="wordmark" href="./" aria-label="theMenu home"><span class="wordmark-the" aria-hidden="true">the</span><span class="wordmark-menu" aria-hidden="true">MENU</span></a>
+    <span class="header-note" data-brand-copy="tagline">Just the menu. Nothing else.</span>
+  </div></header>
+  <main id="main" class="shell" tabindex="-1">
+    <p id="demo-banner" class="demo-banner" hidden><strong>Fictional sample.</strong> These restaurants, dishes, and prices are for demonstration only. <a href="./">Return to the directory</a></p>
+    <section id="home" aria-labelledby="page-title">
+      <div class="intro"><p class="eyebrow">SHREVEPORT / BOSSIER CITY</p><h1 id="page-title" tabindex="-1">Restaurants near you</h1><p class="intro-copy">Local restaurants, with the menu up front.</p></div>
+      <div class="search-wrap"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><label class="visually-hidden" for="search">Search restaurants, dishes, or cuisines</label><input id="search" type="search" placeholder="Restaurant, dish, or cuisine" autocomplete="off" enterkeyhint="search"><button id="clear-search" class="clear-search" type="button" aria-label="Clear search" hidden>×</button></div>
+      <fieldset class="filter-field"><legend class="visually-hidden">Filter by cuisine</legend><div id="filters" class="filters"></div></fieldset>
+      <div class="location-tools"><label class="area-control" for="city">Area <select id="city" aria-label="Area"><option value="all">Both cities</option><option>Shreveport</option><option>Bossier City</option></select></label><button id="location" class="location-button" type="button"><span aria-hidden="true">◎</span> Use my location</button></div>
+      <p id="location-status" class="small location-status" role="status">Location is optional and stays in your browser.</p>
+      <div class="results-meta"><h2 id="results-count">Restaurants</h2><span id="sort-label">A–Z · no paid ranking</span></div>
+      <p id="announcer" class="visually-hidden" role="status" aria-atomic="true"></p>
+      <div id="restaurants" aria-busy="false"><!-- directory:start --><article class="restaurant-row"><a class="restaurant-link" href="menus/chick-fil-a-youree-drive/"><span class="restaurant-info"><span class="restaurant-name">Chick-fil-A - Youree Drive</span><span class="restaurant-meta">Chicken &amp; fast food · Shreveport</span><span class="menu-label">Menu unavailable</span></span><span class="row-arrow" aria-hidden="true">→</span></a></article><article class="restaurant-row"><a class="restaurant-link" href="menus/flying-heart-bossier-city/"><span class="restaurant-info"><span class="restaurant-name">Flying Heart Brewing &amp; Pub</span><span class="restaurant-meta">Pizza &amp; pub food · Bossier City</span><span class="menu-label">Menu excerpt · needs review</span></span><span class="row-arrow" aria-hidden="true">→</span></a></article><article class="restaurant-row"><a class="restaurant-link" href="menus/mcdonalds-kings-highway/"><span class="restaurant-info"><span class="restaurant-name">McDonald&#x27;s - Kings Highway</span><span class="restaurant-meta">Burgers &amp; fast food · Shreveport</span><span class="menu-label">Menu unavailable</span></span><span class="row-arrow" aria-hidden="true">→</span></a></article><article class="restaurant-row"><a class="restaurant-link" href="menus/superior-grill-shreveport/"><span class="restaurant-info"><span class="restaurant-name">Superior Grill</span><span class="restaurant-meta">Mexican · Shreveport</span><span class="menu-label">Menu excerpt · needs review</span></span><span class="row-arrow" aria-hidden="true">→</span></a></article><!-- directory:end --></div>
+      <aside class="directory-note"><span class="note-marker" aria-hidden="true">i</span><div><p>Menus and corrections are free. Optional restaurant branding never changes the order of results.</p><p id="home-menu-notice">Prices, menu items, and availability can change without notice. Updates may be delayed. Confirm current details directly with the restaurant before ordering.</p></div></aside>
+    </section>
+    <section id="detail" hidden aria-labelledby="restaurant-name"><button id="back" class="back-button" type="button">← All restaurants</button><div id="detail-content"></div></section>
+    <noscript><p class="notice">You can read menus without JavaScript. Enable JavaScript for search, filters, and optional location.</p></noscript>
+  </main>
+  <footer class="shell footer"><span>theMenu <span class="footer-divider">/</span> Shreveport–Bossier pilot</span><a href="agents/">Menu data access</a><a href="./corrections.html">Restaurant owners: suggest a correction</a><p data-brand-copy="supporting_promise">No sign-ups. No carts. No nonsense.</p></footer>
+</body>
+</html>

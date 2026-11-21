@@ -1,0 +1,191 @@
+{
+  "type": "object",
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "restaurant_id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "identity_url": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https://[^/\\s]+"
+          },
+          "menu_url": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uri",
+                "pattern": "^https://[^/\\s]+"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "checked_on": {
+            "type": "string",
+            "format": "date"
+          },
+          "collection_method": {
+            "const": "manual_official_source"
+          },
+          "content_basis": {
+            "const": "public_facts"
+          },
+          "ordering_context": {
+            "type": "string",
+            "minLength": 1
+          },
+          "refresh_after_days": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 365
+          },
+          "automation_approved": {
+            "const": false
+          },
+          "access_review": {
+            "type": "string",
+            "minLength": 1
+          },
+          "maintainer_review": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "enum": [
+                  "pending",
+                  "approved"
+                ]
+              },
+              "reviewer": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "reviewed_on": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "status",
+              "reviewer",
+              "reviewed_on"
+            ],
+            "additionalProperties": false
+          },
+          "notes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "observations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "item_id": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+                },
+                "choice_id": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "name": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "price": {
+                  "anyOf": [
+                    {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 10000
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "price_verified_at": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "format": "date"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "item_id",
+                "choice_id",
+                "name",
+                "price",
+                "price_verified_at"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "restaurant_id",
+          "identity_url",
+          "menu_url",
+          "checked_on",
+          "collection_method",
+          "content_basis",
+          "ordering_context",
+          "refresh_after_days",
+          "automation_approved",
+          "access_review",
+          "maintainer_review",
+          "notes",
+          "observations"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "version",
+    "sources"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "theMenu manual facts-only source registry v1"
+}

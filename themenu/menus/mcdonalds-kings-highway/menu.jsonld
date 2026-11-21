@@ -1,0 +1,23 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "McDonald's - Kings Highway menu — theMenu",
+  "description": "Menu unavailable for McDonald's - Kings Highway in Shreveport. Menu unavailable here. Confirm current details with the restaurant.",
+  "mainEntity": {
+    "@type": "Restaurant",
+    "name": "McDonald's - Kings Highway",
+    "servesCuisine": "Burgers & fast food",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1100 Kings Hwy",
+      "addressLocality": "Shreveport",
+      "addressRegion": "LA",
+      "postalCode": "71104",
+      "addressCountry": "US"
+    },
+    "@id": "https://trinity-research.com/themenu/menus/mcdonalds-kings-highway/#restaurant",
+    "url": "https://trinity-research.com/themenu/menus/mcdonalds-kings-highway/",
+    "sameAs": "https://www.mcdonalds.com/us/en-us/location/la/shreveport/1100-kings-hwy/22683.html"
+  },
+  "url": "https://trinity-research.com/themenu/menus/mcdonalds-kings-highway/"
+}

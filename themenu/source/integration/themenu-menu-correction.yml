@@ -1,0 +1,28 @@
+name: theMenu listing or menu correction
+description: Suggest a free correction for theMenu; restaurant consent is not required for a factual listing.
+title: "Menu correction: "
+body:
+  - type: markdown
+    attributes:
+      value: "Reports are public. Do not include private documents, phone numbers, payment details, or personal information. Menu corrections are free."
+  - type: input
+    id: restaurant
+    attributes:
+      label: Restaurant name or listing ID
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What needs correcting?
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Public official source URL, if available
+  - type: textarea
+    id: permission
+    attributes:
+      label: Permission to republish menu content or media, if applicable
+      description: Describe permission; do not attach private agreements to this public issue.

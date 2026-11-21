@@ -1,0 +1,462 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "theMenu directory v2",
+  "type": "object",
+  "properties": {
+    "version": {
+      "const": 2
+    },
+    "region": {
+      "type": "string",
+      "minLength": 1
+    },
+    "demo": {
+      "type": "boolean"
+    },
+    "restaurants": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/restaurant"
+      }
+    }
+  },
+  "required": [
+    "version",
+    "region",
+    "restaurants"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "restaurant": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "maxLength": 80
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "cuisine": {
+          "type": "string",
+          "minLength": 1
+        },
+        "address": {
+          "type": "object",
+          "properties": {
+            "street": {
+              "type": "string",
+              "minLength": 5
+            },
+            "city": {
+              "type": "string",
+              "minLength": 1
+            },
+            "region": {
+              "type": "string",
+              "pattern": "^[A-Z]{2}$"
+            },
+            "postal_code": {
+              "type": "string",
+              "pattern": "^[0-9]{5}(?:-[0-9]{4})?$"
+            },
+            "country": {
+              "const": "US"
+            }
+          },
+          "required": [
+            "street",
+            "city",
+            "region",
+            "postal_code",
+            "country"
+          ],
+          "additionalProperties": false
+        },
+        "coordinates": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "latitude": {
+                  "type": "number",
+                  "minimum": -90,
+                  "maximum": 90
+                },
+                "longitude": {
+                  "type": "number",
+                  "minimum": -180,
+                  "maximum": 180
+                },
+                "accuracy": {
+                  "const": "verified"
+                },
+                "source_url": {
+                  "type": "string",
+                  "format": "uri",
+                  "pattern": "^https://[^/\\s]+"
+                },
+                "verified_at": {
+                  "type": "string",
+                  "format": "date"
+                }
+              },
+              "required": [
+                "latitude",
+                "longitude",
+                "accuracy",
+                "source_url",
+                "verified_at"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "official_url": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uri",
+              "pattern": "^https://[^/\\s]+"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "branding": {
+          "type": "object",
+          "properties": {
+            "tier": {
+              "enum": [
+                "free",
+                "branded"
+              ]
+            },
+            "logo": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/media"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "tier",
+            "logo"
+          ],
+          "additionalProperties": false
+        },
+        "menu": {
+          "$ref": "#/$defs/menu"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "cuisine",
+        "address",
+        "coordinates",
+        "official_url",
+        "branding",
+        "menu"
+      ],
+      "additionalProperties": false
+    },
+    "menu": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "verified",
+            "needs_review",
+            "missing",
+            "outdated"
+          ]
+        },
+        "is_partial": {
+          "type": "boolean"
+        },
+        "last_verified": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reviewer": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/source"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "categories": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/category"
+          }
+        }
+      },
+      "required": [
+        "status",
+        "is_partial",
+        "last_verified",
+        "reviewer",
+        "source",
+        "categories"
+      ],
+      "additionalProperties": false
+    },
+    "category": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "maxLength": 80
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "items": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/item"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "items"
+      ],
+      "additionalProperties": false
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "maxLength": 80
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string"
+        },
+        "price": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 10000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "price_verified_at": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "currency": {
+          "const": "USD"
+        },
+        "choices": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/choice"
+          }
+        },
+        "photos": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/media"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "description",
+        "price",
+        "price_verified_at",
+        "currency",
+        "choices",
+        "photos"
+      ],
+      "additionalProperties": false
+    },
+    "choice": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "maxLength": 80
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "price": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 10000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "price_verified_at": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "price",
+        "price_verified_at"
+      ],
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://[^/\\s]+"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "verified_at": {
+          "type": "string",
+          "format": "date"
+        },
+        "content_basis": {
+          "enum": [
+            "public_facts",
+            "restaurant_submitted",
+            "licensed_feed",
+            "permission_granted",
+            "synthetic_demo"
+          ]
+        }
+      },
+      "required": [
+        "url",
+        "label",
+        "content_basis",
+        "evidence",
+        "verified_at"
+      ],
+      "additionalProperties": false
+    },
+    "media": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "minLength": 1
+        },
+        "alt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "creator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "credit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "license": {
+          "type": "string",
+          "minLength": 1
+        },
+        "permission_basis": {
+          "enum": [
+            "restaurant_submitted",
+            "licensed_feed",
+            "permission_granted",
+            "synthetic_demo"
+          ]
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://[^/\\s]+"
+        }
+      },
+      "required": [
+        "url",
+        "alt",
+        "creator",
+        "credit",
+        "license",
+        "permission_basis",
+        "source_url"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

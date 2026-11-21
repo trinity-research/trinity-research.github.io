@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "region": "Shreveport–Bossier City, Louisiana, USA",
+  "built_at": "2026-11-21T02:28:19.131577+00:00",
+  "schema_url": "https://trinity-research.com/themenu/data/menu-index.schema.json",
+  "freshness_policy": {
+    "review_after_days": 30,
+    "evaluated_on": "2026-11-21"
+  },
+  "price_notice": "Prices, menu items, and availability can change without notice. We do our best to keep information current, but updates may be delayed and errors or omissions can occur. We cannot guarantee that listings are current or complete. Please confirm current prices and menu details directly with the restaurant before ordering.",
+  "reuse_notice": "Factual listings do not imply restaurant consent or endorsement. Rights-managed text and media retain their source-specific terms; no blanket reuse or training license is granted for those assets.",
+  "directory_json": "https://trinity-research.com/themenu/data/restaurants.json",
+  "restaurant_schema": "https://trinity-research.com/themenu/data/restaurant.schema.json",
+  "restaurants": [
+    {
+      "id": "chick-fil-a-youree-drive",
+      "name": "Chick-fil-A - Youree Drive",
+      "city": "Shreveport",
+      "menu_status": "missing",
+      "recorded_menu_status": "missing",
+      "is_partial": false,
+      "last_verified": null,
+      "html_url": "https://trinity-research.com/themenu/menus/chick-fil-a-youree-drive/",
+      "json_url": "https://trinity-research.com/themenu/menus/chick-fil-a-youree-drive/menu.json",
+      "markdown_url": "https://trinity-research.com/themenu/menus/chick-fil-a-youree-drive/index.md"
+    },
+    {
+      "id": "flying-heart-bossier-city",
+      "name": "Flying Heart Brewing & Pub",
+      "city": "Bossier City",
+      "menu_status": "needs_review",
+      "recorded_menu_status": "needs_review",
+      "is_partial": true,
+      "last_verified": "2026-11-20",
+      "html_url": "https://trinity-research.com/themenu/menus/flying-heart-bossier-city/",
+      "json_url": "https://trinity-research.com/themenu/menus/flying-heart-bossier-city/menu.json",
+      "markdown_url": "https://trinity-research.com/themenu/menus/flying-heart-bossier-city/index.md"
+    },
+    {
+      "id": "mcdonalds-kings-highway",
+      "name": "McDonald's - Kings Highway",
+      "city": "Shreveport",
+      "menu_status": "missing",
+      "recorded_menu_status": "missing",
+      "is_partial": false,
+      "last_verified": null,
+      "html_url": "https://trinity-research.com/themenu/menus/mcdonalds-kings-highway/",
+      "json_url": "https://trinity-research.com/themenu/menus/mcdonalds-kings-highway/menu.json",
+      "markdown_url": "https://trinity-research.com/themenu/menus/mcdonalds-kings-highway/index.md"
+    },
+    {
+      "id": "superior-grill-shreveport",
+      "name": "Superior Grill",
+      "city": "Shreveport",
+      "menu_status": "needs_review",
+      "recorded_menu_status": "needs_review",
+      "is_partial": true,
+      "last_verified": "2026-11-20",
+      "html_url": "https://trinity-research.com/themenu/menus/superior-grill-shreveport/",
+      "json_url": "https://trinity-research.com/themenu/menus/superior-grill-shreveport/menu.json",
+      "markdown_url": "https://trinity-research.com/themenu/menus/superior-grill-shreveport/index.md"
+    }
+  ]
+}

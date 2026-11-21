@@ -1,0 +1,188 @@
+{
+  "version": 2,
+  "region": "Fictional examples in the Shreveport–Bossier sample region",
+  "demo": true,
+  "restaurants": [
+    {
+      "id": "demo-bayou-table",
+      "name": "Bayou Table (Fictional)",
+      "cuisine": "Cajun",
+      "address": {
+        "street": "100 Fictional Lane (demo address)",
+        "city": "Bossier City",
+        "region": "LA",
+        "postal_code": "71111",
+        "country": "US"
+      },
+      "coordinates": null,
+      "official_url": null,
+      "branding": {
+        "tier": "free",
+        "logo": null
+      },
+      "menu": {
+        "status": "verified",
+        "is_partial": true,
+        "last_verified": "2026-11-17",
+        "reviewer": "Synthetic fixture; no real verification",
+        "source": {
+          "url": "https://example.com/themenu-demo",
+          "label": "Fictional demonstration source",
+          "evidence": "Authored synthetic fixture. No real restaurant, menu, verification, or price is represented.",
+          "verified_at": "2026-11-17",
+          "content_basis": "synthetic_demo"
+        },
+        "categories": [
+          {
+            "id": "small-plates",
+            "name": "Small plates",
+            "items": [
+              {
+                "id": "corn-fritters",
+                "name": "Sweet corn fritters",
+                "description": "A fictional dish with pepper jelly and fresh herbs.",
+                "price": 8,
+                "price_verified_at": "2026-11-17",
+                "currency": "USD",
+                "choices": [],
+                "photos": []
+              },
+              {
+                "id": "seasonal-salad",
+                "name": "Seasonal greens",
+                "description": "An example with an unknown price, so no price is displayed.",
+                "price": null,
+                "price_verified_at": null,
+                "currency": "USD",
+                "choices": [],
+                "photos": []
+              }
+            ]
+          },
+          {
+            "id": "mains",
+            "name": "Mains",
+            "items": [
+              {
+                "id": "rice-bowl",
+                "name": "Smoky rice bowl",
+                "description": "Roasted vegetables, rice, and a little heat. Demonstration only.",
+                "price": 14,
+                "price_verified_at": "2026-11-17",
+                "currency": "USD",
+                "choices": [
+                  {
+                    "id": "vegetable",
+                    "name": "Roasted vegetable option",
+                    "price": 0,
+                    "price_verified_at": "2026-11-17"
+                  },
+                  {
+                    "id": "add-protein",
+                    "name": "Optional protein addition",
+                    "price": 3,
+                    "price_verified_at": "2026-11-17"
+                  }
+                ],
+                "photos": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "demo-cobalt-cafe",
+      "name": "Cobalt Café (Fictional)",
+      "cuisine": "Cafe",
+      "address": {
+        "street": "100 Fictional Lane (demo address)",
+        "city": "Shreveport",
+        "region": "LA",
+        "postal_code": "71101",
+        "country": "US"
+      },
+      "coordinates": null,
+      "official_url": null,
+      "branding": {
+        "tier": "branded",
+        "logo": {
+          "url": "assets/demo-cafe.svg",
+          "alt": "Fictional Cobalt Café logo",
+          "creator": "theMenu project",
+          "credit": "theMenu synthetic fixture",
+          "license": "Original demo artwork; project use",
+          "permission_basis": "synthetic_demo",
+          "source_url": "https://example.com/themenu-demo"
+        }
+      },
+      "menu": {
+        "status": "needs_review",
+        "is_partial": false,
+        "last_verified": "2026-10-01",
+        "reviewer": "Synthetic fixture; no real verification",
+        "source": {
+          "url": "https://example.com/themenu-demo",
+          "label": "Fictional demonstration source",
+          "evidence": "Authored synthetic fixture. No real restaurant, menu, verification, or price is represented.",
+          "verified_at": "2026-10-01",
+          "content_basis": "synthetic_demo"
+        },
+        "categories": [
+          {
+            "id": "breakfast",
+            "name": "Breakfast",
+            "items": [
+              {
+                "id": "toast",
+                "name": "Garden toast",
+                "description": "Fictional breakfast with tomato and herbs.",
+                "price": 9,
+                "price_verified_at": "2026-10-01",
+                "currency": "USD",
+                "choices": [],
+                "photos": []
+              },
+              {
+                "id": "coffee",
+                "name": "Filter coffee",
+                "description": "A sample coffee listing.",
+                "price": 3,
+                "price_verified_at": "2026-10-01",
+                "currency": "USD",
+                "choices": [],
+                "photos": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "demo-north-market",
+      "name": "North Market (Fictional)",
+      "cuisine": "Pizza",
+      "address": {
+        "street": "100 Fictional Lane (demo address)",
+        "city": "Shreveport",
+        "region": "LA",
+        "postal_code": "71101",
+        "country": "US"
+      },
+      "coordinates": null,
+      "official_url": null,
+      "branding": {
+        "tier": "free",
+        "logo": null
+      },
+      "menu": {
+        "status": "missing",
+        "is_partial": false,
+        "last_verified": null,
+        "reviewer": null,
+        "source": null,
+        "categories": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,339 @@
+{
+  "version": 2,
+  "region": "Shreveport–Bossier City, Louisiana, USA",
+  "restaurants": [
+    {
+      "id": "superior-grill-shreveport",
+      "name": "Superior Grill",
+      "cuisine": "Mexican",
+      "address": {
+        "street": "6123 Line Ave",
+        "city": "Shreveport",
+        "region": "LA",
+        "postal_code": "71106",
+        "country": "US"
+      },
+      "coordinates": null,
+      "official_url": "https://shreveport.superiorgrill.com/hours-location/",
+      "branding": {
+        "tier": "free",
+        "logo": null
+      },
+      "menu": {
+        "status": "needs_review",
+        "is_partial": true,
+        "last_verified": "2026-11-20",
+        "reviewer": "Codex source transcription; maintainer review pending",
+        "source": {
+          "url": "https://shreveport.superiorgrill.com/menu/",
+          "label": "Shreveport main menu - published menu prices; specials and ordering fees not included",
+          "content_basis": "public_facts",
+          "evidence": "Factual item names and displayed USD prices read from the linked official source on 2026-11-20. Excerpt only. Descriptions and media omitted. Maintainer review pending.",
+          "verified_at": "2026-11-20"
+        },
+        "categories": [
+          {
+            "id": "starters",
+            "name": "Starters",
+            "items": [
+              {
+                "id": "tiger-shrimp",
+                "name": "Tiger Shrimp",
+                "description": "",
+                "price": 19.85,
+                "price_verified_at": "2026-11-20",
+                "currency": "USD",
+                "choices": [],
+                "photos": []
+              },
+              {
+                "id": "chile-con-queso",
+                "name": "Original Chile Con Queso",
+                "description": "",
+                "price": null,
+                "price_verified_at": null,
+                "currency": "USD",
+                "choices": [
+                  {
+                    "id": "cup",
+                    "name": "Cup",
+                    "price": 9.95,
+                    "price_verified_at": "2026-11-20"
+                  },
+                  {
+                    "id": "bowl",
+                    "name": "Bowl",
+                    "price": 10.95,
+                    "price_verified_at": "2026-11-20"
+                  }
+                ],
+                "photos": []
+              }
+            ]
+          },
+          {
+            "id": "soups",
+            "name": "Soups",
+            "items": [
+              {
+                "id": "tortilla-soup",
+                "name": "Tortilla Soup",
+                "description": "",
+                "price": null,
+                "price_verified_at": null,
+                "currency": "USD",
+                "choices": [
+                  {
+                    "id": "cup",
+                    "name": "Cup",
+                    "price": 6.95,
+                    "price_verified_at": "2026-11-20"
+                  },
+                  {
+                    "id": "bowl",
+                    "name": "Bowl",
+                    "price": 12.95,
+                    "price_verified_at": "2026-11-20"
+                  }
+                ],
+                "photos": []
+              },
+              {
+                "id": "black-bean-soup",
+                "name": "Black Bean Soup",
+                "description": "",
+                "price": null,
+                "price_verified_at": null,
+                "currency": "USD",
+                "choices": [
+                  {
+                    "id": "cup",
+                    "name": "Cup",
+                    "price": 6.95,
+                    "price_verified_at": "2026-11-20"
+                  },
+                  {
+                    "id": "bowl",
+                    "name": "Bowl",
+                    "price": 12.95,
+                    "price_verified_at": "2026-11-20"
+                  }
+                ],
+                "photos": []
+              }
+            ]
+          },
+          {
+            "id": "burgers",
+            "name": "Burgers",
+            "items": [
+              {
+                "id": "mesquite-hamburger",
+                "name": "Mesquite Grilled Hamburger",
+                "description": "",
+                "price": 20.95,
+                "price_verified_at": "2026-11-20",
+                "currency": "USD",
+                "choices": [],
+                "photos": []
+              }
+            ]
+          },
+          {
+            "id": "desserts",
+            "name": "Desserts",
+            "items": [
+              {
+                "id": "flan",
+                "name": "Flan",
+                "description": "",
+                "price": 9.75,
+                "price_verified_at": "2026-11-20",
+                "currency": "USD",
+                "choices": [],
+                "photos": []
+              },
+              {
+                "id": "sopapillas",
+                "name": "Sopapillas",
+                "description": "",
+                "price": 7.75,
+                "price_verified_at": "2026-11-20",
+                "currency": "USD",
+                "choices": [],
+                "photos": []
+              },
+              {
+                "id": "key-lime-pie",
+                "name": "Margarita Key Lime Pie",
+                "description": "",
+                "price": 9.75,
+                "price_verified_at": "2026-11-20",
+                "currency": "USD",
+                "choices": [],
+                "photos": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "flying-heart-bossier-city",
+      "name": "Flying Heart Brewing & Pub",
+      "cuisine": "Pizza & pub food",
+      "address": {
+        "street": "700 Barksdale Boulevard",
+        "city": "Bossier City",
+        "region": "LA",
+        "postal_code": "71111",
+        "country": "US"
+      },
+      "coordinates": null,
+      "official_url": "https://www.flyingheartbrewing.com/",
+      "branding": {
+        "tier": "free",
+        "logo": null
+      },
+      "menu": {
+        "status": "needs_review",
+        "is_partial": true,
+        "last_verified": "2026-11-20",
+        "reviewer": "Codex source transcription; maintainer review pending",
+        "source": {
+          "url": "https://order.toasttab.com/online/flying-heart-brewing",
+          "label": "Bossier City online-order menu - online prices; dine-in prices not confirmed",
+          "content_basis": "public_facts",
+          "evidence": "Factual item names and displayed USD prices read from the linked official source on 2026-11-20. Excerpt only. Descriptions and media omitted. Maintainer review pending.",
+          "verified_at": "2026-11-20"
+        },
+        "categories": [
+          {
+            "id": "starters",
+            "name": "Starters",
+            "items": [
+              {
+                "id": "german-pretzel",
+                "name": "Big German Pretzel",
+                "description": "",
+                "price": 13,
+                "price_verified_at": "2026-11-20",
+                "currency": "USD",
+                "choices": [],
+                "photos": []
+              },
+              {
+                "id": "cheese-bread",
+                "name": "Firehouse Cheese Bread",
+                "description": "",
+                "price": 12.5,
+                "price_verified_at": "2026-11-20",
+                "currency": "USD",
+                "choices": [],
+                "photos": []
+              },
+              {
+                "id": "pretzel-bites",
+                "name": "Pretzel Bites",
+                "description": "",
+                "price": 7.5,
+                "price_verified_at": "2026-11-20",
+                "currency": "USD",
+                "choices": [],
+                "photos": []
+              }
+            ]
+          },
+          {
+            "id": "pizza",
+            "name": "Pizza",
+            "items": [
+              {
+                "id": "pepperoni-pizza",
+                "name": "Pepperoni Pizza",
+                "description": "",
+                "price": 15.5,
+                "price_verified_at": "2026-11-20",
+                "currency": "USD",
+                "choices": [],
+                "photos": []
+              },
+              {
+                "id": "margherita-pizza",
+                "name": "Margherita Pizza",
+                "description": "",
+                "price": 14,
+                "price_verified_at": "2026-11-20",
+                "currency": "USD",
+                "choices": [],
+                "photos": []
+              },
+              {
+                "id": "meat-jeffro-pizza",
+                "name": "Meat Jeffro Pizza",
+                "description": "",
+                "price": 18,
+                "price_verified_at": "2026-11-20",
+                "currency": "USD",
+                "choices": [],
+                "photos": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "chick-fil-a-youree-drive",
+      "name": "Chick-fil-A - Youree Drive",
+      "cuisine": "Chicken & fast food",
+      "address": {
+        "street": "7004 Youree Drive",
+        "city": "Shreveport",
+        "region": "LA",
+        "postal_code": "71105",
+        "country": "US"
+      },
+      "coordinates": null,
+      "official_url": "https://www.chick-fil-a.com/locations/la/youree-drive",
+      "branding": {
+        "tier": "free",
+        "logo": null
+      },
+      "menu": {
+        "status": "missing",
+        "is_partial": false,
+        "last_verified": null,
+        "reviewer": null,
+        "source": null,
+        "categories": []
+      }
+    },
+    {
+      "id": "mcdonalds-kings-highway",
+      "name": "McDonald's - Kings Highway",
+      "cuisine": "Burgers & fast food",
+      "address": {
+        "street": "1100 Kings Hwy",
+        "city": "Shreveport",
+        "region": "LA",
+        "postal_code": "71104",
+        "country": "US"
+      },
+      "coordinates": null,
+      "official_url": "https://www.mcdonalds.com/us/en-us/location/la/shreveport/1100-kings-hwy/22683.html",
+      "branding": {
+        "tier": "free",
+        "logo": null
+      },
+      "menu": {
+        "status": "missing",
+        "is_partial": false,
+        "last_verified": null,
+        "reviewer": null,
+        "source": null,
+        "categories": []
+      }
+    }
+  ]
+}

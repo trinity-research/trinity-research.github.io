@@ -1,0 +1,75 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Flying Heart Brewing & Pub menu — theMenu",
+  "description": "Menu excerpt for Flying Heart Brewing & Pub in Bossier City. Menu needs review. Confirm current details with the restaurant.",
+  "mainEntity": {
+    "@type": "Restaurant",
+    "name": "Flying Heart Brewing & Pub",
+    "servesCuisine": "Pizza & pub food",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "700 Barksdale Boulevard",
+      "addressLocality": "Bossier City",
+      "addressRegion": "LA",
+      "postalCode": "71111",
+      "addressCountry": "US"
+    },
+    "@id": "https://trinity-research.com/themenu/menus/flying-heart-bossier-city/#restaurant",
+    "url": "https://trinity-research.com/themenu/menus/flying-heart-bossier-city/",
+    "sameAs": "https://www.flyingheartbrewing.com/",
+    "hasMenu": {
+      "@type": "Menu",
+      "name": "Flying Heart Brewing & Pub menu excerpt",
+      "description": "Menu needs review. Last verified: 2026-11-20. Prices, menu items, and availability can change without notice. We do our best to keep information current, but updates may be delayed and errors or omissions can occur. We cannot guarantee that listings are current or complete. Please confirm current prices and menu details directly with the restaurant before ordering. Source context: Bossier City online-order menu - online prices; dine-in prices not confirmed",
+      "hasMenuSection": [
+        {
+          "@type": "MenuSection",
+          "name": "Starters",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Big German Pretzel",
+              "@id": "https://trinity-research.com/themenu/menus/flying-heart-bossier-city/#dish-german-pretzel"
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Firehouse Cheese Bread",
+              "@id": "https://trinity-research.com/themenu/menus/flying-heart-bossier-city/#dish-cheese-bread"
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Pretzel Bites",
+              "@id": "https://trinity-research.com/themenu/menus/flying-heart-bossier-city/#dish-pretzel-bites"
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Pizza",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Pepperoni Pizza",
+              "@id": "https://trinity-research.com/themenu/menus/flying-heart-bossier-city/#dish-pepperoni-pizza"
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Margherita Pizza",
+              "@id": "https://trinity-research.com/themenu/menus/flying-heart-bossier-city/#dish-margherita-pizza"
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Meat Jeffro Pizza",
+              "@id": "https://trinity-research.com/themenu/menus/flying-heart-bossier-city/#dish-meat-jeffro-pizza"
+            }
+          ]
+        }
+      ],
+      "@id": "https://trinity-research.com/themenu/menus/flying-heart-bossier-city/#menu",
+      "url": "https://trinity-research.com/themenu/menus/flying-heart-bossier-city/",
+      "isBasedOn": "https://order.toasttab.com/online/flying-heart-brewing"
+    }
+  },
+  "url": "https://trinity-research.com/themenu/menus/flying-heart-bossier-city/"
+}

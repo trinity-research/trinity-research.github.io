@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /themenu/reference/
+Disallow: /themenu/tests/
+Disallow: /themenu/.browser-fixtures/
+Disallow: /themenu/data/demo.json
+Disallow: /themenu/*?*demo=1
+Allow: /themenu/

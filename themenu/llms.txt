@@ -1,0 +1,21 @@
+# theMenu
+
+> A curated menu directory. Just the menu. Nothing else.
+
+Prices, menu items, and availability can change without notice. We do our best to keep information current, but updates may be delayed and errors or omissions can occur. We cannot guarantee that listings are current or complete. Please confirm current prices and menu details directly with the restaurant before ordering.
+
+Only canonical reviewed records are included. Factual listings do not imply restaurant consent or endorsement. Rights-managed text and media retain their source-specific terms; no blanket reuse or training license is granted for those assets.
+
+## Menu data
+
+- [Data access guide](https://trinity-research.com/themenu/agents/index.md): public static resource.
+- [Menu discovery index](https://trinity-research.com/themenu/menu-index.json): public static resource.
+- [Canonical directory JSON](https://trinity-research.com/themenu/data/restaurants.json): public static resource.
+- [Directory schema](https://trinity-research.com/themenu/data/schema.json): public static resource.
+
+## Menus
+
+- [Chick-fil-A - Youree Drive](https://trinity-research.com/themenu/menus/chick-fil-a-youree-drive/index.md): dated snapshot; check source and excerpt status.
+- [Flying Heart Brewing & Pub](https://trinity-research.com/themenu/menus/flying-heart-bossier-city/index.md): dated snapshot; check source and excerpt status.
+- [McDonald's - Kings Highway](https://trinity-research.com/themenu/menus/mcdonalds-kings-highway/index.md): dated snapshot; check source and excerpt status.
+- [Superior Grill](https://trinity-research.com/themenu/menus/superior-grill-shreveport/index.md): dated snapshot; check source and excerpt status.
