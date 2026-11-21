@@ -16,7 +16,7 @@
       "reuseDecision": "Extracted factual table values with source attribution and links; no report artwork, university logo, or original PDF republished. No blanket open licence is asserted.",
       "verification": "Automatically parsed with date, schema, units, missing-value and count-reconciliation checks.",
       "lastReportSha256": "53fc36aae8f0775564837818992cd1c19473c89951cd2a1b77515665ffc0329d",
-      "lastAutomaticCheckAt": "2026-11-21T08:43:57.730Z"
+      "lastAutomaticCheckAt": "2026-11-21T16:55:43.846Z"
     },
     {
       "id": "inhs-central-mississippi",
@@ -31,7 +31,7 @@
       "reuseDecision": "Extracted factual table values with source attribution and links; no report artwork, university logo, or original PDF republished. No blanket open licence is asserted.",
       "verification": "Automatically parsed with date, schema, units, missing-value and count-reconciliation checks.",
       "lastReportSha256": "01197989aaae0c9d6b181ba4e6705818c7fc6c19507756cc4af78e4d48865bd7",
-      "lastAutomaticCheckAt": "2026-11-21T08:43:57.730Z"
+      "lastAutomaticCheckAt": "2026-11-21T16:55:43.846Z"
     }
   ],
   "reports": [
