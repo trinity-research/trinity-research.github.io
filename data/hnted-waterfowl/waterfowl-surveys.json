@@ -10,7 +10,7 @@
       "indexUrl": "https://www.fws.gov/library/collections/loess-bluffs-2026-waterfowl-and-bald-eagle-surveys",
       "reportUrl": "https://www.fws.gov/sites/default/files/documents/2026-11/loess_bluffs_waterfowl_survey_20261123.pdf",
       "reportLandingUrl": "https://www.fws.gov/media/loess-bluffs-waterfowl-survey-10-27-2026",
-      "retrievedAt": "2026-11-27T19:27:22.787Z",
+      "retrievedAt": "2026-11-27T22:53:51.733Z",
       "documentSha256": "ca1d59600dd664650725d928fcee9285be9a66313253134ef269cc8ef0e38150",
       "access": "Public official PDF, successfully downloaded. Newest entry in the official 2026 collection at retrieval.",
       "indexDiscovery": "The collection's public search response uses /fws_search/library_collections_content with nid=[\"5385546\"]. Its first item lists the October 27 report.",
@@ -19,7 +19,7 @@
       "cadence": "Agency describes weekly staff surveys during fall through spring migration.",
       "verification": "Automatically parsed with date, schema, units, missing-value and count-reconciliation checks.",
       "lastReportSha256": "ca1d59600dd664650725d928fcee9285be9a66313253134ef269cc8ef0e38150",
-      "lastAutomaticCheckAt": "2026-11-27T19:27:21.942Z"
+      "lastAutomaticCheckAt": "2026-11-27T22:53:50.787Z"
     },
     {
       "id": "iowa-dnr-migration",
@@ -34,7 +34,7 @@
       "cadence": "Fall weekly reports; the index lists reports for weeks ending September 4 through October 30, 2026.",
       "verification": "Automatically parsed with date, schema, units, missing-value and count-reconciliation checks.",
       "lastReportSha256": "e9161c3916af1ece7cc2cf95b3b7f71fff866860aa374b252eb53793f609a52d",
-      "lastAutomaticCheckAt": "2026-11-27T19:27:22.973Z"
+      "lastAutomaticCheckAt": "2026-11-27T22:53:53.713Z"
     }
   ],
   "reports": [
@@ -406,7 +406,7 @@
       "referenceStates": [
         "MO"
       ],
-      "checkedAt": "2026-11-27T19:27:22.787Z"
+      "checkedAt": "2026-11-27T22:53:51.733Z"
     },
     {
       "sourceId": "iowa-dnr-migration",
