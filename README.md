@@ -78,7 +78,10 @@ is `scripts/wpc-fronts.mjs`; the collector is
 [NOAA's bulletin documentation](https://www.wpc.ncep.noaa.gov/html/read_coded_bull_hr.shtml).
 An isolated malformed analysis boundary can be omitted with an explicit
 partial-geometry notice. Missing coordinates are never guessed; broader errors
-retain the previous source frames. Forecast parsing remains strict.
+retain the previous source frames. Forecast parsing can omit an isolated
+zero-length line made of identical valid coordinates, with an omission notice;
+malformed coordinates, incomplete lines, pressure centers, dates, and broader
+errors remain strict.
 
 Run `node scripts/check-hnted-waterfowl-health.mjs --require-fresh --live` to
 check saved timestamps, actual forecast coverage, river observation times,
@@ -97,6 +100,10 @@ inconsistent downloads retain the prior view and show a warning. These requests
 fetch shared static files and do not send visitor coordinates. Daily cold-history
 cards distinguish NOAA archive observation dates from source-check times; those
 records can lag even when today's forecasts and collection job are current.
+An empty daily-archive response retains those dated records and marks the
+latest check unavailable. It does not block fresh river/snow data. At least
+two newly collected river series remain required, and their actual observation
+times are checked before a refresh can pass health validation.
 
 `slssm-01.html`, `signals.html`, `feed.xml`, and `sitemap.xml` are the only
 pages with generated content; everything else is hand-written.

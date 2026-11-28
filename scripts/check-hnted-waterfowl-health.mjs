@@ -13,7 +13,7 @@ for(let attempt=0;attempt<attempts;attempt++){try{
   const [liveWeather,liveConditions,liveStatus,liveSurveys,liveFronts]=await Promise.all([fetchJson('weather.json'),fetchJson('conditions.json'),fetchJson('update-status.json'),fetchJson('surveys.json'),fetchJson('fronts.json')]);
   const behind=(actual,expected)=>!Number.isFinite(Date.parse(actual))||(Number.isFinite(Date.parse(expected))&&Date.parse(actual)<Date.parse(expected));
   if(behind(liveWeather.generatedAt,weather?.generatedAt)||behind(liveConditions.generatedAt,conditions?.generatedAt)||behind(liveStatus.finishedAt,status?.finishedAt)||behind(liveSurveys.generatedAt,surveys?.generatedAt)||behind(liveFronts.generatedAt,fronts?.generatedAt))throw new Error('The live website is behind the saved refresh.');
-  const liveHealth=updateHealth(liveWeather,liveConditions,liveStatus,{monitoring:liveSurveys.monitoring,requireReportChecks:true,fronts:liveFronts,requireFronts:true});if(liveHealth.overdue)throw new Error('The published observations, front map, or report source checks are not current.');
+  const liveHealth=updateHealth(liveWeather,liveConditions,liveStatus,{monitoring:liveSurveys.monitoring,requireReportChecks:true,fronts:liveFronts,requireFronts:true});if(liveHealth.overdue)throw new Error('Live files are published, but source freshness failed: '+liveHealth.reasons.join(', ')+(liveHealth.failedJobs.length?' (failed jobs: '+liveHealth.failedJobs.join(', ')+')':''));
   console.log('Live refresh dates and forecast coverage verified.');
   liveError=undefined;publishNeeded=false;break;
 }catch(error){publishNeeded=true;liveError=error;console.log('Live publication check: '+error.message);if(attempt+1<attempts)await new Promise(resolve=>setTimeout(resolve,10000));}}

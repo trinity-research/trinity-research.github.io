@@ -56,7 +56,7 @@ function validForecast(line,issuedAt){
   if(value<issued-12*HOUR||value>issued+120*HOUR)throw new Error('WPC forecast valid time is outside the short-range bulletin.');
   return new Date(value).toISOString();
 }
-function features(groups,id,{allowPartialFeatures=false}={}){
+function features(groups,id,{allowPartialFeatures=false,omitDegenerateLines=false}={}){
   const result=[],omissions=[];
   for(const group of groups){
     const type=codes[group.code];
@@ -79,16 +79,16 @@ function features(groups,id,{allowPartialFeatures=false}={}){
         if(coordinates.length<2)throw new Error('Degenerate WPC front line.');
         result.push({type:'Feature',id:id+'-'+type+'-'+result.length,geometry:{type:'LineString',coordinates},properties:{type,sourceCode:group.code}});
       }catch(error){
-        if(!allowPartialFeatures)throw error;
+        if(!allowPartialFeatures&&!(omitDegenerateLines&&error.message==='Degenerate WPC front line.'))throw error;
         omissions.push({sourceCode:group.code,reason:error.message});
       }
     }
   }
   if(!result.some(f=>f.geometry.type==='LineString')||result.length>1000)throw new Error('WPC bulletin has no complete front lines or exceeds the feature limit.');
-  if(omissions.length>2||omissions.length/groups.length>.1)throw new Error('Too many malformed WPC front groups for a partial analysis.');
+  if(omissions.length>2||omissions.length/groups.length>.1)throw new Error('Too many malformed WPC front groups for a partial bulletin.');
   return {features:result,...(omissions.length?{partial:true,omissions}:{})};
 }
-function parse(text,{kind,sourceUrl,allowPartialFeatures=false}){
+function parse(text,{kind,sourceUrl,allowPartialFeatures=false,omitDegenerateLines=false}){
   if(typeof text!=='string'||text.length>250000||/[<>\0]/.test(text))throw new Error('Invalid WPC plain-text bulletin.');
   const lines=text.replace(/\r/g,'').split('\n').map(line=>line.trim().replace(/\s+/g,' ')).filter(Boolean);
   if(lines[0]!=='CODED SURFACE FRONTAL POSITIONS'+(kind==='forecast'?' FORECAST':'')||lines[1]!=='NWS WEATHER PREDICTION CENTER COLLEGE PARK MD')throw new Error('Unrecognized WPC bulletin header.');
@@ -97,7 +97,7 @@ function parse(text,{kind,sourceUrl,allowPartialFeatures=false}){
   const flushFrame=()=>{
     flushGroup();if(!validAt)return;
     const id='wpc-'+kind+'-'+validAt.replace(/[-:]/g,'').slice(0,13).replace('T','');
-    frames.push({id,kind,issuedAt,validAt,sourceUrl,...features(groups,id,{allowPartialFeatures:kind==='analysis'&&allowPartialFeatures})});groups=[];
+    frames.push({id,kind,issuedAt,validAt,sourceUrl,...features(groups,id,{allowPartialFeatures:kind==='analysis'&&allowPartialFeatures,omitDegenerateLines:kind==='forecast'&&omitDegenerateLines})});groups=[];
   };
   for(const line of lines.slice(3)){
     if(ended)throw new Error('Unexpected content after WPC bulletin terminator.');
@@ -123,6 +123,6 @@ function parse(text,{kind,sourceUrl,allowPartialFeatures=false}){
 export function parseWpcSurfaceBulletin(text,{sourceUrl=WPC_ANALYSIS_URL,allowPartialFeatures=false}={}){
   return parse(text,{kind:'analysis',sourceUrl:source(sourceUrl,WPC_ANALYSIS_URL),allowPartialFeatures:allowPartialFeatures===true})[0];
 }
-export function parseWpcForecastBulletin(text,{sourceUrl=WPC_FORECAST_URL}={}){
-  return parse(text,{kind:'forecast',sourceUrl:source(sourceUrl,WPC_FORECAST_URL)});
+export function parseWpcForecastBulletin(text,{sourceUrl=WPC_FORECAST_URL,omitDegenerateLines=false}={}){
+  return parse(text,{kind:'forecast',sourceUrl:source(sourceUrl,WPC_FORECAST_URL),omitDegenerateLines:omitDegenerateLines===true});
 }

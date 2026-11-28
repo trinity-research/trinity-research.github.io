@@ -70,3 +70,15 @@ export function validateConditions(data){
   if(data.snowAnalysis){const snow=data.snowAnalysis;if(!Number.isFinite(Date.parse(snow.validAt))||!Number.isFinite(Date.parse(snow.issuedAt))||!/^data\/snow-analysis-[a-f0-9]{12}\.png$/.test(snow.image)||snow.width!==960||snow.height!==760||snow.unit!=='in'||!Array.isArray(snow.legend)||!snow.legend.length||!Array.isArray(snow.extent3857)||snow.extent3857.length!==4||!snow.extent3857.every(Number.isFinite))throw new Error('Invalid dated snow-analysis raster.');}
   return data;
 }
+
+// Daily archives and current river readings have different publication cycles.
+// A missing archive response must not prevent fresh rivers/snow from publishing.
+export function reconcileConditions(previous,next){
+  if(next.gauges?.length<2)throw new Error('Insufficient fresh river coverage; keeping the previous conditions snapshot.');
+  const cold=new Map((next.coldSites??[]).map(site=>[site.id,site]));
+  for(const old of previous?.coldSites??[])if(!cold.has(old.id))cold.set(old.id,{...old,retained:true,lastAttemptedAt:next.generatedAt});
+  if(cold.size<2)throw new Error('Insufficient saved or current daily history; keeping the previous conditions snapshot.');
+  const result={...next,coldSites:[...cold.values()]};
+  if(!result.snowAnalysis&&previous?.snowAnalysis)result.snowAnalysis={...previous.snowAnalysis,retained:true,lastAttemptedAt:next.generatedAt};
+  return validateConditions(result);
+}

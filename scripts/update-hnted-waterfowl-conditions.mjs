@@ -2,9 +2,10 @@
 import {mkdir,readFile,writeFile,rename} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {dateKey,addDays} from '../hnted/engine.js';
-import {parseDailyCold,parseUsgsStage,validateConditions} from '../hnted/waterfowl/conditions-data.js';
+import {parseDailyCold,parseUsgsStage,validateConditions,reconcileConditions} from '../hnted/waterfowl/conditions-data.js';
 const root=new URL('../',import.meta.url),out=new URL('hnted/waterfowl/data/',root),raw=new URL('.hnted-runtime/waterfowl/',root);
 await Promise.all([mkdir(out,{recursive:true}),mkdir(raw,{recursive:true})]);
+const previous=await readFile(new URL('conditions.json',out),'utf8').then(JSON.parse).then(validateConditions).catch(()=>null);
 const headers={'User-Agent':'HNTED-Waterfowl/0.2 (https://trinity-research.com/hnted/)','Accept':'application/json'};
 const allowed=new Set(['www.ncei.noaa.gov','api.waterdata.usgs.gov','mapservices.weather.noaa.gov']);
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
@@ -25,7 +26,8 @@ try{
   const url=new URL('https://www.ncei.noaa.gov/access/services/data/v1');
   url.search=new URLSearchParams({dataset:'daily-summaries',stations:cold.map(s=>s.stationId).join(','),startDate:start,endDate:end,dataTypes:'TMIN,TMAX,SNOW,SNWD',units:'metric',includeAttributes:'true',includeStationLocation:'true',includeStationName:'true',format:'json'});
   const result=await get(url,'conditions-ncei-daily.json');
-  for(const site of cold){try{coldSites.push({...site,...parseDailyCold(result.data,{stationId:site.stationId,units:'metric',start,end}),zone:'America/Chicago',sourceUrl:result.url,retrievedAt:result.retrievedAt,sha256:result.sha256,coordinateSource:'NOAA NCEI daily-summaries station metadata'});}catch(error){errors.push({id:site.id,message:error.message});}}
+  if(!Array.isArray(result.data)||!result.data.length)throw new Error('NOAA daily archive returned no records for '+start+' through '+end+'. Saved history is retained.');
+  for(const site of cold){try{coldSites.push({...site,...parseDailyCold(result.data,{stationId:site.stationId,units:'metric',start,end}),zone:'America/Chicago',sourceUrl:result.url,retrievedAt:result.retrievedAt,sha256:result.sha256,coordinateSource:'NOAA NCEI daily-summaries station metadata'});}catch(error){errors.push({id:site.id,message:error.message});console.log(site.name+' daily archive: '+error.message);}}
   console.log('NOAA daily history: '+coldSites.length+' public stations.');
 }catch(error){errors.push({id:'ncei-daily',message:error.message});console.log(error.message);}
 
@@ -71,7 +73,7 @@ try{
   console.log('NOAA snow analysis valid '+snowAnalysis.validAt+'.');
 }catch(error){errors.push({id:'nohrsc-snow-analysis',message:error.message});console.log('Snow map: '+error.message);}
 
-if(coldSites.length<2||gauges.length<2)throw new Error('Insufficient ground-data coverage; keeping the previous conditions snapshot.');
-const result=validateConditions({schemaVersion:1,generatedAt:new Date().toISOString(),mode:'manually-refreshed-public-observations',coldSites,gauges,snowAnalysis,errors,attribution:[{name:'NOAA NCEI daily summaries',url:'https://www.ncei.noaa.gov/access'},{name:'NOAA National Snow Analysis',url:'https://www.nohrsc.noaa.gov/nsa/'},{name:'U.S. Geological Survey',url:'https://api.waterdata.usgs.gov/docs/ogcapi/'}]});
+const result=reconcileConditions(previous,{schemaVersion:1,generatedAt:new Date().toISOString(),mode:'refreshed-public-observations',coldSites,gauges,snowAnalysis,errors,attribution:[{name:'NOAA NCEI daily summaries',url:'https://www.ncei.noaa.gov/access'},{name:'NOAA National Snow Analysis',url:'https://www.nohrsc.noaa.gov/nsa/'},{name:'U.S. Geological Survey',url:'https://api.waterdata.usgs.gov/docs/ogcapi/'}]});
+console.log('Ground data: '+gauges.length+' fresh river series, '+coldSites.length+' current daily archives, '+result.coldSites.filter(s=>s.retained).length+' retained daily archives.');
 await writeFile(new URL('conditions.pending.json',out),JSON.stringify(result)+'\n');await rename(new URL('conditions.pending.json',out),new URL('conditions.json',out));
 console.log('Saved ground conditions. No schedule or migration rating enabled.');
